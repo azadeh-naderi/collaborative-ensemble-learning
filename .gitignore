@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Data / outputs
+results/*.png
+results/*.pt
+results/*.pth
+results/*.npy
+results/*.npz
+results/*.json
+
+# Local data
+/data/

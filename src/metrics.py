@@ -113,6 +113,12 @@ def variance_model_accuracy(models_with_idx, dataloader):
     accs = torch.tensor([accuracy(m, dataloader) for m, _ in models_with_idx], dtype=torch.float32)
     return float(accs.var(unbiased=False).item())
 
+def calculate_std_dev(values):
+    if len(values) < 2:
+        return 0.0
+    mean = sum(values) / len(values)
+    variance = sum((x - mean) ** 2 for x in values) / len(values)
+    return math.sqrt(variance)
 
 def get_models_no_oracle(updated_models, oracle_id=0):
     return [(m, mid) for (m, mid) in updated_models if mid != oracle_id]

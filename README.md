@@ -1,4 +1,4 @@
-# CELNet: Collaborative Ensemble Learning
+# Collaborative Ensemble Learning
 
 Research-style PyTorch repository for collaborative ensemble learning with:
 
@@ -14,7 +14,7 @@ This repository is a modularized version of the original experiment script you s
 ## Repository structure
 
 ```text
-celnet-research-repo/
+research-repo/
 ├── configs/
 │   └── default.yaml
 ├── results/
@@ -22,17 +22,16 @@ celnet-research-repo/
 │   ├── plot_pairing_comparison.py
 │   └── run_default.sh
 ├── src/
-│   └── celnet/
-│       ├── __init__.py
-│       ├── config.py
-│       ├── data.py
-│       ├── experiment.py
-│       ├── metrics.py
-│       ├── models.py
-│       ├── pairing.py
-│       ├── plotting.py
-│       ├── training.py
-│       └── utils.py
+│   ├── __init__.py
+│   ├── config.py
+│   ├── data.py
+│   ├── experiment.py
+│   ├── metrics.py
+│   ├── models.py
+│   ├── pairing.py
+│   ├── plotting.py
+│   ├── training.py
+│   └── utils.py
 ├── main.py
 ├── requirements.txt
 ├── .gitignore

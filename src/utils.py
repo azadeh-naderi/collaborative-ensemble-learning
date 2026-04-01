@@ -37,12 +37,7 @@ class TimeLogger:
         print(f"Duration: {self.end_time - self.start_time}")
 
 
-def calculate_std_dev(values):
-    if len(values) < 2:
-        return 0.0
-    mean = sum(values) / len(values)
-    variance = sum((x - mean) ** 2 for x in values) / len(values)
-    return math.sqrt(variance)
+
 
 
 def save_json(data: dict, path: str | Path) -> None:

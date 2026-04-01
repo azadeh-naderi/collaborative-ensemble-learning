@@ -1,7 +1,0 @@
-torch
-torchvision
-numpy
-matplotlib
-networkx
-pytz
-PyYAML

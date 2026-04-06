@@ -1,0 +1,775 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Start time: 2026-03-24 23:54:14
+
+=== Round 1/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (13.66) -> student 1 (9.56)
+  kd-train: teacher 2 (11.10) -> student 3 (9.94)
+  kd-train: teacher 5 (10.62) -> student 7 (10.00)
+  kd-train: teacher 8 (10.58) -> student 6 (10.10)
+
+=== Round 2/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 9 (36.52) -> student 6 (10.44)
+  kd-train: teacher 4 (13.66) -> student 7 (10.58)
+  kd-train: teacher 1 (11.18) -> student 8 (10.58)
+  kd-train: teacher 2 (11.10) -> student 5 (10.62)
+
+=== Round 3/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 9 (36.52) -> student 8 (10.28)
+  kd-train: teacher 6 (33.54) -> student 2 (11.10)
+  kd-train: teacher 3 (31.56) -> student 1 (11.18)
+  kd-train: teacher 7 (14.64) -> student 4 (13.66)
+
+=== Round 4/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 5 (42.32) -> student 7 (14.64)
+  kd-train: teacher 9 (36.52) -> student 2 (26.92)
+  kd-train: teacher 8 (33.62) -> student 1 (28.66)
+  kd-train: teacher 6 (33.54) -> student 3 (31.56)
+
+=== Round 5/100 (max) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 5 (42.32) -> student 3 (32.38)
+  kd-train: teacher 7 (37.96) -> student 2 (32.46)
+  kd-train: teacher 9 (36.52) -> student 6 (33.54)
+  kd-train: teacher 4 (34.70) -> student 8 (33.62)
+
+=== Round 6/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 1 (43.62) -> student 4 (34.70)
+  kd-train: teacher 5 (42.32) -> student 6 (34.98)
+  kd-train: teacher 3 (39.52) -> student 2 (35.36)
+  kd-train: teacher 7 (37.96) -> student 9 (36.52)
+
+=== Round 7/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 8 (45.70) -> student 7 (37.96)
+  kd-train: teacher 1 (43.62) -> student 2 (39.24)
+  kd-train: teacher 5 (42.32) -> student 4 (39.42)
+  kd-train: teacher 6 (41.40) -> student 3 (39.52)
+
+=== Round 8/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 9 (46.96) -> student 7 (39.82)
+  kd-train: teacher 8 (45.70) -> student 2 (40.52)
+  kd-train: teacher 1 (43.62) -> student 6 (41.40)
+  kd-train: teacher 5 (42.32) -> student 4 (42.12)
+
+=== Round 9/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 3 (50.14) -> student 4 (41.84)
+  kd-train: teacher 9 (46.96) -> student 5 (42.32)
+  kd-train: teacher 7 (45.98) -> student 2 (43.38)
+  kd-train: teacher 8 (45.70) -> student 1 (43.62)
+
+=== Round 10/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 6 (52.22) -> student 1 (43.86)
+  kd-train: teacher 3 (50.14) -> student 5 (44.74)
+  kd-train: teacher 9 (46.96) -> student 2 (45.32)
+  kd-train: teacher 7 (45.98) -> student 8 (45.70)
+
+=== Round 11/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 6 (52.22) -> student 2 (45.34)
+  kd-train: teacher 4 (51.52) -> student 7 (45.98)
+  kd-train: teacher 3 (50.14) -> student 9 (46.96)
+  kd-train: teacher 1 (48.72) -> student 5 (47.32)
+
+=== Round 12/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 8 (52.66) -> student 9 (47.42)
+  kd-train: teacher 6 (52.22) -> student 2 (47.66)
+  kd-train: teacher 4 (51.52) -> student 1 (48.72)
+  kd-train: teacher 3 (50.14) -> student 7 (50.12)
+
+=== Round 13/100 (max) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 5 (55.18) -> student 7 (48.92)
+  kd-train: teacher 8 (52.66) -> student 9 (49.86)
+  kd-train: teacher 6 (52.22) -> student 3 (50.14)
+  kd-train: teacher 4 (51.52) -> student 2 (50.62)
+
+=== Round 14/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (57.86) -> student 9 (50.76)
+  kd-train: teacher 5 (55.18) -> student 2 (51.00)
+  kd-train: teacher 8 (52.66) -> student 7 (51.28)
+  kd-train: teacher 6 (52.22) -> student 4 (51.52)
+
+=== Round 15/100 (max) ===
+  oracle-train: oracle -> student 7
+  kd-train: teacher 1 (57.86) -> student 6 (52.22)
+  kd-train: teacher 9 (56.58) -> student 4 (52.44)
+  kd-train: teacher 5 (55.18) -> student 8 (52.66)
+  kd-train: teacher 2 (53.56) -> student 3 (52.92)
+
+=== Round 16/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 7 (58.02) -> student 8 (48.80)
+  kd-train: teacher 1 (57.86) -> student 2 (53.56)
+  kd-train: teacher 6 (56.68) -> student 5 (55.18)
+  kd-train: teacher 9 (56.58) -> student 4 (56.42)
+
+=== Round 17/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 7 (58.02) -> student 3 (55.62)
+  kd-train: teacher 1 (57.86) -> student 4 (55.68)
+  kd-train: teacher 2 (57.00) -> student 9 (56.58)
+  kd-train: teacher 8 (56.84) -> student 6 (56.68)
+
+=== Round 18/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 5 (63.28) -> student 6 (56.18)
+  kd-train: teacher 3 (58.08) -> student 8 (56.84)
+  kd-train: teacher 7 (58.02) -> student 2 (57.00)
+  kd-train: teacher 1 (57.86) -> student 4 (57.02)
+
+=== Round 19/100 (max) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 5 (63.28) -> student 8 (56.22)
+  kd-train: teacher 6 (60.36) -> student 1 (57.86)
+  kd-train: teacher 9 (58.82) -> student 4 (57.98)
+  kd-train: teacher 3 (58.08) -> student 7 (58.02)
+
+=== Round 20/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 5 (63.28) -> student 1 (57.20)
+  kd-train: teacher 2 (63.16) -> student 7 (57.44)
+  kd-train: teacher 8 (61.28) -> student 3 (58.08)
+  kd-train: teacher 6 (60.36) -> student 9 (58.82)
+
+=== Round 21/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 5 (63.28) -> student 9 (58.82)
+  kd-train: teacher 2 (63.16) -> student 7 (59.68)
+  kd-train: teacher 4 (62.32) -> student 6 (60.36)
+  kd-train: teacher 1 (61.36) -> student 8 (61.28)
+
+=== Round 22/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 5 (63.28) -> student 6 (60.20)
+  kd-train: teacher 7 (63.22) -> student 3 (61.24)
+  kd-train: teacher 2 (63.16) -> student 1 (61.36)
+  kd-train: teacher 4 (62.32) -> student 9 (61.94)
+
+=== Round 23/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 5 (63.28) -> student 1 (60.20)
+  kd-train: teacher 7 (63.22) -> student 8 (62.20)
+  kd-train: teacher 6 (63.20) -> student 4 (62.32)
+  kd-train: teacher 3 (63.18) -> student 2 (63.16)
+
+=== Round 24/100 (max) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 9 (63.84) -> student 1 (62.04)
+  kd-train: teacher 8 (63.66) -> student 3 (63.18)
+  kd-train: teacher 4 (63.66) -> student 6 (63.20)
+  kd-train: teacher 5 (63.28) -> student 7 (63.22)
+
+=== Round 25/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 9 (63.84) -> student 1 (61.46)
+  kd-train: teacher 8 (63.66) -> student 3 (61.84)
+  kd-train: teacher 4 (63.66) -> student 2 (62.78)
+  kd-train: teacher 5 (63.28) -> student 7 (62.90)
+
+=== Round 26/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 9 (63.84) -> student 3 (61.48)
+  kd-train: teacher 8 (63.66) -> student 7 (61.84)
+  kd-train: teacher 4 (63.66) -> student 1 (62.74)
+  kd-train: teacher 5 (63.28) -> student 2 (63.26)
+
+=== Round 27/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 6 (65.26) -> student 7 (61.80)
+  kd-train: teacher 2 (64.50) -> student 1 (62.72)
+  kd-train: teacher 9 (63.84) -> student 5 (63.28)
+  kd-train: teacher 4 (63.66) -> student 8 (63.66)
+
+=== Round 28/100 (max) ===
+  oracle-train: oracle -> student 7
+  kd-train: teacher 6 (65.26) -> student 5 (61.54)
+  kd-train: teacher 2 (64.50) -> student 8 (62.22)
+  kd-train: teacher 1 (64.16) -> student 3 (63.44)
+  kd-train: teacher 9 (63.84) -> student 4 (63.66)
+
+=== Round 29/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 7 (66.04) -> student 4 (61.46)
+  kd-train: teacher 6 (65.26) -> student 8 (63.74)
+  kd-train: teacher 2 (64.50) -> student 9 (63.84)
+  kd-train: teacher 1 (64.16) -> student 3 (64.12)
+
+=== Round 30/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 7 (66.04) -> student 9 (63.84)
+  kd-train: teacher 6 (65.26) -> student 1 (64.16)
+  kd-train: teacher 5 (64.52) -> student 3 (64.44)
+  kd-train: teacher 4 (64.52) -> student 2 (64.50)
+
+=== Round 31/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 7 (66.04) -> student 1 (62.32)
+  kd-train: teacher 6 (65.26) -> student 8 (64.32)
+  kd-train: teacher 2 (64.70) -> student 4 (64.52)
+  kd-train: teacher 9 (64.54) -> student 5 (64.52)
+
+=== Round 32/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (67.08) -> student 5 (63.70)
+  kd-train: teacher 7 (66.04) -> student 9 (64.54)
+  kd-train: teacher 6 (65.26) -> student 2 (64.70)
+  kd-train: teacher 8 (65.18) -> student 1 (65.10)
+
+=== Round 33/100 (max) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (67.08) -> student 1 (63.82)
+  kd-train: teacher 9 (66.48) -> student 5 (65.14)
+  kd-train: teacher 7 (66.04) -> student 8 (65.18)
+  kd-train: teacher 4 (65.26) -> student 6 (65.26)
+
+=== Round 34/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 8 (67.14) -> student 5 (64.88)
+  kd-train: teacher 3 (67.08) -> student 4 (65.26)
+  kd-train: teacher 2 (66.62) -> student 7 (66.04)
+  kd-train: teacher 9 (66.48) -> student 1 (66.18)
+
+=== Round 35/100 (max) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 8 (67.14) -> student 7 (65.68)
+  kd-train: teacher 4 (67.14) -> student 9 (66.48)
+  kd-train: teacher 3 (67.08) -> student 6 (66.58)
+  kd-train: teacher 5 (66.82) -> student 2 (66.62)
+
+=== Round 36/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 8 (67.14) -> student 1 (66.18)
+  kd-train: teacher 4 (67.14) -> student 7 (66.18)
+  kd-train: teacher 3 (67.08) -> student 2 (66.46)
+  kd-train: teacher 6 (66.92) -> student 5 (66.82)
+
+=== Round 37/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 8 (67.14) -> student 7 (64.46)
+  kd-train: teacher 4 (67.14) -> student 2 (66.02)
+  kd-train: teacher 3 (67.08) -> student 9 (66.38)
+  kd-train: teacher 6 (66.92) -> student 1 (66.86)
+
+=== Round 38/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 8 (67.14) -> student 2 (66.12)
+  kd-train: teacher 4 (67.14) -> student 1 (66.72)
+  kd-train: teacher 9 (67.10) -> student 6 (66.92)
+  kd-train: teacher 3 (67.08) -> student 7 (67.04)
+
+=== Round 39/100 (max) ===
+  oracle-train: oracle -> student 7
+  kd-train: teacher 5 (69.00) -> student 1 (66.68)
+  kd-train: teacher 6 (68.24) -> student 3 (67.08)
+  kd-train: teacher 2 (67.96) -> student 9 (67.10)
+  kd-train: teacher 4 (67.14) -> student 8 (67.14)
+
+=== Round 40/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 5 (69.00) -> student 4 (67.14)
+  kd-train: teacher 9 (68.48) -> student 3 (67.58)
+  kd-train: teacher 6 (68.24) -> student 1 (67.88)
+  kd-train: teacher 2 (67.96) -> student 7 (67.96)
+
+=== Round 41/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 5 (69.00) -> student 3 (66.94)
+  kd-train: teacher 8 (68.94) -> student 2 (67.96)
+  kd-train: teacher 9 (68.48) -> student 1 (68.22)
+  kd-train: teacher 7 (68.32) -> student 6 (68.24)
+
+=== Round 42/100 (max) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (70.10) -> student 6 (67.98)
+  kd-train: teacher 5 (69.00) -> student 1 (68.18)
+  kd-train: teacher 8 (68.94) -> student 7 (68.32)
+  kd-train: teacher 3 (68.90) -> student 9 (68.48)
+
+=== Round 43/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 4 (70.10) -> student 9 (67.04)
+  kd-train: teacher 5 (69.00) -> student 2 (68.30)
+  kd-train: teacher 8 (68.94) -> student 1 (68.34)
+  kd-train: teacher 3 (68.90) -> student 7 (68.88)
+
+=== Round 44/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (70.10) -> student 1 (67.88)
+  kd-train: teacher 7 (69.04) -> student 2 (68.08)
+  kd-train: teacher 5 (69.00) -> student 6 (68.16)
+  kd-train: teacher 8 (68.94) -> student 3 (68.90)
+
+=== Round 45/100 (max) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (70.10) -> student 2 (67.40)
+  kd-train: teacher 7 (69.04) -> student 9 (68.06)
+  kd-train: teacher 5 (69.00) -> student 3 (68.10)
+  kd-train: teacher 6 (68.96) -> student 8 (68.94)
+
+=== Round 46/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 4 (70.10) -> student 9 (67.48)
+  kd-train: teacher 1 (69.42) -> student 2 (68.32)
+  kd-train: teacher 7 (69.04) -> student 8 (68.36)
+  kd-train: teacher 5 (69.00) -> student 6 (68.96)
+
+=== Round 47/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 4 (70.10) -> student 3 (67.70)
+  kd-train: teacher 1 (69.42) -> student 2 (68.00)
+  kd-train: teacher 7 (69.04) -> student 9 (68.24)
+  kd-train: teacher 5 (69.00) -> student 8 (68.36)
+
+=== Round 48/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (70.10) -> student 2 (67.92)
+  kd-train: teacher 1 (69.42) -> student 3 (67.98)
+  kd-train: teacher 7 (69.04) -> student 6 (68.28)
+  kd-train: teacher 5 (69.00) -> student 8 (68.90)
+
+=== Round 49/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 8 (70.78) -> student 2 (68.44)
+  kd-train: teacher 4 (70.10) -> student 5 (69.00)
+  kd-train: teacher 9 (69.60) -> student 7 (69.04)
+  kd-train: teacher 1 (69.42) -> student 3 (69.32)
+
+=== Round 50/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 8 (70.78) -> student 7 (69.04)
+  kd-train: teacher 6 (70.62) -> student 2 (69.22)
+  kd-train: teacher 4 (70.10) -> student 1 (69.42)
+  kd-train: teacher 5 (69.60) -> student 9 (69.60)
+
+=== Round 51/100 (max) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 8 (70.78) -> student 9 (68.86)
+  kd-train: teacher 6 (70.62) -> student 1 (69.14)
+  kd-train: teacher 7 (70.40) -> student 5 (69.60)
+  kd-train: teacher 3 (70.40) -> student 4 (70.10)
+
+=== Round 52/100 (max) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 8 (70.78) -> student 1 (68.30)
+  kd-train: teacher 6 (70.62) -> student 5 (70.38)
+  kd-train: teacher 9 (70.52) -> student 3 (70.40)
+  kd-train: teacher 4 (70.44) -> student 7 (70.40)
+
+=== Round 53/100 (max) ===
+  oracle-train: oracle -> student 7
+  kd-train: teacher 2 (73.02) -> student 3 (69.86)
+  kd-train: teacher 1 (71.14) -> student 5 (70.24)
+  kd-train: teacher 8 (70.78) -> student 4 (70.44)
+  kd-train: teacher 6 (70.62) -> student 9 (70.52)
+
+=== Round 54/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 2 (73.02) -> student 7 (69.76)
+  kd-train: teacher 3 (71.80) -> student 9 (70.04)
+  kd-train: teacher 1 (71.14) -> student 6 (70.62)
+  kd-train: teacher 4 (70.98) -> student 8 (70.78)
+
+=== Round 55/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 2 (73.02) -> student 9 (70.44)
+  kd-train: teacher 3 (71.80) -> student 5 (70.48)
+  kd-train: teacher 6 (71.34) -> student 7 (70.92)
+  kd-train: teacher 1 (71.14) -> student 4 (70.98)
+
+=== Round 56/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 2 (73.02) -> student 8 (68.46)
+  kd-train: teacher 3 (71.80) -> student 5 (70.14)
+  kd-train: teacher 7 (71.66) -> student 1 (71.14)
+  kd-train: teacher 9 (71.46) -> student 6 (71.34)
+
+=== Round 57/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 2 (73.02) -> student 6 (70.28)
+  kd-train: teacher 3 (71.80) -> student 1 (70.66)
+  kd-train: teacher 7 (71.66) -> student 5 (70.72)
+  kd-train: teacher 9 (71.46) -> student 8 (71.40)
+
+=== Round 58/100 (max) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 2 (73.02) -> student 8 (71.08)
+  kd-train: teacher 4 (72.04) -> student 6 (71.44)
+  kd-train: teacher 3 (71.80) -> student 9 (71.46)
+  kd-train: teacher 7 (71.66) -> student 5 (71.52)
+
+=== Round 59/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 2 (73.02) -> student 6 (70.62)
+  kd-train: teacher 4 (72.04) -> student 9 (71.38)
+  kd-train: teacher 5 (72.02) -> student 1 (71.40)
+  kd-train: teacher 3 (71.80) -> student 7 (71.66)
+
+=== Round 60/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 2 (73.02) -> student 9 (70.28)
+  kd-train: teacher 4 (72.04) -> student 1 (70.64)
+  kd-train: teacher 5 (72.02) -> student 6 (70.94)
+  kd-train: teacher 3 (71.80) -> student 7 (70.96)
+
+=== Round 61/100 (max) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 2 (73.02) -> student 6 (70.42)
+  kd-train: teacher 8 (72.16) -> student 7 (70.88)
+  kd-train: teacher 4 (72.04) -> student 9 (71.02)
+  kd-train: teacher 5 (72.02) -> student 3 (71.80)
+
+=== Round 62/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 2 (73.02) -> student 7 (69.02)
+  kd-train: teacher 6 (72.50) -> student 1 (71.12)
+  kd-train: teacher 8 (72.16) -> student 3 (71.54)
+  kd-train: teacher 4 (72.04) -> student 5 (72.02)
+
+=== Round 63/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 5 (73.28) -> student 9 (72.02)
+  kd-train: teacher 2 (73.02) -> student 1 (72.04)
+  kd-train: teacher 7 (72.50) -> student 4 (72.04)
+  kd-train: teacher 6 (72.50) -> student 8 (72.16)
+
+=== Round 64/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 5 (73.28) -> student 3 (72.06)
+  kd-train: teacher 2 (73.02) -> student 8 (72.10)
+  kd-train: teacher 1 (72.92) -> student 9 (72.18)
+  kd-train: teacher 6 (72.50) -> student 7 (72.50)
+
+=== Round 65/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 5 (73.28) -> student 4 (71.50)
+  kd-train: teacher 2 (73.02) -> student 7 (71.68)
+  kd-train: teacher 1 (72.92) -> student 8 (72.00)
+  kd-train: teacher 3 (72.88) -> student 6 (72.50)
+
+=== Round 66/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (73.68) -> student 8 (71.00)
+  kd-train: teacher 5 (73.28) -> student 6 (71.52)
+  kd-train: teacher 2 (73.02) -> student 7 (71.98)
+  kd-train: teacher 1 (72.92) -> student 3 (72.88)
+
+=== Round 67/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 4 (73.68) -> student 7 (71.66)
+  kd-train: teacher 8 (73.56) -> student 3 (71.96)
+  kd-train: teacher 9 (73.28) -> student 1 (72.92)
+  kd-train: teacher 5 (73.28) -> student 2 (73.02)
+
+=== Round 68/100 (max) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (73.68) -> student 7 (71.64)
+  kd-train: teacher 8 (73.56) -> student 6 (71.80)
+  kd-train: teacher 9 (73.28) -> student 2 (72.04)
+  kd-train: teacher 5 (73.28) -> student 3 (72.08)
+
+=== Round 69/100 (max) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (73.68) -> student 1 (71.94)
+  kd-train: teacher 8 (73.56) -> student 7 (72.62)
+  kd-train: teacher 6 (73.40) -> student 3 (72.68)
+  kd-train: teacher 5 (73.28) -> student 9 (73.28)
+
+=== Round 70/100 (max) ===
+  oracle-train: oracle -> student 7
+  kd-train: teacher 1 (74.40) -> student 2 (72.32)
+  kd-train: teacher 9 (74.20) -> student 3 (73.14)
+  kd-train: teacher 4 (73.68) -> student 5 (73.28)
+  kd-train: teacher 8 (73.56) -> student 6 (73.40)
+
+=== Round 71/100 (max) ===
+  oracle-train: oracle -> student 7
+  kd-train: teacher 1 (74.40) -> student 6 (71.54)
+  kd-train: teacher 9 (74.20) -> student 2 (72.80)
+  kd-train: teacher 3 (73.70) -> student 5 (72.82)
+  kd-train: teacher 4 (73.68) -> student 8 (73.56)
+
+=== Round 72/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (74.40) -> student 6 (73.10)
+  kd-train: teacher 9 (74.20) -> student 8 (73.38)
+  kd-train: teacher 3 (73.70) -> student 2 (73.52)
+  kd-train: teacher 4 (73.68) -> student 7 (73.66)
+
+=== Round 73/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (74.40) -> student 2 (73.22)
+  kd-train: teacher 9 (74.20) -> student 8 (73.44)
+  kd-train: teacher 7 (73.92) -> student 4 (73.68)
+  kd-train: teacher 6 (73.92) -> student 3 (73.70)
+
+=== Round 74/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 4 (74.52) -> student 3 (72.84)
+  kd-train: teacher 1 (74.40) -> student 2 (72.98)
+  kd-train: teacher 9 (74.20) -> student 8 (73.34)
+  kd-train: teacher 6 (73.92) -> student 7 (73.92)
+
+=== Round 75/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 5 (74.92) -> student 2 (72.48)
+  kd-train: teacher 4 (74.52) -> student 3 (72.54)
+  kd-train: teacher 1 (74.40) -> student 7 (73.84)
+  kd-train: teacher 9 (74.20) -> student 6 (73.92)
+
+=== Round 76/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 5 (74.92) -> student 2 (70.48)
+  kd-train: teacher 4 (74.52) -> student 6 (72.24)
+  kd-train: teacher 1 (74.40) -> student 3 (72.82)
+  kd-train: teacher 9 (74.20) -> student 7 (73.76)
+
+=== Round 77/100 (max) ===
+  oracle-train: oracle -> student 8
+  kd-train: teacher 5 (74.92) -> student 3 (71.64)
+  kd-train: teacher 4 (74.52) -> student 6 (71.98)
+  kd-train: teacher 1 (74.40) -> student 2 (72.02)
+  kd-train: teacher 7 (74.24) -> student 9 (74.20)
+
+=== Round 78/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 8 (75.78) -> student 3 (72.52)
+  kd-train: teacher 5 (74.92) -> student 2 (73.64)
+  kd-train: teacher 4 (74.52) -> student 7 (74.24)
+  kd-train: teacher 1 (74.40) -> student 9 (74.34)
+
+=== Round 79/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 8 (75.78) -> student 7 (73.04)
+  kd-train: teacher 5 (74.92) -> student 9 (73.32)
+  kd-train: teacher 4 (74.52) -> student 2 (73.34)
+  kd-train: teacher 1 (74.40) -> student 3 (73.56)
+
+=== Round 80/100 (max) ===
+  oracle-train: oracle -> student 6
+  kd-train: teacher 8 (75.78) -> student 3 (72.40)
+  kd-train: teacher 5 (74.92) -> student 7 (73.18)
+  kd-train: teacher 4 (74.52) -> student 2 (73.36)
+  kd-train: teacher 1 (74.40) -> student 9 (73.60)
+
+=== Round 81/100 (max) ===
+  oracle-train: oracle -> student 7
+  kd-train: teacher 8 (75.78) -> student 2 (72.92)
+  kd-train: teacher 6 (75.38) -> student 9 (73.48)
+  kd-train: teacher 5 (74.92) -> student 3 (73.58)
+  kd-train: teacher 4 (74.52) -> student 1 (74.40)
+
+=== Round 82/100 (max) ===
+  oracle-train: oracle -> student 7
+  kd-train: teacher 8 (75.78) -> student 9 (72.20)
+  kd-train: teacher 6 (75.38) -> student 3 (72.42)
+  kd-train: teacher 5 (74.92) -> student 2 (73.12)
+  kd-train: teacher 4 (74.52) -> student 1 (73.74)
+
+=== Round 83/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 8 (75.78) -> student 2 (72.90)
+  kd-train: teacher 7 (75.48) -> student 1 (73.88)
+  kd-train: teacher 6 (75.38) -> student 9 (73.94)
+  kd-train: teacher 5 (74.92) -> student 4 (74.52)
+
+=== Round 84/100 (max) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 8 (75.78) -> student 9 (72.02)
+  kd-train: teacher 7 (75.48) -> student 3 (72.44)
+  kd-train: teacher 6 (75.38) -> student 2 (73.46)
+  kd-train: teacher 5 (74.92) -> student 4 (73.74)
+
+=== Round 85/100 (max) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 8 (75.78) -> student 4 (72.76)
+  kd-train: teacher 7 (75.48) -> student 1 (74.02)
+  kd-train: teacher 6 (75.38) -> student 9 (74.24)
+  kd-train: teacher 2 (75.22) -> student 5 (74.92)
+
+=== Round 86/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 3 (79.38) -> student 4 (72.68)
+  kd-train: teacher 8 (75.78) -> student 1 (73.18)
+  kd-train: teacher 7 (75.48) -> student 5 (74.82)
+  kd-train: teacher 6 (75.38) -> student 2 (75.22)
+
+=== Round 87/100 (max) ===
+  oracle-train: oracle -> student 9
+  kd-train: teacher 3 (79.38) -> student 5 (73.98)
+  kd-train: teacher 8 (75.78) -> student 1 (75.20)
+  kd-train: teacher 2 (75.60) -> student 4 (75.38)
+  kd-train: teacher 7 (75.48) -> student 6 (75.38)
+
+=== Round 88/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (79.38) -> student 1 (73.86)
+  kd-train: teacher 5 (77.74) -> student 9 (74.42)
+  kd-train: teacher 8 (75.78) -> student 6 (74.74)
+  kd-train: teacher 2 (75.60) -> student 7 (75.48)
+
+=== Round 89/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (79.38) -> student 6 (74.16)
+  kd-train: teacher 1 (77.82) -> student 7 (75.46)
+  kd-train: teacher 5 (77.74) -> student 2 (75.60)
+  kd-train: teacher 9 (77.62) -> student 8 (75.78)
+
+=== Round 90/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (79.38) -> student 8 (75.02)
+  kd-train: teacher 7 (78.08) -> student 6 (77.44)
+  kd-train: teacher 2 (78.02) -> student 9 (77.62)
+  kd-train: teacher 1 (77.82) -> student 5 (77.74)
+
+=== Round 91/100 (max) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (79.38) -> student 5 (74.66)
+  kd-train: teacher 8 (78.44) -> student 6 (77.28)
+  kd-train: teacher 7 (78.08) -> student 9 (77.68)
+  kd-train: teacher 2 (78.02) -> student 1 (77.82)
+
+=== Round 92/100 (max) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (79.38) -> student 4 (75.88)
+  kd-train: teacher 8 (78.44) -> student 6 (77.06)
+  kd-train: teacher 7 (78.08) -> student 5 (77.54)
+  kd-train: teacher 2 (78.02) -> student 9 (77.78)
+
+=== Round 93/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (80.68) -> student 6 (76.78)
+  kd-train: teacher 3 (79.38) -> student 2 (78.02)
+  kd-train: teacher 4 (79.18) -> student 7 (78.08)
+  kd-train: teacher 8 (78.44) -> student 9 (78.16)
+
+=== Round 94/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (80.68) -> student 8 (78.44)
+  kd-train: teacher 3 (79.38) -> student 9 (78.52)
+  kd-train: teacher 2 (79.30) -> student 6 (78.88)
+  kd-train: teacher 4 (79.18) -> student 7 (78.94)
+
+=== Round 95/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (80.68) -> student 8 (78.24)
+  kd-train: teacher 9 (79.50) -> student 6 (78.70)
+  kd-train: teacher 3 (79.38) -> student 7 (79.04)
+  kd-train: teacher 2 (79.30) -> student 4 (79.18)
+
+=== Round 96/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (80.68) -> student 6 (76.92)
+  kd-train: teacher 7 (80.20) -> student 4 (78.20)
+  kd-train: teacher 9 (79.50) -> student 8 (78.94)
+  kd-train: teacher 3 (79.38) -> student 2 (79.30)
+
+=== Round 97/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (80.68) -> student 8 (77.88)
+  kd-train: teacher 7 (80.20) -> student 4 (78.78)
+  kd-train: teacher 6 (80.10) -> student 2 (79.32)
+  kd-train: teacher 9 (79.50) -> student 3 (79.38)
+
+=== Round 98/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (80.68) -> student 8 (78.76)
+  kd-train: teacher 7 (80.20) -> student 4 (78.90)
+  kd-train: teacher 2 (80.20) -> student 3 (79.12)
+  kd-train: teacher 6 (80.10) -> student 9 (79.50)
+
+=== Round 99/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (80.68) -> student 8 (78.16)
+  kd-train: teacher 9 (80.22) -> student 4 (78.46)
+  kd-train: teacher 7 (80.20) -> student 3 (79.90)
+  kd-train: teacher 2 (80.20) -> student 6 (80.10)
+
+=== Round 100/100 (max) ===
+  oracle-train: oracle -> student 5
+  kd-train: teacher 1 (80.68) -> student 8 (77.56)
+  kd-train: teacher 9 (80.22) -> student 4 (78.94)
+  kd-train: teacher 7 (80.20) -> student 3 (79.48)
+  kd-train: teacher 2 (80.20) -> student 6 (79.96)
+End time: 2026-03-25 01:27:36
+Duration: 1:33:22.909382
+avg_ens_acc = 80.48
+avg_ens_conf = 0.79
+Mean pairwise 0/1 disagreement: 0.1186
+
+===== Distilling Ensemble → Single Model =====
+[Distill Epoch 1/50] Loss=2.0727 ValAcc=55.96
+[Distill Epoch 2/50] Loss=1.2867 ValAcc=63.38
+[Distill Epoch 3/50] Loss=0.8775 ValAcc=67.96
+[Distill Epoch 4/50] Loss=0.6638 ValAcc=69.78
+[Distill Epoch 5/50] Loss=0.5345 ValAcc=72.38
+[Distill Epoch 6/50] Loss=0.4681 ValAcc=74.22
+[Distill Epoch 7/50] Loss=0.4120 ValAcc=75.58
+[Distill Epoch 8/50] Loss=0.3744 ValAcc=76.44
+[Distill Epoch 9/50] Loss=0.3453 ValAcc=76.44
+[Distill Epoch 10/50] Loss=0.3271 ValAcc=76.84
+[Distill Epoch 11/50] Loss=0.3069 ValAcc=77.86
+[Distill Epoch 12/50] Loss=0.2973 ValAcc=78.04
+[Distill Epoch 13/50] Loss=0.2871 ValAcc=78.72
+[Distill Epoch 14/50] Loss=0.2761 ValAcc=78.32
+[Distill Epoch 15/50] Loss=0.2702 ValAcc=79.32
+[Distill Epoch 16/50] Loss=0.2607 ValAcc=78.82
+[Distill Epoch 17/50] Loss=0.2570 ValAcc=80.20
+[Distill Epoch 18/50] Loss=0.2480 ValAcc=79.74
+[Distill Epoch 19/50] Loss=0.2464 ValAcc=79.94
+[Distill Epoch 20/50] Loss=0.2392 ValAcc=80.08
+[Distill Epoch 21/50] Loss=0.2352 ValAcc=80.20
+[Distill Epoch 22/50] Loss=0.2318 ValAcc=81.16
+[Distill Epoch 23/50] Loss=0.2290 ValAcc=80.68
+[Distill Epoch 24/50] Loss=0.2234 ValAcc=80.46
+[Distill Epoch 25/50] Loss=0.2208 ValAcc=80.84
+[Distill Epoch 26/50] Loss=0.2194 ValAcc=80.96
+[Distill Epoch 27/50] Loss=0.2167 ValAcc=80.80
+[Distill Epoch 28/50] Loss=0.2138 ValAcc=80.82
+[Distill Epoch 29/50] Loss=0.2115 ValAcc=81.48
+[Distill Epoch 30/50] Loss=0.2101 ValAcc=81.30
+[Distill Epoch 31/50] Loss=0.2086 ValAcc=81.88
+[Distill Epoch 32/50] Loss=0.2062 ValAcc=81.44
+[Distill Epoch 33/50] Loss=0.2045 ValAcc=81.44
+[Distill Epoch 34/50] Loss=0.2030 ValAcc=81.22
+[Distill Epoch 35/50] Loss=0.2011 ValAcc=81.86
+[Distill Epoch 36/50] Loss=0.2003 ValAcc=81.28
+[Distill Epoch 37/50] Loss=0.1986 ValAcc=80.96
+[Distill Epoch 38/50] Loss=0.1975 ValAcc=81.88
+[Distill Epoch 39/50] Loss=0.1956 ValAcc=82.00
+[Distill Epoch 40/50] Loss=0.1931 ValAcc=81.94
+[Distill Epoch 41/50] Loss=0.1928 ValAcc=82.58
+[Distill Epoch 42/50] Loss=0.1916 ValAcc=82.50
+[Distill Epoch 43/50] Loss=0.1909 ValAcc=81.98
+[Distill Epoch 44/50] Loss=0.1902 ValAcc=81.68
+[Distill Epoch 45/50] Loss=0.1897 ValAcc=82.36
+[Distill Epoch 46/50] Loss=0.1866 ValAcc=82.14
+[Distill Epoch 47/50] Loss=0.1869 ValAcc=82.52
+[Distill Epoch 48/50] Loss=0.1843 ValAcc=82.24
+[Distill Epoch 49/50] Loss=0.1838 ValAcc=82.38
+[Distill Epoch 50/50] Loss=0.1825 ValAcc=82.14
+
+Distilled Student Test Accuracy: 81.47
+M1_acc= 79.98
+M2_acc= 79.31
+M3_acc= 79.38
+M4_acc= 78.27
+M5_acc= 76.77
+M6_acc= 79.52
+M7_acc= 79.44
+M8_acc= 78.44
+M9_acc= 79.61
+std_dev= 0.93
+acc_var= 0.872
+

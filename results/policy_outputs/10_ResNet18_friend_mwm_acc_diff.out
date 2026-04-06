@@ -1,0 +1,624 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Fixed friend groups: [[7, 3, 2, 8, 5], [6, 9, 4, 0, 1]]
+Start time: 2026-03-27 22:02:23
+
+=== Round 1/100 (friend_acc_diff) ===
+  kd-train: teacher 5 (10.62) -> student 7 (10.00)
+  kd-train: teacher 2 (11.10) -> student 3 (9.94)
+  kd-train: teacher 4 (13.66) -> student 9 (7.42)
+  oracle-train: oracle -> student 1
+
+=== Round 2/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (11.08) -> student 8 (10.58)
+  kd-train: teacher 2 (11.10) -> student 3 (9.78)
+  kd-train: teacher 1 (35.44) -> student 4 (13.66)
+  oracle-train: oracle -> student 6
+
+=== Round 3/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (11.08) -> student 5 (10.62)
+  kd-train: teacher 2 (11.10) -> student 3 (9.40)
+  kd-train: teacher 6 (38.98) -> student 9 (14.34)
+  oracle-train: oracle -> student 4
+
+=== Round 4/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (10.64)
+  kd-train: teacher 5 (11.12) -> student 3 (9.84)
+  kd-train: teacher 4 (45.64) -> student 9 (36.38)
+  oracle-train: oracle -> student 1
+
+=== Round 5/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (10.84)
+  kd-train: teacher 5 (11.12) -> student 8 (9.44)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (47.34) -> student 6 (38.98)
+
+=== Round 6/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (10.70)
+  kd-train: teacher 5 (11.12) -> student 3 (9.70)
+  kd-train: teacher 9 (48.34) -> student 6 (42.78)
+  oracle-train: oracle -> student 4
+
+=== Round 7/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (11.06)
+  kd-train: teacher 5 (11.12) -> student 8 (9.42)
+  kd-train: teacher 4 (52.34) -> student 6 (46.38)
+  oracle-train: oracle -> student 1
+
+=== Round 8/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (10.78)
+  kd-train: teacher 5 (11.12) -> student 3 (9.42)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (52.34) -> student 6 (48.84)
+
+=== Round 9/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (10.80)
+  kd-train: teacher 5 (11.12) -> student 8 (9.42)
+  kd-train: teacher 9 (53.44) -> student 6 (46.82)
+  oracle-train: oracle -> student 1
+
+=== Round 10/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (10.88)
+  kd-train: teacher 5 (11.12) -> student 3 (9.94)
+  kd-train: teacher 9 (53.44) -> student 6 (50.10)
+  oracle-train: oracle -> student 1
+
+=== Round 11/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (10.96)
+  kd-train: teacher 5 (11.12) -> student 8 (9.42)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (62.14) -> student 6 (49.92)
+
+=== Round 12/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (10.46)
+  kd-train: teacher 5 (11.12) -> student 3 (9.42)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (62.14) -> student 9 (53.44)
+
+=== Round 13/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (11.02)
+  kd-train: teacher 5 (11.12) -> student 8 (9.42)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (63.52) -> student 6 (60.46)
+
+=== Round 14/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (10.86)
+  kd-train: teacher 5 (11.12) -> student 3 (9.56)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (63.52) -> student 6 (60.40)
+
+=== Round 15/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (10.84)
+  kd-train: teacher 5 (11.12) -> student 8 (9.68)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (63.52) -> student 6 (58.68)
+
+=== Round 16/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (10.64)
+  kd-train: teacher 5 (11.12) -> student 3 (9.52)
+  kd-train: teacher 9 (67.48) -> student 6 (61.86)
+  oracle-train: oracle -> student 1
+
+=== Round 17/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (10.96)
+  kd-train: teacher 5 (11.12) -> student 8 (9.42)
+  kd-train: teacher 9 (67.48) -> student 6 (62.96)
+  oracle-train: oracle -> student 1
+
+=== Round 18/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (10.68)
+  kd-train: teacher 5 (11.12) -> student 8 (10.66)
+  kd-train: teacher 9 (67.48) -> student 6 (64.34)
+  oracle-train: oracle -> student 4
+
+=== Round 19/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (11.00)
+  kd-train: teacher 5 (11.12) -> student 3 (9.42)
+  kd-train: teacher 9 (67.48) -> student 6 (63.72)
+  oracle-train: oracle -> student 4
+
+=== Round 20/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (10.62)
+  kd-train: teacher 5 (11.12) -> student 8 (9.42)
+  kd-train: teacher 9 (67.48) -> student 6 (62.72)
+  oracle-train: oracle -> student 4
+
+=== Round 21/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (11.00)
+  kd-train: teacher 5 (11.12) -> student 3 (10.14)
+  kd-train: teacher 9 (67.48) -> student 6 (65.80)
+  oracle-train: oracle -> student 4
+
+=== Round 22/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (10.44)
+  kd-train: teacher 5 (11.12) -> student 8 (9.40)
+  kd-train: teacher 9 (67.48) -> student 6 (64.78)
+  oracle-train: oracle -> student 4
+
+=== Round 23/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 8 (10.50)
+  kd-train: teacher 5 (11.12) -> student 3 (9.42)
+  kd-train: teacher 4 (69.94) -> student 6 (64.86)
+  oracle-train: oracle -> student 1
+
+=== Round 24/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (11.10) -> student 3 (10.76)
+  kd-train: teacher 5 (11.12) -> student 8 (9.42)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (69.94) -> student 6 (62.88)
+
+=== Round 25/100 (friend_acc_diff) ===
+  kd-train: teacher 3 (12.00) -> student 8 (10.58)
+  kd-train: teacher 5 (11.12) -> student 7 (11.08)
+  kd-train: teacher 9 (69.98) -> student 6 (66.94)
+  oracle-train: oracle -> student 1
+
+=== Round 26/100 (friend_acc_diff) ===
+  kd-train: teacher 3 (12.00) -> student 7 (11.06)
+  kd-train: teacher 8 (12.86) -> student 2 (11.10)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (71.16) -> student 6 (65.88)
+
+=== Round 27/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (12.78) -> student 3 (12.00)
+  kd-train: teacher 8 (12.86) -> student 5 (11.12)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (71.16) -> student 6 (67.84)
+
+=== Round 28/100 (friend_acc_diff) ===
+  kd-train: teacher 3 (12.98) -> student 7 (12.70)
+  kd-train: teacher 5 (13.30) -> student 2 (12.78)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (73.16) -> student 6 (69.62)
+
+=== Round 29/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (13.16) -> student 7 (12.96)
+  kd-train: teacher 5 (13.30) -> student 8 (12.86)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (73.16) -> student 6 (69.90)
+
+=== Round 30/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (13.24) -> student 3 (12.98)
+  kd-train: teacher 5 (13.30) -> student 8 (12.86)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (73.16) -> student 6 (70.08)
+
+=== Round 31/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (13.24) -> student 8 (13.14)
+  kd-train: teacher 5 (13.30) -> student 3 (13.08)
+  kd-train: teacher 4 (73.16) -> student 6 (68.78)
+  oracle-train: oracle -> student 1
+
+=== Round 32/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (13.38) -> student 7 (13.24)
+  kd-train: teacher 3 (13.50) -> student 2 (13.16)
+  kd-train: teacher 4 (73.16) -> student 6 (71.08)
+  oracle-train: oracle -> student 1
+
+=== Round 33/100 (friend_acc_diff) ===
+  kd-train: teacher 3 (13.50) -> student 7 (13.30)
+  kd-train: teacher 2 (13.74) -> student 5 (13.30)
+  kd-train: teacher 4 (73.16) -> student 6 (70.76)
+  oracle-train: oracle -> student 1
+
+=== Round 34/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (13.74) -> student 7 (13.40)
+  kd-train: teacher 5 (14.42) -> student 8 (13.38)
+  kd-train: teacher 4 (73.16) -> student 6 (72.46)
+  oracle-train: oracle -> student 1
+
+=== Round 35/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (13.90) -> student 3 (13.50)
+  kd-train: teacher 5 (14.42) -> student 2 (13.74)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (74.36) -> student 6 (71.28)
+
+=== Round 36/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (14.42) -> student 7 (13.90)
+  kd-train: teacher 5 (14.42) -> student 8 (13.88)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (74.36) -> student 6 (71.00)
+
+=== Round 37/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (14.48) -> student 8 (14.16)
+  kd-train: teacher 5 (14.42) -> student 3 (13.98)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (74.36) -> student 6 (71.16)
+
+=== Round 38/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (14.48) -> student 3 (14.38)
+  kd-train: teacher 5 (14.42) -> student 8 (13.86)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (74.36) -> student 6 (69.98)
+
+=== Round 39/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (14.48) -> student 3 (14.42)
+  kd-train: teacher 8 (14.50) -> student 5 (14.42)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (74.36) -> student 6 (72.76)
+
+=== Round 40/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (14.48) -> student 2 (14.42)
+  kd-train: teacher 8 (14.50) -> student 5 (14.12)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (74.36) -> student 6 (71.16)
+
+=== Round 41/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (14.48) -> student 2 (14.22)
+  kd-train: teacher 8 (14.50) -> student 5 (13.82)
+  kd-train: teacher 9 (75.10) -> student 6 (71.28)
+  oracle-train: oracle -> student 4
+
+=== Round 42/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (14.50) -> student 3 (14.46)
+  kd-train: teacher 5 (14.98) -> student 2 (13.82)
+  kd-train: teacher 9 (75.10) -> student 6 (71.24)
+  oracle-train: oracle -> student 4
+
+=== Round 43/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (14.86) -> student 7 (14.48)
+  kd-train: teacher 5 (14.98) -> student 8 (14.50)
+  kd-train: teacher 4 (76.16) -> student 6 (73.20)
+  oracle-train: oracle -> student 1
+
+=== Round 44/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (15.02) -> student 8 (14.82)
+  kd-train: teacher 5 (14.98) -> student 3 (14.58)
+  kd-train: teacher 4 (76.16) -> student 6 (71.68)
+  oracle-train: oracle -> student 1
+
+=== Round 45/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (15.02) -> student 2 (14.86)
+  kd-train: teacher 5 (14.98) -> student 3 (14.70)
+  kd-train: teacher 4 (76.16) -> student 6 (73.88)
+  oracle-train: oracle -> student 1
+
+=== Round 46/100 (friend_acc_diff) ===
+  kd-train: teacher 5 (14.98) -> student 2 (14.90)
+  kd-train: teacher 7 (15.02) -> student 8 (14.88)
+  kd-train: teacher 4 (76.16) -> student 6 (73.72)
+  oracle-train: oracle -> student 1
+
+=== Round 47/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (15.02) -> student 2 (14.96)
+  kd-train: teacher 8 (15.00) -> student 3 (14.92)
+  kd-train: teacher 4 (76.16) -> student 6 (73.32)
+  oracle-train: oracle -> student 1
+
+=== Round 48/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (15.02) -> student 2 (14.88)
+  kd-train: teacher 8 (15.00) -> student 3 (14.68)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (76.16) -> student 6 (72.56)
+
+=== Round 49/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (15.02) -> student 8 (15.00)
+  kd-train: teacher 3 (15.18) -> student 5 (14.98)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (76.16) -> student 6 (74.60)
+
+=== Round 50/100 (friend_acc_diff) ===
+  kd-train: teacher 3 (15.18) -> student 7 (15.02)
+  kd-train: teacher 5 (15.40) -> student 2 (15.02)
+  kd-train: teacher 9 (76.20) -> student 6 (74.84)
+  oracle-train: oracle -> student 1
+
+=== Round 51/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (15.62) -> student 8 (15.06)
+  kd-train: teacher 5 (15.40) -> student 7 (15.18)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (76.66) -> student 6 (73.68)
+
+=== Round 52/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (15.62) -> student 3 (15.18)
+  kd-train: teacher 8 (15.62) -> student 7 (14.98)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (76.66) -> student 6 (73.98)
+
+=== Round 53/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (15.62) -> student 7 (15.48)
+  kd-train: teacher 8 (15.62) -> student 5 (15.40)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (76.66) -> student 6 (74.78)
+
+=== Round 54/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (15.62) -> student 7 (15.56)
+  kd-train: teacher 8 (15.62) -> student 5 (15.26)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (77.60) -> student 6 (74.62)
+
+=== Round 55/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (15.62) -> student 3 (15.56)
+  kd-train: teacher 7 (15.68) -> student 5 (15.58)
+  kd-train: teacher 4 (77.60) -> student 6 (75.46)
+  oracle-train: oracle -> student 1
+
+=== Round 56/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (15.68) -> student 2 (15.62)
+  kd-train: teacher 5 (15.62) -> student 3 (15.54)
+  kd-train: teacher 4 (77.60) -> student 6 (74.58)
+  oracle-train: oracle -> student 1
+
+=== Round 57/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (15.68) -> student 3 (15.50)
+  kd-train: teacher 2 (15.84) -> student 5 (15.62)
+  kd-train: teacher 4 (77.60) -> student 6 (76.40)
+  oracle-train: oracle -> student 1
+
+=== Round 58/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (15.84) -> student 8 (15.62)
+  kd-train: teacher 5 (15.88) -> student 3 (15.44)
+  kd-train: teacher 4 (77.60) -> student 6 (75.98)
+  oracle-train: oracle -> student 1
+
+=== Round 59/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (16.18) -> student 2 (15.84)
+  kd-train: teacher 5 (15.88) -> student 7 (15.68)
+  kd-train: teacher 4 (77.60) -> student 9 (76.72)
+  oracle-train: oracle -> student 1
+
+=== Round 60/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (15.92) -> student 3 (15.84)
+  kd-train: teacher 8 (16.18) -> student 2 (15.52)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (78.26) -> student 6 (76.88)
+
+=== Round 61/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (16.22) -> student 5 (15.88)
+  kd-train: teacher 8 (16.18) -> student 3 (15.82)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (78.26) -> student 6 (74.44)
+
+=== Round 62/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (16.22) -> student 5 (16.00)
+  kd-train: teacher 8 (16.18) -> student 7 (15.92)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (78.26) -> student 6 (76.44)
+
+=== Round 63/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (16.20) -> student 3 (16.16)
+  kd-train: teacher 2 (16.22) -> student 5 (16.16)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (78.26) -> student 6 (77.12)
+
+=== Round 64/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (16.22) -> student 8 (16.18)
+  kd-train: teacher 3 (16.28) -> student 5 (16.16)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (78.26) -> student 6 (77.56)
+
+=== Round 65/100 (friend_acc_diff) ===
+  kd-train: teacher 3 (16.28) -> student 7 (16.20)
+  kd-train: teacher 8 (16.26) -> student 5 (16.02)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (78.26) -> student 6 (77.48)
+
+=== Round 66/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (16.28) -> student 2 (16.22)
+  kd-train: teacher 3 (16.28) -> student 5 (16.18)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.26) -> student 6 (77.56)
+
+=== Round 67/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (16.28) -> student 8 (16.26)
+  kd-train: teacher 2 (16.32) -> student 5 (16.14)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.26) -> student 6 (77.70)
+
+=== Round 68/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (16.46) -> student 3 (16.28)
+  kd-train: teacher 5 (16.38) -> student 7 (16.28)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.26) -> student 6 (77.22)
+
+=== Round 69/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (16.46) -> student 2 (16.32)
+  kd-train: teacher 7 (16.48) -> student 3 (16.38)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.26) -> student 6 (77.96)
+
+=== Round 70/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (16.48) -> student 3 (16.42)
+  kd-train: teacher 2 (16.56) -> student 5 (16.38)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.26) -> student 6 (77.78)
+
+=== Round 71/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (16.56) -> student 8 (16.46)
+  kd-train: teacher 7 (16.48) -> student 3 (16.40)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.26) -> student 6 (77.68)
+
+=== Round 72/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (16.78) -> student 3 (16.42)
+  kd-train: teacher 2 (16.56) -> student 7 (16.48)
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.26) -> student 6 (77.48)
+
+=== Round 73/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (16.78) -> student 2 (16.56)
+  kd-train: teacher 3 (16.98) -> student 5 (16.48)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (78.38) -> student 6 (77.46)
+
+=== Round 74/100 (friend_acc_diff) ===
+  kd-train: teacher 3 (16.98) -> student 8 (16.78)
+  kd-train: teacher 2 (17.00) -> student 7 (16.58)
+  kd-train: teacher 4 (78.38) -> student 6 (77.86)
+  oracle-train: oracle -> student 1
+
+=== Round 75/100 (friend_acc_diff) ===
+  kd-train: teacher 3 (16.98) -> student 7 (16.94)
+  kd-train: teacher 2 (17.00) -> student 8 (16.90)
+  kd-train: teacher 4 (78.38) -> student 6 (77.74)
+  oracle-train: oracle -> student 1
+
+=== Round 76/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (17.00) -> student 8 (16.84)
+  kd-train: teacher 7 (17.12) -> student 5 (16.94)
+  kd-train: teacher 4 (78.38) -> student 6 (78.26)
+  oracle-train: oracle -> student 1
+
+=== Round 77/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (17.00) -> student 3 (16.98)
+  kd-train: teacher 7 (17.12) -> student 8 (16.94)
+  kd-train: teacher 4 (78.38) -> student 6 (77.78)
+  oracle-train: oracle -> student 1
+
+=== Round 78/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (17.00) -> student 3 (16.94)
+  kd-train: teacher 7 (17.12) -> student 8 (16.88)
+  kd-train: teacher 4 (78.38) -> student 6 (77.64)
+  oracle-train: oracle -> student 1
+
+=== Round 79/100 (friend_acc_diff) ===
+  kd-train: teacher 3 (17.12) -> student 8 (16.98)
+  kd-train: teacher 7 (17.12) -> student 2 (17.00)
+  kd-train: teacher 4 (78.38) -> student 6 (78.02)
+  oracle-train: oracle -> student 1
+
+=== Round 80/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (17.16) -> student 2 (16.86)
+  kd-train: teacher 7 (17.12) -> student 5 (17.00)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 1 (78.90) -> student 6 (78.00)
+
+=== Round 81/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.12) -> student 2 (17.02)
+  kd-train: teacher 8 (17.16) -> student 5 (17.00)
+  kd-train: teacher 6 (79.10) -> student 9 (77.72)
+  oracle-train: oracle -> student 4
+
+=== Round 82/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.12) -> student 2 (17.10)
+  kd-train: teacher 8 (17.16) -> student 5 (17.02)
+  kd-train: teacher 6 (79.10) -> student 9 (78.76)
+  oracle-train: oracle -> student 4
+
+=== Round 83/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.12) -> student 2 (17.04)
+  kd-train: teacher 8 (17.16) -> student 5 (16.06)
+  kd-train: teacher 4 (79.42) -> student 9 (78.34)
+  oracle-train: oracle -> student 1
+
+=== Round 84/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (17.16) -> student 2 (16.94)
+  kd-train: teacher 7 (17.12) -> student 5 (17.02)
+  kd-train: teacher 4 (79.42) -> student 9 (78.60)
+  oracle-train: oracle -> student 1
+
+=== Round 85/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.12) -> student 2 (16.92)
+  kd-train: teacher 8 (17.16) -> student 5 (16.94)
+  kd-train: teacher 4 (79.42) -> student 9 (77.00)
+  oracle-train: oracle -> student 1
+
+=== Round 86/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (17.16) -> student 2 (17.04)
+  kd-train: teacher 3 (17.12) -> student 5 (17.08)
+  kd-train: teacher 4 (79.42) -> student 9 (77.98)
+  oracle-train: oracle -> student 1
+
+=== Round 87/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.12) -> student 2 (16.96)
+  kd-train: teacher 8 (17.16) -> student 5 (16.78)
+  kd-train: teacher 4 (79.42) -> student 9 (76.90)
+  oracle-train: oracle -> student 1
+
+=== Round 88/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (17.16) -> student 2 (16.86)
+  kd-train: teacher 3 (17.12) -> student 5 (16.90)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (79.42) -> student 6 (79.10)
+
+=== Round 89/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (17.16) -> student 7 (17.12)
+  kd-train: teacher 5 (17.16) -> student 2 (16.98)
+  kd-train: teacher 6 (79.50) -> student 9 (77.10)
+  oracle-train: oracle -> student 1
+
+=== Round 90/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.16) -> student 3 (17.12)
+  kd-train: teacher 5 (17.16) -> student 2 (16.88)
+  kd-train: teacher 6 (79.50) -> student 9 (78.00)
+  oracle-train: oracle -> student 1
+
+=== Round 91/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.16) -> student 2 (17.04)
+  kd-train: teacher 5 (17.16) -> student 3 (16.82)
+  kd-train: teacher 6 (79.50) -> student 9 (79.38)
+  oracle-train: oracle -> student 1
+
+=== Round 92/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.16) -> student 3 (17.10)
+  kd-train: teacher 5 (17.16) -> student 2 (16.98)
+  kd-train: teacher 6 (79.50) -> student 9 (77.84)
+  oracle-train: oracle -> student 4
+
+=== Round 93/100 (friend_acc_diff) ===
+  kd-train: teacher 8 (17.16) -> student 2 (17.04)
+  kd-train: teacher 5 (17.16) -> student 3 (17.04)
+  kd-train: teacher 6 (79.50) -> student 9 (77.78)
+  oracle-train: oracle -> student 4
+
+=== Round 94/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.16) -> student 3 (17.04)
+  kd-train: teacher 5 (17.16) -> student 2 (16.98)
+  kd-train: teacher 6 (79.50) -> student 9 (76.76)
+  oracle-train: oracle -> student 4
+
+=== Round 95/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (17.24) -> student 7 (17.16)
+  kd-train: teacher 5 (17.16) -> student 3 (17.08)
+  kd-train: teacher 6 (79.50) -> student 9 (78.04)
+  oracle-train: oracle -> student 4
+
+=== Round 96/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (17.24) -> student 3 (17.06)
+  kd-train: teacher 7 (17.26) -> student 8 (17.16)
+  kd-train: teacher 6 (79.50) -> student 9 (78.36)
+  oracle-train: oracle -> student 4
+
+=== Round 97/100 (friend_acc_diff) ===
+  kd-train: teacher 2 (17.24) -> student 3 (17.18)
+  kd-train: teacher 7 (17.26) -> student 5 (17.16)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (79.52) -> student 6 (79.50)
+
+=== Round 98/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.26) -> student 3 (17.18)
+  kd-train: teacher 8 (17.24) -> student 5 (16.98)
+  oracle-train: oracle -> student 9
+  kd-train: teacher 4 (79.52) -> student 6 (79.02)
+
+=== Round 99/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.26) -> student 3 (17.18)
+  kd-train: teacher 8 (17.24) -> student 5 (17.14)
+  kd-train: teacher 6 (80.02) -> student 9 (76.76)
+  oracle-train: oracle -> student 1
+
+=== Round 100/100 (friend_acc_diff) ===
+  kd-train: teacher 7 (17.26) -> student 3 (17.22)
+  kd-train: teacher 8 (17.24) -> student 5 (17.12)
+  kd-train: teacher 6 (80.02) -> student 9 (78.32)
+  oracle-train: oracle -> student 1
+End time: 2026-03-27 23:20:13
+Duration: 1:17:50.239013
+avg_ens_acc = 55.86
+avg_ens_conf = 0.25
+Mean pairwise 0/1 disagreement: 0.4936
+
+===== Distilling Ensemble → Single Model =====
+M1_acc= 77.5
+M2_acc= 17.68
+M3_acc= 17.55
+M4_acc= 79.29
+M5_acc= 17.64
+M6_acc= 79.26
+M7_acc= 17.6
+M8_acc= 17.59
+M9_acc= 77.77
+std_dev= 30.24
+acc_var= 914.3462
+

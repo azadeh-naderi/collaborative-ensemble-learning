@@ -1,0 +1,470 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Start time: 2026-03-24 21:51:54
+
+=== Round 1/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (13.66) -> student 3 (9.94)
+
+=== Round 2/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (38.12) -> student 4 (13.66)
+
+=== Round 3/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 4 (37.80) -> student 2 (11.10)
+
+=== Round 4/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (38.12) -> student 2 (37.72)
+
+=== Round 5/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (41.24) -> student 2 (38.48)
+
+=== Round 6/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (41.24) -> student 4 (39.30)
+
+=== Round 7/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 2 (49.88) -> student 3 (41.24)
+
+=== Round 8/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (51.64) -> student 3 (45.78)
+
+=== Round 9/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 4 (51.64) -> student 2 (49.88)
+
+=== Round 10/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (54.80) -> student 4 (51.64)
+
+=== Round 11/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (54.80) -> student 1 (51.90)
+
+=== Round 12/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 2 (57.02) -> student 4 (52.20)
+
+=== Round 13/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 2 (57.02) -> student 3 (54.80)
+
+=== Round 14/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (58.46) -> student 2 (57.02)
+
+=== Round 15/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (60.62) -> student 3 (59.32)
+
+=== Round 16/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 2 (66.04) -> student 3 (59.88)
+
+=== Round 17/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (64.36) -> student 4 (60.62)
+
+=== Round 18/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 2 (66.04) -> student 4 (63.42)
+
+=== Round 19/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 2 (66.04) -> student 1 (63.70)
+
+=== Round 20/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (65.98) -> student 3 (64.36)
+
+=== Round 21/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 4 (68.56) -> student 1 (65.98)
+
+=== Round 22/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 2 (66.04) -> student 1 (65.30)
+
+=== Round 23/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (68.56) -> student 3 (66.04)
+
+=== Round 24/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (67.84) -> student 2 (66.04)
+
+=== Round 25/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 1 (69.42) -> student 3 (67.84)
+
+=== Round 26/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (68.56) -> student 3 (66.72)
+
+=== Round 27/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (69.42) -> student 2 (68.38)
+
+=== Round 28/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (69.86) -> student 1 (69.42)
+
+=== Round 29/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 1 (69.94) -> student 4 (68.56)
+
+=== Round 30/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (69.86) -> student 4 (69.24)
+
+=== Round 31/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 2 (73.36) -> student 1 (69.94)
+
+=== Round 32/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 2 (73.36) -> student 3 (69.86)
+
+=== Round 33/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (70.56) -> student 4 (70.34)
+
+=== Round 34/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (71.34) -> student 3 (70.56)
+
+=== Round 35/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 2 (73.36) -> student 1 (71.34)
+
+=== Round 36/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (72.20) -> student 1 (72.10)
+
+=== Round 37/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 2 (73.36) -> student 1 (72.10)
+
+=== Round 38/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 2 (73.36) -> student 4 (72.82)
+
+=== Round 39/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (73.30) -> student 4 (71.90)
+
+=== Round 40/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 2 (73.36) -> student 4 (71.68)
+
+=== Round 41/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 2 (73.36) -> student 1 (73.30)
+
+=== Round 42/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 2 (73.36) -> student 1 (72.68)
+
+=== Round 43/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (73.86) -> student 2 (73.36)
+
+=== Round 44/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (73.86) -> student 4 (72.54)
+
+=== Round 45/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (74.42) -> student 3 (73.86)
+
+=== Round 46/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (73.96) -> student 4 (73.84)
+
+=== Round 47/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (74.04) -> student 3 (73.96)
+
+=== Round 48/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 2 (74.04) -> student 3 (72.40)
+
+=== Round 49/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (74.04) -> student 2 (74.04)
+
+=== Round 50/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (76.24) -> student 3 (75.00)
+
+=== Round 51/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (75.02) -> student 2 (74.56)
+
+=== Round 52/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (76.24) -> student 1 (73.82)
+
+=== Round 53/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (75.02) -> student 1 (74.58)
+
+=== Round 54/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (76.24) -> student 3 (75.02)
+
+=== Round 55/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 4 (76.24) -> student 2 (75.38)
+
+=== Round 56/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 2 (76.58) -> student 4 (76.24)
+
+=== Round 57/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (75.56) -> student 4 (74.76)
+
+=== Round 58/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (77.16) -> student 1 (75.56)
+
+=== Round 59/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 2 (76.58) -> student 1 (75.18)
+
+=== Round 60/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 2 (76.58) -> student 4 (75.18)
+
+=== Round 61/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (77.16) -> student 2 (76.58)
+
+=== Round 62/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (77.16) -> student 4 (75.64)
+
+=== Round 63/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (77.16) -> student 2 (75.80)
+
+=== Round 64/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (77.16) -> student 1 (76.66)
+
+=== Round 65/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (77.16) -> student 2 (75.36)
+
+=== Round 66/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (77.54) -> student 2 (75.88)
+
+=== Round 67/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (77.54) -> student 3 (77.16)
+
+=== Round 68/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 4 (77.54) -> student 1 (75.98)
+
+=== Round 69/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 4 (77.54) -> student 2 (76.30)
+
+=== Round 70/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (76.22) -> student 2 (76.14)
+
+=== Round 71/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 4 (77.54) -> student 2 (76.12)
+
+=== Round 72/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (76.22) -> student 2 (75.90)
+
+=== Round 73/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (78.22) -> student 1 (76.22)
+
+=== Round 74/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (77.54) -> student 1 (77.08)
+
+=== Round 75/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (78.22) -> student 4 (77.54)
+
+=== Round 76/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (78.22) -> student 4 (76.64)
+
+=== Round 77/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (78.22) -> student 1 (78.06)
+
+=== Round 78/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 3 (78.22) -> student 1 (76.20)
+
+=== Round 79/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.14) -> student 2 (77.52)
+
+=== Round 80/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.14) -> student 2 (77.00)
+
+=== Round 81/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 1 (78.14) -> student 4 (77.22)
+
+=== Round 82/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.14) -> student 2 (77.06)
+
+=== Round 83/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.14) -> student 2 (77.56)
+
+=== Round 84/100 (euclidean) ===
+  oracle-train: oracle -> student 4
+  kd-train: teacher 1 (78.14) -> student 2 (77.24)
+
+=== Round 85/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (78.22) -> student 2 (77.90)
+
+=== Round 86/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (79.18) -> student 3 (78.22)
+
+=== Round 87/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (77.26) -> student 2 (76.54)
+
+=== Round 88/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (77.58) -> student 1 (77.26)
+
+=== Round 89/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (79.18) -> student 1 (76.60)
+
+=== Round 90/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (79.18) -> student 3 (77.58)
+
+=== Round 91/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (79.18) -> student 1 (76.84)
+
+=== Round 92/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 2 (77.68) -> student 3 (77.60)
+
+=== Round 93/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (79.18) -> student 3 (76.40)
+
+=== Round 94/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 3 (77.94) -> student 2 (77.68)
+
+=== Round 95/100 (euclidean) ===
+  oracle-train: oracle -> student 1
+  kd-train: teacher 4 (79.18) -> student 2 (77.94)
+
+=== Round 96/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 3 (77.94) -> student 1 (76.28)
+
+=== Round 97/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 4 (79.18) -> student 1 (78.94)
+
+=== Round 98/100 (euclidean) ===
+  oracle-train: oracle -> student 2
+  kd-train: teacher 1 (78.80) -> student 3 (77.94)
+
+=== Round 99/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 1 (78.80) -> student 2 (78.02)
+
+=== Round 100/100 (euclidean) ===
+  oracle-train: oracle -> student 3
+  kd-train: teacher 4 (79.18) -> student 2 (76.84)
+End time: 2026-03-24 22:25:01
+Duration: 0:33:07.497632
+avg_ens_acc = 81.0
+avg_ens_conf = 0.76
+Mean pairwise 0/1 disagreement: 0.1811
+
+===== Distilling Ensemble → Single Model =====
+[Distill Epoch 1/50] Loss=2.1593 ValAcc=45.56
+[Distill Epoch 2/50] Loss=1.4464 ValAcc=60.96
+[Distill Epoch 3/50] Loss=0.9859 ValAcc=65.28
+[Distill Epoch 4/50] Loss=0.7717 ValAcc=69.76
+[Distill Epoch 5/50] Loss=0.6603 ValAcc=71.46
+[Distill Epoch 6/50] Loss=0.5702 ValAcc=73.28
+[Distill Epoch 7/50] Loss=0.5120 ValAcc=73.76
+[Distill Epoch 8/50] Loss=0.4653 ValAcc=75.82
+[Distill Epoch 9/50] Loss=0.4363 ValAcc=75.70
+[Distill Epoch 10/50] Loss=0.3998 ValAcc=75.86
+[Distill Epoch 11/50] Loss=0.3789 ValAcc=77.24
+[Distill Epoch 12/50] Loss=0.3688 ValAcc=77.18
+[Distill Epoch 13/50] Loss=0.3490 ValAcc=77.84
+[Distill Epoch 14/50] Loss=0.3397 ValAcc=78.48
+[Distill Epoch 15/50] Loss=0.3267 ValAcc=78.66
+[Distill Epoch 16/50] Loss=0.3180 ValAcc=79.26
+[Distill Epoch 17/50] Loss=0.3076 ValAcc=79.34
+[Distill Epoch 18/50] Loss=0.2983 ValAcc=79.68
+[Distill Epoch 19/50] Loss=0.2941 ValAcc=78.90
+[Distill Epoch 20/50] Loss=0.2864 ValAcc=79.62
+[Distill Epoch 21/50] Loss=0.2821 ValAcc=80.10
+[Distill Epoch 22/50] Loss=0.2758 ValAcc=80.28
+[Distill Epoch 23/50] Loss=0.2683 ValAcc=80.40
+[Distill Epoch 24/50] Loss=0.2654 ValAcc=80.26
+[Distill Epoch 25/50] Loss=0.2641 ValAcc=80.96
+[Distill Epoch 26/50] Loss=0.2564 ValAcc=80.40
+[Distill Epoch 27/50] Loss=0.2531 ValAcc=80.58
+[Distill Epoch 28/50] Loss=0.2515 ValAcc=81.60
+[Distill Epoch 29/50] Loss=0.2481 ValAcc=80.56
+[Distill Epoch 30/50] Loss=0.2464 ValAcc=80.72
+[Distill Epoch 31/50] Loss=0.2434 ValAcc=81.30
+[Distill Epoch 32/50] Loss=0.2387 ValAcc=81.40
+[Distill Epoch 33/50] Loss=0.2363 ValAcc=80.94
+[Distill Epoch 34/50] Loss=0.2354 ValAcc=81.52
+[Distill Epoch 35/50] Loss=0.2321 ValAcc=81.50
+[Distill Epoch 36/50] Loss=0.2290 ValAcc=81.62
+[Distill Epoch 37/50] Loss=0.2274 ValAcc=81.70
+[Distill Epoch 38/50] Loss=0.2263 ValAcc=82.12
+[Distill Epoch 39/50] Loss=0.2238 ValAcc=82.22
+[Distill Epoch 40/50] Loss=0.2229 ValAcc=82.00
+[Distill Epoch 41/50] Loss=0.2199 ValAcc=81.80
+[Distill Epoch 42/50] Loss=0.2198 ValAcc=81.64
+[Distill Epoch 43/50] Loss=0.2178 ValAcc=81.80
+[Distill Epoch 44/50] Loss=0.2154 ValAcc=81.56
+[Distill Epoch 45/50] Loss=0.2143 ValAcc=81.82
+[Distill Epoch 46/50] Loss=0.2131 ValAcc=81.78
+[Distill Epoch 47/50] Loss=0.2111 ValAcc=82.24
+[Distill Epoch 48/50] Loss=0.2094 ValAcc=81.74
+[Distill Epoch 49/50] Loss=0.2089 ValAcc=82.48
+[Distill Epoch 50/50] Loss=0.2073 ValAcc=82.44
+
+Distilled Student Test Accuracy: 81.68
+M1_acc= 78.19
+M2_acc= 77.72
+M3_acc= 76.92
+M4_acc= 78.23
+std_dev= 0.53
+acc_var= 0.2782
+

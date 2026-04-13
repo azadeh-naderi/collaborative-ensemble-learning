@@ -117,27 +117,6 @@ def maximum_weight_matching_accuracy_difference(tuple_models, val_loader):
 
 
 @torch.no_grad()
-def random_graph_mwm_acc_pairing(tuple_models, val_loader, degree=5, seed=None):
-    num_models = len(tuple_models)
-    if num_models < 2:
-        return []
-    rng = random.Random(seed) if seed is not None else random
-    models = [m for m, _ in tuple_models]
-    ids = [idx for _, idx in tuple_models]
-    accs = [float(accuracy(model, val_loader)) for model, _ in tuple_models]
-    g = nx.Graph()
-    g.add_nodes_from(range(num_models))
-    for i in range(num_models):
-        possible_neighbors = [j for j in range(num_models) if j != i]
-        chosen_neighbors = rng.sample(possible_neighbors, k=min(degree, len(possible_neighbors)))
-        for j in chosen_neighbors:
-            if not g.has_edge(i, j):
-                g.add_edge(i, j, weight=abs(accs[i] - accs[j]))
-    matching = nx.max_weight_matching(g, maxcardinality=True)
-    return [((models[i], ids[i]), (models[j], ids[j])) for i, j in matching]
-
-
-@torch.no_grad()
 def compute_feature_vector_accuracy(model, val_splits, batch_size, run_seed):
     feature_vector = torch.zeros(len(val_splits))
     for j, subset in enumerate(val_splits):
@@ -171,6 +150,94 @@ def farthest_val_random_split(tuple_models, val_splits, batch_size, run_seed):
             break
     return pairs
 
+def pair_fixed_groups_random(groups, seed=None):
+    """
+    Random pairing, but only inside each fixed friend group.
+    """
+    rng = random.Random(seed) if seed is not None else random
+    pairs = []
+
+    for group in groups:
+        if len(group) < 2:
+            continue
+
+        members = list(group)
+        rng.shuffle(members)
+
+        for i in range(0, len(members) - 1, 2):
+            pairs.append((members[i], members[i + 1]))
+
+    return pairs
+
+
+@torch.no_grad()
+def pair_fixed_groups_mwm_acc_diff(groups, val_loader):
+    """
+    Pair only inside each fixed friend group, using maximum-weight matching
+    with edge weight = absolute accuracy difference.
+    """
+    pairs = []
+
+    for group in groups:
+        if len(group) < 2:
+            continue
+
+        models = [m for m, _ in group]
+        ids = [idx for _, idx in group]
+
+        accs = []
+        for model, idx in group:
+            if idx == 0:
+                acc = 100.0
+            else:
+                acc = float(accuracy(model, val_loader))
+            accs.append(acc)
+
+        G = nx.Graph()
+        G.add_nodes_from(range(len(group)))
+
+        for i in range(len(group)):
+            for j in range(i + 1, len(group)):
+                weight = abs(accs[i] - accs[j])
+                G.add_edge(i, j, weight=weight)
+
+        matching = nx.max_weight_matching(G, maxcardinality=True)
+
+        for i, j in matching:
+            pairs.append(((models[i], ids[i]), (models[j], ids[j])))
+
+    return pairs
+
+@torch.no_grad()
+def pair_fixed_groups_acc_diff(groups, val_loader):
+
+    pairs = []
+
+    for group in groups:
+        if len(group) < 2:
+            continue
+
+        # Compute accuracies for members of this group
+        members_with_acc = []
+        for model, idx in group:
+            if idx == 0:
+                acc = 100.0   # oracle handling, same as your current code
+            else:
+                acc = float(accuracy(model, val_loader))
+            members_with_acc.append((model, idx, acc))
+
+        # Sort by accuracy from low to high
+        members_with_acc.sort(key=lambda x: x[2])
+
+        # Pair lowest with highest, next-lowest with next-highest, ...
+        n = len(members_with_acc)
+        for i in range(n // 2):
+            low_model, low_id, low_acc = members_with_acc[i]
+            high_model, high_id, high_acc = members_with_acc[n - 1 - i]
+
+            pairs.append(((low_model, low_id), (high_model, high_id)))
+
+    return pairs
 
 def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, degree, run_seed, batch_size, round_idx):
     return {
@@ -179,7 +246,9 @@ def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, d
         "max": lambda: max_difference_pairing(updated_models, val_loader),
         "mwm_classAcc": lambda: maximum_weight_matching_class_accuracy(updated_models, val_loader, num_classes),
         "mwm_acc": lambda: maximum_weight_matching_accuracy_difference(updated_models, val_loader),
-        "random_graph_mwm_acc": lambda: random_graph_mwm_acc_pairing(updated_models, val_loader, degree=degree, seed=run_seed + round_idx),
+        "friend_random": lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
+        "friend_mwm_acc_diff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
+        "friend_acc_diff": lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
     }
 
 

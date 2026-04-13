@@ -115,24 +115,6 @@ def maximum_weight_matching_accuracy_difference(tuple_models, val_loader):
     return [((models[i], model_indices[i]), (models[j], model_indices[j])) for i, j in matching]
 
 
-@torch.no_grad()
-def random_graph_pairing(tuple_models, degree=5, seed=None):
-    models = [model for model, _ in tuple_models]
-    model_indices = [idx for _, idx in tuple_models]
-    num_models = len(tuple_models)
-    if num_models < 2:
-        return []
-    rng = random.Random(seed) if seed is not None else random
-    g = nx.Graph()
-    g.add_nodes_from(range(num_models))
-    for i in range(num_models):
-        possible_neighbors = [j for j in range(num_models) if j != i]
-        chosen_neighbors = rng.sample(possible_neighbors, k=min(degree, len(possible_neighbors)))
-        for j in chosen_neighbors:
-            g.add_edge(i, j, weight=1.0)
-    matching = nx.max_weight_matching(g, maxcardinality=True)
-    return [((models[i], model_indices[i]), (models[j], model_indices[j])) for i, j in matching]
-
 
 @torch.no_grad()
 def random_graph_mwm_acc_pairing(tuple_models, val_loader, degree=5, seed=None):
@@ -197,7 +179,6 @@ def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, d
         "max": lambda: max_difference_pairing(updated_models, val_loader),
         "mwm_classAcc": lambda: maximum_weight_matching_class_accuracy(updated_models, val_loader, num_classes),
         "mwm_acc": lambda: maximum_weight_matching_accuracy_difference(updated_models, val_loader),
-        "random_graph": lambda: random_graph_pairing(updated_models, degree=degree, seed=run_seed),
         "random_graph_mwm_acc": lambda: random_graph_mwm_acc_pairing(updated_models, val_loader, degree=degree, seed=run_seed + round_idx),
     }
 

@@ -150,6 +150,42 @@ def farthest_val_random_split(tuple_models, val_splits, batch_size, run_seed):
             break
     return pairs
 
+
+def make_fixed_friend_groups_by_id(tuple_models, group_size=group_size, seed=None):
+    """
+    Create fixed random friend groups using model IDs only.
+    Call this once before the round loop.
+    """
+    if group_size < 2:
+        raise ValueError("group_size must be at least 2.")
+
+    ids = [idx for _, idx in tuple_models]
+
+    rng = random.Random(seed) if seed is not None else random
+    rng.shuffle(ids)
+
+    group_ids = []
+    for i in range(0, len(ids), group_size):
+        group_ids.append(ids[i:i + group_size])
+
+    return group_ids
+
+
+def materialize_groups_from_ids(updated_models, group_ids):
+    """
+    Convert fixed group IDs into current (model, idx) tuples.
+    """
+    id_to_model = {idx: (model, idx) for model, idx in updated_models}
+
+    groups = []
+    for gid_group in group_ids:
+        group = [id_to_model[idx] for idx in gid_group if idx in id_to_model]
+        if len(group) > 0:
+            groups.append(group)
+
+    return groups
+
+
 def pair_fixed_groups_random(groups, seed=None):
     """
     Random pairing, but only inside each fixed friend group.
@@ -208,6 +244,7 @@ def pair_fixed_groups_mwm_acc_diff(groups, val_loader):
 
     return pairs
 
+
 @torch.no_grad()
 def pair_fixed_groups_acc_diff(groups, val_loader):
 
@@ -239,6 +276,58 @@ def pair_fixed_groups_acc_diff(groups, val_loader):
 
     return pairs
 
+
+@torch.no_grad()
+def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree=degree, seed=None):
+    """
+    Include oracle in a true random d-regular graph, then choose disjoint pairs
+    greedily by largest accuracy difference among allowed graph edges.
+    """
+    num_models = len(tuple_models)
+    if num_models < 2:
+        return []
+
+    if degree >= num_models:
+        raise ValueError(
+            f"degree must be < num_models, got degree={degree}, num_models={num_models}"
+        )
+
+    if (num_models * degree) % 2 != 0:
+        raise ValueError(
+            f"A {degree}-regular graph on {num_models} nodes cannot exist because "
+            f"num_models * degree must be even."
+        )
+
+    models = [m for m, _ in tuple_models]
+    ids = [idx for _, idx in tuple_models]
+
+    accs = []
+    for model, idx in tuple_models:
+        if idx == 0:
+            accs.append(100.0)
+        else:
+            accs.append(float(accuracy(model, val_loader)))
+
+    G = nx.random_regular_graph(d=degree, n=num_models, seed=seed)
+
+    edge_list = []
+    for i, j in G.edges():
+        diff = abs(accs[i] - accs[j])
+        edge_list.append((diff, i, j))
+
+    edge_list.sort(reverse=True)
+
+    paired = set()
+    pairs = []
+
+    for diff, i, j in edge_list:
+        if i not in paired and j not in paired:
+            paired.add(i)
+            paired.add(j)
+            pairs.append(((models[i], ids[i]), (models[j], ids[j])))
+
+    return pairs
+
 def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, degree, run_seed, batch_size, round_idx):
     return {
         "split": lambda: farthest_val_random_split(updated_models, val_splits, batch_size, run_seed),
@@ -246,9 +335,12 @@ def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, d
         "max": lambda: max_difference_pairing(updated_models, val_loader),
         "mwm_classAcc": lambda: maximum_weight_matching_class_accuracy(updated_models, val_loader, num_classes),
         "mwm_acc": lambda: maximum_weight_matching_accuracy_difference(updated_models, val_loader),
+        
         "friend_random": lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
         "friend_mwm_acc_diff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
         "friend_acc_diff": lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
+
+        "random_3reg_max": lambda: random_regular_graph_maxdiff_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
     }
 
 

@@ -328,6 +328,66 @@ def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree=degree
 
     return pairs
 
+@torch.no_grad()
+def random_regular_graph_uniform_pairing(tuple_models, degree=degree, seed=None):
+    """
+    Random 3-regular graph + uniform random neighbor matching.
+
+    Steps:
+    1. Build random d-regular graph
+    2. Randomly iterate nodes
+    3. Each node picks a random available neighbor
+    4. Form disjoint pairs
+
+    Returns:
+        [((model_a, idx_a), (model_b, idx_b)), ...]
+    """
+    num_models = len(tuple_models)
+    if num_models < 2:
+        return []
+
+    if degree >= num_models:
+        raise ValueError(f"degree must be < num_models")
+
+    if (num_models * degree) % 2 != 0:
+        raise ValueError("num_models * degree must be even for regular graph")
+
+    rng = random.Random(seed)
+
+    models = [m for m, _ in tuple_models]
+    ids = [idx for _, idx in tuple_models]
+
+    # Step 1: build random 3-regular graph
+    G = nx.random_regular_graph(d=degree, n=num_models, seed=seed)
+
+    # Step 2: shuffle node order
+    nodes = list(range(num_models))
+    rng.shuffle(nodes)
+
+    paired = set()
+    pairs = []
+
+    # Step 3: greedy random neighbor matching
+    for i in nodes:
+        if i in paired:
+            continue
+
+        # available neighbors that are not yet paired
+        neighbors = [j for j in G.neighbors(i) if j not in paired]
+
+        if len(neighbors) == 0:
+            continue  # no available neighbor left
+
+        # pick one neighbor uniformly at random
+        j = rng.choice(neighbors)
+
+        paired.add(i)
+        paired.add(j)
+
+        pairs.append(((models[i], ids[i]), (models[j], ids[j])))
+
+    return pairs
+
 def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, degree, run_seed, batch_size, round_idx):
     return {
         "split": lambda: farthest_val_random_split(updated_models, val_splits, batch_size, run_seed),
@@ -341,6 +401,7 @@ def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, d
         "friend_acc_diff": lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
 
         "random_3reg_max": lambda: random_regular_graph_maxdiff_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
+        "random_3reg_uniform": lambda: random_regular_graph_uniform_pairing(tuple_models=updated_models, degree=degree, seed=run_seed + round_idx),
     }
 
 

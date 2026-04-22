@@ -1,0 +1,60 @@
+N=4:
+avg_ens_acc = 86.03
+avg_ens_conf = 0.86
+Mean pairwise 0/1 disagreement: 0.0951
+Distilled Student Test Accuracy: 84.53
+M1_acc= 84.9
+M2_acc= 84.76
+M3_acc= 85.59
+std_dev= 0.36
+acc_var= 0.1316
+
+========================================
+N=10:
+
+avg_ens_acc = 80.56
+avg_ens_conf = 0.77
+Mean pairwise 0/1 disagreement: 0.144
+
+Distilled Student Test Accuracy: 81.72
+M1_acc= 79.64
+M2_acc= 78.69
+M3_acc= 79.08
+M4_acc= 76.02
+M5_acc= 80.56
+M6_acc= 80.21
+M7_acc= 76.55
+M8_acc= 75.89
+M9_acc= 76.82
+std_dev= 1.74
+acc_var= 3.0445
+
+=======================================
+N=20:
+
+avg_ens_acc = 77.57
+avg_ens_conf = 0.74
+Mean pairwise 0/1 disagreement: 0.1653
+
+Distilled Student Test Accuracy: 80.04
+M1_acc= 75.48
+M2_acc= 74.13
+M3_acc= 74.99
+M4_acc= 74.69
+M5_acc= 76.08
+M6_acc= 76.35
+M7_acc= 73.4
+M8_acc= 74.86
+M9_acc= 76.15
+M10_acc= 75.45
+M11_acc= 76.84
+M12_acc= 67.2
+M13_acc= 75.67
+M14_acc= 73.56
+M15_acc= 76.98
+M16_acc= 76.47
+M17_acc= 72.38
+M18_acc= 75.27
+M19_acc= 74.58
+std_dev= 2.14
+acc_var= 4.5826

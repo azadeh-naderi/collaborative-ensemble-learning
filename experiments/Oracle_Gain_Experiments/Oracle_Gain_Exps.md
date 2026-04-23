@@ -1,4 +1,4 @@
-Oracle Gain Diagnostic Experiments
+## Oracle Gain Diagnostic Experiments
 
 To investigate the source of the observed negative oracle gain, we design a set of controlled ablation experiments. Each experiment isolates a single factor in the training dynamics to determine whether the issue arises from optimization behavior, learning rate configuration, or interactions between learning modes.
 
@@ -19,3 +19,34 @@ The default training setup uses a learning rate scheduler that decays the learni
 
 F. Remove KL Divergence from Peer-to-Peer Learning.
 In the standard setup, peer-to-peer learning combines cross-entropy with a KL divergence (distillation) term. These objectives may introduce conflicting gradient signals across rounds, particularly when followed by oracle-guided updates. To isolate this effect, we remove the KL divergence component and retain only the supervised loss during peer interactions. Improvement in oracle gain would indicate that the distillation objective interferes with subsequent oracle learning.
+
+
+## Explanation
+The KL term in peer training is too dominant or too persistent
+
+with alpha = 0.9 and T = 4, so the KL component is very strong in practice. From your code, that means peer training is mostly driven by matching the teacher distribution, not by hard pseudo-label correction.
+
+Over many rounds, this can create:
+
+strong peer-consensus behavior,
+smoother but possibly biased class distributions,
+and resistance to sudden supervised correction from the oracle.
+
+Then the oracle step may:
+
+improve CE loss,
+but slightly hurt immediate top-1 accuracy on validation,
+especially when the student is near a locally stable peer-distilled solution.
+
+That matches your plots very well.
+
+The best explanation is that, later in training, the oracle-trained student has entered a parameter region shaped by repeated peer updates, and a full supervised oracle step with the same training routine is no longer compatible with that region.
+
+In practical terms, after enough rounds:
+
+the student has already been heavily shaped by peer learning,
+MWM still assigns one model to the oracle each round based on the matching objective,
+but that chosen student is no longer one that benefits from a full CE pass,
+so the oracle update becomes a disruptive step rather than a corrective one.
+
+Since the loss also worsens, this looks like a genuine optimization mismatch / destructive update, not just a measurement artifact.

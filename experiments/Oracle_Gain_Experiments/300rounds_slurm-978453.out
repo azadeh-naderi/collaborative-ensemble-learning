@@ -1,0 +1,1332 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Start time: 2026-04-23 10:25:10
+
+=== Round 1/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (13.66) -> student 3 (9.94)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (10.62) -> student 1 (9.56)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (11.10) -> student 9 (7.42)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 6 : 10.10
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 38.50
+  kd-train: teacher 8 (10.58) -> student 7 (10.00)
+    [KD LR after step] = 0.100000
+
+=== Round 2/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 11.00
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 30.46
+  kd-train: teacher 2 (11.10) -> student 1 (10.64)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (48.60) -> student 8 (10.58)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (13.68) -> student 5 (10.62)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (13.66) -> student 9 (9.42)
+    [KD LR after step] = 0.100000
+
+=== Round 3/100 (MWM_AccDiff) ===
+  kd-train: teacher 9 (15.26) -> student 1 (9.42)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (40.80) -> student 5 (13.80)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 2 : 11.10
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 37.90
+  kd-train: teacher 6 (48.60) -> student 3 (13.68)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (41.46) -> student 4 (13.66)
+    [KD LR after step] = 0.100000
+
+=== Round 4/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (48.60) -> student 5 (36.82)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (49.00) -> student 9 (15.26)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 40.80
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 6.90
+  kd-train: teacher 3 (44.12) -> student 1 (15.78)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (41.46) -> student 4 (35.36)
+    [KD LR after step] = 0.100000
+
+=== Round 5/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (48.60) -> student 4 (36.50)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 9 : 43.86
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 3.80
+  kd-train: teacher 2 (49.00) -> student 5 (44.12)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (44.12) -> student 1 (40.70)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (47.70) -> student 7 (41.46)
+    [KD LR after step] = 0.100000
+
+=== Round 6/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 3 : 44.12
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 6.16
+  kd-train: teacher 6 (48.60) -> student 7 (42.42)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (47.70) -> student 4 (43.10)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (49.00) -> student 5 (44.38)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (47.66) -> student 1 (39.34)
+    [KD LR after step] = 0.100000
+
+=== Round 7/100 (MWM_AccDiff) ===
+  kd-train: teacher 5 (47.82) -> student 1 (45.58)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (50.28) -> student 7 (45.86)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (48.60) -> student 4 (43.10)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 9 : 47.66
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 11.92
+  kd-train: teacher 2 (49.00) -> student 8 (47.70)
+    [KD LR after step] = 0.100000
+
+=== Round 8/100 (MWM_AccDiff) ===
+  kd-train: teacher 3 (50.28) -> student 4 (45.80)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (59.58) -> student 7 (34.20)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (48.60) -> student 1 (47.34)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 44.90
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 11.92
+  kd-train: teacher 2 (49.00) -> student 5 (47.82)
+    [KD LR after step] = 0.100000
+
+=== Round 9/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 6 : 48.60
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 6.66
+  kd-train: teacher 9 (59.58) -> student 5 (47.54)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (50.28) -> student 1 (48.28)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (57.06) -> student 4 (45.42)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (56.82) -> student 2 (49.00)
+    [KD LR after step] = 0.010000
+
+=== Round 10/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (56.82) -> student 3 (50.28)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (59.58) -> student 2 (52.50)
+    [KD LR after step] = 0.010000
+  oracle-train: oracle -> student 6 : 55.26
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 6.22
+  kd-train: teacher 5 (56.22) -> student 4 (54.48)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (57.06) -> student 1 (48.32)
+    [KD LR after step] = 0.100000
+
+=== Round 11/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 52.68
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 6.06
+  kd-train: teacher 9 (59.58) -> student 5 (56.22)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (57.06) -> student 1 (54.52)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (61.48) -> student 3 (56.12)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (58.18) -> student 8 (56.82)
+    [KD LR after step] = 0.100000
+
+=== Round 12/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (61.48) -> student 8 (56.62)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 3 : 57.76
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 3.50
+  kd-train: teacher 4 (58.74) -> student 1 (54.58)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (58.18) -> student 7 (57.06)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (59.58) -> student 5 (56.20)
+    [KD LR after step] = 0.100000
+
+=== Round 13/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (61.48) -> student 5 (58.14)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (59.58) -> student 2 (58.18)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 4 (58.74) -> student 1 (55.14)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (61.26) -> student 7 (55.82)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 56.48
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 6.22
+
+=== Round 14/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 58.74
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 0.54
+  kd-train: teacher 8 (62.70) -> student 5 (53.22)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (61.48) -> student 7 (56.32)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (61.26) -> student 2 (58.86)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 9 (59.58) -> student 1 (57.64)
+    [KD LR after step] = 0.100000
+
+=== Round 15/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 59.28
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 6.28
+  kd-train: teacher 5 (60.34) -> student 1 (57.74)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (61.26) -> student 7 (55.66)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (62.70) -> student 2 (58.34)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 6 (61.48) -> student 9 (59.58)
+    [KD LR after step] = 0.100000
+
+=== Round 16/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (61.76) -> student 1 (59.48)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (65.56) -> student 9 (59.52)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 3 : 61.26
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 5.32
+  kd-train: teacher 6 (61.48) -> student 7 (58.94)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (62.70) -> student 5 (60.34)
+    [KD LR after step] = 0.100000
+
+=== Round 17/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (65.56) -> student 7 (58.26)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (62.70) -> student 1 (57.32)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (63.18) -> student 2 (61.76)
+    [KD LR after step] = 0.010000
+  oracle-train: oracle -> student 6 : 61.48
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 3.48
+  kd-train: teacher 3 (66.58) -> student 5 (61.70)
+    [KD LR after step] = 0.100000
+
+=== Round 18/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (65.56) -> student 7 (61.04)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (64.30) -> student 1 (61.20)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (66.58) -> student 2 (62.46)
+    [KD LR after step] = 0.010000
+  oracle-train: oracle -> student 8 : 62.70
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 1.94
+  kd-train: teacher 6 (64.96) -> student 9 (63.18)
+    [KD LR after step] = 0.100000
+
+=== Round 19/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (64.64) -> student 1 (62.48)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 9 : 63.34
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -1.98
+  kd-train: teacher 6 (64.96) -> student 7 (64.38)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (65.56) -> student 5 (64.30)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (66.58) -> student 2 (63.98)
+    [KD LR after step] = 0.010000
+
+=== Round 20/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (65.56) -> student 1 (60.58)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (64.96) -> student 7 (60.64)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (66.58) -> student 9 (61.36)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 64.64
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 3.78
+  kd-train: teacher 2 (64.88) -> student 5 (64.30)
+    [KD LR after step] = 0.100000
+
+=== Round 21/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (65.56) -> student 1 (61.90)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (66.32) -> student 7 (61.44)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 2 : 64.88
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 3.30
+  kd-train: teacher 8 (68.42) -> student 6 (64.96)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 3 (66.58) -> student 5 (63.82)
+    [KD LR after step] = 0.100000
+
+=== Round 22/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 65.08
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 1.56
+  kd-train: teacher 2 (68.18) -> student 6 (63.92)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 3 (66.58) -> student 4 (65.56)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (68.42) -> student 5 (65.54)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (66.32) -> student 1 (63.32)
+    [KD LR after step] = 0.100000
+
+=== Round 23/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (68.42) -> student 4 (66.20)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (68.18) -> student 9 (66.32)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (66.64) -> student 1 (63.70)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 5 : 66.00
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -1.40
+  kd-train: teacher 6 (67.98) -> student 3 (66.58)
+    [KD LR after step] = 0.100000
+
+=== Round 24/100 (MWM_AccDiff) ===
+  kd-train: teacher 9 (68.12) -> student 4 (65.60)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (68.42) -> student 1 (62.48)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 3 : 66.96
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 1.72
+  kd-train: teacher 6 (67.98) -> student 7 (66.64)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (68.18) -> student 5 (64.60)
+    [KD LR after step] = 0.100000
+
+=== Round 25/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (68.18) -> student 1 (67.00)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (68.68) -> student 7 (67.88)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 6 : 67.98
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 0.78
+  kd-train: teacher 8 (68.42) -> student 4 (67.22)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (68.12) -> student 5 (67.80)
+    [KD LR after step] = 0.100000
+
+=== Round 26/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (68.18) -> student 1 (67.22)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (68.76) -> student 7 (67.24)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (68.68) -> student 9 (68.12)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (68.42) -> student 4 (66.86)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 5 : 68.00
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -0.40
+
+=== Round 27/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 67.92
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -0.66
+  kd-train: teacher 3 (68.68) -> student 9 (66.98)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (68.76) -> student 1 (66.86)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (69.52) -> student 5 (67.60)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (68.42) -> student 2 (68.18)
+    [KD LR after step] = 0.001000
+
+=== Round 28/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (69.52) -> student 4 (67.26)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (68.76) -> student 5 (68.12)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (68.68) -> student 9 (66.88)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (68.42) -> student 1 (66.20)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 2 : 67.90
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 4.06
+
+=== Round 29/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 68.10
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 0.10
+  kd-train: teacher 2 (71.96) -> student 9 (68.30)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (69.06) -> student 3 (68.68)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (68.76) -> student 1 (66.46)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (69.52) -> student 8 (68.42)
+    [KD LR after step] = 0.100000
+
+=== Round 30/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (71.96) -> student 4 (68.20)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (69.06) -> student 1 (66.58)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 3 : 67.72
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -0.40
+  kd-train: teacher 7 (69.52) -> student 6 (68.76)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 9 (70.74) -> student 8 (68.40)
+    [KD LR after step] = 0.100000
+
+=== Round 31/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (71.20) -> student 3 (67.32)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (70.20) -> student 1 (66.42)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 6 : 68.84
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 2.98
+  kd-train: teacher 2 (71.96) -> student 5 (69.06)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (70.74) -> student 7 (69.52)
+    [KD LR after step] = 0.100000
+
+=== Round 32/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 71.20
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.32
+  kd-train: teacher 5 (71.70) -> student 1 (70.26)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (71.54) -> student 7 (70.64)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (71.96) -> student 9 (70.74)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (71.82) -> student 8 (70.20)
+    [KD LR after step] = 0.100000
+
+=== Round 33/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 69.92
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -3.12
+  kd-train: teacher 2 (71.96) -> student 9 (69.52)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (71.70) -> student 4 (68.88)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (71.82) -> student 7 (68.80)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (71.54) -> student 8 (69.48)
+    [KD LR after step] = 0.100000
+
+=== Round 34/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 3 : 71.54
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -3.80
+  kd-train: teacher 4 (72.26) -> student 1 (66.80)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (71.70) -> student 9 (71.30)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (71.96) -> student 7 (69.38)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (71.82) -> student 8 (70.16)
+    [KD LR after step] = 0.100000
+
+=== Round 35/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (72.44) -> student 3 (67.74)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (72.26) -> student 9 (68.38)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 5 : 71.70
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -1.20
+  kd-train: teacher 6 (71.82) -> student 1 (70.86)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (71.96) -> student 8 (70.04)
+    [KD LR after step] = 0.100000
+
+=== Round 36/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (72.44) -> student 5 (70.50)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 6 : 71.82
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: -2.16
+  kd-train: teacher 2 (71.96) -> student 8 (71.46)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (72.74) -> student 1 (69.74)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (72.26) -> student 9 (70.84)
+    [KD LR after step] = 0.100000
+
+=== Round 37/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (72.26) -> student 8 (71.44)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (72.74) -> student 9 (69.96)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (72.80) -> student 6 (69.66)
+    [KD LR after step] = 0.001000
+  oracle-train: oracle -> student 2 : 71.96
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 0.54
+  kd-train: teacher 7 (72.44) -> student 1 (71.54)
+    [KD LR after step] = 0.100000
+
+=== Round 38/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (72.50) -> student 1 (70.40)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 4 : 72.26
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -1.74
+  kd-train: teacher 3 (72.74) -> student 9 (69.98)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (72.80) -> student 7 (72.44)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 8 (68.56)
+    [KD LR after step] = 0.100000
+
+=== Round 39/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (72.50) -> student 1 (71.76)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (72.74) -> student 9 (70.56)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 7 (71.54)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (72.80) -> student 4 (70.52)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 71.66
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -5.30
+
+=== Round 40/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (72.56) -> student 7 (71.28)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (72.80) -> student 1 (69.90)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (72.74) -> student 8 (66.36)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 2 : 72.50
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 0.54
+  kd-train: teacher 6 (74.24) -> student 9 (70.42)
+    [KD LR after step] = 0.100000
+
+=== Round 41/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 72.56
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -0.28
+  kd-train: teacher 3 (72.74) -> student 9 (71.94)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (72.80) -> student 1 (72.14)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 8 (72.04)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (73.04) -> student 7 (70.94)
+    [KD LR after step] = 0.100000
+
+=== Round 42/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (73.04) -> student 1 (71.80)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 3 : 72.74
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -0.16
+  kd-train: teacher 6 (74.24) -> student 7 (71.90)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (72.80) -> student 4 (72.28)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (72.90) -> student 9 (70.00)
+    [KD LR after step] = 0.100000
+
+=== Round 43/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (72.90) -> student 1 (72.34)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (73.04) -> student 3 (72.58)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 7 (72.46)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 5 : 72.80
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.76
+  kd-train: teacher 4 (72.84) -> student 9 (70.32)
+    [KD LR after step] = 0.100000
+
+=== Round 44/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 72.84
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 0.40
+  kd-train: teacher 3 (73.56) -> student 9 (70.10)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (72.90) -> student 1 (72.02)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 5 (70.04)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (73.04) -> student 7 (71.26)
+    [KD LR after step] = 0.100000
+
+=== Round 45/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (74.24) -> student 7 (71.36)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 2 : 73.04
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 0.62
+  kd-train: teacher 3 (73.56) -> student 1 (71.66)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (73.16) -> student 8 (72.90)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (73.24) -> student 9 (71.28)
+    [KD LR after step] = 0.100000
+
+=== Round 46/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (73.24) -> student 7 (72.60)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (73.66) -> student 9 (71.12)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (73.56) -> student 8 (71.94)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 5 : 73.16
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.24
+  kd-train: teacher 6 (74.24) -> student 1 (71.06)
+    [KD LR after step] = 0.100000
+
+=== Round 47/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (73.66) -> student 1 (70.86)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (73.24) -> student 8 (71.94)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 5 (70.92)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 9 : 72.94
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.70
+  kd-train: teacher 3 (73.56) -> student 7 (70.44)
+    [KD LR after step] = 0.100000
+
+=== Round 48/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (73.66) -> student 1 (72.08)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 4 : 73.24
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: 1.36
+  kd-train: teacher 5 (74.42) -> student 8 (70.90)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 9 (70.24)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (73.56) -> student 7 (71.80)
+    [KD LR after step] = 0.100000
+
+=== Round 49/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (73.66) -> student 1 (72.10)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (74.60) -> student 3 (73.56)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 9 : 73.28
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -4.26
+  kd-train: teacher 6 (74.24) -> student 7 (73.00)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (74.42) -> student 8 (71.66)
+    [KD LR after step] = 0.100000
+
+=== Round 50/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.60) -> student 3 (69.36)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (74.42) -> student 9 (69.02)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (73.66) -> student 7 (72.30)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 1 (71.96)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 73.58
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -4.54
+
+=== Round 51/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.60) -> student 3 (72.36)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (74.10) -> student 7 (72.92)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 2 : 73.66
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 0.26
+  kd-train: teacher 6 (74.24) -> student 1 (72.70)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (74.42) -> student 8 (69.04)
+    [KD LR after step] = 0.100000
+
+=== Round 52/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.60) -> student 3 (72.00)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 2 : 73.92
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 0.38
+  kd-train: teacher 6 (74.24) -> student 8 (73.12)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (74.42) -> student 7 (72.02)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (74.10) -> student 1 (73.62)
+    [KD LR after step] = 0.100000
+
+=== Round 53/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 9 : 74.10
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -3.80
+  kd-train: teacher 4 (74.60) -> student 1 (72.28)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (74.30) -> student 7 (73.10)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 8 (73.42)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (74.42) -> student 3 (72.26)
+    [KD LR after step] = 0.100000
+
+=== Round 54/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (74.30) -> student 3 (73.96)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (74.42) -> student 9 (70.30)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (74.24) -> student 1 (72.12)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 74.16
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.50
+  kd-train: teacher 4 (74.60) -> student 7 (74.18)
+    [KD LR after step] = 0.100000
+
+=== Round 55/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.60) -> student 7 (71.16)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 2 (74.30) -> student 1 (73.30)
+    [KD LR after step] = 0.010000
+  oracle-train: oracle -> student 6 : 74.24
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 2.20
+  kd-train: teacher 9 (74.32) -> student 3 (72.38)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (74.42) -> student 8 (71.66)
+    [KD LR after step] = 0.100000
+
+=== Round 56/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.60) -> student 1 (73.10)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 6 (76.44) -> student 7 (73.48)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 2 : 74.30
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 0.34
+  kd-train: teacher 9 (74.32) -> student 8 (73.70)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (74.42) -> student 3 (72.96)
+    [KD LR after step] = 0.100000
+
+=== Round 57/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (74.64) -> student 1 (73.54)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 4 (74.60) -> student 8 (73.36)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (75.54) -> student 9 (74.32)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 5 : 74.42
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -3.24
+  kd-train: teacher 6 (76.44) -> student 3 (73.62)
+    [KD LR after step] = 0.100000
+
+=== Round 58/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (75.54) -> student 4 (74.60)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.44) -> student 8 (73.88)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 5 : 71.18
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -0.44
+  kd-train: teacher 2 (74.64) -> student 3 (73.88)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (76.24) -> student 9 (74.54)
+    [KD LR after step] = 0.100000
+
+=== Round 59/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 75.54
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -3.80
+  kd-train: teacher 9 (75.62) -> student 4 (75.26)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (76.24) -> student 5 (70.74)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.44) -> student 3 (73.82)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (75.80) -> student 2 (74.64)
+    [KD LR after step] = 0.001000
+
+=== Round 60/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 3 : 75.20
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -4.82
+  kd-train: teacher 5 (76.58) -> student 4 (73.30)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.44) -> student 7 (71.74)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (76.24) -> student 9 (75.62)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (75.80) -> student 2 (74.20)
+    [KD LR after step] = 0.001000
+
+=== Round 61/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (76.24) -> student 2 (73.38)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 6 (76.44) -> student 3 (70.38)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.58) -> student 9 (75.02)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 75.80
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -5.52
+  kd-train: teacher 7 (76.06) -> student 4 (74.98)
+    [KD LR after step] = 0.100000
+
+=== Round 62/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (76.24) -> student 8 (70.28)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 9 : 75.44
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -5.42
+  kd-train: teacher 6 (76.44) -> student 2 (74.48)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 5 (76.58) -> student 3 (74.60)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (76.06) -> student 4 (75.08)
+    [KD LR after step] = 0.100000
+
+=== Round 63/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 76.06
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.96
+  kd-train: teacher 8 (76.52) -> student 3 (74.60)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (76.24) -> student 2 (74.78)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 6 (76.44) -> student 9 (70.02)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.58) -> student 4 (74.64)
+    [KD LR after step] = 0.100000
+
+=== Round 64/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (76.44) -> student 9 (75.04)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 3 : 76.04
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -8.08
+  kd-train: teacher 5 (76.58) -> student 2 (74.38)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 1 (76.24) -> student 4 (75.66)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (76.52) -> student 7 (73.10)
+    [KD LR after step] = 0.100000
+
+=== Round 65/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (76.52) -> student 3 (67.96)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (76.24) -> student 2 (73.88)
+    [KD LR after step] = 0.001000
+  oracle-train: oracle -> student 9 : 75.32
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -6.62
+  kd-train: teacher 6 (76.44) -> student 4 (75.46)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.58) -> student 7 (75.38)
+    [KD LR after step] = 0.100000
+
+=== Round 66/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 3 : 75.64
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -3.58
+  kd-train: teacher 6 (76.44) -> student 7 (74.92)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (76.52) -> student 9 (68.70)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.58) -> student 2 (74.48)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 1 (76.24) -> student 4 (75.30)
+    [KD LR after step] = 0.100000
+
+=== Round 67/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (76.52) -> student 3 (72.06)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (76.24) -> student 7 (75.54)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.44) -> student 4 (74.52)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 9 : 76.02
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -4.82
+  kd-train: teacher 5 (76.58) -> student 2 (73.36)
+    [KD LR after step] = 0.001000
+
+=== Round 68/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 75.68
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -6.20
+  kd-train: teacher 1 (76.24) -> student 3 (75.14)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.44) -> student 9 (71.20)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.58) -> student 4 (73.66)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (76.52) -> student 2 (73.64)
+    [KD LR after step] = 0.001000
+
+=== Round 69/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 76.24
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 1.24
+  kd-train: teacher 9 (76.46) -> student 4 (74.20)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.44) -> student 3 (75.68)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.58) -> student 2 (73.96)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 8 (76.52) -> student 7 (69.48)
+    [KD LR after step] = 0.100000
+
+=== Round 70/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (77.48) -> student 2 (73.70)
+    [KD LR after step] = 0.000100
+  oracle-train: oracle -> student 6 : 76.44
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 0.44
+  kd-train: teacher 5 (76.58) -> student 4 (74.40)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (76.46) -> student 3 (76.28)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (76.52) -> student 7 (76.08)
+    [KD LR after step] = 0.100000
+
+=== Round 71/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 9 : 76.46
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -1.68
+  kd-train: teacher 5 (76.58) -> student 4 (74.98)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.88) -> student 2 (75.20)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 1 (77.48) -> student 3 (75.08)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (76.52) -> student 7 (76.34)
+    [KD LR after step] = 0.100000
+
+=== Round 72/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 3 : 76.44
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -4.96
+  kd-train: teacher 6 (76.88) -> student 7 (75.42)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 8 (76.52) -> student 9 (74.78)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.58) -> student 2 (75.38)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 1 (77.48) -> student 4 (74.06)
+    [KD LR after step] = 0.100000
+
+=== Round 73/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (77.48) -> student 3 (71.48)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.58) -> student 9 (76.30)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.88) -> student 2 (74.62)
+    [KD LR after step] = 0.000100
+  oracle-train: oracle -> student 8 : 76.52
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -5.20
+  kd-train: teacher 7 (76.74) -> student 4 (74.24)
+    [KD LR after step] = 0.100000
+
+=== Round 74/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (77.48) -> student 4 (74.14)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (76.86) -> student 2 (75.38)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 6 (76.88) -> student 8 (71.32)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 5 : 76.58
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.60
+  kd-train: teacher 7 (76.74) -> student 9 (76.12)
+    [KD LR after step] = 0.100000
+
+=== Round 75/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (77.48) -> student 2 (74.50)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 3 (76.86) -> student 9 (75.16)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.88) -> student 5 (73.98)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 76.28
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -1.50
+  kd-train: teacher 7 (76.74) -> student 4 (75.86)
+    [KD LR after step] = 0.100000
+
+=== Round 76/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 76.74
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 2.68
+  kd-train: teacher 6 (76.88) -> student 9 (75.34)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (76.86) -> student 2 (75.52)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 1 (77.48) -> student 4 (74.52)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.94) -> student 8 (74.78)
+    [KD LR after step] = 0.100000
+
+=== Round 77/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 3 : 76.86
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -5.80
+  kd-train: teacher 1 (77.48) -> student 4 (76.32)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (79.42) -> student 9 (75.94)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (76.88) -> student 8 (75.80)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (76.94) -> student 2 (74.12)
+    [KD LR after step] = 0.000100
+
+=== Round 78/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (79.42) -> student 4 (75.00)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (77.48) -> student 3 (71.06)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (77.92) -> student 6 (76.88)
+    [KD LR after step] = 0.001000
+  oracle-train: oracle -> student 8 : 76.44
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.76
+  kd-train: teacher 5 (76.94) -> student 2 (74.08)
+    [KD LR after step] = 0.000100
+
+=== Round 79/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (79.42) -> student 4 (76.60)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (77.48) -> student 2 (74.26)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 9 (77.92) -> student 8 (73.68)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 5 : 76.94
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -1.16
+  kd-train: teacher 3 (77.34) -> student 6 (76.20)
+    [KD LR after step] = 0.001000
+
+=== Round 80/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 3 : 77.34
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -5.06
+  kd-train: teacher 9 (77.92) -> student 5 (75.78)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (79.42) -> student 6 (75.74)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 1 (77.48) -> student 4 (75.70)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (77.64) -> student 2 (75.46)
+    [KD LR after step] = 0.000100
+
+=== Round 81/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 77.48
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 0.32
+  kd-train: teacher 7 (79.42) -> student 2 (74.76)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 9 (77.92) -> student 3 (72.28)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 6 (77.48) -> student 5 (77.26)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 8 (77.64) -> student 4 (76.54)
+    [KD LR after step] = 0.100000
+
+=== Round 82/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (77.64) -> student 3 (76.86)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 6 : 77.48
+    [Oracle LR after step] = 0.001000
+  oracle-gain in this round: 0.00
+  kd-train: teacher 9 (77.92) -> student 2 (75.26)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 7 (79.42) -> student 5 (76.58)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (77.80) -> student 4 (75.00)
+    [KD LR after step] = 0.100000
+
+=== Round 83/100 (MWM_AccDiff) ===
+  kd-train: teacher 9 (77.92) -> student 4 (75.74)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (77.80) -> student 6 (77.48)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 7 (79.42) -> student 3 (76.42)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 77.64
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -3.18
+  kd-train: teacher 5 (78.20) -> student 2 (74.76)
+    [KD LR after step] = 0.000100
+
+=== Round 84/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (77.80) -> student 6 (77.06)
+    [KD LR after step] = 0.001000
+  oracle-train: oracle -> student 3 : 77.78
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -3.50
+  kd-train: teacher 9 (77.92) -> student 8 (74.46)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (78.20) -> student 2 (75.76)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 7 (79.42) -> student 4 (75.04)
+    [KD LR after step] = 0.010000
+
+=== Round 85/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (79.42) -> student 4 (76.20)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 1 (77.80) -> student 6 (77.26)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 9 (77.92) -> student 3 (74.28)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 77.40
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.70
+  kd-train: teacher 5 (78.20) -> student 2 (75.38)
+    [KD LR after step] = 0.000100
+
+=== Round 86/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 77.80
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 1.20
+  kd-train: teacher 4 (78.42) -> student 8 (74.70)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 5 (78.20) -> student 6 (76.64)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 7 (79.42) -> student 2 (75.46)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 9 (77.92) -> student 3 (77.08)
+    [KD LR after step] = 0.100000
+
+=== Round 87/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.42) -> student 2 (75.48)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 8 (78.80) -> student 3 (76.94)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (79.00) -> student 5 (78.20)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 9 : 77.92
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: -4.66
+  kd-train: teacher 7 (79.42) -> student 6 (76.98)
+    [KD LR after step] = 0.001000
+
+=== Round 88/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.42) -> student 2 (75.46)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 8 (78.80) -> student 5 (76.48)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 3 : 77.24
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -3.96
+  kd-train: teacher 7 (79.42) -> student 6 (77.56)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 1 (79.00) -> student 9 (73.26)
+    [KD LR after step] = 0.010000
+
+=== Round 89/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 78.42
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 0.94
+  kd-train: teacher 7 (79.42) -> student 2 (75.42)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 8 (78.80) -> student 6 (77.30)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 1 (79.00) -> student 5 (76.72)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (79.04) -> student 3 (73.28)
+    [KD LR after step] = 0.100000
+
+=== Round 90/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (79.42) -> student 2 (75.54)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 1 (79.00) -> student 3 (78.42)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (79.36) -> student 5 (76.70)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 78.80
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -5.80
+  kd-train: teacher 9 (79.04) -> student 6 (77.22)
+    [KD LR after step] = 0.001000
+
+=== Round 91/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (79.36) -> student 8 (73.00)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (79.42) -> student 2 (75.58)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 1 (79.00) -> student 3 (77.50)
+    [KD LR after step] = 0.010000
+  oracle-train: oracle -> student 5 : 78.02
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.80
+  kd-train: teacher 9 (79.04) -> student 6 (76.78)
+    [KD LR after step] = 0.001000
+
+=== Round 92/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 79.00
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 0.40
+  kd-train: teacher 4 (79.36) -> student 6 (76.60)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 7 (79.42) -> student 5 (75.22)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (79.04) -> student 3 (78.04)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 8 (79.92) -> student 2 (75.36)
+    [KD LR after step] = 0.000100
+
+=== Round 93/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (79.36) -> student 3 (78.88)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 7 (79.42) -> student 2 (75.32)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 1 (79.40) -> student 6 (77.38)
+    [KD LR after step] = 0.001000
+  oracle-train: oracle -> student 9 : 79.04
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 1.84
+  kd-train: teacher 8 (79.92) -> student 5 (77.42)
+    [KD LR after step] = 0.100000
+
+=== Round 94/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 79.36
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 1.06
+  kd-train: teacher 8 (79.92) -> student 6 (77.34)
+    [KD LR after step] = 0.001000
+  kd-train: teacher 3 (79.98) -> student 2 (75.44)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 9 (80.88) -> student 5 (77.78)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 7 (79.42) -> student 1 (79.40)
+    [KD LR after step] = 0.010000
+
+=== Round 95/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 79.64
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 0.82
+  kd-train: teacher 4 (80.42) -> student 2 (75.50)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 9 (80.88) -> student 5 (77.78)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (79.98) -> student 6 (77.64)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 8 (79.92) -> student 7 (79.42)
+    [KD LR after step] = 0.010000
+
+=== Round 96/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (80.46) -> student 2 (75.80)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 4 (80.42) -> student 6 (77.74)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 3 (79.98) -> student 7 (78.94)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 9 (80.88) -> student 5 (77.84)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 8 : 79.92
+    [Oracle LR after step] = 0.100000
+  oracle-gain in this round: -2.90
+
+=== Round 97/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 79.12
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 1.14
+  kd-train: teacher 1 (80.46) -> student 8 (77.02)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 4 (80.42) -> student 6 (77.86)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 9 (80.88) -> student 2 (75.54)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 3 (79.98) -> student 5 (78.26)
+    [KD LR after step] = 0.100000
+
+=== Round 98/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (80.46) -> student 2 (75.66)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 7 (80.26) -> student 8 (79.64)
+    [KD LR after step] = 0.100000
+  oracle-train: oracle -> student 3 : 79.98
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 1.18
+  kd-train: teacher 4 (80.42) -> student 6 (77.86)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 9 (80.88) -> student 5 (78.02)
+    [KD LR after step] = 0.100000
+
+=== Round 99/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 80.26
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: -0.20
+  kd-train: teacher 4 (80.42) -> student 8 (79.60)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 1 (80.46) -> student 5 (78.44)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 3 (81.16) -> student 2 (75.82)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 9 (80.88) -> student 6 (77.70)
+    [KD LR after step] = 0.000100
+
+=== Round 100/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 80.06
+    [Oracle LR after step] = 0.010000
+  oracle-gain in this round: 1.52
+  kd-train: teacher 3 (81.16) -> student 8 (78.54)
+    [KD LR after step] = 0.010000
+  kd-train: teacher 1 (80.46) -> student 2 (76.48)
+    [KD LR after step] = 0.000100
+  kd-train: teacher 4 (80.42) -> student 5 (78.26)
+    [KD LR after step] = 0.100000
+  kd-train: teacher 9 (80.88) -> student 6 (77.94)
+    [KD LR after step] = 0.000100
+M0: oracle_total_gain=0.00, non_oracle_total_gain=0.00
+M1: oracle_total_gain=0.86, non_oracle_total_gain=70.04
+M2: oracle_total_gain=47.94, non_oracle_total_gain=16.80
+M3: oracle_total_gain=-26.24, non_oracle_total_gain=97.46
+M4: oracle_total_gain=11.74, non_oracle_total_gain=55.02
+M5: oracle_total_gain=-18.24, non_oracle_total_gain=86.48
+M6: oracle_total_gain=59.10, non_oracle_total_gain=8.50
+M7: oracle_total_gain=24.20, non_oracle_total_gain=47.38
+M8: oracle_total_gain=-11.14, non_oracle_total_gain=80.14
+M9: oracle_total_gain=-18.38, non_oracle_total_gain=91.84
+End time: 2026-04-23 12:08:58
+Duration: 1:43:47.715698
+avg_ens_acc = 81.39
+avg_learner_acc = 79.25
+avg_ens_conf = 0.79
+Mean pairwise 0/1 disagreement: 0.136
+M1_acc= 79.7
+M2_acc= 76.22
+M3_acc= 80.3
+M4_acc= 79.5
+M5_acc= 78.68
+M6_acc= 78.03
+M7_acc= 81.23
+M8_acc= 79.09
+M9_acc= 80.47
+std_dev= 1.41
+acc_var= 1.98
+

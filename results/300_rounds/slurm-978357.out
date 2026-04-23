@@ -1,0 +1,2539 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Start time: 2026-04-23 06:41:06
+
+=== Round 1/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 10.62
+  oracle-gain in this round: 27.16
+  kd-train: teacher 6 (10.10) -> student 7 (10.00)
+  kd-train: teacher 4 (13.66) -> student 1 (9.56)
+  kd-train: teacher 2 (11.10) -> student 3 (9.94)
+  kd-train: teacher 8 (10.58) -> student 9 (7.42)
+
+=== Round 2/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 10.14
+  oracle-gain in this round: 24.72
+  kd-train: teacher 5 (37.78) -> student 1 (14.36)
+  kd-train: teacher 6 (10.10) -> student 3 (9.56)
+  kd-train: teacher 4 (13.66) -> student 9 (9.80)
+  kd-train: teacher 2 (11.10) -> student 8 (10.58)
+
+=== Round 3/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 10.14
+  oracle-gain in this round: 18.58
+  kd-train: teacher 7 (34.86) -> student 9 (13.92)
+  kd-train: teacher 6 (10.10) -> student 8 (9.68)
+  kd-train: teacher 5 (37.78) -> student 4 (13.66)
+  kd-train: teacher 1 (13.70) -> student 2 (11.10)
+
+=== Round 4/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 10.14
+  oracle-gain in this round: 31.08
+  kd-train: teacher 3 (28.72) -> student 6 (10.10)
+  kd-train: teacher 9 (28.58) -> student 2 (12.68)
+  kd-train: teacher 5 (37.78) -> student 1 (13.70)
+  kd-train: teacher 4 (35.46) -> student 7 (34.86)
+
+=== Round 5/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 28.58
+  oracle-gain in this round: 5.38
+  kd-train: teacher 2 (30.80) -> student 3 (28.72)
+  kd-train: teacher 8 (41.22) -> student 9 (28.58)
+  kd-train: teacher 1 (36.32) -> student 7 (34.52)
+  kd-train: teacher 5 (37.78) -> student 4 (35.46)
+
+=== Round 6/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 30.42
+  oracle-gain in this round: 11.76
+  kd-train: teacher 6 (33.96) -> student 2 (30.80)
+  kd-train: teacher 8 (41.22) -> student 7 (35.62)
+  kd-train: teacher 9 (40.14) -> student 1 (36.32)
+  kd-train: teacher 5 (37.78) -> student 4 (37.30)
+
+=== Round 7/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 30.38
+  oracle-gain in this round: 13.80
+  kd-train: teacher 3 (42.18) -> student 6 (33.96)
+  kd-train: teacher 7 (39.36) -> student 4 (36.96)
+  kd-train: teacher 5 (37.78) -> student 1 (37.70)
+  kd-train: teacher 8 (41.22) -> student 9 (40.14)
+
+=== Round 8/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 35.92
+  oracle-gain in this round: 10.64
+  kd-train: teacher 2 (44.18) -> student 9 (38.04)
+  kd-train: teacher 6 (41.56) -> student 4 (39.30)
+  kd-train: teacher 3 (42.18) -> student 7 (39.36)
+  kd-train: teacher 8 (41.22) -> student 5 (37.78)
+
+=== Round 9/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 30.30
+  oracle-gain in this round: 17.38
+  kd-train: teacher 9 (42.94) -> student 5 (37.40)
+  kd-train: teacher 1 (46.56) -> student 2 (44.18)
+  kd-train: teacher 6 (41.56) -> student 8 (41.22)
+  kd-train: teacher 3 (42.18) -> student 7 (41.96)
+
+=== Round 10/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 40.74
+  oracle-gain in this round: 7.36
+  kd-train: teacher 9 (42.94) -> student 2 (42.44)
+  kd-train: teacher 1 (46.56) -> student 8 (40.56)
+  kd-train: teacher 4 (47.68) -> student 6 (41.56)
+  kd-train: teacher 3 (42.18) -> student 7 (41.64)
+
+=== Round 11/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 42.56
+  oracle-gain in this round: 8.04
+  kd-train: teacher 8 (45.12) -> student 9 (42.94)
+  kd-train: teacher 5 (48.10) -> student 7 (41.54)
+  kd-train: teacher 1 (46.56) -> student 3 (42.18)
+  kd-train: teacher 4 (47.68) -> student 6 (45.48)
+
+=== Round 12/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 42.50
+  oracle-gain in this round: 2.22
+  kd-train: teacher 5 (48.10) -> student 3 (43.64)
+  kd-train: teacher 7 (47.30) -> student 8 (45.12)
+  kd-train: teacher 2 (50.60) -> student 6 (45.22)
+  kd-train: teacher 4 (47.68) -> student 1 (46.56)
+
+=== Round 13/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 44.72
+  oracle-gain in this round: 7.72
+  kd-train: teacher 2 (50.60) -> student 3 (44.52)
+  kd-train: teacher 6 (48.44) -> student 4 (47.68)
+  kd-train: teacher 1 (48.20) -> student 5 (48.10)
+  kd-train: teacher 8 (47.66) -> student 7 (47.30)
+
+=== Round 14/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 47.02
+  oracle-gain in this round: 4.34
+  kd-train: teacher 9 (52.44) -> student 3 (49.06)
+  kd-train: teacher 6 (48.44) -> student 5 (47.94)
+  kd-train: teacher 4 (48.82) -> student 8 (47.66)
+  kd-train: teacher 2 (50.60) -> student 1 (48.20)
+
+=== Round 15/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 39.10
+  oracle-gain in this round: 11.18
+  kd-train: teacher 7 (51.36) -> student 8 (47.10)
+  kd-train: teacher 2 (50.60) -> student 3 (49.20)
+  kd-train: teacher 9 (52.44) -> student 4 (48.82)
+  kd-train: teacher 5 (48.88) -> student 6 (48.44)
+
+=== Round 16/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 46.08
+  oracle-gain in this round: 16.46
+  kd-train: teacher 7 (51.36) -> student 5 (48.88)
+  kd-train: teacher 9 (52.44) -> student 8 (50.66)
+  kd-train: teacher 2 (50.60) -> student 1 (50.28)
+  kd-train: teacher 3 (50.84) -> student 6 (49.52)
+
+=== Round 17/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 49.02
+  oracle-gain in this round: 9.42
+  kd-train: teacher 4 (62.54) -> student 7 (51.36)
+  kd-train: teacher 3 (50.84) -> student 8 (49.28)
+  kd-train: teacher 9 (52.44) -> student 6 (49.82)
+  kd-train: teacher 2 (50.60) -> student 1 (50.38)
+
+=== Round 18/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 46.16
+  oracle-gain in this round: 13.94
+  kd-train: teacher 5 (58.44) -> student 9 (52.44)
+  kd-train: teacher 7 (58.40) -> student 3 (50.84)
+  kd-train: teacher 4 (62.54) -> student 2 (50.60)
+  kd-train: teacher 8 (51.18) -> student 1 (50.64)
+
+=== Round 19/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 49.70
+  oracle-gain in this round: 7.16
+  kd-train: teacher 6 (60.10) -> student 3 (56.62)
+  kd-train: teacher 7 (58.40) -> student 9 (56.76)
+  kd-train: teacher 4 (62.54) -> student 8 (51.18)
+  kd-train: teacher 5 (58.44) -> student 2 (55.48)
+
+=== Round 20/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 53.86
+  oracle-gain in this round: 7.54
+  kd-train: teacher 6 (60.10) -> student 1 (56.86)
+  kd-train: teacher 3 (58.46) -> student 9 (57.40)
+  kd-train: teacher 5 (58.44) -> student 7 (58.40)
+  kd-train: teacher 4 (62.54) -> student 8 (61.66)
+
+=== Round 21/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 57.08
+  oracle-gain in this round: 6.52
+  kd-train: teacher 2 (61.40) -> student 6 (60.10)
+  kd-train: teacher 8 (60.86) -> student 3 (58.46)
+  kd-train: teacher 1 (58.82) -> student 7 (55.66)
+  kd-train: teacher 4 (62.54) -> student 5 (58.44)
+
+=== Round 22/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 57.54
+  oracle-gain in this round: 5.68
+  kd-train: teacher 5 (59.06) -> student 1 (58.82)
+  kd-train: teacher 9 (63.60) -> student 3 (59.40)
+  kd-train: teacher 4 (62.54) -> student 2 (61.40)
+  kd-train: teacher 6 (61.80) -> student 8 (60.86)
+
+=== Round 23/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 57.42
+  oracle-gain in this round: 6.48
+  kd-train: teacher 3 (60.32) -> student 5 (59.06)
+  kd-train: teacher 9 (63.60) -> student 8 (59.74)
+  kd-train: teacher 7 (63.22) -> student 2 (60.52)
+  kd-train: teacher 4 (62.54) -> student 6 (61.80)
+
+=== Round 24/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 58.66
+  oracle-gain in this round: 3.70
+  kd-train: teacher 6 (62.52) -> student 3 (60.32)
+  kd-train: teacher 9 (63.60) -> student 2 (60.04)
+  kd-train: teacher 4 (62.54) -> student 8 (62.34)
+  kd-train: teacher 1 (63.90) -> student 7 (63.22)
+
+=== Round 25/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 59.58
+  oracle-gain in this round: 4.56
+  kd-train: teacher 9 (63.60) -> student 3 (60.34)
+  kd-train: teacher 7 (62.62) -> student 6 (62.52)
+  kd-train: teacher 2 (62.82) -> student 4 (62.54)
+  kd-train: teacher 1 (63.90) -> student 5 (62.36)
+
+=== Round 26/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 61.84
+  oracle-gain in this round: -0.76
+  kd-train: teacher 8 (64.14) -> student 9 (63.60)
+  kd-train: teacher 4 (62.66) -> student 7 (62.62)
+  kd-train: teacher 2 (62.82) -> student 6 (62.82)
+  kd-train: teacher 1 (63.90) -> student 5 (63.26)
+
+=== Round 27/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 61.62
+  oracle-gain in this round: 3.60
+  kd-train: teacher 8 (64.14) -> student 3 (61.08)
+  kd-train: teacher 9 (63.06) -> student 5 (62.32)
+  kd-train: teacher 1 (63.90) -> student 4 (62.66)
+  kd-train: teacher 2 (62.82) -> student 6 (62.62)
+
+=== Round 28/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 61.02
+  oracle-gain in this round: 1.72
+  kd-train: teacher 7 (65.22) -> student 5 (62.80)
+  kd-train: teacher 9 (63.06) -> student 2 (62.82)
+  kd-train: teacher 1 (63.90) -> student 3 (63.56)
+  kd-train: teacher 8 (64.14) -> student 6 (62.46)
+
+=== Round 29/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 61.76
+  oracle-gain in this round: -0.14
+  kd-train: teacher 5 (63.76) -> student 9 (63.06)
+  kd-train: teacher 8 (64.14) -> student 4 (62.74)
+  kd-train: teacher 7 (65.22) -> student 6 (62.90)
+  kd-train: teacher 1 (63.90) -> student 3 (63.12)
+
+=== Round 30/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 61.62
+  oracle-gain in this round: 2.04
+  kd-train: teacher 4 (64.02) -> student 6 (63.42)
+  kd-train: teacher 8 (64.14) -> student 9 (63.60)
+  kd-train: teacher 1 (63.90) -> student 5 (63.76)
+  kd-train: teacher 7 (65.22) -> student 3 (64.00)
+
+=== Round 31/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 63.66
+  oracle-gain in this round: 3.20
+  kd-train: teacher 4 (64.02) -> student 3 (63.68)
+  kd-train: teacher 7 (65.22) -> student 8 (64.14)
+  kd-train: teacher 6 (63.10) -> student 5 (62.80)
+  kd-train: teacher 9 (64.00) -> student 1 (63.90)
+
+=== Round 32/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 61.28
+  oracle-gain in this round: -1.06
+  kd-train: teacher 2 (66.86) -> student 5 (62.14)
+  kd-train: teacher 8 (64.92) -> student 4 (64.02)
+  kd-train: teacher 7 (65.22) -> student 6 (63.10)
+  kd-train: teacher 1 (64.04) -> student 9 (64.00)
+
+=== Round 33/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 60.22
+  oracle-gain in this round: 8.52
+  kd-train: teacher 4 (65.14) -> student 5 (63.90)
+  kd-train: teacher 2 (66.86) -> student 8 (64.92)
+  kd-train: teacher 7 (65.22) -> student 1 (64.04)
+  kd-train: teacher 9 (64.20) -> student 6 (64.04)
+
+=== Round 34/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 64.04
+  oracle-gain in this round: 3.36
+  kd-train: teacher 3 (68.74) -> student 2 (66.86)
+  kd-train: teacher 1 (63.48) -> student 6 (62.86)
+  kd-train: teacher 5 (65.46) -> student 9 (64.20)
+  kd-train: teacher 7 (65.22) -> student 4 (65.14)
+
+=== Round 35/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 64.12
+  oracle-gain in this round: 1.84
+  kd-train: teacher 3 (68.74) -> student 8 (67.40)
+  kd-train: teacher 2 (67.10) -> student 1 (63.48)
+  kd-train: teacher 9 (64.14) -> student 6 (63.48)
+  kd-train: teacher 5 (65.46) -> student 7 (65.22)
+
+=== Round 36/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 63.22
+  oracle-gain in this round: 0.66
+  kd-train: teacher 1 (64.68) -> student 9 (64.14)
+  kd-train: teacher 2 (67.10) -> student 7 (65.36)
+  kd-train: teacher 3 (68.74) -> student 5 (65.46)
+  kd-train: teacher 8 (68.78) -> student 4 (65.96)
+
+=== Round 37/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 62.46
+  oracle-gain in this round: 3.74
+  kd-train: teacher 7 (65.72) -> student 6 (63.88)
+  kd-train: teacher 5 (68.04) -> student 2 (67.10)
+  kd-train: teacher 3 (68.74) -> student 1 (64.68)
+  kd-train: teacher 8 (68.78) -> student 4 (67.02)
+
+=== Round 38/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 62.78
+  oracle-gain in this round: 5.92
+  kd-train: teacher 9 (66.20) -> student 1 (63.54)
+  kd-train: teacher 2 (68.14) -> student 7 (65.72)
+  kd-train: teacher 3 (68.74) -> student 5 (68.04)
+  kd-train: teacher 8 (68.78) -> student 4 (66.74)
+
+=== Round 39/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 65.44
+  oracle-gain in this round: -0.88
+  kd-train: teacher 7 (67.04) -> student 9 (66.20)
+  kd-train: teacher 3 (68.74) -> student 6 (68.70)
+  kd-train: teacher 2 (68.14) -> student 4 (68.00)
+  kd-train: teacher 8 (68.78) -> student 5 (66.90)
+
+=== Round 40/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 64.56
+  oracle-gain in this round: 2.64
+  kd-train: teacher 6 (68.28) -> student 4 (67.06)
+  kd-train: teacher 7 (67.04) -> student 5 (65.12)
+  kd-train: teacher 3 (68.74) -> student 9 (65.82)
+  kd-train: teacher 8 (68.78) -> student 2 (68.14)
+
+=== Round 41/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 66.48
+  oracle-gain in this round: 3.64
+  kd-train: teacher 1 (67.20) -> student 2 (67.02)
+  kd-train: teacher 6 (68.28) -> student 7 (67.04)
+  kd-train: teacher 3 (68.74) -> student 5 (66.20)
+  kd-train: teacher 8 (68.78) -> student 4 (68.52)
+
+=== Round 42/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 67.04
+  oracle-gain in this round: -0.86
+  kd-train: teacher 9 (70.12) -> student 1 (67.20)
+  kd-train: teacher 8 (68.78) -> student 2 (67.04)
+  kd-train: teacher 6 (68.28) -> student 4 (68.06)
+  kd-train: teacher 3 (68.74) -> student 5 (67.20)
+
+=== Round 43/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 66.18
+  oracle-gain in this round: -1.02
+  kd-train: teacher 1 (68.72) -> student 7 (66.18)
+  kd-train: teacher 9 (70.12) -> student 4 (68.14)
+  kd-train: teacher 8 (68.78) -> student 6 (68.28)
+  kd-train: teacher 3 (68.74) -> student 2 (66.44)
+
+=== Round 44/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 65.16
+  oracle-gain in this round: 2.42
+  kd-train: teacher 6 (67.92) -> student 7 (66.20)
+  kd-train: teacher 3 (68.74) -> student 1 (68.72)
+  kd-train: teacher 9 (70.12) -> student 8 (68.78)
+  kd-train: teacher 2 (68.72) -> student 4 (68.72)
+
+=== Round 45/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 67.58
+  oracle-gain in this round: 2.78
+  kd-train: teacher 9 (70.12) -> student 6 (67.92)
+  kd-train: teacher 1 (68.70) -> student 8 (67.78)
+  kd-train: teacher 4 (67.76) -> student 7 (67.56)
+  kd-train: teacher 3 (68.74) -> student 2 (68.72)
+
+=== Round 46/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 66.72
+  oracle-gain in this round: 1.02
+  kd-train: teacher 5 (70.36) -> student 4 (67.76)
+  kd-train: teacher 6 (69.84) -> student 1 (68.70)
+  kd-train: teacher 9 (70.12) -> student 3 (68.74)
+  kd-train: teacher 7 (68.94) -> student 8 (68.64)
+
+=== Round 47/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 67.02
+  oracle-gain in this round: -1.78
+  kd-train: teacher 5 (70.36) -> student 3 (67.38)
+  kd-train: teacher 9 (70.12) -> student 4 (69.24)
+  kd-train: teacher 7 (68.94) -> student 2 (67.74)
+  kd-train: teacher 6 (69.84) -> student 1 (69.14)
+
+=== Round 48/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 65.24
+  oracle-gain in this round: 5.42
+  kd-train: teacher 9 (70.12) -> student 3 (67.32)
+  kd-train: teacher 5 (70.36) -> student 7 (68.94)
+  kd-train: teacher 4 (68.68) -> student 2 (68.58)
+  kd-train: teacher 1 (70.00) -> student 6 (69.84)
+
+=== Round 49/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 68.88
+  oracle-gain in this round: 1.14
+  kd-train: teacher 5 (70.36) -> student 3 (69.38)
+  kd-train: teacher 8 (70.66) -> student 6 (68.32)
+  kd-train: teacher 1 (70.00) -> student 4 (68.68)
+  kd-train: teacher 9 (70.12) -> student 2 (67.26)
+
+=== Round 50/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 66.72
+  oracle-gain in this round: 1.98
+  kd-train: teacher 5 (70.36) -> student 2 (68.28)
+  kd-train: teacher 9 (70.12) -> student 3 (68.62)
+  kd-train: teacher 8 (70.66) -> student 7 (70.02)
+  kd-train: teacher 1 (70.00) -> student 4 (69.26)
+
+=== Round 51/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 68.18
+  oracle-gain in this round: 1.82
+  kd-train: teacher 3 (69.46) -> student 6 (68.70)
+  kd-train: teacher 5 (70.36) -> student 9 (70.12)
+  kd-train: teacher 8 (70.66) -> student 1 (70.00)
+  kd-train: teacher 7 (70.36) -> student 4 (69.32)
+
+=== Round 52/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 68.50
+  oracle-gain in this round: 2.86
+  kd-train: teacher 5 (70.36) -> student 3 (69.46)
+  kd-train: teacher 2 (70.00) -> student 1 (68.58)
+  kd-train: teacher 4 (69.94) -> student 6 (69.42)
+  kd-train: teacher 8 (70.66) -> student 7 (70.36)
+
+=== Round 53/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 68.78
+  oracle-gain in this round: 0.04
+  kd-train: teacher 8 (70.66) -> student 5 (70.36)
+  kd-train: teacher 7 (70.06) -> student 2 (70.00)
+  kd-train: teacher 4 (69.94) -> student 1 (69.62)
+  kd-train: teacher 9 (71.36) -> student 6 (69.38)
+
+=== Round 54/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 68.94
+  oracle-gain in this round: -1.30
+  kd-train: teacher 6 (70.62) -> student 2 (69.12)
+  kd-train: teacher 9 (71.36) -> student 7 (70.06)
+  kd-train: teacher 8 (70.66) -> student 3 (68.82)
+  kd-train: teacher 5 (70.66) -> student 4 (69.94)
+
+=== Round 55/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 67.64
+  oracle-gain in this round: 3.44
+  kd-train: teacher 7 (70.16) -> student 3 (68.94)
+  kd-train: teacher 8 (70.66) -> student 2 (68.20)
+  kd-train: teacher 5 (70.66) -> student 6 (70.62)
+  kd-train: teacher 9 (71.36) -> student 4 (70.40)
+
+=== Round 56/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 68.22
+  oracle-gain in this round: 3.70
+  kd-train: teacher 8 (70.66) -> student 3 (68.32)
+  kd-train: teacher 5 (70.66) -> student 7 (70.16)
+  kd-train: teacher 9 (71.36) -> student 1 (71.08)
+  kd-train: teacher 6 (70.94) -> student 4 (69.36)
+
+=== Round 57/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 68.94
+  oracle-gain in this round: 1.76
+  kd-train: teacher 2 (71.92) -> student 4 (69.98)
+  kd-train: teacher 8 (70.66) -> student 1 (70.54)
+  kd-train: teacher 9 (71.36) -> student 5 (70.66)
+  kd-train: teacher 6 (70.94) -> student 7 (69.28)
+
+=== Round 58/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 67.04
+  oracle-gain in this round: 4.74
+  kd-train: teacher 4 (71.14) -> student 1 (69.80)
+  kd-train: teacher 2 (71.92) -> student 3 (70.70)
+  kd-train: teacher 9 (71.36) -> student 7 (69.84)
+  kd-train: teacher 6 (70.94) -> student 8 (70.66)
+
+=== Round 59/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 71.14
+  oracle-gain in this round: -2.42
+  kd-train: teacher 1 (71.74) -> student 8 (70.06)
+  kd-train: teacher 5 (71.78) -> student 7 (69.80)
+  kd-train: teacher 2 (71.92) -> student 6 (70.94)
+  kd-train: teacher 3 (72.22) -> student 9 (71.36)
+
+=== Round 60/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 68.72
+  oracle-gain in this round: 2.78
+  kd-train: teacher 9 (72.02) -> student 8 (70.42)
+  kd-train: teacher 5 (71.78) -> student 6 (71.04)
+  kd-train: teacher 3 (72.22) -> student 7 (70.18)
+  kd-train: teacher 2 (71.92) -> student 1 (71.74)
+
+=== Round 61/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 68.30
+  oracle-gain in this round: 4.66
+  kd-train: teacher 9 (72.02) -> student 4 (71.50)
+  kd-train: teacher 7 (71.38) -> student 6 (70.06)
+  kd-train: teacher 2 (71.92) -> student 5 (71.78)
+  kd-train: teacher 3 (72.22) -> student 1 (71.16)
+
+=== Round 62/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 70.72
+  oracle-gain in this round: 0.74
+  kd-train: teacher 8 (72.96) -> student 6 (70.74)
+  kd-train: teacher 5 (72.06) -> student 9 (72.02)
+  kd-train: teacher 1 (72.02) -> student 7 (71.38)
+  kd-train: teacher 3 (72.22) -> student 2 (71.92)
+
+=== Round 63/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 70.24
+  oracle-gain in this round: 2.14
+  kd-train: teacher 4 (71.46) -> student 9 (70.98)
+  kd-train: teacher 8 (72.96) -> student 2 (71.48)
+  kd-train: teacher 3 (72.22) -> student 6 (71.88)
+  kd-train: teacher 5 (72.06) -> student 1 (72.02)
+
+=== Round 64/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 70.46
+  oracle-gain in this round: 3.78
+  kd-train: teacher 7 (72.38) -> student 4 (71.46)
+  kd-train: teacher 8 (72.96) -> student 6 (70.38)
+  kd-train: teacher 3 (72.22) -> student 2 (70.86)
+  kd-train: teacher 5 (72.06) -> student 1 (71.88)
+
+=== Round 65/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 68.90
+  oracle-gain in this round: -1.28
+  kd-train: teacher 4 (71.76) -> student 6 (70.82)
+  kd-train: teacher 8 (72.96) -> student 3 (72.22)
+  kd-train: teacher 9 (74.24) -> student 7 (72.38)
+  kd-train: teacher 5 (72.06) -> student 1 (71.38)
+
+=== Round 66/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 68.20
+  oracle-gain in this round: 0.26
+  kd-train: teacher 4 (71.76) -> student 2 (67.62)
+  kd-train: teacher 8 (72.96) -> student 1 (71.32)
+  kd-train: teacher 5 (72.06) -> student 3 (71.56)
+  kd-train: teacher 9 (74.24) -> student 7 (71.16)
+
+=== Round 67/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 68.46
+  oracle-gain in this round: 5.48
+  kd-train: teacher 4 (71.76) -> student 1 (70.42)
+  kd-train: teacher 8 (72.96) -> student 2 (69.86)
+  kd-train: teacher 3 (72.16) -> student 7 (71.86)
+  kd-train: teacher 9 (74.24) -> student 5 (72.06)
+
+=== Round 68/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 68.96
+  oracle-gain in this round: 2.90
+  kd-train: teacher 8 (72.96) -> student 4 (71.76)
+  kd-train: teacher 2 (72.54) -> student 3 (72.16)
+  kd-train: teacher 6 (73.94) -> student 5 (71.32)
+  kd-train: teacher 9 (74.24) -> student 7 (72.30)
+
+=== Round 69/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 70.90
+  oracle-gain in this round: -2.78
+  kd-train: teacher 4 (72.54) -> student 1 (71.86)
+  kd-train: teacher 6 (73.94) -> student 8 (72.96)
+  kd-train: teacher 5 (74.08) -> student 2 (72.54)
+  kd-train: teacher 9 (74.24) -> student 3 (72.64)
+
+=== Round 70/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 68.12
+  oracle-gain in this round: 4.14
+  kd-train: teacher 4 (72.54) -> student 2 (70.54)
+  kd-train: teacher 6 (73.94) -> student 1 (71.62)
+  kd-train: teacher 8 (72.40) -> student 3 (71.34)
+  kd-train: teacher 9 (74.24) -> student 5 (74.08)
+
+=== Round 71/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 69.44
+  oracle-gain in this round: 2.26
+  kd-train: teacher 4 (72.54) -> student 7 (72.26)
+  kd-train: teacher 5 (72.60) -> student 1 (71.66)
+  kd-train: teacher 6 (73.94) -> student 2 (72.46)
+  kd-train: teacher 9 (74.24) -> student 8 (72.40)
+
+=== Round 72/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 70.22
+  oracle-gain in this round: 2.32
+  kd-train: teacher 4 (72.54) -> student 8 (71.42)
+  kd-train: teacher 7 (72.28) -> student 3 (71.70)
+  kd-train: teacher 5 (72.60) -> student 2 (71.94)
+  kd-train: teacher 9 (74.24) -> student 6 (73.94)
+
+=== Round 73/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 70.96
+  oracle-gain in this round: -2.06
+  kd-train: teacher 1 (72.54) -> student 7 (72.28)
+  kd-train: teacher 9 (74.24) -> student 8 (71.54)
+  kd-train: teacher 6 (73.84) -> student 4 (72.54)
+  kd-train: teacher 5 (72.60) -> student 2 (71.82)
+
+=== Round 74/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 68.90
+  oracle-gain in this round: 3.00
+  kd-train: teacher 5 (72.60) -> student 7 (71.30)
+  kd-train: teacher 6 (73.84) -> student 1 (72.54)
+  kd-train: teacher 4 (73.92) -> student 2 (72.84)
+  kd-train: teacher 9 (74.24) -> student 8 (73.88)
+
+=== Round 75/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 71.58
+  oracle-gain in this round: 2.34
+  kd-train: teacher 8 (72.00) -> student 3 (71.90)
+  kd-train: teacher 4 (73.92) -> student 1 (72.92)
+  kd-train: teacher 9 (74.24) -> student 2 (71.18)
+  kd-train: teacher 6 (73.84) -> student 5 (72.60)
+
+=== Round 76/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 72.00
+  oracle-gain in this round: 0.08
+  kd-train: teacher 7 (73.92) -> student 3 (72.50)
+  kd-train: teacher 4 (73.92) -> student 2 (72.38)
+  kd-train: teacher 5 (73.12) -> student 1 (72.26)
+  kd-train: teacher 9 (74.24) -> student 6 (73.84)
+
+=== Round 77/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 71.20
+  oracle-gain in this round: 2.54
+  kd-train: teacher 6 (72.86) -> student 8 (72.08)
+  kd-train: teacher 7 (73.92) -> student 2 (72.30)
+  kd-train: teacher 4 (73.92) -> student 1 (72.68)
+  kd-train: teacher 9 (74.24) -> student 5 (73.12)
+
+=== Round 78/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 71.44
+  oracle-gain in this round: -2.00
+  kd-train: teacher 7 (73.92) -> student 6 (72.86)
+  kd-train: teacher 3 (73.74) -> student 8 (72.48)
+  kd-train: teacher 4 (73.92) -> student 5 (73.06)
+  kd-train: teacher 9 (74.24) -> student 1 (73.04)
+
+=== Round 79/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 69.44
+  oracle-gain in this round: 3.46
+  kd-train: teacher 6 (72.30) -> student 1 (71.58)
+  kd-train: teacher 7 (73.92) -> student 5 (72.04)
+  kd-train: teacher 9 (74.24) -> student 3 (73.74)
+  kd-train: teacher 4 (73.92) -> student 8 (73.48)
+
+=== Round 80/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 69.82
+  oracle-gain in this round: -0.52
+  kd-train: teacher 2 (72.90) -> student 6 (72.30)
+  kd-train: teacher 8 (72.46) -> student 5 (71.72)
+  kd-train: teacher 9 (74.24) -> student 7 (73.92)
+  kd-train: teacher 3 (74.28) -> student 4 (73.92)
+
+=== Round 81/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 69.30
+  oracle-gain in this round: 2.42
+  kd-train: teacher 7 (74.82) -> student 6 (69.74)
+  kd-train: teacher 2 (72.90) -> student 5 (71.08)
+  kd-train: teacher 4 (72.92) -> student 8 (72.46)
+  kd-train: teacher 3 (74.28) -> student 9 (74.24)
+
+=== Round 82/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 71.46
+  oracle-gain in this round: 2.22
+  kd-train: teacher 9 (73.24) -> student 1 (71.72)
+  kd-train: teacher 6 (73.54) -> student 5 (71.66)
+  kd-train: teacher 7 (74.82) -> student 2 (72.90)
+  kd-train: teacher 3 (74.28) -> student 4 (72.92)
+
+=== Round 83/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 71.94
+  oracle-gain in this round: -0.56
+  kd-train: teacher 8 (73.68) -> student 6 (73.54)
+  kd-train: teacher 9 (73.24) -> student 4 (72.90)
+  kd-train: teacher 2 (73.94) -> student 1 (73.32)
+  kd-train: teacher 7 (74.82) -> student 3 (74.28)
+
+=== Round 84/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 71.96
+  oracle-gain in this round: 1.56
+  kd-train: teacher 3 (73.46) -> student 5 (71.38)
+  kd-train: teacher 7 (74.82) -> student 6 (72.32)
+  kd-train: teacher 1 (73.62) -> student 9 (73.24)
+  kd-train: teacher 2 (73.94) -> student 8 (73.68)
+
+=== Round 85/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 71.88
+  oracle-gain in this round: 0.58
+  kd-train: teacher 4 (73.52) -> student 6 (73.52)
+  kd-train: teacher 3 (73.46) -> student 9 (72.36)
+  kd-train: teacher 7 (74.82) -> student 1 (73.62)
+  kd-train: teacher 8 (74.24) -> student 2 (73.94)
+
+=== Round 86/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 72.46
+  oracle-gain in this round: -1.00
+  kd-train: teacher 4 (73.52) -> student 2 (72.66)
+  kd-train: teacher 6 (73.88) -> student 9 (72.86)
+  kd-train: teacher 8 (74.24) -> student 3 (73.46)
+  kd-train: teacher 7 (74.82) -> student 1 (74.16)
+
+=== Round 87/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 71.46
+  oracle-gain in this round: 3.34
+  kd-train: teacher 3 (72.52) -> student 2 (72.08)
+  kd-train: teacher 8 (74.24) -> student 4 (73.52)
+  kd-train: teacher 7 (74.82) -> student 9 (72.34)
+  kd-train: teacher 1 (74.02) -> student 6 (73.88)
+
+=== Round 88/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 71.96
+  oracle-gain in this round: -0.62
+  kd-train: teacher 5 (74.80) -> student 4 (73.16)
+  kd-train: teacher 8 (74.24) -> student 6 (71.52)
+  kd-train: teacher 9 (72.70) -> student 3 (72.52)
+  kd-train: teacher 7 (74.82) -> student 1 (74.02)
+
+=== Round 89/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 71.34
+  oracle-gain in this round: 3.50
+  kd-train: teacher 5 (74.80) -> student 1 (72.28)
+  kd-train: teacher 4 (73.72) -> student 6 (73.16)
+  kd-train: teacher 8 (74.24) -> student 9 (72.70)
+  kd-train: teacher 7 (74.82) -> student 3 (73.50)
+
+=== Round 90/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 69.14
+  oracle-gain in this round: 1.96
+  kd-train: teacher 5 (74.80) -> student 9 (72.10)
+  kd-train: teacher 8 (74.24) -> student 6 (72.36)
+  kd-train: teacher 2 (74.84) -> student 3 (73.00)
+  kd-train: teacher 7 (74.82) -> student 4 (73.72)
+
+=== Round 91/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 71.42
+  oracle-gain in this round: -1.04
+  kd-train: teacher 5 (74.80) -> student 4 (72.40)
+  kd-train: teacher 8 (74.24) -> student 1 (71.10)
+  kd-train: teacher 7 (74.82) -> student 3 (74.28)
+  kd-train: teacher 2 (74.84) -> student 6 (74.34)
+
+=== Round 92/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 70.38
+  oracle-gain in this round: 4.76
+  kd-train: teacher 8 (74.24) -> student 4 (71.66)
+  kd-train: teacher 5 (74.80) -> student 1 (73.52)
+  kd-train: teacher 7 (74.82) -> student 6 (72.70)
+  kd-train: teacher 2 (74.84) -> student 3 (73.74)
+
+=== Round 93/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 71.66
+  oracle-gain in this round: -1.62
+  kd-train: teacher 5 (74.80) -> student 8 (74.24)
+  kd-train: teacher 1 (73.68) -> student 4 (73.48)
+  kd-train: teacher 7 (74.82) -> student 3 (73.82)
+  kd-train: teacher 9 (75.14) -> student 2 (74.84)
+
+=== Round 94/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 71.86
+  oracle-gain in this round: 1.20
+  kd-train: teacher 5 (74.80) -> student 6 (70.04)
+  kd-train: teacher 2 (75.88) -> student 1 (73.68)
+  kd-train: teacher 9 (75.14) -> student 8 (73.56)
+  kd-train: teacher 7 (74.82) -> student 3 (73.40)
+
+=== Round 95/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 72.62
+  oracle-gain in this round: 0.62
+  kd-train: teacher 5 (74.80) -> student 1 (74.12)
+  kd-train: teacher 4 (73.06) -> student 6 (73.04)
+  kd-train: teacher 9 (75.14) -> student 3 (73.14)
+  kd-train: teacher 2 (75.88) -> student 7 (74.82)
+
+=== Round 96/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 70.60
+  oracle-gain in this round: 0.04
+  kd-train: teacher 4 (73.06) -> student 1 (72.86)
+  kd-train: teacher 2 (75.88) -> student 5 (74.80)
+  kd-train: teacher 8 (73.24) -> student 3 (72.22)
+  kd-train: teacher 9 (75.14) -> student 7 (74.16)
+
+=== Round 97/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 70.62
+  oracle-gain in this round: 1.22
+  kd-train: teacher 5 (75.16) -> student 6 (70.64)
+  kd-train: teacher 1 (73.58) -> student 8 (73.24)
+  kd-train: teacher 9 (75.14) -> student 4 (73.06)
+  kd-train: teacher 2 (75.88) -> student 7 (73.72)
+
+=== Round 98/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 73.48
+  oracle-gain in this round: 0.96
+  kd-train: teacher 6 (75.28) -> student 3 (71.84)
+  kd-train: teacher 9 (75.14) -> student 8 (73.06)
+  kd-train: teacher 5 (75.16) -> student 1 (73.58)
+  kd-train: teacher 2 (75.88) -> student 7 (75.04)
+
+=== Round 99/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 74.44
+  oracle-gain in this round: 2.18
+  kd-train: teacher 9 (75.14) -> student 1 (73.98)
+  kd-train: teacher 8 (75.24) -> student 7 (74.74)
+  kd-train: teacher 2 (75.88) -> student 3 (74.86)
+  kd-train: teacher 6 (75.28) -> student 5 (75.16)
+
+=== Round 100/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 74.32
+  oracle-gain in this round: -1.18
+  kd-train: teacher 4 (76.62) -> student 3 (73.76)
+  kd-train: teacher 9 (75.14) -> student 7 (74.20)
+  kd-train: teacher 2 (75.88) -> student 5 (74.94)
+  kd-train: teacher 6 (75.28) -> student 8 (75.24)
+
+=== Round 101/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 73.14
+  oracle-gain in this round: -1.98
+  kd-train: teacher 4 (76.62) -> student 7 (74.04)
+  kd-train: teacher 9 (75.14) -> student 3 (74.10)
+  kd-train: teacher 2 (75.88) -> student 5 (74.74)
+  kd-train: teacher 6 (75.28) -> student 8 (74.76)
+
+=== Round 102/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 71.16
+  oracle-gain in this round: 3.28
+  kd-train: teacher 4 (76.62) -> student 3 (74.58)
+  kd-train: teacher 7 (75.30) -> student 9 (75.14)
+  kd-train: teacher 2 (75.88) -> student 5 (73.26)
+  kd-train: teacher 6 (75.28) -> student 8 (74.20)
+
+=== Round 103/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 74.70
+  oracle-gain in this round: -2.58
+  kd-train: teacher 4 (76.62) -> student 1 (74.44)
+  kd-train: teacher 7 (75.30) -> student 8 (74.56)
+  kd-train: teacher 2 (75.88) -> student 3 (74.64)
+  kd-train: teacher 6 (75.28) -> student 9 (74.92)
+
+=== Round 104/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 72.12
+  oracle-gain in this round: 2.92
+  kd-train: teacher 2 (75.88) -> student 8 (72.52)
+  kd-train: teacher 4 (76.62) -> student 3 (75.10)
+  kd-train: teacher 1 (76.06) -> student 9 (74.66)
+  kd-train: teacher 7 (75.30) -> student 6 (75.28)
+
+=== Round 105/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 75.52
+  oracle-gain in this round: -0.54
+  kd-train: teacher 3 (75.80) -> student 5 (75.04)
+  kd-train: teacher 4 (76.62) -> student 2 (75.88)
+  kd-train: teacher 1 (76.06) -> student 6 (75.34)
+  kd-train: teacher 7 (75.30) -> student 8 (75.28)
+
+=== Round 106/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 74.02
+  oracle-gain in this round: -0.42
+  kd-train: teacher 2 (76.02) -> student 9 (74.98)
+  kd-train: teacher 4 (76.62) -> student 7 (75.30)
+  kd-train: teacher 1 (76.06) -> student 5 (75.40)
+  kd-train: teacher 3 (75.80) -> student 8 (74.80)
+
+=== Round 107/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 72.32
+  oracle-gain in this round: 2.14
+  kd-train: teacher 9 (75.48) -> student 6 (73.60)
+  kd-train: teacher 2 (76.02) -> student 5 (74.98)
+  kd-train: teacher 7 (76.04) -> student 3 (75.80)
+  kd-train: teacher 4 (76.62) -> student 1 (76.06)
+
+=== Round 108/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 74.48
+  oracle-gain in this round: -0.46
+  kd-train: teacher 9 (75.48) -> student 8 (74.46)
+  kd-train: teacher 3 (75.84) -> student 6 (75.22)
+  kd-train: teacher 1 (76.84) -> student 2 (76.02)
+  kd-train: teacher 4 (76.62) -> student 7 (76.04)
+
+=== Round 109/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 74.18
+  oracle-gain in this round: -0.80
+  kd-train: teacher 9 (75.48) -> student 5 (74.02)
+  kd-train: teacher 2 (76.38) -> student 7 (74.92)
+  kd-train: teacher 1 (76.84) -> student 6 (74.88)
+  kd-train: teacher 4 (76.62) -> student 3 (75.84)
+
+=== Round 110/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 73.38
+  oracle-gain in this round: 1.48
+  kd-train: teacher 9 (75.48) -> student 7 (75.22)
+  kd-train: teacher 5 (75.36) -> student 3 (75.16)
+  kd-train: teacher 4 (76.62) -> student 2 (76.38)
+  kd-train: teacher 1 (76.84) -> student 6 (75.90)
+
+=== Round 111/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 72.52
+  oracle-gain in this round: 0.68
+  kd-train: teacher 8 (74.86) -> student 3 (74.18)
+  kd-train: teacher 2 (75.82) -> student 6 (75.34)
+  kd-train: teacher 1 (76.84) -> student 9 (75.48)
+  kd-train: teacher 4 (76.62) -> student 5 (75.36)
+
+=== Round 112/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 70.64
+  oracle-gain in this round: 2.12
+  kd-train: teacher 8 (74.86) -> student 6 (74.60)
+  kd-train: teacher 2 (75.82) -> student 7 (73.20)
+  kd-train: teacher 4 (76.62) -> student 9 (75.40)
+  kd-train: teacher 1 (76.84) -> student 5 (76.28)
+
+=== Round 113/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 72.76
+  oracle-gain in this round: 3.06
+  kd-train: teacher 9 (75.58) -> student 6 (73.42)
+  kd-train: teacher 2 (75.82) -> student 8 (74.86)
+  kd-train: teacher 5 (76.42) -> student 7 (75.02)
+  kd-train: teacher 1 (76.84) -> student 4 (76.62)
+
+=== Round 114/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 73.36
+  oracle-gain in this round: 0.52
+  kd-train: teacher 3 (75.82) -> student 9 (75.58)
+  kd-train: teacher 8 (75.58) -> student 7 (74.92)
+  kd-train: teacher 5 (76.42) -> student 2 (75.82)
+  kd-train: teacher 1 (76.84) -> student 4 (76.76)
+
+=== Round 115/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 73.58
+  oracle-gain in this round: -4.44
+  kd-train: teacher 3 (75.82) -> student 7 (74.92)
+  kd-train: teacher 8 (75.58) -> student 6 (73.88)
+  kd-train: teacher 5 (76.42) -> student 4 (76.10)
+  kd-train: teacher 1 (76.84) -> student 2 (75.52)
+
+=== Round 116/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 69.14
+  oracle-gain in this round: 5.78
+  kd-train: teacher 6 (75.42) -> student 7 (73.86)
+  kd-train: teacher 3 (75.82) -> student 8 (75.58)
+  kd-train: teacher 4 (75.86) -> student 2 (75.44)
+  kd-train: teacher 1 (76.84) -> student 5 (76.42)
+
+=== Round 117/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 74.34
+  oracle-gain in this round: -4.00
+  kd-train: teacher 6 (75.42) -> student 9 (74.92)
+  kd-train: teacher 1 (76.84) -> student 8 (75.38)
+  kd-train: teacher 3 (75.82) -> student 2 (75.12)
+  kd-train: teacher 4 (75.86) -> student 5 (75.32)
+
+=== Round 118/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 70.34
+  oracle-gain in this round: 5.58
+  kd-train: teacher 9 (75.06) -> student 2 (72.92)
+  kd-train: teacher 3 (75.82) -> student 6 (75.42)
+  kd-train: teacher 8 (76.62) -> student 4 (75.86)
+  kd-train: teacher 1 (76.84) -> student 5 (75.68)
+
+=== Round 119/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 75.06
+  oracle-gain in this round: 0.42
+  kd-train: teacher 7 (75.92) -> student 6 (75.48)
+  kd-train: teacher 5 (76.06) -> student 3 (75.82)
+  kd-train: teacher 4 (75.94) -> student 2 (74.74)
+  kd-train: teacher 1 (76.84) -> student 8 (76.62)
+
+=== Round 120/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 74.72
+  oracle-gain in this round: -1.00
+  kd-train: teacher 9 (75.48) -> student 6 (75.02)
+  kd-train: teacher 8 (76.18) -> student 7 (75.92)
+  kd-train: teacher 1 (76.84) -> student 4 (75.94)
+  kd-train: teacher 5 (76.06) -> student 3 (75.76)
+
+=== Round 121/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 73.72
+  oracle-gain in this round: 0.30
+  kd-train: teacher 3 (75.64) -> student 9 (75.48)
+  kd-train: teacher 5 (76.06) -> student 6 (75.78)
+  kd-train: teacher 1 (76.84) -> student 7 (76.30)
+  kd-train: teacher 4 (76.62) -> student 8 (76.18)
+
+=== Round 122/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 74.02
+  oracle-gain in this round: 2.70
+  kd-train: teacher 8 (75.70) -> student 9 (74.90)
+  kd-train: teacher 1 (76.84) -> student 6 (75.30)
+  kd-train: teacher 4 (76.62) -> student 3 (75.64)
+  kd-train: teacher 7 (76.54) -> student 5 (76.06)
+
+=== Round 123/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 75.60
+  oracle-gain in this round: -3.62
+  kd-train: teacher 2 (76.72) -> student 7 (76.54)
+  kd-train: teacher 6 (76.22) -> student 5 (75.08)
+  kd-train: teacher 1 (76.84) -> student 8 (75.70)
+  kd-train: teacher 4 (76.62) -> student 9 (75.42)
+
+=== Round 124/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 71.98
+  oracle-gain in this round: 1.80
+  kd-train: teacher 4 (76.62) -> student 7 (75.58)
+  kd-train: teacher 2 (76.72) -> student 8 (75.76)
+  kd-train: teacher 1 (76.84) -> student 9 (76.40)
+  kd-train: teacher 6 (76.22) -> student 5 (76.10)
+
+=== Round 125/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 73.78
+  oracle-gain in this round: 1.38
+  kd-train: teacher 2 (76.72) -> student 7 (76.06)
+  kd-train: teacher 5 (74.86) -> student 8 (73.84)
+  kd-train: teacher 4 (76.62) -> student 9 (76.10)
+  kd-train: teacher 1 (76.84) -> student 6 (76.22)
+
+=== Round 126/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 74.38
+  oracle-gain in this round: -0.62
+  kd-train: teacher 8 (75.30) -> student 3 (75.16)
+  kd-train: teacher 2 (76.72) -> student 6 (76.04)
+  kd-train: teacher 4 (76.62) -> student 5 (74.86)
+  kd-train: teacher 1 (76.84) -> student 9 (76.52)
+
+=== Round 127/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 74.70
+  oracle-gain in this round: -1.08
+  kd-train: teacher 6 (76.18) -> student 3 (75.56)
+  kd-train: teacher 8 (75.30) -> student 7 (73.76)
+  kd-train: teacher 2 (76.72) -> student 4 (76.62)
+  kd-train: teacher 1 (76.84) -> student 9 (76.02)
+
+=== Round 128/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 73.62
+  oracle-gain in this round: 1.20
+  kd-train: teacher 8 (75.30) -> student 4 (74.44)
+  kd-train: teacher 1 (76.84) -> student 6 (76.18)
+  kd-train: teacher 3 (76.04) -> student 7 (75.60)
+  kd-train: teacher 9 (77.26) -> student 2 (76.72)
+
+=== Round 129/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 74.74
+  oracle-gain in this round: -3.48
+  kd-train: teacher 1 (76.84) -> student 5 (74.82)
+  kd-train: teacher 3 (76.04) -> student 8 (75.30)
+  kd-train: teacher 7 (75.60) -> student 4 (75.04)
+  kd-train: teacher 9 (77.26) -> student 2 (76.98)
+
+=== Round 130/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 71.26
+  oracle-gain in this round: 3.30
+  kd-train: teacher 5 (76.38) -> student 7 (75.60)
+  kd-train: teacher 2 (75.80) -> student 8 (75.20)
+  kd-train: teacher 1 (76.84) -> student 4 (74.48)
+  kd-train: teacher 9 (77.26) -> student 3 (76.04)
+
+=== Round 131/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 74.56
+  oracle-gain in this round: 1.14
+  kd-train: teacher 4 (75.54) -> student 8 (73.70)
+  kd-train: teacher 9 (77.26) -> student 7 (74.40)
+  kd-train: teacher 3 (76.38) -> student 5 (76.38)
+  kd-train: teacher 1 (76.84) -> student 2 (75.80)
+
+=== Round 132/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 75.54
+  oracle-gain in this round: -1.16
+  kd-train: teacher 6 (75.70) -> student 8 (74.70)
+  kd-train: teacher 9 (77.26) -> student 2 (76.60)
+  kd-train: teacher 1 (76.84) -> student 7 (76.04)
+  kd-train: teacher 3 (76.38) -> student 5 (76.20)
+
+=== Round 133/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 72.46
+  oracle-gain in this round: 2.64
+  kd-train: teacher 7 (76.08) -> student 6 (75.70)
+  kd-train: teacher 1 (76.84) -> student 4 (74.38)
+  kd-train: teacher 9 (77.26) -> student 5 (75.12)
+  kd-train: teacher 2 (76.80) -> student 3 (76.38)
+
+=== Round 134/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 75.88
+  oracle-gain in this round: -1.44
+  kd-train: teacher 7 (76.08) -> student 8 (75.10)
+  kd-train: teacher 9 (77.26) -> student 6 (76.06)
+  kd-train: teacher 1 (76.84) -> student 3 (76.00)
+  kd-train: teacher 2 (76.80) -> student 4 (75.96)
+
+=== Round 135/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 75.80
+  oracle-gain in this round: 0.48
+  kd-train: teacher 1 (76.84) -> student 5 (74.44)
+  kd-train: teacher 4 (76.00) -> student 8 (75.92)
+  kd-train: teacher 9 (77.26) -> student 7 (76.08)
+  kd-train: teacher 2 (76.80) -> student 3 (76.00)
+
+=== Round 136/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 76.28
+  oracle-gain in this round: 1.70
+  kd-train: teacher 8 (75.24) -> student 5 (75.20)
+  kd-train: teacher 1 (76.84) -> student 4 (76.00)
+  kd-train: teacher 3 (76.22) -> student 7 (75.66)
+  kd-train: teacher 9 (77.26) -> student 2 (76.80)
+
+=== Round 137/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 74.44
+  oracle-gain in this round: 0.18
+  kd-train: teacher 6 (77.98) -> student 5 (74.42)
+  kd-train: teacher 3 (76.22) -> student 8 (75.24)
+  kd-train: teacher 9 (77.26) -> student 4 (75.94)
+  kd-train: teacher 1 (76.84) -> student 2 (76.62)
+
+=== Round 138/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 74.30
+  oracle-gain in this round: 0.98
+  kd-train: teacher 1 (76.84) -> student 7 (74.62)
+  kd-train: teacher 6 (77.98) -> student 4 (75.20)
+  kd-train: teacher 5 (76.94) -> student 3 (76.22)
+  kd-train: teacher 9 (77.26) -> student 2 (76.76)
+
+=== Round 139/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 75.28
+  oracle-gain in this round: -2.56
+  kd-train: teacher 4 (75.30) -> student 7 (74.78)
+  kd-train: teacher 5 (76.94) -> student 1 (76.84)
+  kd-train: teacher 6 (77.98) -> student 2 (75.32)
+  kd-train: teacher 9 (77.26) -> student 3 (76.08)
+
+=== Round 140/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 74.12
+  oracle-gain in this round: 1.38
+  kd-train: teacher 3 (75.94) -> student 8 (72.72)
+  kd-train: teacher 9 (77.26) -> student 1 (76.60)
+  kd-train: teacher 2 (75.60) -> student 4 (75.30)
+  kd-train: teacher 6 (77.98) -> student 5 (76.94)
+
+=== Round 141/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 75.38
+  oracle-gain in this round: 1.68
+  kd-train: teacher 6 (77.98) -> student 7 (75.50)
+  kd-train: teacher 5 (76.64) -> student 4 (74.82)
+  kd-train: teacher 3 (75.94) -> student 2 (75.60)
+  kd-train: teacher 9 (77.26) -> student 1 (76.14)
+
+=== Round 142/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 74.38
+  oracle-gain in this round: -4.02
+  kd-train: teacher 8 (77.06) -> student 3 (75.94)
+  kd-train: teacher 7 (76.98) -> student 1 (75.96)
+  kd-train: teacher 9 (77.26) -> student 4 (76.36)
+  kd-train: teacher 6 (77.98) -> student 5 (76.64)
+
+=== Round 143/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 70.36
+  oracle-gain in this round: 0.24
+  kd-train: teacher 4 (76.92) -> student 3 (72.52)
+  kd-train: teacher 9 (77.26) -> student 8 (77.06)
+  kd-train: teacher 7 (76.98) -> student 5 (75.76)
+  kd-train: teacher 6 (77.98) -> student 1 (76.60)
+
+=== Round 144/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 70.60
+  oracle-gain in this round: 5.06
+  kd-train: teacher 4 (76.92) -> student 5 (74.72)
+  kd-train: teacher 9 (77.26) -> student 1 (75.38)
+  kd-train: teacher 7 (76.98) -> student 3 (76.12)
+  kd-train: teacher 6 (77.98) -> student 8 (76.98)
+
+=== Round 145/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 73.76
+  oracle-gain in this round: 0.18
+  kd-train: teacher 7 (76.98) -> student 1 (74.96)
+  kd-train: teacher 2 (75.66) -> student 5 (75.56)
+  kd-train: teacher 9 (77.26) -> student 8 (77.04)
+  kd-train: teacher 6 (77.98) -> student 4 (76.92)
+
+=== Round 146/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 73.94
+  oracle-gain in this round: 2.84
+  kd-train: teacher 1 (75.24) -> student 5 (74.44)
+  kd-train: teacher 4 (75.80) -> student 2 (75.66)
+  kd-train: teacher 9 (77.26) -> student 7 (76.98)
+  kd-train: teacher 6 (77.98) -> student 8 (76.84)
+
+=== Round 147/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 74.82
+  oracle-gain in this round: -0.04
+  kd-train: teacher 7 (76.64) -> student 1 (75.24)
+  kd-train: teacher 9 (77.26) -> student 3 (76.78)
+  kd-train: teacher 8 (76.74) -> student 4 (75.80)
+  kd-train: teacher 6 (77.98) -> student 2 (75.42)
+
+=== Round 148/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 75.60
+  oracle-gain in this round: -6.90
+  kd-train: teacher 2 (76.84) -> student 5 (74.78)
+  kd-train: teacher 8 (76.74) -> student 7 (76.64)
+  kd-train: teacher 9 (77.26) -> student 4 (75.70)
+  kd-train: teacher 6 (77.98) -> student 3 (76.60)
+
+=== Round 149/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 68.70
+  oracle-gain in this round: 6.64
+  kd-train: teacher 7 (76.40) -> student 4 (75.22)
+  kd-train: teacher 9 (77.26) -> student 8 (76.74)
+  kd-train: teacher 6 (77.98) -> student 5 (76.20)
+  kd-train: teacher 2 (76.84) -> student 3 (76.82)
+
+=== Round 150/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 75.70
+  oracle-gain in this round: -0.50
+  kd-train: teacher 9 (77.26) -> student 4 (75.08)
+  kd-train: teacher 2 (76.84) -> student 1 (75.34)
+  kd-train: teacher 6 (77.98) -> student 7 (76.40)
+  kd-train: teacher 5 (76.70) -> student 3 (76.00)
+
+=== Round 151/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 75.20
+  oracle-gain in this round: 1.76
+  kd-train: teacher 4 (76.18) -> student 3 (75.36)
+  kd-train: teacher 9 (77.26) -> student 1 (76.06)
+  kd-train: teacher 2 (76.84) -> student 5 (76.70)
+  kd-train: teacher 6 (77.98) -> student 7 (76.92)
+
+=== Round 152/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 75.78
+  oracle-gain in this round: -2.16
+  kd-train: teacher 7 (76.82) -> student 4 (76.18)
+  kd-train: teacher 2 (76.84) -> student 1 (76.74)
+  kd-train: teacher 9 (77.26) -> student 5 (76.66)
+  kd-train: teacher 6 (77.98) -> student 8 (76.96)
+
+=== Round 153/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 73.96
+  oracle-gain in this round: -2.60
+  kd-train: teacher 8 (77.46) -> student 5 (76.42)
+  kd-train: teacher 9 (77.26) -> student 7 (76.82)
+  kd-train: teacher 2 (76.84) -> student 3 (73.62)
+  kd-train: teacher 6 (77.98) -> student 1 (75.46)
+
+=== Round 154/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 71.36
+  oracle-gain in this round: 5.00
+  kd-train: teacher 7 (76.60) -> student 1 (75.96)
+  kd-train: teacher 8 (77.46) -> student 9 (77.26)
+  kd-train: teacher 5 (76.22) -> student 3 (75.86)
+  kd-train: teacher 6 (77.98) -> student 2 (76.84)
+
+=== Round 155/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 76.18
+  oracle-gain in this round: -0.84
+  kd-train: teacher 4 (76.36) -> student 5 (76.22)
+  kd-train: teacher 2 (76.80) -> student 7 (76.60)
+  kd-train: teacher 6 (77.98) -> student 9 (75.58)
+  kd-train: teacher 8 (77.46) -> student 3 (75.98)
+
+=== Round 156/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 75.68
+  oracle-gain in this round: -2.06
+  kd-train: teacher 8 (77.46) -> student 5 (75.26)
+  kd-train: teacher 3 (76.18) -> student 1 (75.34)
+  kd-train: teacher 2 (76.80) -> student 4 (76.36)
+  kd-train: teacher 6 (77.98) -> student 9 (76.14)
+
+=== Round 157/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 74.04
+  oracle-gain in this round: 1.08
+  kd-train: teacher 4 (76.12) -> student 7 (73.62)
+  kd-train: teacher 1 (75.74) -> student 9 (75.04)
+  kd-train: teacher 8 (77.46) -> student 2 (76.80)
+  kd-train: teacher 6 (77.98) -> student 3 (76.18)
+
+=== Round 158/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 76.12
+  oracle-gain in this round: -0.66
+  kd-train: teacher 2 (75.22) -> student 5 (75.12)
+  kd-train: teacher 7 (75.88) -> student 3 (75.42)
+  kd-train: teacher 8 (77.46) -> student 9 (75.58)
+  kd-train: teacher 6 (77.98) -> student 1 (75.74)
+
+=== Round 159/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 72.60
+  oracle-gain in this round: 2.02
+  kd-train: teacher 4 (75.46) -> student 5 (73.58)
+  kd-train: teacher 9 (76.08) -> student 7 (75.88)
+  kd-train: teacher 1 (76.48) -> student 2 (75.22)
+  kd-train: teacher 6 (77.98) -> student 8 (77.46)
+
+=== Round 160/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 74.14
+  oracle-gain in this round: -0.70
+  kd-train: teacher 9 (76.08) -> student 5 (74.14)
+  kd-train: teacher 4 (75.46) -> student 3 (74.62)
+  kd-train: teacher 8 (77.60) -> student 2 (76.02)
+  kd-train: teacher 6 (77.98) -> student 1 (76.48)
+
+=== Round 161/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 74.82
+  oracle-gain in this round: -4.64
+  kd-train: teacher 4 (75.46) -> student 7 (73.44)
+  kd-train: teacher 3 (76.04) -> student 5 (75.06)
+  kd-train: teacher 1 (76.70) -> student 9 (76.08)
+  kd-train: teacher 6 (77.98) -> student 8 (77.60)
+
+=== Round 162/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 70.18
+  oracle-gain in this round: 6.76
+  kd-train: teacher 4 (75.46) -> student 9 (75.12)
+  kd-train: teacher 6 (77.98) -> student 7 (75.44)
+  kd-train: teacher 1 (76.70) -> student 5 (74.94)
+  kd-train: teacher 8 (77.38) -> student 3 (76.04)
+
+=== Round 163/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 73.34
+  oracle-gain in this round: 2.26
+  kd-train: teacher 2 (76.94) -> student 4 (75.46)
+  kd-train: teacher 3 (77.20) -> student 5 (74.96)
+  kd-train: teacher 8 (77.38) -> student 7 (77.18)
+  kd-train: teacher 6 (77.98) -> student 1 (76.70)
+
+=== Round 164/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 75.46
+  oracle-gain in this round: -3.58
+  kd-train: teacher 4 (77.02) -> student 1 (75.62)
+  kd-train: teacher 7 (76.48) -> student 9 (75.60)
+  kd-train: teacher 3 (77.20) -> student 2 (76.94)
+  kd-train: teacher 6 (77.98) -> student 8 (77.38)
+
+=== Round 165/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 71.88
+  oracle-gain in this round: 4.08
+  kd-train: teacher 2 (76.68) -> student 1 (74.46)
+  kd-train: teacher 4 (77.02) -> student 9 (75.64)
+  kd-train: teacher 8 (77.50) -> student 3 (77.20)
+  kd-train: teacher 6 (77.98) -> student 7 (76.48)
+
+=== Round 166/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 74.20
+  oracle-gain in this round: 0.62
+  kd-train: teacher 5 (75.96) -> student 9 (75.86)
+  kd-train: teacher 4 (77.02) -> student 1 (74.74)
+  kd-train: teacher 8 (77.50) -> student 2 (76.68)
+  kd-train: teacher 6 (77.98) -> student 7 (77.20)
+
+=== Round 167/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 74.82
+  oracle-gain in this round: 1.12
+  kd-train: teacher 4 (77.02) -> student 5 (75.96)
+  kd-train: teacher 2 (76.76) -> student 1 (75.90)
+  kd-train: teacher 7 (75.90) -> student 9 (75.12)
+  kd-train: teacher 6 (77.98) -> student 8 (77.50)
+
+=== Round 168/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 75.76
+  oracle-gain in this round: -0.82
+  kd-train: teacher 5 (76.30) -> student 9 (75.18)
+  kd-train: teacher 2 (76.76) -> student 3 (75.94)
+  kd-train: teacher 8 (77.46) -> student 4 (77.02)
+  kd-train: teacher 6 (77.98) -> student 7 (75.90)
+
+=== Round 169/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 74.96
+  oracle-gain in this round: 0.14
+  kd-train: teacher 5 (76.30) -> student 1 (74.94)
+  kd-train: teacher 8 (77.46) -> student 3 (76.98)
+  kd-train: teacher 4 (76.50) -> student 7 (75.64)
+  kd-train: teacher 6 (77.98) -> student 2 (76.76)
+
+=== Round 170/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 74.96
+  oracle-gain in this round: 1.70
+  kd-train: teacher 7 (77.14) -> student 5 (76.30)
+  kd-train: teacher 2 (76.00) -> student 9 (75.10)
+  kd-train: teacher 4 (76.50) -> student 3 (76.42)
+  kd-train: teacher 6 (77.98) -> student 8 (77.46)
+
+=== Round 171/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 72.66
+  oracle-gain in this round: -2.08
+  kd-train: teacher 3 (75.84) -> student 9 (75.78)
+  kd-train: teacher 7 (77.14) -> student 1 (76.66)
+  kd-train: teacher 4 (76.50) -> student 2 (76.00)
+  kd-train: teacher 6 (77.98) -> student 5 (76.68)
+
+=== Round 172/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 70.58
+  oracle-gain in this round: 7.10
+  kd-train: teacher 5 (76.92) -> student 3 (75.84)
+  kd-train: teacher 6 (77.98) -> student 9 (75.52)
+  kd-train: teacher 7 (77.14) -> student 2 (77.00)
+  kd-train: teacher 1 (76.94) -> student 4 (76.50)
+
+=== Round 173/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 75.86
+  oracle-gain in this round: 1.32
+  kd-train: teacher 7 (77.14) -> student 3 (76.96)
+  kd-train: teacher 8 (77.68) -> student 9 (76.46)
+  kd-train: teacher 5 (76.92) -> student 2 (76.60)
+  kd-train: teacher 6 (77.98) -> student 1 (76.94)
+
+=== Round 174/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 76.10
+  oracle-gain in this round: -2.50
+  kd-train: teacher 7 (77.14) -> student 9 (75.44)
+  kd-train: teacher 1 (77.78) -> student 4 (77.18)
+  kd-train: teacher 8 (77.68) -> student 2 (75.74)
+  kd-train: teacher 6 (77.98) -> student 5 (76.92)
+
+=== Round 175/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 73.60
+  oracle-gain in this round: 3.54
+  kd-train: teacher 9 (75.80) -> student 2 (75.46)
+  kd-train: teacher 7 (77.14) -> student 4 (76.98)
+  kd-train: teacher 1 (77.78) -> student 8 (77.68)
+  kd-train: teacher 6 (77.98) -> student 5 (76.46)
+
+=== Round 176/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 74.66
+  oracle-gain in this round: -1.18
+  kd-train: teacher 8 (77.14) -> student 9 (75.80)
+  kd-train: teacher 4 (76.46) -> student 5 (75.62)
+  kd-train: teacher 3 (77.14) -> student 7 (77.14)
+  kd-train: teacher 6 (77.98) -> student 1 (77.78)
+
+=== Round 177/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 73.48
+  oracle-gain in this round: 1.84
+  kd-train: teacher 8 (77.14) -> student 4 (76.46)
+  kd-train: teacher 5 (76.92) -> student 9 (75.54)
+  kd-train: teacher 6 (77.98) -> student 7 (74.84)
+  kd-train: teacher 3 (77.14) -> student 1 (76.72)
+
+=== Round 178/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 75.32
+  oracle-gain in this round: 0.26
+  kd-train: teacher 8 (77.14) -> student 5 (76.92)
+  kd-train: teacher 9 (76.22) -> student 4 (75.98)
+  kd-train: teacher 6 (77.98) -> student 1 (75.44)
+  kd-train: teacher 3 (77.14) -> student 7 (76.62)
+
+=== Round 179/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 74.90
+  oracle-gain in this round: -1.58
+  kd-train: teacher 7 (76.46) -> student 2 (75.58)
+  kd-train: teacher 1 (76.36) -> student 5 (75.54)
+  kd-train: teacher 8 (77.14) -> student 9 (76.22)
+  kd-train: teacher 6 (77.98) -> student 3 (77.14)
+
+=== Round 180/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 73.32
+  oracle-gain in this round: 0.26
+  kd-train: teacher 2 (77.24) -> student 8 (77.14)
+  kd-train: teacher 1 (76.36) -> student 9 (75.72)
+  kd-train: teacher 6 (77.98) -> student 7 (76.46)
+  kd-train: teacher 3 (77.02) -> student 5 (76.38)
+
+=== Round 181/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 73.58
+  oracle-gain in this round: 3.06
+  kd-train: teacher 2 (77.24) -> student 5 (75.06)
+  kd-train: teacher 8 (76.76) -> student 7 (76.30)
+  kd-train: teacher 3 (77.02) -> student 9 (75.64)
+  kd-train: teacher 6 (77.98) -> student 1 (76.36)
+
+=== Round 182/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 75.42
+  oracle-gain in this round: -2.16
+  kd-train: teacher 2 (77.24) -> student 4 (76.64)
+  kd-train: teacher 1 (77.04) -> student 7 (75.62)
+  kd-train: teacher 6 (77.98) -> student 5 (75.34)
+  kd-train: teacher 3 (77.02) -> student 8 (76.76)
+
+=== Round 183/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 73.26
+  oracle-gain in this round: 3.92
+  kd-train: teacher 1 (77.04) -> student 4 (76.74)
+  kd-train: teacher 2 (77.24) -> student 7 (76.60)
+  kd-train: teacher 3 (77.02) -> student 5 (76.82)
+  kd-train: teacher 6 (77.98) -> student 8 (76.90)
+
+=== Round 184/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 73.80
+  oracle-gain in this round: -0.98
+  kd-train: teacher 4 (77.30) -> student 7 (74.92)
+  kd-train: teacher 2 (77.24) -> student 1 (77.04)
+  kd-train: teacher 9 (77.18) -> student 8 (77.08)
+  kd-train: teacher 6 (77.98) -> student 3 (77.02)
+
+=== Round 185/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 72.82
+  oracle-gain in this round: 4.02
+  kd-train: teacher 4 (77.30) -> student 2 (77.24)
+  kd-train: teacher 9 (77.18) -> student 7 (75.40)
+  kd-train: teacher 8 (78.44) -> student 1 (75.52)
+  kd-train: teacher 6 (77.98) -> student 3 (77.72)
+
+=== Round 186/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 75.08
+  oracle-gain in this round: 0.94
+  kd-train: teacher 4 (77.30) -> student 7 (75.62)
+  kd-train: teacher 9 (77.18) -> student 1 (75.82)
+  kd-train: teacher 3 (77.60) -> student 5 (76.84)
+  kd-train: teacher 8 (78.44) -> student 6 (77.98)
+
+=== Round 187/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 74.68
+  oracle-gain in this round: 0.42
+  kd-train: teacher 4 (77.30) -> student 1 (74.28)
+  kd-train: teacher 9 (77.18) -> student 5 (76.96)
+  kd-train: teacher 6 (78.18) -> student 2 (76.02)
+  kd-train: teacher 8 (78.44) -> student 3 (77.60)
+
+=== Round 188/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 75.74
+  oracle-gain in this round: -0.88
+  kd-train: teacher 4 (77.30) -> student 9 (77.18)
+  kd-train: teacher 5 (76.86) -> student 7 (75.10)
+  kd-train: teacher 2 (78.10) -> student 3 (77.92)
+  kd-train: teacher 8 (78.44) -> student 6 (78.18)
+
+=== Round 189/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 74.86
+  oracle-gain in this round: 1.64
+  kd-train: teacher 4 (77.30) -> student 7 (75.30)
+  kd-train: teacher 5 (76.86) -> student 9 (76.82)
+  kd-train: teacher 6 (77.56) -> student 3 (77.06)
+  kd-train: teacher 8 (78.44) -> student 2 (78.10)
+
+=== Round 190/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 75.42
+  oracle-gain in this round: -1.92
+  kd-train: teacher 4 (77.30) -> student 9 (76.32)
+  kd-train: teacher 2 (76.96) -> student 1 (76.50)
+  kd-train: teacher 5 (76.86) -> student 3 (76.48)
+  kd-train: teacher 8 (78.44) -> student 6 (77.56)
+
+=== Round 191/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 73.50
+  oracle-gain in this round: 2.10
+  kd-train: teacher 5 (76.86) -> student 9 (75.62)
+  kd-train: teacher 4 (77.30) -> student 3 (76.16)
+  kd-train: teacher 8 (78.44) -> student 2 (76.96)
+  kd-train: teacher 6 (77.46) -> student 1 (76.94)
+
+=== Round 192/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 75.60
+  oracle-gain in this round: -1.04
+  kd-train: teacher 4 (77.30) -> student 7 (75.60)
+  kd-train: teacher 6 (77.46) -> student 9 (75.96)
+  kd-train: teacher 2 (77.44) -> student 5 (76.86)
+  kd-train: teacher 8 (78.44) -> student 1 (77.42)
+
+=== Round 193/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 74.56
+  oracle-gain in this round: -1.34
+  kd-train: teacher 7 (76.54) -> student 9 (76.14)
+  kd-train: teacher 6 (77.46) -> student 4 (77.30)
+  kd-train: teacher 1 (76.42) -> student 5 (76.42)
+  kd-train: teacher 8 (78.44) -> student 2 (77.44)
+
+=== Round 194/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 73.22
+  oracle-gain in this round: 4.94
+  kd-train: teacher 2 (78.06) -> student 9 (73.96)
+  kd-train: teacher 7 (76.54) -> student 4 (76.40)
+  kd-train: teacher 8 (78.44) -> student 5 (75.56)
+  kd-train: teacher 6 (77.46) -> student 1 (76.42)
+
+=== Round 195/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 76.16
+  oracle-gain in this round: -1.94
+  kd-train: teacher 3 (78.16) -> student 7 (76.54)
+  kd-train: teacher 1 (77.08) -> student 9 (75.02)
+  kd-train: teacher 2 (78.06) -> student 6 (77.46)
+  kd-train: teacher 8 (78.44) -> student 5 (77.26)
+
+=== Round 196/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 74.22
+  oracle-gain in this round: 0.92
+  kd-train: teacher 6 (77.84) -> student 1 (77.08)
+  kd-train: teacher 9 (76.40) -> student 5 (76.26)
+  kd-train: teacher 8 (78.44) -> student 7 (77.32)
+  kd-train: teacher 3 (78.16) -> student 2 (78.06)
+
+=== Round 197/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 75.14
+  oracle-gain in this round: 3.62
+  kd-train: teacher 6 (77.84) -> student 2 (75.96)
+  kd-train: teacher 7 (77.00) -> student 5 (74.54)
+  kd-train: teacher 3 (78.16) -> student 9 (76.40)
+  kd-train: teacher 8 (78.44) -> student 1 (77.24)
+
+=== Round 198/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 76.16
+  oracle-gain in this round: -2.40
+  kd-train: teacher 4 (78.76) -> student 1 (78.18)
+  kd-train: teacher 8 (78.44) -> student 5 (74.88)
+  kd-train: teacher 6 (77.84) -> student 7 (77.00)
+  kd-train: teacher 3 (78.16) -> student 2 (77.86)
+
+=== Round 199/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 73.76
+  oracle-gain in this round: -0.98
+  kd-train: teacher 8 (78.44) -> student 2 (75.10)
+  kd-train: teacher 7 (77.02) -> student 1 (76.68)
+  kd-train: teacher 4 (78.76) -> student 5 (76.82)
+  kd-train: teacher 3 (78.16) -> student 6 (77.84)
+
+=== Round 200/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 72.78
+  oracle-gain in this round: 5.30
+  kd-train: teacher 8 (78.44) -> student 5 (74.38)
+  kd-train: teacher 4 (78.76) -> student 6 (75.42)
+  kd-train: teacher 2 (76.94) -> student 1 (75.98)
+  kd-train: teacher 3 (78.16) -> student 7 (77.02)
+
+=== Round 201/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 75.92
+  oracle-gain in this round: -2.30
+  kd-train: teacher 8 (78.44) -> student 6 (75.82)
+  kd-train: teacher 9 (78.08) -> student 5 (76.98)
+  kd-train: teacher 4 (78.76) -> student 2 (76.94)
+  kd-train: teacher 3 (78.16) -> student 7 (77.52)
+
+=== Round 202/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 73.62
+  oracle-gain in this round: 1.98
+  kd-train: teacher 8 (78.44) -> student 2 (76.00)
+  kd-train: teacher 3 (78.16) -> student 5 (76.20)
+  kd-train: teacher 4 (78.76) -> student 9 (78.08)
+  kd-train: teacher 7 (77.66) -> student 6 (77.52)
+
+=== Round 203/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 75.60
+  oracle-gain in this round: 0.86
+  kd-train: teacher 8 (78.44) -> student 9 (76.74)
+  kd-train: teacher 5 (76.42) -> student 6 (76.34)
+  kd-train: teacher 7 (77.66) -> student 2 (76.74)
+  kd-train: teacher 4 (78.76) -> student 3 (78.16)
+
+=== Round 204/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 75.24
+  oracle-gain in this round: 2.28
+  kd-train: teacher 3 (77.00) -> student 1 (76.46)
+  kd-train: teacher 2 (76.48) -> student 5 (76.42)
+  kd-train: teacher 4 (78.76) -> student 8 (78.44)
+  kd-train: teacher 9 (78.92) -> student 7 (77.66)
+
+=== Round 205/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 77.52
+  oracle-gain in this round: -0.68
+  kd-train: teacher 8 (77.38) -> student 5 (76.06)
+  kd-train: teacher 9 (78.92) -> student 1 (77.06)
+  kd-train: teacher 3 (77.00) -> student 2 (76.48)
+  kd-train: teacher 4 (78.76) -> student 7 (77.06)
+
+=== Round 206/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 76.84
+  oracle-gain in this round: 0.22
+  kd-train: teacher 9 (78.92) -> student 5 (76.40)
+  kd-train: teacher 8 (77.38) -> student 2 (75.60)
+  kd-train: teacher 1 (77.90) -> student 7 (76.44)
+  kd-train: teacher 4 (78.76) -> student 3 (77.00)
+
+=== Round 207/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 77.06
+  oracle-gain in this round: -0.60
+  kd-train: teacher 2 (76.44) -> student 7 (76.44)
+  kd-train: teacher 9 (78.92) -> student 8 (77.38)
+  kd-train: teacher 4 (78.76) -> student 5 (76.62)
+  kd-train: teacher 3 (78.38) -> student 1 (77.90)
+
+=== Round 208/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 76.14
+  oracle-gain in this round: -5.00
+  kd-train: teacher 6 (76.46) -> student 2 (76.44)
+  kd-train: teacher 8 (77.40) -> student 1 (76.34)
+  kd-train: teacher 4 (78.76) -> student 5 (75.78)
+  kd-train: teacher 9 (78.92) -> student 3 (78.38)
+
+=== Round 209/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 71.14
+  oracle-gain in this round: 5.58
+  kd-train: teacher 5 (76.78) -> student 6 (76.46)
+  kd-train: teacher 4 (78.76) -> student 2 (73.34)
+  kd-train: teacher 9 (78.92) -> student 3 (76.90)
+  kd-train: teacher 8 (77.40) -> student 1 (77.16)
+
+=== Round 210/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 75.58
+  oracle-gain in this round: -5.08
+  kd-train: teacher 3 (77.72) -> student 7 (76.72)
+  kd-train: teacher 8 (77.40) -> student 2 (75.34)
+  kd-train: teacher 9 (78.92) -> student 5 (76.78)
+  kd-train: teacher 4 (78.76) -> student 6 (77.00)
+
+=== Round 211/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 70.50
+  oracle-gain in this round: 6.04
+  kd-train: teacher 4 (78.76) -> student 3 (77.72)
+  kd-train: teacher 7 (77.50) -> student 2 (76.08)
+  kd-train: teacher 6 (78.68) -> student 8 (77.40)
+  kd-train: teacher 9 (78.92) -> student 5 (77.40)
+
+=== Round 212/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 76.54
+  oracle-gain in this round: 0.76
+  kd-train: teacher 3 (77.70) -> student 2 (76.18)
+  kd-train: teacher 4 (78.76) -> student 7 (77.50)
+  kd-train: teacher 5 (77.96) -> student 8 (76.72)
+  kd-train: teacher 9 (78.92) -> student 6 (78.68)
+
+=== Round 213/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 74.64
+  oracle-gain in this round: -0.16
+  kd-train: teacher 7 (78.28) -> student 6 (77.50)
+  kd-train: teacher 4 (78.76) -> student 1 (77.30)
+  kd-train: teacher 9 (78.92) -> student 3 (77.70)
+  kd-train: teacher 5 (77.96) -> student 8 (77.36)
+
+=== Round 214/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 74.48
+  oracle-gain in this round: 1.66
+  kd-train: teacher 9 (78.92) -> student 6 (77.74)
+  kd-train: teacher 1 (77.98) -> student 5 (77.96)
+  kd-train: teacher 3 (78.62) -> student 7 (78.28)
+  kd-train: teacher 4 (78.76) -> student 8 (76.48)
+
+=== Round 215/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 76.14
+  oracle-gain in this round: 0.12
+  kd-train: teacher 7 (77.12) -> student 5 (75.28)
+  kd-train: teacher 3 (78.62) -> student 8 (75.42)
+  kd-train: teacher 6 (78.00) -> student 1 (77.98)
+  kd-train: teacher 9 (78.92) -> student 4 (78.76)
+
+=== Round 216/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 76.56
+  oracle-gain in this round: -3.04
+  kd-train: teacher 8 (77.98) -> student 2 (76.26)
+  kd-train: teacher 6 (78.00) -> student 7 (77.12)
+  kd-train: teacher 4 (78.92) -> student 1 (77.84)
+  kd-train: teacher 9 (78.92) -> student 3 (78.62)
+
+=== Round 217/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 73.52
+  oracle-gain in this round: 0.84
+  kd-train: teacher 1 (78.08) -> student 2 (78.00)
+  kd-train: teacher 3 (79.04) -> student 6 (78.00)
+  kd-train: teacher 4 (78.92) -> student 8 (77.98)
+  kd-train: teacher 9 (78.92) -> student 7 (78.16)
+
+=== Round 218/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 74.36
+  oracle-gain in this round: 2.34
+  kd-train: teacher 6 (78.06) -> student 8 (74.92)
+  kd-train: teacher 3 (79.04) -> student 1 (78.08)
+  kd-train: teacher 4 (78.92) -> student 7 (78.34)
+  kd-train: teacher 9 (78.92) -> student 2 (77.86)
+
+=== Round 219/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 76.98
+  oracle-gain in this round: -0.28
+  kd-train: teacher 6 (78.06) -> student 2 (78.02)
+  kd-train: teacher 4 (78.92) -> student 5 (76.70)
+  kd-train: teacher 7 (77.74) -> student 8 (77.60)
+  kd-train: teacher 3 (79.04) -> student 9 (78.92)
+
+=== Round 220/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 76.14
+  oracle-gain in this round: -3.70
+  kd-train: teacher 9 (77.74) -> student 1 (76.70)
+  kd-train: teacher 5 (78.28) -> student 6 (78.06)
+  kd-train: teacher 3 (79.04) -> student 4 (78.92)
+  kd-train: teacher 7 (77.74) -> student 8 (76.74)
+
+=== Round 221/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 72.44
+  oracle-gain in this round: 4.84
+  kd-train: teacher 9 (77.74) -> student 8 (76.06)
+  kd-train: teacher 5 (78.28) -> student 1 (77.56)
+  kd-train: teacher 4 (78.98) -> student 6 (77.20)
+  kd-train: teacher 3 (79.04) -> student 7 (77.74)
+
+=== Round 222/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 77.26
+  oracle-gain in this round: -1.96
+  kd-train: teacher 6 (77.94) -> student 2 (77.28)
+  kd-train: teacher 9 (77.74) -> student 1 (77.06)
+  kd-train: teacher 4 (78.98) -> student 5 (78.28)
+  kd-train: teacher 3 (79.04) -> student 7 (77.50)
+
+=== Round 223/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 75.30
+  oracle-gain in this round: -0.14
+  kd-train: teacher 2 (77.08) -> student 5 (77.06)
+  kd-train: teacher 6 (77.94) -> student 1 (76.70)
+  kd-train: teacher 3 (79.04) -> student 9 (77.74)
+  kd-train: teacher 4 (78.98) -> student 7 (77.06)
+
+=== Round 224/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 75.16
+  oracle-gain in this round: 0.96
+  kd-train: teacher 4 (78.98) -> student 5 (76.82)
+  kd-train: teacher 9 (78.54) -> student 1 (77.12)
+  kd-train: teacher 7 (77.60) -> student 2 (77.08)
+  kd-train: teacher 3 (79.04) -> student 6 (77.94)
+
+=== Round 225/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 76.12
+  oracle-gain in this round: 2.02
+  kd-train: teacher 2 (78.10) -> student 1 (77.78)
+  kd-train: teacher 9 (78.54) -> student 7 (77.60)
+  kd-train: teacher 5 (78.24) -> student 6 (77.82)
+  kd-train: teacher 3 (79.04) -> student 4 (78.98)
+
+=== Round 226/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 74.68
+  oracle-gain in this round: -1.64
+  kd-train: teacher 9 (78.54) -> student 8 (78.14)
+  kd-train: teacher 4 (78.08) -> student 1 (75.92)
+  kd-train: teacher 2 (78.10) -> student 7 (77.48)
+  kd-train: teacher 3 (79.04) -> student 5 (78.24)
+
+=== Round 227/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 73.04
+  oracle-gain in this round: 2.82
+  kd-train: teacher 2 (78.10) -> student 1 (75.82)
+  kd-train: teacher 8 (78.26) -> student 7 (76.60)
+  kd-train: teacher 5 (78.88) -> student 9 (78.54)
+  kd-train: teacher 3 (79.04) -> student 4 (78.08)
+
+=== Round 228/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 75.10
+  oracle-gain in this round: -0.58
+  kd-train: teacher 9 (77.20) -> student 7 (76.18)
+  kd-train: teacher 2 (78.10) -> student 6 (75.86)
+  kd-train: teacher 5 (78.88) -> student 8 (78.26)
+  kd-train: teacher 3 (79.04) -> student 4 (78.58)
+
+=== Round 229/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 74.52
+  oracle-gain in this round: 3.88
+  kd-train: teacher 2 (78.10) -> student 9 (77.20)
+  kd-train: teacher 6 (77.18) -> student 7 (76.36)
+  kd-train: teacher 4 (77.84) -> student 8 (77.52)
+  kd-train: teacher 3 (79.04) -> student 5 (78.88)
+
+=== Round 230/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 75.22
+  oracle-gain in this round: -1.18
+  kd-train: teacher 1 (78.40) -> student 9 (76.22)
+  kd-train: teacher 8 (78.04) -> student 6 (77.18)
+  kd-train: teacher 5 (78.98) -> student 2 (78.10)
+  kd-train: teacher 3 (79.04) -> student 4 (77.84)
+
+=== Round 231/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 74.04
+  oracle-gain in this round: 2.10
+  kd-train: teacher 9 (76.94) -> student 4 (76.52)
+  kd-train: teacher 1 (78.40) -> student 2 (77.18)
+  kd-train: teacher 5 (78.98) -> student 6 (77.26)
+  kd-train: teacher 3 (79.04) -> student 8 (78.04)
+
+=== Round 232/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 76.28
+  oracle-gain in this round: 0.32
+  kd-train: teacher 8 (78.46) -> student 9 (76.94)
+  kd-train: teacher 2 (78.42) -> student 6 (77.60)
+  kd-train: teacher 1 (78.40) -> student 7 (76.14)
+  kd-train: teacher 3 (79.04) -> student 5 (78.98)
+
+=== Round 233/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 76.90
+  oracle-gain in this round: -5.62
+  kd-train: teacher 7 (77.00) -> student 4 (76.60)
+  kd-train: teacher 6 (77.34) -> student 9 (76.66)
+  kd-train: teacher 8 (78.46) -> student 1 (78.40)
+  kd-train: teacher 3 (79.04) -> student 2 (78.42)
+
+=== Round 234/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 71.28
+  oracle-gain in this round: 3.86
+  kd-train: teacher 8 (78.46) -> student 9 (74.06)
+  kd-train: teacher 2 (78.58) -> student 7 (77.00)
+  kd-train: teacher 1 (77.52) -> student 6 (77.34)
+  kd-train: teacher 3 (79.04) -> student 4 (78.44)
+
+=== Round 235/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 75.90
+  oracle-gain in this round: 1.18
+  kd-train: teacher 9 (76.88) -> student 5 (75.14)
+  kd-train: teacher 4 (78.20) -> student 1 (77.52)
+  kd-train: teacher 8 (78.46) -> student 7 (77.70)
+  kd-train: teacher 3 (79.04) -> student 2 (78.58)
+
+=== Round 236/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 76.88
+  oracle-gain in this round: -0.34
+  kd-train: teacher 6 (77.08) -> student 5 (76.28)
+  kd-train: teacher 8 (78.46) -> student 1 (77.40)
+  kd-train: teacher 4 (78.20) -> student 7 (77.04)
+  kd-train: teacher 3 (79.04) -> student 2 (78.20)
+
+=== Round 237/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 76.12
+  oracle-gain in this round: -2.32
+  kd-train: teacher 6 (77.08) -> student 9 (76.54)
+  kd-train: teacher 7 (77.54) -> student 2 (77.36)
+  kd-train: teacher 8 (78.46) -> student 4 (78.20)
+  kd-train: teacher 3 (79.04) -> student 1 (78.16)
+
+=== Round 238/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 73.80
+  oracle-gain in this round: 1.84
+  kd-train: teacher 7 (77.54) -> student 9 (74.68)
+  kd-train: teacher 4 (77.22) -> student 6 (77.08)
+  kd-train: teacher 8 (78.46) -> student 2 (77.62)
+  kd-train: teacher 3 (79.04) -> student 1 (78.66)
+
+=== Round 239/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 75.64
+  oracle-gain in this round: 3.60
+  kd-train: teacher 8 (78.46) -> student 9 (76.56)
+  kd-train: teacher 1 (78.14) -> student 7 (77.54)
+  kd-train: teacher 2 (77.80) -> student 4 (77.22)
+  kd-train: teacher 3 (79.04) -> student 6 (77.14)
+
+=== Round 240/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 76.66
+  oracle-gain in this round: -0.20
+  kd-train: teacher 5 (79.24) -> student 9 (77.16)
+  kd-train: teacher 1 (78.14) -> student 2 (77.80)
+  kd-train: teacher 8 (78.46) -> student 6 (77.94)
+  kd-train: teacher 3 (79.04) -> student 7 (78.74)
+
+=== Round 241/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 76.46
+  oracle-gain in this round: -2.50
+  kd-train: teacher 5 (79.24) -> student 4 (76.46)
+  kd-train: teacher 1 (78.14) -> student 9 (77.94)
+  kd-train: teacher 3 (79.04) -> student 6 (77.12)
+  kd-train: teacher 8 (78.46) -> student 7 (77.66)
+
+=== Round 242/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 73.96
+  oracle-gain in this round: 2.84
+  kd-train: teacher 7 (77.30) -> student 4 (77.26)
+  kd-train: teacher 5 (79.24) -> student 6 (77.42)
+  kd-train: teacher 8 (78.46) -> student 9 (77.42)
+  kd-train: teacher 3 (79.04) -> student 1 (78.14)
+
+=== Round 243/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 76.80
+  oracle-gain in this round: 0.42
+  kd-train: teacher 5 (79.24) -> student 4 (76.32)
+  kd-train: teacher 6 (77.56) -> student 7 (77.30)
+  kd-train: teacher 3 (79.04) -> student 9 (77.32)
+  kd-train: teacher 8 (78.46) -> student 1 (77.56)
+
+=== Round 244/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 75.90
+  oracle-gain in this round: -0.78
+  kd-train: teacher 4 (77.32) -> student 1 (77.30)
+  kd-train: teacher 5 (79.24) -> student 9 (77.22)
+  kd-train: teacher 8 (78.46) -> student 6 (77.56)
+  kd-train: teacher 3 (79.04) -> student 2 (77.22)
+
+=== Round 245/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 75.12
+  oracle-gain in this round: 1.12
+  kd-train: teacher 6 (76.32) -> student 1 (75.94)
+  kd-train: teacher 8 (78.46) -> student 4 (77.32)
+  kd-train: teacher 3 (79.04) -> student 9 (77.30)
+  kd-train: teacher 5 (79.24) -> student 2 (78.58)
+
+=== Round 246/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 75.74
+  oracle-gain in this round: 0.06
+  kd-train: teacher 4 (77.56) -> student 7 (76.24)
+  kd-train: teacher 5 (79.24) -> student 6 (76.32)
+  kd-train: teacher 8 (78.46) -> student 2 (77.70)
+  kd-train: teacher 3 (79.04) -> student 9 (77.92)
+
+=== Round 247/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 75.80
+  oracle-gain in this round: -1.22
+  kd-train: teacher 5 (79.24) -> student 4 (77.56)
+  kd-train: teacher 8 (78.46) -> student 6 (78.30)
+  kd-train: teacher 9 (78.12) -> student 7 (77.88)
+  kd-train: teacher 3 (79.04) -> student 2 (78.50)
+
+=== Round 248/300 (ClassDist) ===
+  oracle-train: oracle -> student 1 : 74.58
+  oracle-gain in this round: 4.16
+  kd-train: teacher 5 (79.24) -> student 6 (77.58)
+  kd-train: teacher 2 (78.28) -> student 4 (76.86)
+  kd-train: teacher 8 (78.46) -> student 9 (78.12)
+  kd-train: teacher 3 (79.04) -> student 7 (77.66)
+
+=== Round 249/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 76.96
+  oracle-gain in this round: -5.00
+  kd-train: teacher 1 (78.74) -> student 6 (77.50)
+  kd-train: teacher 5 (79.24) -> student 8 (78.46)
+  kd-train: teacher 7 (78.20) -> student 4 (78.02)
+  kd-train: teacher 3 (79.04) -> student 2 (78.28)
+
+=== Round 250/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 71.96
+  oracle-gain in this round: 5.40
+  kd-train: teacher 8 (78.58) -> student 2 (77.84)
+  kd-train: teacher 5 (79.24) -> student 4 (77.80)
+  kd-train: teacher 1 (78.74) -> student 7 (78.20)
+  kd-train: teacher 3 (79.04) -> student 6 (78.86)
+
+=== Round 251/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 75.58
+  oracle-gain in this round: 1.14
+  kd-train: teacher 7 (76.90) -> student 4 (76.36)
+  kd-train: teacher 8 (78.58) -> student 6 (77.32)
+  kd-train: teacher 3 (79.04) -> student 9 (77.36)
+  kd-train: teacher 5 (79.24) -> student 1 (78.74)
+
+=== Round 252/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 75.66
+  oracle-gain in this round: -1.04
+  kd-train: teacher 8 (78.58) -> student 2 (76.72)
+  kd-train: teacher 6 (77.28) -> student 7 (76.90)
+  kd-train: teacher 5 (79.24) -> student 3 (79.04)
+  kd-train: teacher 9 (78.40) -> student 1 (78.14)
+
+=== Round 253/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 74.62
+  oracle-gain in this round: 2.82
+  kd-train: teacher 1 (77.78) -> student 7 (75.78)
+  kd-train: teacher 9 (78.40) -> student 3 (77.64)
+  kd-train: teacher 5 (79.24) -> student 2 (77.64)
+  kd-train: teacher 8 (78.58) -> student 6 (77.28)
+
+=== Round 254/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 77.44
+  oracle-gain in this round: 0.08
+  kd-train: teacher 8 (78.58) -> student 7 (77.12)
+  kd-train: teacher 3 (78.24) -> student 2 (77.94)
+  kd-train: teacher 1 (77.78) -> student 6 (76.42)
+  kd-train: teacher 5 (79.24) -> student 9 (78.40)
+
+=== Round 255/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 77.52
+  oracle-gain in this round: 0.24
+  kd-train: teacher 9 (78.68) -> student 3 (78.24)
+  kd-train: teacher 2 (77.34) -> student 7 (76.56)
+  kd-train: teacher 8 (78.58) -> student 6 (76.60)
+  kd-train: teacher 5 (79.24) -> student 1 (77.78)
+
+=== Round 256/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 76.70
+  oracle-gain in this round: -4.54
+  kd-train: teacher 2 (77.34) -> student 6 (76.42)
+  kd-train: teacher 4 (77.76) -> student 1 (77.06)
+  kd-train: teacher 8 (78.58) -> student 3 (77.52)
+  kd-train: teacher 5 (79.24) -> student 9 (78.68)
+
+=== Round 257/300 (ClassDist) ===
+  oracle-train: oracle -> student 7 : 72.16
+  oracle-gain in this round: 10.86
+  kd-train: teacher 9 (77.52) -> student 3 (77.28)
+  kd-train: teacher 5 (79.24) -> student 1 (76.10)
+  kd-train: teacher 8 (78.58) -> student 6 (76.74)
+  kd-train: teacher 4 (77.76) -> student 2 (77.34)
+
+=== Round 258/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 75.84
+  oracle-gain in this round: -0.96
+  kd-train: teacher 1 (78.88) -> student 2 (77.44)
+  kd-train: teacher 7 (83.02) -> student 6 (76.72)
+  kd-train: teacher 8 (78.58) -> student 4 (77.76)
+  kd-train: teacher 5 (79.24) -> student 9 (77.52)
+
+=== Round 259/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 74.88
+  oracle-gain in this round: 1.84
+  kd-train: teacher 7 (83.02) -> student 2 (76.72)
+  kd-train: teacher 1 (78.88) -> student 9 (78.00)
+  kd-train: teacher 6 (80.10) -> student 4 (78.00)
+  kd-train: teacher 5 (79.24) -> student 8 (78.58)
+
+=== Round 260/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 76.72
+  oracle-gain in this round: 1.96
+  kd-train: teacher 2 (79.80) -> student 9 (76.46)
+  kd-train: teacher 4 (80.40) -> student 1 (78.88)
+  kd-train: teacher 6 (80.10) -> student 8 (78.48)
+  kd-train: teacher 7 (83.02) -> student 5 (79.24)
+
+=== Round 261/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 78.68
+  oracle-gain in this round: -4.62
+  kd-train: teacher 2 (79.80) -> student 8 (79.78)
+  kd-train: teacher 7 (83.02) -> student 4 (80.40)
+  kd-train: teacher 5 (82.34) -> student 9 (79.12)
+  kd-train: teacher 1 (80.82) -> student 6 (80.10)
+
+=== Round 262/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 74.06
+  oracle-gain in this round: 4.22
+  kd-train: teacher 4 (81.96) -> student 8 (78.60)
+  kd-train: teacher 7 (83.02) -> student 6 (78.82)
+  kd-train: teacher 9 (79.82) -> student 2 (79.80)
+  kd-train: teacher 5 (82.34) -> student 1 (80.82)
+
+=== Round 263/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 78.28
+  oracle-gain in this round: 0.42
+  kd-train: teacher 8 (80.54) -> student 2 (79.04)
+  kd-train: teacher 6 (80.44) -> student 9 (79.82)
+  kd-train: teacher 5 (82.34) -> student 4 (81.96)
+  kd-train: teacher 7 (83.02) -> student 1 (82.38)
+
+=== Round 264/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 78.56
+  oracle-gain in this round: -3.18
+  kd-train: teacher 7 (83.02) -> student 3 (78.70)
+  kd-train: teacher 8 (80.54) -> student 6 (80.44)
+  kd-train: teacher 4 (80.36) -> student 9 (79.72)
+  kd-train: teacher 1 (82.62) -> student 5 (82.34)
+
+=== Round 265/300 (ClassDist) ===
+  oracle-train: oracle -> student 2 : 75.38
+  oracle-gain in this round: 2.58
+  kd-train: teacher 3 (82.52) -> student 6 (76.92)
+  kd-train: teacher 7 (83.02) -> student 9 (76.50)
+  kd-train: teacher 8 (80.54) -> student 4 (80.36)
+  kd-train: teacher 1 (82.62) -> student 5 (80.96)
+
+=== Round 266/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 77.96
+  oracle-gain in this round: -1.84
+  kd-train: teacher 8 (80.54) -> student 6 (79.70)
+  kd-train: teacher 3 (82.52) -> student 2 (77.96)
+  kd-train: teacher 7 (83.02) -> student 9 (79.60)
+  kd-train: teacher 1 (82.62) -> student 5 (82.48)
+
+=== Round 267/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 76.12
+  oracle-gain in this round: 1.22
+  kd-train: teacher 7 (83.02) -> student 6 (78.32)
+  kd-train: teacher 8 (80.54) -> student 2 (80.38)
+  kd-train: teacher 3 (82.52) -> student 5 (81.76)
+  kd-train: teacher 1 (82.62) -> student 9 (80.86)
+
+=== Round 268/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 77.34
+  oracle-gain in this round: 0.78
+  kd-train: teacher 5 (80.18) -> student 6 (79.20)
+  kd-train: teacher 7 (83.02) -> student 2 (79.54)
+  kd-train: teacher 3 (82.52) -> student 8 (80.54)
+  kd-train: teacher 1 (82.62) -> student 9 (80.52)
+
+=== Round 269/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 77.44
+  oracle-gain in this round: -0.30
+  kd-train: teacher 8 (80.62) -> student 4 (78.12)
+  kd-train: teacher 2 (81.32) -> student 5 (80.18)
+  kd-train: teacher 7 (83.02) -> student 9 (80.78)
+  kd-train: teacher 1 (82.62) -> student 3 (82.52)
+
+=== Round 270/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 77.14
+  oracle-gain in this round: 0.26
+  kd-train: teacher 9 (80.90) -> student 4 (79.12)
+  kd-train: teacher 7 (83.02) -> student 5 (80.56)
+  kd-train: teacher 2 (81.32) -> student 8 (80.62)
+  kd-train: teacher 1 (82.62) -> student 3 (81.86)
+
+=== Round 271/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 77.40
+  oracle-gain in this round: -2.08
+  kd-train: teacher 5 (80.90) -> student 8 (79.92)
+  kd-train: teacher 7 (83.02) -> student 2 (81.32)
+  kd-train: teacher 3 (82.32) -> student 9 (80.90)
+  kd-train: teacher 1 (82.62) -> student 4 (80.60)
+
+=== Round 272/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 75.32
+  oracle-gain in this round: 2.26
+  kd-train: teacher 3 (82.32) -> student 8 (78.94)
+  kd-train: teacher 5 (80.90) -> student 9 (79.76)
+  kd-train: teacher 1 (82.62) -> student 2 (80.88)
+  kd-train: teacher 7 (83.02) -> student 4 (82.26)
+
+=== Round 273/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 77.58
+  oracle-gain in this round: -0.70
+  kd-train: teacher 8 (79.60) -> student 9 (78.90)
+  kd-train: teacher 3 (82.32) -> student 5 (80.90)
+  kd-train: teacher 7 (83.02) -> student 4 (81.68)
+  kd-train: teacher 1 (82.62) -> student 2 (82.26)
+
+=== Round 274/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 76.88
+  oracle-gain in this round: 1.60
+  kd-train: teacher 4 (81.44) -> student 9 (78.46)
+  kd-train: teacher 7 (83.02) -> student 8 (79.60)
+  kd-train: teacher 2 (82.62) -> student 5 (80.54)
+  kd-train: teacher 1 (82.62) -> student 3 (82.32)
+
+=== Round 275/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 78.48
+  oracle-gain in this round: 2.22
+  kd-train: teacher 4 (81.44) -> student 5 (80.58)
+  kd-train: teacher 8 (81.40) -> student 9 (79.72)
+  kd-train: teacher 7 (83.02) -> student 3 (82.16)
+  kd-train: teacher 1 (82.62) -> student 2 (82.62)
+
+=== Round 276/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 79.40
+  oracle-gain in this round: -2.42
+  kd-train: teacher 6 (80.70) -> student 9 (78.84)
+  kd-train: teacher 4 (81.44) -> student 8 (81.40)
+  kd-train: teacher 1 (82.62) -> student 3 (81.70)
+  kd-train: teacher 7 (83.02) -> student 2 (82.86)
+
+=== Round 277/300 (ClassDist) ===
+  oracle-train: oracle -> student 5 : 76.98
+  oracle-gain in this round: 6.06
+  kd-train: teacher 8 (78.28) -> student 9 (77.72)
+  kd-train: teacher 3 (81.04) -> student 6 (80.70)
+  kd-train: teacher 1 (82.62) -> student 4 (81.44)
+  kd-train: teacher 7 (83.02) -> student 2 (82.70)
+
+=== Round 278/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 78.12
+  oracle-gain in this round: -3.16
+  kd-train: teacher 6 (80.72) -> student 8 (78.28)
+  kd-train: teacher 5 (83.04) -> student 4 (80.52)
+  kd-train: teacher 7 (83.02) -> student 3 (81.04)
+  kd-train: teacher 2 (82.74) -> student 1 (82.62)
+
+=== Round 279/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 74.96
+  oracle-gain in this round: 2.56
+  kd-train: teacher 4 (80.94) -> student 8 (77.82)
+  kd-train: teacher 5 (83.04) -> student 6 (80.72)
+  kd-train: teacher 1 (82.36) -> student 3 (81.52)
+  kd-train: teacher 7 (83.02) -> student 2 (82.74)
+
+=== Round 280/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 77.52
+  oracle-gain in this round: -1.54
+  kd-train: teacher 5 (83.04) -> student 4 (80.94)
+  kd-train: teacher 2 (82.86) -> student 8 (79.96)
+  kd-train: teacher 6 (82.28) -> student 3 (81.10)
+  kd-train: teacher 7 (83.02) -> student 1 (82.36)
+
+=== Round 281/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 75.98
+  oracle-gain in this round: 2.26
+  kd-train: teacher 4 (80.44) -> student 3 (80.42)
+  kd-train: teacher 6 (82.28) -> student 8 (80.92)
+  kd-train: teacher 5 (83.04) -> student 2 (82.86)
+  kd-train: teacher 7 (83.02) -> student 1 (82.76)
+
+=== Round 282/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 78.24
+  oracle-gain in this round: 1.34
+  kd-train: teacher 6 (82.28) -> student 3 (78.22)
+  kd-train: teacher 4 (80.44) -> student 8 (79.66)
+  kd-train: teacher 2 (83.08) -> student 7 (83.02)
+  kd-train: teacher 5 (83.04) -> student 1 (83.00)
+
+=== Round 283/300 (ClassDist) ===
+  oracle-train: oracle -> student 9 : 79.58
+  oracle-gain in this round: -0.28
+  kd-train: teacher 3 (79.64) -> student 8 (79.00)
+  kd-train: teacher 6 (82.28) -> student 4 (80.44)
+  kd-train: teacher 5 (83.04) -> student 1 (82.82)
+  kd-train: teacher 7 (83.10) -> student 2 (83.08)
+
+=== Round 284/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 76.78
+  oracle-gain in this round: -2.14
+  kd-train: teacher 4 (81.06) -> student 9 (79.30)
+  kd-train: teacher 7 (83.10) -> student 3 (79.64)
+  kd-train: teacher 2 (83.24) -> student 6 (82.28)
+  kd-train: teacher 5 (83.04) -> student 1 (82.84)
+
+=== Round 285/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 74.64
+  oracle-gain in this round: 3.14
+  kd-train: teacher 6 (82.34) -> student 9 (80.10)
+  kd-train: teacher 3 (81.22) -> student 4 (81.06)
+  kd-train: teacher 2 (83.24) -> student 1 (82.72)
+  kd-train: teacher 7 (83.10) -> student 5 (83.04)
+
+=== Round 286/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 77.78
+  oracle-gain in this round: 1.74
+  kd-train: teacher 9 (81.76) -> student 4 (78.32)
+  kd-train: teacher 6 (82.34) -> student 3 (81.22)
+  kd-train: teacher 2 (83.24) -> student 5 (83.24)
+  kd-train: teacher 7 (83.10) -> student 1 (82.94)
+
+=== Round 287/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 78.22
+  oracle-gain in this round: -2.68
+  kd-train: teacher 9 (81.76) -> student 8 (79.52)
+  kd-train: teacher 2 (83.24) -> student 4 (80.54)
+  kd-train: teacher 7 (83.10) -> student 6 (82.34)
+  kd-train: teacher 1 (83.06) -> student 5 (82.40)
+
+=== Round 288/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 75.54
+  oracle-gain in this round: -1.12
+  kd-train: teacher 6 (82.08) -> student 4 (80.40)
+  kd-train: teacher 2 (83.24) -> student 8 (81.34)
+  kd-train: teacher 7 (83.10) -> student 9 (81.76)
+  kd-train: teacher 1 (83.06) -> student 5 (82.94)
+
+=== Round 289/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 74.42
+  oracle-gain in this round: 3.86
+  kd-train: teacher 9 (81.98) -> student 4 (80.44)
+  kd-train: teacher 8 (82.20) -> student 6 (82.08)
+  kd-train: teacher 5 (83.46) -> student 2 (83.24)
+  kd-train: teacher 7 (83.10) -> student 1 (83.06)
+
+=== Round 290/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 78.28
+  oracle-gain in this round: 0.68
+  kd-train: teacher 2 (83.24) -> student 4 (80.94)
+  kd-train: teacher 5 (83.46) -> student 6 (81.34)
+  kd-train: teacher 1 (83.28) -> student 9 (81.98)
+  kd-train: teacher 7 (83.10) -> student 8 (82.20)
+
+=== Round 291/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 78.96
+  oracle-gain in this round: 0.28
+  kd-train: teacher 5 (83.46) -> student 4 (80.60)
+  kd-train: teacher 1 (83.28) -> student 8 (82.12)
+  kd-train: teacher 9 (82.82) -> student 6 (81.80)
+  kd-train: teacher 2 (83.24) -> student 7 (83.10)
+
+=== Round 292/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 79.24
+  oracle-gain in this round: -1.74
+  kd-train: teacher 1 (83.28) -> student 6 (80.34)
+  kd-train: teacher 8 (81.92) -> student 4 (81.10)
+  kd-train: teacher 2 (83.24) -> student 9 (82.82)
+  kd-train: teacher 5 (83.46) -> student 7 (82.66)
+
+=== Round 293/300 (ClassDist) ===
+  oracle-train: oracle -> student 3 : 77.50
+  oracle-gain in this round: 7.00
+  kd-train: teacher 5 (83.46) -> student 4 (80.14)
+  kd-train: teacher 6 (81.92) -> student 8 (81.92)
+  kd-train: teacher 1 (83.28) -> student 9 (81.16)
+  kd-train: teacher 2 (83.24) -> student 7 (82.76)
+
+=== Round 294/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 80.48
+  oracle-gain in this round: -3.62
+  kd-train: teacher 3 (84.50) -> student 6 (81.92)
+  kd-train: teacher 9 (82.12) -> student 4 (81.68)
+  kd-train: teacher 1 (83.28) -> student 7 (82.86)
+  kd-train: teacher 5 (83.46) -> student 2 (83.24)
+
+=== Round 295/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 76.86
+  oracle-gain in this round: 2.00
+  kd-train: teacher 1 (83.28) -> student 6 (78.84)
+  kd-train: teacher 2 (83.30) -> student 4 (80.02)
+  kd-train: teacher 3 (84.50) -> student 9 (82.12)
+  kd-train: teacher 5 (83.46) -> student 7 (83.22)
+
+=== Round 296/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 78.86
+  oracle-gain in this round: -3.54
+  kd-train: teacher 6 (82.32) -> student 9 (81.12)
+  kd-train: teacher 3 (84.50) -> student 4 (80.84)
+  kd-train: teacher 1 (83.28) -> student 7 (83.16)
+  kd-train: teacher 5 (83.46) -> student 2 (83.30)
+
+=== Round 297/300 (ClassDist) ===
+  oracle-train: oracle -> student 8 : 75.32
+  oracle-gain in this round: 4.78
+  kd-train: teacher 9 (80.12) -> student 4 (78.96)
+  kd-train: teacher 3 (84.50) -> student 6 (82.32)
+  kd-train: teacher 5 (83.46) -> student 1 (83.28)
+  kd-train: teacher 2 (83.42) -> student 7 (83.38)
+
+=== Round 298/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 79.88
+  oracle-gain in this round: -1.30
+  kd-train: teacher 3 (84.50) -> student 4 (79.08)
+  kd-train: teacher 9 (80.12) -> student 8 (80.10)
+  kd-train: teacher 5 (83.46) -> student 7 (82.86)
+  kd-train: teacher 2 (83.42) -> student 1 (83.24)
+
+=== Round 299/300 (ClassDist) ===
+  oracle-train: oracle -> student 6 : 78.58
+  oracle-gain in this round: 5.76
+  kd-train: teacher 3 (84.50) -> student 9 (80.12)
+  kd-train: teacher 1 (83.04) -> student 8 (80.80)
+  kd-train: teacher 7 (82.98) -> student 4 (81.06)
+  kd-train: teacher 5 (83.46) -> student 2 (83.42)
+
+=== Round 300/300 (ClassDist) ===
+  oracle-train: oracle -> student 4 : 80.92
+  oracle-gain in this round: -5.38
+  kd-train: teacher 2 (83.24) -> student 8 (82.30)
+  kd-train: teacher 6 (84.34) -> student 9 (81.10)
+  kd-train: teacher 3 (84.50) -> student 7 (82.98)
+  kd-train: teacher 5 (83.46) -> student 1 (83.04)
+M0: oracle_total_gain=0.00, non_oracle_total_gain=0.00
+M1: oracle_total_gain=57.38, non_oracle_total_gain=16.10
+M2: oracle_total_gain=55.40, non_oracle_total_gain=16.74
+M3: oracle_total_gain=67.90, non_oracle_total_gain=6.66
+M4: oracle_total_gain=47.64, non_oracle_total_gain=14.24
+M5: oracle_total_gain=67.20, non_oracle_total_gain=5.64
+M6: oracle_total_gain=46.58, non_oracle_total_gain=27.66
+M7: oracle_total_gain=53.66, non_oracle_total_gain=19.94
+M8: oracle_total_gain=65.30, non_oracle_total_gain=6.18
+M9: oracle_total_gain=42.74, non_oracle_total_gain=31.72
+End time: 2026-04-23 11:37:28
+Duration: 4:56:22.123704
+
+===== Distilling Ensemble → Single Model =====
+[Distill Epoch 1/100] Loss=2.6237 ValAcc=58.06
+[Distill Epoch 2/100] Loss=1.6677 ValAcc=64.32
+[Distill Epoch 3/100] Loss=1.0992 ValAcc=66.92
+[Distill Epoch 4/100] Loss=0.8238 ValAcc=70.10
+[Distill Epoch 5/100] Loss=0.6625 ValAcc=73.34
+[Distill Epoch 6/100] Loss=0.5411 ValAcc=75.10
+[Distill Epoch 7/100] Loss=0.4585 ValAcc=75.74
+[Distill Epoch 8/100] Loss=0.3981 ValAcc=76.66
+[Distill Epoch 9/100] Loss=0.3539 ValAcc=77.14
+[Distill Epoch 10/100] Loss=0.3189 ValAcc=77.92
+[Distill Epoch 11/100] Loss=0.2898 ValAcc=78.62
+[Distill Epoch 12/100] Loss=0.2688 ValAcc=79.44
+[Distill Epoch 13/100] Loss=0.2544 ValAcc=78.80
+[Distill Epoch 14/100] Loss=0.2412 ValAcc=79.86
+[Distill Epoch 15/100] Loss=0.2278 ValAcc=80.14
+[Distill Epoch 16/100] Loss=0.2143 ValAcc=79.60
+[Distill Epoch 17/100] Loss=0.2074 ValAcc=80.22
+[Distill Epoch 18/100] Loss=0.1974 ValAcc=80.42
+[Distill Epoch 19/100] Loss=0.1943 ValAcc=80.84
+[Distill Epoch 20/100] Loss=0.1854 ValAcc=81.50
+[Distill Epoch 21/100] Loss=0.1790 ValAcc=81.08
+[Distill Epoch 22/100] Loss=0.1735 ValAcc=81.90
+[Distill Epoch 23/100] Loss=0.1676 ValAcc=81.30
+[Distill Epoch 24/100] Loss=0.1654 ValAcc=81.90
+[Distill Epoch 25/100] Loss=0.1597 ValAcc=81.56
+[Distill Epoch 26/100] Loss=0.1561 ValAcc=81.94
+[Distill Epoch 27/100] Loss=0.1538 ValAcc=81.84
+[Distill Epoch 28/100] Loss=0.1510 ValAcc=81.86
+[Distill Epoch 29/100] Loss=0.1469 ValAcc=82.44
+[Distill Epoch 30/100] Loss=0.1432 ValAcc=82.28
+[Distill Epoch 31/100] Loss=0.1426 ValAcc=82.54
+[Distill Epoch 32/100] Loss=0.1398 ValAcc=82.12
+[Distill Epoch 33/100] Loss=0.1365 ValAcc=82.76
+[Distill Epoch 34/100] Loss=0.1348 ValAcc=82.54
+[Distill Epoch 35/100] Loss=0.1338 ValAcc=83.16
+[Distill Epoch 36/100] Loss=0.1309 ValAcc=82.68
+[Distill Epoch 37/100] Loss=0.1302 ValAcc=82.54
+[Distill Epoch 38/100] Loss=0.1270 ValAcc=82.80
+[Distill Epoch 39/100] Loss=0.1258 ValAcc=82.38
+[Distill Epoch 40/100] Loss=0.1247 ValAcc=82.78
+[Distill Epoch 41/100] Loss=0.1227 ValAcc=82.58
+[Distill Epoch 42/100] Loss=0.1221 ValAcc=82.62
+[Distill Epoch 43/100] Loss=0.1196 ValAcc=82.56
+[Distill Epoch 44/100] Loss=0.1199 ValAcc=83.06
+[Distill Epoch 45/100] Loss=0.1177 ValAcc=82.98
+[Distill Epoch 46/100] Loss=0.1161 ValAcc=83.14
+[Distill Epoch 47/100] Loss=0.1151 ValAcc=83.28
+[Distill Epoch 48/100] Loss=0.1136 ValAcc=83.08
+[Distill Epoch 49/100] Loss=0.1125 ValAcc=82.92
+[Distill Epoch 50/100] Loss=0.1109 ValAcc=83.32
+[Distill Epoch 51/100] Loss=0.1114 ValAcc=83.02
+[Distill Epoch 52/100] Loss=0.1101 ValAcc=82.86
+[Distill Epoch 53/100] Loss=0.1082 ValAcc=83.34
+[Distill Epoch 54/100] Loss=0.1079 ValAcc=83.34
+[Distill Epoch 55/100] Loss=0.1082 ValAcc=82.98
+[Distill Epoch 56/100] Loss=0.1064 ValAcc=83.24
+[Distill Epoch 57/100] Loss=0.1045 ValAcc=83.42
+[Distill Epoch 58/100] Loss=0.1047 ValAcc=83.28
+[Distill Epoch 59/100] Loss=0.1038 ValAcc=83.14
+[Distill Epoch 60/100] Loss=0.1030 ValAcc=83.30
+[Distill Epoch 61/100] Loss=0.1027 ValAcc=83.36
+[Distill Epoch 62/100] Loss=0.1015 ValAcc=83.58
+[Distill Epoch 63/100] Loss=0.1022 ValAcc=83.18
+[Distill Epoch 64/100] Loss=0.1005 ValAcc=83.38
+[Distill Epoch 65/100] Loss=0.0990 ValAcc=83.44
+[Distill Epoch 66/100] Loss=0.0989 ValAcc=83.40
+[Distill Epoch 67/100] Loss=0.0978 ValAcc=83.14
+[Distill Epoch 68/100] Loss=0.0968 ValAcc=83.16
+[Distill Epoch 69/100] Loss=0.0970 ValAcc=83.40
+[Distill Epoch 70/100] Loss=0.0968 ValAcc=83.66
+[Distill Epoch 71/100] Loss=0.0948 ValAcc=83.70
+[Distill Epoch 72/100] Loss=0.0958 ValAcc=83.36
+[Distill Epoch 73/100] Loss=0.0942 ValAcc=83.46
+[Distill Epoch 74/100] Loss=0.0937 ValAcc=83.86
+[Distill Epoch 75/100] Loss=0.0931 ValAcc=83.42
+[Distill Epoch 76/100] Loss=0.0926 ValAcc=83.60
+[Distill Epoch 77/100] Loss=0.0927 ValAcc=83.52
+[Distill Epoch 78/100] Loss=0.0920 ValAcc=83.62
+[Distill Epoch 79/100] Loss=0.0909 ValAcc=83.36
+[Distill Epoch 80/100] Loss=0.0909 ValAcc=83.60
+[Distill Epoch 81/100] Loss=0.0896 ValAcc=83.60
+[Distill Epoch 82/100] Loss=0.0896 ValAcc=83.70
+[Distill Epoch 83/100] Loss=0.0890 ValAcc=83.64
+[Distill Epoch 84/100] Loss=0.0888 ValAcc=83.66
+[Distill Epoch 85/100] Loss=0.0888 ValAcc=83.82
+[Distill Epoch 86/100] Loss=0.0880 ValAcc=83.70
+[Distill Epoch 87/100] Loss=0.0876 ValAcc=83.64
+[Distill Epoch 88/100] Loss=0.0877 ValAcc=83.56
+[Distill Epoch 89/100] Loss=0.0872 ValAcc=83.34
+[Distill Epoch 90/100] Loss=0.0865 ValAcc=83.84
+[Distill Epoch 91/100] Loss=0.0863 ValAcc=83.60
+[Distill Epoch 92/100] Loss=0.0859 ValAcc=83.80
+[Distill Epoch 93/100] Loss=0.0856 ValAcc=83.88
+[Distill Epoch 94/100] Loss=0.0845 ValAcc=83.80
+[Distill Epoch 95/100] Loss=0.0841 ValAcc=83.80
+[Distill Epoch 96/100] Loss=0.0843 ValAcc=83.98
+[Distill Epoch 97/100] Loss=0.0839 ValAcc=83.62
+[Distill Epoch 98/100] Loss=0.0839 ValAcc=83.66
+[Distill Epoch 99/100] Loss=0.0833 ValAcc=83.76
+[Distill Epoch 100/100] Loss=0.0826 ValAcc=83.68
+
+Distilled Student Test Accuracy: 83.83
+84.15
+84.16
+84.15
+avg_ens_acc = 84.15
+avg_learner_acc = 81.98
+avg_ens_conf = 0.81
+Mean pairwise 0/1 disagreement: 0.126
+M1_acc= 82.87
+M2_acc= 82.53
+M3_acc= 83.9
+M4_acc= 75.48
+M5_acc= 82.81
+M6_acc= 84.04
+M7_acc= 82.87
+M8_acc= 81.77
+M9_acc= 81.59
+std_dev= 2.43
+acc_var= 5.88
+

@@ -1,0 +1,933 @@
+Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to ./data/cifar-10-python.tar.gz
+Extracting ./data/cifar-10-python.tar.gz to ./data
+Files already downloaded and verified
+Files already downloaded and verified
+Start time: 2026-04-23 00:10:05
+
+=== Round 1/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (13.66) -> student 3 (9.94)
+  kd-train: teacher 5 (10.62) -> student 1 (9.56)
+  kd-train: teacher 2 (11.10) -> student 9 (7.42)
+  oracle-train: oracle -> student 6 : 10.10
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.4468 | ValLoss Δ: +0.5651
+  oracle-gain in this round: 8.34
+  kd-train: teacher 8 (10.58) -> student 7 (10.00)
+
+=== Round 2/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (18.44) -> student 5 (10.62)
+  kd-train: teacher 3 (13.68) -> student 8 (10.58)
+  oracle-train: oracle -> student 2 : 11.10
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.7665 | ValLoss Δ: -0.7485
+  oracle-gain in this round: 28.66
+  kd-train: teacher 7 (11.22) -> student 1 (10.64)
+  kd-train: teacher 4 (13.66) -> student 9 (9.42)
+
+=== Round 3/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 13.66
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.7207 | ValLoss Δ: -0.3792
+  oracle-gain in this round: 26.24
+  kd-train: teacher 5 (17.30) -> student 8 (13.88)
+  kd-train: teacher 2 (39.76) -> student 7 (11.22)
+  kd-train: teacher 6 (18.44) -> student 3 (13.68)
+  kd-train: teacher 9 (14.76) -> student 1 (11.08)
+
+=== Round 4/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (36.84) -> student 8 (16.46)
+  kd-train: teacher 2 (39.76) -> student 9 (14.76)
+  kd-train: teacher 4 (39.90) -> student 1 (14.98)
+  oracle-train: oracle -> student 5 : 17.30
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -1.2356 | ValLoss Δ: -1.1523
+  oracle-gain in this round: 20.74
+  kd-train: teacher 3 (18.74) -> student 6 (18.44)
+
+=== Round 5/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (39.76) -> student 7 (36.84)
+  kd-train: teacher 5 (38.04) -> student 1 (35.78)
+  oracle-train: oracle -> student 3 : 18.74
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -1.3721 | ValLoss Δ: -1.3392
+  oracle-gain in this round: 23.58
+  kd-train: teacher 4 (39.90) -> student 6 (17.34)
+  kd-train: teacher 9 (37.74) -> student 8 (34.06)
+
+=== Round 6/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (39.90) -> student 1 (37.12)
+  oracle-train: oracle -> student 5 : 38.04
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.2093 | ValLoss Δ: -0.2110
+  oracle-gain in this round: 9.06
+  kd-train: teacher 3 (42.32) -> student 6 (37.14)
+  kd-train: teacher 2 (39.76) -> student 8 (36.24)
+  kd-train: teacher 7 (39.74) -> student 9 (37.74)
+
+=== Round 7/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (40.00) -> student 1 (39.10)
+  oracle-train: oracle -> student 9 : 39.44
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.2317 | ValLoss Δ: -0.2616
+  oracle-gain in this round: 10.34
+  kd-train: teacher 6 (40.50) -> student 4 (39.90)
+  kd-train: teacher 5 (47.10) -> student 7 (39.74)
+  kd-train: teacher 3 (42.32) -> student 2 (39.76)
+
+=== Round 8/100 (MWM_AccDiff) ===
+  kd-train: teacher 9 (49.78) -> student 2 (37.92)
+  kd-train: teacher 5 (47.10) -> student 4 (25.12)
+  kd-train: teacher 7 (44.46) -> student 6 (40.50)
+  oracle-train: oracle -> student 8 : 40.00
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1911 | ValLoss Δ: -0.1852
+  oracle-gain in this round: 6.64
+  kd-train: teacher 3 (42.32) -> student 1 (39.90)
+
+=== Round 9/100 (MWM_AccDiff) ===
+  kd-train: teacher 9 (49.78) -> student 2 (42.02)
+  oracle-train: oracle -> student 6 : 42.54
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1953 | ValLoss Δ: -0.2831
+  oracle-gain in this round: 8.96
+  kd-train: teacher 7 (44.46) -> student 1 (38.50)
+  kd-train: teacher 8 (46.64) -> student 4 (41.08)
+  kd-train: teacher 5 (47.10) -> student 3 (42.32)
+
+=== Round 10/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (47.44) -> student 1 (44.66)
+  kd-train: teacher 9 (49.78) -> student 4 (44.16)
+  kd-train: teacher 6 (51.50) -> student 7 (44.46)
+  oracle-train: oracle -> student 8 : 46.64
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.2209 | ValLoss Δ: -0.2378
+  oracle-gain in this round: 9.36
+  kd-train: teacher 5 (47.10) -> student 3 (45.22)
+
+=== Round 11/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (51.50) -> student 2 (47.44)
+  oracle-train: oracle -> student 4 : 47.56
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1140 | ValLoss Δ: -0.1198
+  oracle-gain in this round: 4.90
+  kd-train: teacher 7 (49.90) -> student 1 (46.34)
+  kd-train: teacher 9 (49.78) -> student 3 (45.64)
+  kd-train: teacher 8 (56.00) -> student 5 (47.10)
+
+=== Round 12/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (56.00) -> student 3 (44.88)
+  kd-train: teacher 4 (52.46) -> student 9 (49.78)
+  kd-train: teacher 7 (49.90) -> student 1 (48.60)
+  oracle-train: oracle -> student 5 : 34.34
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.9618 | ValLoss Δ: -0.9380
+  oracle-gain in this round: 20.20
+  kd-train: teacher 6 (51.50) -> student 2 (46.64)
+
+=== Round 13/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 9 : 50.06
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.3026 | ValLoss Δ: -0.2840
+  oracle-gain in this round: 7.86
+  kd-train: teacher 4 (52.46) -> student 1 (47.34)
+  kd-train: teacher 3 (53.96) -> student 2 (50.74)
+  kd-train: teacher 5 (54.54) -> student 6 (51.50)
+  kd-train: teacher 8 (56.00) -> student 7 (49.90)
+
+=== Round 14/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (54.02) -> student 6 (52.62)
+  kd-train: teacher 5 (54.54) -> student 1 (49.00)
+  oracle-train: oracle -> student 3 : 53.96
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1232 | ValLoss Δ: -0.0664
+  oracle-gain in this round: 2.98
+  kd-train: teacher 8 (56.00) -> student 7 (52.00)
+  kd-train: teacher 9 (57.92) -> student 4 (52.46)
+
+=== Round 15/100 (MWM_AccDiff) ===
+  kd-train: teacher 3 (56.94) -> student 4 (55.34)
+  kd-train: teacher 8 (56.00) -> student 1 (54.00)
+  kd-train: teacher 9 (57.92) -> student 2 (54.02)
+  kd-train: teacher 7 (55.40) -> student 6 (53.52)
+  oracle-train: oracle -> student 5 : 54.54
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.2222 | ValLoss Δ: -0.1851
+  oracle-gain in this round: 5.98
+
+=== Round 16/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (56.70) -> student 7 (55.40)
+  kd-train: teacher 5 (60.52) -> student 6 (54.74)
+  kd-train: teacher 3 (56.94) -> student 4 (55.52)
+  oracle-train: oracle -> student 2 : 56.40
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0481 | ValLoss Δ: -0.0259
+  oracle-gain in this round: 0.22
+  kd-train: teacher 9 (57.92) -> student 8 (56.00)
+
+=== Round 17/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 55.16
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0864 | ValLoss Δ: -0.0962
+  oracle-gain in this round: 3.06
+  kd-train: teacher 9 (57.92) -> student 2 (56.62)
+  kd-train: teacher 5 (60.52) -> student 4 (55.42)
+  kd-train: teacher 8 (57.72) -> student 3 (56.94)
+  kd-train: teacher 6 (56.98) -> student 1 (56.70)
+
+=== Round 18/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (58.44) -> student 6 (56.98)
+  kd-train: teacher 4 (58.82) -> student 9 (57.92)
+  kd-train: teacher 7 (58.22) -> student 1 (55.76)
+  kd-train: teacher 5 (60.52) -> student 3 (57.30)
+  oracle-train: oracle -> student 8 : 57.72
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1579 | ValLoss Δ: -0.1736
+  oracle-gain in this round: 6.60
+
+=== Round 19/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 58.22
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0882 | ValLoss Δ: -0.0604
+  oracle-gain in this round: 0.94
+  kd-train: teacher 2 (58.44) -> student 1 (56.10)
+  kd-train: teacher 5 (60.52) -> student 6 (55.46)
+  kd-train: teacher 4 (58.82) -> student 3 (58.30)
+  kd-train: teacher 8 (64.32) -> student 9 (55.90)
+
+=== Round 20/100 (MWM_AccDiff) ===
+  kd-train: teacher 5 (60.52) -> student 7 (59.16)
+  oracle-train: oracle -> student 3 : 57.60
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1562 | ValLoss Δ: -0.1537
+  oracle-gain in this round: 5.90
+  kd-train: teacher 8 (64.32) -> student 2 (58.44)
+  kd-train: teacher 6 (59.94) -> student 1 (57.86)
+  kd-train: teacher 9 (62.88) -> student 4 (58.82)
+
+=== Round 21/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 61.28
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0565 | ValLoss Δ: +0.0766
+  oracle-gain in this round: -2.16
+  kd-train: teacher 7 (63.50) -> student 6 (59.94)
+  kd-train: teacher 2 (63.66) -> student 9 (62.88)
+  kd-train: teacher 3 (63.50) -> student 1 (59.30)
+  kd-train: teacher 8 (64.32) -> student 5 (60.52)
+
+=== Round 22/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 9 : 62.60
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1070 | ValLoss Δ: -0.0597
+  oracle-gain in this round: 1.38
+  kd-train: teacher 2 (63.66) -> student 4 (59.12)
+  kd-train: teacher 7 (63.50) -> student 6 (60.20)
+  kd-train: teacher 3 (63.50) -> student 1 (61.78)
+  kd-train: teacher 8 (64.32) -> student 5 (60.42)
+
+=== Round 23/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (63.66) -> student 1 (60.92)
+  kd-train: teacher 8 (64.32) -> student 5 (60.28)
+  oracle-train: oracle -> student 3 : 63.50
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0444 | ValLoss Δ: +0.0201
+  oracle-gain in this round: 0.06
+  kd-train: teacher 9 (63.98) -> student 6 (60.36)
+  kd-train: teacher 4 (63.86) -> student 7 (63.50)
+
+=== Round 24/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 62.72
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0285 | ValLoss Δ: +0.0108
+  oracle-gain in this round: -0.86
+  kd-train: teacher 8 (64.32) -> student 6 (59.30)
+  kd-train: teacher 2 (63.66) -> student 3 (63.56)
+  kd-train: teacher 9 (63.98) -> student 5 (62.62)
+  kd-train: teacher 4 (63.86) -> student 7 (63.34)
+
+=== Round 25/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 63.08
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0374 | ValLoss Δ: +0.0379
+  oracle-gain in this round: -0.20
+  kd-train: teacher 4 (63.86) -> student 1 (61.86)
+  kd-train: teacher 8 (64.32) -> student 6 (61.88)
+  kd-train: teacher 9 (63.98) -> student 5 (61.68)
+  kd-train: teacher 3 (64.12) -> student 2 (63.66)
+
+=== Round 26/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 62.88
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0844 | ValLoss Δ: -0.1095
+  oracle-gain in this round: 4.52
+  kd-train: teacher 4 (63.86) -> student 1 (62.94)
+  kd-train: teacher 9 (63.98) -> student 2 (62.92)
+  kd-train: teacher 8 (64.32) -> student 6 (62.90)
+  kd-train: teacher 3 (64.12) -> student 5 (61.54)
+
+=== Round 27/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 63.86
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1319 | ValLoss Δ: -0.0982
+  oracle-gain in this round: 4.18
+  kd-train: teacher 7 (67.40) -> student 5 (62.24)
+  kd-train: teacher 3 (64.12) -> student 6 (62.22)
+  kd-train: teacher 9 (63.98) -> student 1 (63.46)
+  kd-train: teacher 8 (64.32) -> student 2 (61.90)
+
+=== Round 28/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (67.40) -> student 6 (61.88)
+  kd-train: teacher 4 (68.04) -> student 5 (62.10)
+  oracle-train: oracle -> student 2 : 62.80
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1406 | ValLoss Δ: -0.1209
+  oracle-gain in this round: 3.42
+  kd-train: teacher 8 (64.32) -> student 9 (63.98)
+  kd-train: teacher 3 (64.12) -> student 1 (63.88)
+
+=== Round 29/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (64.32) -> student 1 (64.06)
+  kd-train: teacher 4 (68.04) -> student 6 (62.92)
+  oracle-train: oracle -> student 9 : 62.80
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1527 | ValLoss Δ: -0.1324
+  oracle-gain in this round: 5.42
+  kd-train: teacher 7 (67.40) -> student 5 (62.20)
+  kd-train: teacher 2 (66.22) -> student 3 (64.12)
+
+=== Round 30/100 (MWM_AccDiff) ===
+  kd-train: teacher 9 (68.22) -> student 5 (64.18)
+  kd-train: teacher 7 (67.40) -> student 1 (63.88)
+  oracle-train: oracle -> student 2 : 66.22
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0618 | ValLoss Δ: -0.0458
+  oracle-gain in this round: 2.30
+  kd-train: teacher 4 (68.04) -> student 8 (64.32)
+  kd-train: teacher 6 (66.64) -> student 3 (64.06)
+
+=== Round 31/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (68.04) -> student 8 (63.18)
+  oracle-train: oracle -> student 6 : 66.64
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0290 | ValLoss Δ: +0.0427
+  oracle-gain in this round: -2.08
+  kd-train: teacher 2 (68.52) -> student 3 (65.48)
+  kd-train: teacher 9 (68.22) -> student 5 (67.12)
+  kd-train: teacher 7 (67.40) -> student 1 (65.42)
+
+=== Round 32/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (68.04) -> student 8 (65.36)
+  kd-train: teacher 2 (68.52) -> student 3 (67.26)
+  kd-train: teacher 7 (67.40) -> student 1 (63.66)
+  oracle-train: oracle -> student 5 : 66.88
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0275 | ValLoss Δ: +0.0741
+  oracle-gain in this round: -2.22
+  kd-train: teacher 9 (68.22) -> student 6 (64.56)
+
+=== Round 33/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 67.40
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0888 | ValLoss Δ: -0.0873
+  oracle-gain in this round: 2.58
+  kd-train: teacher 4 (68.04) -> student 6 (67.52)
+  kd-train: teacher 9 (68.22) -> student 8 (65.28)
+  kd-train: teacher 3 (67.74) -> student 1 (66.80)
+  kd-train: teacher 2 (68.52) -> student 5 (64.66)
+
+=== Round 34/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (68.04) -> student 8 (65.88)
+  oracle-train: oracle -> student 3 : 67.74
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0005 | ValLoss Δ: +0.0361
+  oracle-gain in this round: -1.06
+  kd-train: teacher 2 (68.52) -> student 6 (67.18)
+  kd-train: teacher 7 (69.98) -> student 5 (66.90)
+  kd-train: teacher 9 (68.22) -> student 1 (65.86)
+
+=== Round 35/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 68.02
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0604 | ValLoss Δ: +0.0231
+  oracle-gain in this round: -1.20
+  kd-train: teacher 4 (68.04) -> student 6 (67.24)
+  kd-train: teacher 7 (69.98) -> student 5 (66.60)
+  kd-train: teacher 2 (68.52) -> student 3 (66.68)
+  kd-train: teacher 9 (68.22) -> student 8 (65.60)
+
+=== Round 36/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (68.52) -> student 1 (66.82)
+  oracle-train: oracle -> student 4 : 68.04
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0298 | ValLoss Δ: +0.0193
+  oracle-gain in this round: -1.12
+  kd-train: teacher 9 (68.22) -> student 8 (65.02)
+  kd-train: teacher 7 (69.98) -> student 5 (66.86)
+  kd-train: teacher 3 (68.18) -> student 6 (67.80)
+
+=== Round 37/100 (MWM_AccDiff) ===
+  kd-train: teacher 9 (68.22) -> student 1 (67.54)
+  kd-train: teacher 5 (69.48) -> student 8 (66.14)
+  kd-train: teacher 2 (68.52) -> student 3 (68.18)
+  oracle-train: oracle -> student 6 : 68.02
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0438 | ValLoss Δ: +0.0217
+  oracle-gain in this round: -0.56
+  kd-train: teacher 7 (69.98) -> student 4 (66.92)
+
+=== Round 38/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (68.52) -> student 1 (67.52)
+  kd-train: teacher 4 (69.80) -> student 3 (68.26)
+  oracle-train: oracle -> student 9 : 68.22
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0618 | ValLoss Δ: +0.0207
+  oracle-gain in this round: -0.36
+  kd-train: teacher 7 (69.98) -> student 6 (67.46)
+  kd-train: teacher 5 (69.48) -> student 8 (66.74)
+
+=== Round 39/100 (MWM_AccDiff) ===
+  kd-train: teacher 5 (69.48) -> student 1 (68.38)
+  kd-train: teacher 7 (69.98) -> student 8 (65.90)
+  oracle-train: oracle -> student 2 : 68.52
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0582 | ValLoss Δ: -0.0361
+  oracle-gain in this round: 1.72
+  kd-train: teacher 3 (69.60) -> student 6 (68.08)
+  kd-train: teacher 4 (69.80) -> student 9 (67.86)
+
+=== Round 40/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (69.80) -> student 5 (69.48)
+  oracle-train: oracle -> student 3 : 69.60
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0143 | ValLoss Δ: +0.0307
+  oracle-gain in this round: 0.34
+  kd-train: teacher 6 (69.86) -> student 1 (68.78)
+  kd-train: teacher 7 (69.98) -> student 9 (67.86)
+  kd-train: teacher 2 (70.24) -> student 8 (67.92)
+
+=== Round 41/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 69.80
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0043 | ValLoss Δ: -0.0328
+  oracle-gain in this round: 0.70
+  kd-train: teacher 3 (69.94) -> student 5 (68.04)
+  kd-train: teacher 2 (70.24) -> student 8 (67.48)
+  kd-train: teacher 6 (69.86) -> student 1 (68.70)
+  kd-train: teacher 7 (69.98) -> student 9 (67.70)
+
+=== Round 42/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (70.24) -> student 9 (67.62)
+  oracle-train: oracle -> student 6 : 69.86
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0414 | ValLoss Δ: +0.0063
+  oracle-gain in this round: -0.20
+  kd-train: teacher 7 (69.98) -> student 1 (68.26)
+  kd-train: teacher 4 (70.50) -> student 8 (68.94)
+  kd-train: teacher 3 (69.94) -> student 5 (68.90)
+
+=== Round 43/100 (MWM_AccDiff) ===
+  kd-train: teacher 3 (69.94) -> student 9 (68.52)
+  oracle-train: oracle -> student 6 : 69.66
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0432 | ValLoss Δ: +0.0524
+  oracle-gain in this round: -1.18
+  kd-train: teacher 4 (70.50) -> student 5 (68.76)
+  kd-train: teacher 7 (69.98) -> student 1 (68.94)
+  kd-train: teacher 2 (70.24) -> student 8 (69.08)
+
+=== Round 44/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 68.90
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0973 | ValLoss Δ: -0.0666
+  oracle-gain in this round: 2.12
+  kd-train: teacher 3 (69.94) -> student 6 (68.48)
+  kd-train: teacher 4 (70.50) -> student 8 (67.88)
+  kd-train: teacher 2 (70.24) -> student 5 (68.12)
+  kd-train: teacher 7 (69.98) -> student 9 (67.74)
+
+=== Round 45/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 69.98
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1220 | ValLoss Δ: -0.1152
+  oracle-gain in this round: 3.66
+  kd-train: teacher 1 (71.02) -> student 5 (66.14)
+  kd-train: teacher 6 (70.88) -> student 8 (64.28)
+  kd-train: teacher 2 (70.24) -> student 3 (69.94)
+  kd-train: teacher 4 (70.50) -> student 9 (69.54)
+
+=== Round 46/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (70.50) -> student 3 (69.24)
+  kd-train: teacher 6 (70.88) -> student 9 (66.92)
+  kd-train: teacher 1 (71.02) -> student 5 (68.52)
+  oracle-train: oracle -> student 2 : 70.24
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0066 | ValLoss Δ: +0.0577
+  oracle-gain in this round: -1.86
+  kd-train: teacher 7 (73.64) -> student 8 (68.60)
+
+=== Round 47/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (70.68) -> student 3 (69.86)
+  oracle-train: oracle -> student 4 : 70.50
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0543 | ValLoss Δ: +0.0072
+  oracle-gain in this round: -0.56
+  kd-train: teacher 1 (71.02) -> student 2 (68.38)
+  kd-train: teacher 6 (70.88) -> student 9 (69.06)
+  kd-train: teacher 7 (73.64) -> student 5 (69.66)
+
+=== Round 48/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (73.64) -> student 4 (69.94)
+  kd-train: teacher 1 (71.02) -> student 5 (70.70)
+  kd-train: teacher 6 (70.88) -> student 9 (69.70)
+  kd-train: teacher 2 (70.72) -> student 3 (69.94)
+  oracle-train: oracle -> student 8 : 70.68
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0593 | ValLoss Δ: -0.0393
+  oracle-gain in this round: 0.26
+
+=== Round 49/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (71.38) -> student 3 (69.38)
+  kd-train: teacher 7 (73.64) -> student 5 (68.06)
+  oracle-train: oracle -> student 6 : 70.88
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0208 | ValLoss Δ: +0.0102
+  oracle-gain in this round: -0.08
+  kd-train: teacher 1 (71.02) -> student 9 (67.92)
+  kd-train: teacher 8 (70.94) -> student 2 (70.72)
+
+=== Round 50/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (71.38) -> student 3 (70.14)
+  kd-train: teacher 1 (71.02) -> student 6 (70.80)
+  kd-train: teacher 2 (71.06) -> student 9 (69.26)
+  kd-train: teacher 7 (73.64) -> student 5 (69.48)
+  oracle-train: oracle -> student 8 : 70.94
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0241 | ValLoss Δ: -0.0269
+  oracle-gain in this round: 1.98
+
+=== Round 51/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (71.94) -> student 2 (71.06)
+  oracle-train: oracle -> student 3 : 71.06
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0528 | ValLoss Δ: +0.0066
+  oracle-gain in this round: -0.82
+  kd-train: teacher 4 (71.38) -> student 1 (71.02)
+  kd-train: teacher 7 (73.64) -> student 5 (69.14)
+  kd-train: teacher 8 (72.92) -> student 9 (67.28)
+
+=== Round 52/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (71.38) -> student 5 (69.96)
+  kd-train: teacher 7 (73.64) -> student 9 (70.12)
+  oracle-train: oracle -> student 2 : 70.86
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0202 | ValLoss Δ: -0.0306
+  oracle-gain in this round: 1.38
+  kd-train: teacher 8 (72.92) -> student 3 (70.24)
+  kd-train: teacher 6 (71.94) -> student 1 (69.54)
+
+=== Round 53/100 (MWM_AccDiff) ===
+  kd-train: teacher 3 (72.10) -> student 4 (71.38)
+  kd-train: teacher 8 (72.92) -> student 1 (70.30)
+  kd-train: teacher 2 (72.24) -> student 9 (69.60)
+  kd-train: teacher 7 (73.64) -> student 5 (69.48)
+  oracle-train: oracle -> student 6 : 71.94
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0235 | ValLoss Δ: +0.0076
+  oracle-gain in this round: 1.08
+
+=== Round 54/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (72.92) -> student 3 (72.10)
+  kd-train: teacher 6 (73.02) -> student 5 (72.10)
+  oracle-train: oracle -> student 2 : 72.24
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0635 | ValLoss Δ: -0.0532
+  oracle-gain in this round: 2.04
+  kd-train: teacher 1 (72.84) -> student 9 (71.92)
+  kd-train: teacher 7 (73.64) -> student 4 (69.96)
+
+=== Round 55/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 72.84
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0096 | ValLoss Δ: +0.0471
+  oracle-gain in this round: -2.66
+  kd-train: teacher 8 (72.92) -> student 3 (72.18)
+  kd-train: teacher 6 (73.02) -> student 9 (70.04)
+  kd-train: teacher 2 (74.28) -> student 5 (70.16)
+  kd-train: teacher 7 (73.64) -> student 4 (70.24)
+
+=== Round 56/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (72.92) -> student 3 (71.48)
+  oracle-train: oracle -> student 4 : 72.08
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0364 | ValLoss Δ: -0.0047
+  oracle-gain in this round: -0.40
+  kd-train: teacher 6 (73.02) -> student 1 (70.18)
+  kd-train: teacher 2 (74.28) -> student 5 (71.50)
+  kd-train: teacher 7 (73.64) -> student 9 (69.46)
+
+=== Round 57/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 71.68
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0505 | ValLoss Δ: -0.0500
+  oracle-gain in this round: 3.12
+  kd-train: teacher 6 (73.02) -> student 9 (70.88)
+  kd-train: teacher 8 (72.92) -> student 1 (70.42)
+  kd-train: teacher 2 (74.28) -> student 3 (71.04)
+  kd-train: teacher 7 (73.64) -> student 5 (71.76)
+
+=== Round 58/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.80) -> student 5 (70.20)
+  oracle-train: oracle -> student 3 : 72.14
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0106 | ValLoss Δ: -0.0069
+  oracle-gain in this round: 0.62
+  kd-train: teacher 2 (74.28) -> student 9 (71.52)
+  kd-train: teacher 6 (73.02) -> student 1 (72.46)
+  kd-train: teacher 7 (73.64) -> student 8 (72.92)
+
+=== Round 59/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.80) -> student 5 (70.24)
+  kd-train: teacher 8 (73.50) -> student 1 (73.00)
+  oracle-train: oracle -> student 9 : 72.72
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0198 | ValLoss Δ: -0.0052
+  oracle-gain in this round: 0.52
+  kd-train: teacher 2 (74.28) -> student 3 (72.76)
+  kd-train: teacher 7 (73.64) -> student 6 (73.02)
+
+=== Round 60/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.80) -> student 5 (71.16)
+  oracle-train: oracle -> student 9 : 73.24
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0398 | ValLoss Δ: -0.0598
+  oracle-gain in this round: 1.52
+  kd-train: teacher 7 (73.64) -> student 1 (71.92)
+  kd-train: teacher 3 (74.20) -> student 6 (71.82)
+  kd-train: teacher 2 (74.28) -> student 8 (73.50)
+
+=== Round 61/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 73.64
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0146 | ValLoss Δ: +0.0681
+  oracle-gain in this round: -1.78
+  kd-train: teacher 4 (74.80) -> student 1 (72.56)
+  kd-train: teacher 9 (74.76) -> student 8 (72.60)
+  kd-train: teacher 3 (74.20) -> student 6 (73.54)
+  kd-train: teacher 2 (74.28) -> student 5 (72.64)
+
+=== Round 62/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (74.28) -> student 1 (73.02)
+  oracle-train: oracle -> student 6 : 74.14
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0220 | ValLoss Δ: +0.0354
+  oracle-gain in this round: -2.38
+  kd-train: teacher 9 (74.76) -> student 7 (71.86)
+  kd-train: teacher 4 (74.80) -> student 8 (73.70)
+  kd-train: teacher 3 (74.20) -> student 5 (73.48)
+
+=== Round 63/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (74.28) -> student 1 (72.86)
+  kd-train: teacher 4 (74.80) -> student 6 (71.76)
+  kd-train: teacher 9 (74.76) -> student 7 (72.12)
+  kd-train: teacher 3 (74.20) -> student 5 (73.12)
+  oracle-train: oracle -> student 8 : 73.30
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0334 | ValLoss Δ: +0.0662
+  oracle-gain in this round: -2.08
+
+=== Round 64/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 73.20
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0314 | ValLoss Δ: +0.0144
+  oracle-gain in this round: -0.18
+  kd-train: teacher 4 (74.80) -> student 6 (73.22)
+  kd-train: teacher 9 (74.76) -> student 8 (71.22)
+  kd-train: teacher 3 (74.20) -> student 1 (70.30)
+  kd-train: teacher 2 (74.28) -> student 5 (71.78)
+
+=== Round 65/100 (MWM_AccDiff) ===
+  kd-train: teacher 2 (74.28) -> student 1 (73.98)
+  kd-train: teacher 4 (74.80) -> student 5 (72.46)
+  oracle-train: oracle -> student 3 : 74.20
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0484 | ValLoss Δ: +0.0707
+  oracle-gain in this round: -2.26
+  kd-train: teacher 8 (74.32) -> student 6 (73.50)
+  kd-train: teacher 9 (74.76) -> student 7 (73.02)
+
+=== Round 66/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.80) -> student 3 (71.94)
+  kd-train: teacher 7 (74.56) -> student 2 (74.28)
+  kd-train: teacher 9 (74.76) -> student 5 (73.16)
+  kd-train: teacher 1 (74.86) -> student 6 (73.18)
+  oracle-train: oracle -> student 8 : 74.32
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0882 | ValLoss Δ: +0.1362
+  oracle-gain in this round: -4.24
+
+=== Round 67/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.80) -> student 8 (70.08)
+  kd-train: teacher 7 (74.56) -> student 2 (73.76)
+  oracle-train: oracle -> student 6 : 73.60
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0083 | ValLoss Δ: -0.0058
+  oracle-gain in this round: -0.30
+  kd-train: teacher 9 (74.76) -> student 5 (73.10)
+  kd-train: teacher 1 (74.86) -> student 3 (72.58)
+
+=== Round 68/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 74.56
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0154 | ValLoss Δ: +0.0430
+  oracle-gain in this round: -1.18
+  kd-train: teacher 3 (75.62) -> student 8 (73.56)
+  kd-train: teacher 4 (74.80) -> student 6 (73.30)
+  kd-train: teacher 1 (74.86) -> student 5 (72.94)
+  kd-train: teacher 9 (74.76) -> student 2 (74.48)
+
+=== Round 69/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (74.86) -> student 2 (72.96)
+  kd-train: teacher 3 (75.62) -> student 7 (73.38)
+  kd-train: teacher 4 (74.80) -> student 5 (72.42)
+  oracle-train: oracle -> student 8 : 74.28
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0620 | ValLoss Δ: +0.0541
+  oracle-gain in this round: -0.74
+  kd-train: teacher 9 (74.76) -> student 6 (73.74)
+
+=== Round 70/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 74.52
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0108 | ValLoss Δ: +0.0137
+  oracle-gain in this round: 0.20
+  kd-train: teacher 3 (75.62) -> student 8 (73.54)
+  kd-train: teacher 4 (74.80) -> student 2 (73.60)
+  kd-train: teacher 1 (74.86) -> student 5 (72.60)
+  kd-train: teacher 9 (74.76) -> student 6 (73.04)
+
+=== Round 71/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 74.72
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0085 | ValLoss Δ: +0.0155
+  oracle-gain in this round: -0.44
+  kd-train: teacher 4 (74.80) -> student 6 (74.20)
+  kd-train: teacher 1 (74.86) -> student 5 (72.60)
+  kd-train: teacher 3 (75.62) -> student 2 (69.94)
+  kd-train: teacher 9 (74.76) -> student 8 (74.52)
+
+=== Round 72/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.80) -> student 7 (74.28)
+  kd-train: teacher 1 (74.86) -> student 2 (74.10)
+  kd-train: teacher 8 (74.82) -> student 6 (72.92)
+  oracle-train: oracle -> student 9 : 74.76
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0138 | ValLoss Δ: +0.0054
+  oracle-gain in this round: -0.32
+  kd-train: teacher 3 (75.62) -> student 5 (73.62)
+
+=== Round 73/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (74.80) -> student 7 (74.46)
+  kd-train: teacher 1 (74.86) -> student 6 (72.34)
+  oracle-train: oracle -> student 9 : 74.44
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0152 | ValLoss Δ: +0.0142
+  oracle-gain in this round: 0.02
+  kd-train: teacher 3 (75.62) -> student 5 (72.98)
+  kd-train: teacher 8 (74.82) -> student 2 (74.42)
+
+=== Round 74/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (74.86) -> student 5 (74.38)
+  oracle-train: oracle -> student 2 : 74.64
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0557 | ValLoss Δ: +0.0882
+  oracle-gain in this round: -3.50
+  kd-train: teacher 3 (75.62) -> student 6 (73.58)
+  kd-train: teacher 8 (74.82) -> student 7 (74.30)
+  kd-train: teacher 4 (74.80) -> student 9 (74.46)
+
+=== Round 75/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 74.80
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0426 | ValLoss Δ: +0.0171
+  oracle-gain in this round: -1.54
+  kd-train: teacher 8 (74.82) -> student 5 (74.70)
+  kd-train: teacher 1 (74.86) -> student 6 (74.06)
+  kd-train: teacher 3 (75.62) -> student 2 (71.14)
+  kd-train: teacher 7 (75.34) -> student 9 (73.50)
+
+=== Round 76/100 (MWM_AccDiff) ===
+  kd-train: teacher 1 (74.86) -> student 2 (73.52)
+  kd-train: teacher 9 (75.06) -> student 4 (73.26)
+  oracle-train: oracle -> student 5 : 74.66
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.1750 | ValLoss Δ: -0.1509
+  oracle-gain in this round: 3.62
+  kd-train: teacher 3 (75.62) -> student 6 (73.74)
+  kd-train: teacher 7 (75.34) -> student 8 (74.82)
+
+=== Round 77/100 (MWM_AccDiff) ===
+  kd-train: teacher 7 (75.34) -> student 4 (74.88)
+  kd-train: teacher 5 (78.28) -> student 8 (74.84)
+  oracle-train: oracle -> student 6 : 73.68
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0561 | ValLoss Δ: +0.0751
+  oracle-gain in this round: -2.28
+  kd-train: teacher 3 (75.62) -> student 2 (73.42)
+  kd-train: teacher 9 (75.06) -> student 1 (74.86)
+
+=== Round 78/100 (MWM_AccDiff) ===
+  kd-train: teacher 3 (75.62) -> student 4 (75.14)
+  kd-train: teacher 8 (77.78) -> student 6 (71.40)
+  oracle-train: oracle -> student 9 : 75.06
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0134 | ValLoss Δ: +0.0043
+  oracle-gain in this round: -0.92
+  kd-train: teacher 7 (75.34) -> student 1 (74.92)
+  kd-train: teacher 5 (78.28) -> student 2 (73.76)
+
+=== Round 79/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 75.34
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0434 | ValLoss Δ: -0.0074
+  oracle-gain in this round: -0.28
+  kd-train: teacher 2 (76.60) -> student 1 (74.98)
+  kd-train: teacher 5 (78.28) -> student 4 (73.60)
+  kd-train: teacher 8 (77.78) -> student 9 (74.14)
+  kd-train: teacher 6 (77.68) -> student 3 (75.62)
+
+=== Round 80/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (77.76) -> student 7 (75.06)
+  kd-train: teacher 8 (77.78) -> student 1 (76.50)
+  oracle-train: oracle -> student 9 : 77.00
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0647 | ValLoss Δ: +0.0596
+  oracle-gain in this round: -2.24
+  kd-train: teacher 6 (77.68) -> student 2 (76.60)
+  kd-train: teacher 5 (78.28) -> student 3 (76.06)
+
+=== Round 81/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (77.76) -> student 3 (77.46)
+  kd-train: teacher 8 (77.78) -> student 1 (77.18)
+  oracle-train: oracle -> student 6 : 77.68
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0855 | ValLoss Δ: -0.0820
+  oracle-gain in this round: 3.18
+  kd-train: teacher 5 (78.28) -> student 2 (75.74)
+  kd-train: teacher 7 (77.88) -> student 9 (74.76)
+
+=== Round 82/100 (MWM_AccDiff) ===
+  kd-train: teacher 8 (77.78) -> student 3 (76.24)
+  oracle-train: oracle -> student 4 : 77.76
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.1986 | ValLoss Δ: +0.2036
+  oracle-gain in this round: -6.98
+  kd-train: teacher 7 (77.88) -> student 1 (77.00)
+  kd-train: teacher 6 (80.86) -> student 9 (77.22)
+  kd-train: teacher 5 (78.28) -> student 2 (77.58)
+
+=== Round 83/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 2 : 77.66
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.1278 | ValLoss Δ: +0.1348
+  oracle-gain in this round: -4.64
+  kd-train: teacher 7 (77.88) -> student 1 (76.86)
+  kd-train: teacher 8 (77.78) -> student 4 (70.78)
+  kd-train: teacher 6 (80.86) -> student 9 (76.72)
+  kd-train: teacher 5 (78.28) -> student 3 (75.58)
+
+=== Round 84/100 (MWM_AccDiff) ===
+  kd-train: teacher 9 (79.32) -> student 3 (77.48)
+  kd-train: teacher 5 (78.28) -> student 8 (77.78)
+  oracle-train: oracle -> student 2 : 73.02
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0466 | ValLoss Δ: +0.0450
+  oracle-gain in this round: -0.48
+  kd-train: teacher 6 (80.86) -> student 4 (77.46)
+  kd-train: teacher 7 (77.88) -> student 1 (76.48)
+
+=== Round 85/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 78.06
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0846 | ValLoss Δ: +0.0629
+  oracle-gain in this round: -2.66
+  kd-train: teacher 5 (78.28) -> student 1 (76.70)
+  kd-train: teacher 6 (80.86) -> student 3 (77.44)
+  kd-train: teacher 9 (79.32) -> student 7 (77.88)
+  kd-train: teacher 8 (78.22) -> student 2 (72.54)
+
+=== Round 86/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 75.40
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0194 | ValLoss Δ: -0.0136
+  oracle-gain in this round: 0.82
+  kd-train: teacher 1 (78.62) -> student 8 (78.22)
+  kd-train: teacher 6 (80.86) -> student 3 (77.34)
+  kd-train: teacher 5 (78.28) -> student 2 (77.72)
+  kd-train: teacher 9 (79.32) -> student 7 (78.08)
+
+=== Round 87/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 76.22
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0271 | ValLoss Δ: -0.0184
+  oracle-gain in this round: 0.64
+  kd-train: teacher 1 (78.62) -> student 8 (78.22)
+  kd-train: teacher 6 (80.86) -> student 3 (77.90)
+  kd-train: teacher 5 (78.28) -> student 2 (77.78)
+  kd-train: teacher 9 (79.32) -> student 7 (78.06)
+
+=== Round 88/100 (MWM_AccDiff) ===
+  kd-train: teacher 6 (80.86) -> student 4 (76.86)
+  oracle-train: oracle -> student 8 : 76.34
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.1165 | ValLoss Δ: +0.0911
+  oracle-gain in this round: -2.98
+  kd-train: teacher 1 (78.62) -> student 7 (78.08)
+  kd-train: teacher 9 (79.32) -> student 3 (77.40)
+  kd-train: teacher 5 (78.28) -> student 2 (77.98)
+
+=== Round 89/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (80.42) -> student 8 (73.36)
+  kd-train: teacher 9 (79.32) -> student 2 (78.92)
+  kd-train: teacher 7 (78.98) -> student 1 (78.62)
+  oracle-train: oracle -> student 5 : 78.28
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0255 | ValLoss Δ: -0.0283
+  oracle-gain in this round: 1.66
+  kd-train: teacher 6 (80.86) -> student 3 (77.32)
+
+=== Round 90/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (80.42) -> student 8 (77.52)
+  oracle-train: oracle -> student 3 : 78.90
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.1860 | ValLoss Δ: +0.1704
+  oracle-gain in this round: -5.78
+  kd-train: teacher 6 (80.86) -> student 7 (78.98)
+  kd-train: teacher 5 (79.94) -> student 2 (77.12)
+  kd-train: teacher 9 (79.32) -> student 1 (79.02)
+
+=== Round 91/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (80.42) -> student 7 (78.12)
+  kd-train: teacher 5 (79.94) -> student 8 (78.48)
+  oracle-train: oracle -> student 3 : 73.12
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0235 | ValLoss Δ: +0.0639
+  oracle-gain in this round: -1.86
+  kd-train: teacher 6 (80.86) -> student 2 (77.68)
+  kd-train: teacher 9 (79.32) -> student 1 (78.24)
+
+=== Round 92/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (80.42) -> student 3 (71.26)
+  kd-train: teacher 6 (80.86) -> student 7 (78.12)
+  oracle-train: oracle -> student 8 : 77.94
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.1067 | ValLoss Δ: +0.1435
+  oracle-gain in this round: -3.52
+  kd-train: teacher 5 (79.94) -> student 2 (78.22)
+  kd-train: teacher 9 (79.32) -> student 1 (78.56)
+
+=== Round 93/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 79.26
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.1513 | ValLoss Δ: +0.1612
+  oracle-gain in this round: -5.30
+  kd-train: teacher 4 (80.42) -> student 2 (77.94)
+  kd-train: teacher 9 (79.32) -> student 1 (78.58)
+  kd-train: teacher 6 (80.86) -> student 3 (78.04)
+  kd-train: teacher 5 (79.94) -> student 8 (74.42)
+
+=== Round 94/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (80.42) -> student 7 (73.96)
+  kd-train: teacher 8 (79.76) -> student 1 (78.58)
+  oracle-train: oracle -> student 9 : 79.32
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.1963 | ValLoss Δ: +0.1940
+  oracle-gain in this round: -6.14
+  kd-train: teacher 6 (80.86) -> student 2 (77.06)
+  kd-train: teacher 5 (79.94) -> student 3 (79.40)
+
+=== Round 95/100 (MWM_AccDiff) ===
+  kd-train: teacher 5 (79.94) -> student 1 (79.28)
+  kd-train: teacher 3 (80.32) -> student 7 (78.40)
+  kd-train: teacher 6 (80.86) -> student 2 (77.52)
+  oracle-train: oracle -> student 8 : 79.76
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.1551 | ValLoss Δ: +0.1280
+  oracle-gain in this round: -4.80
+  kd-train: teacher 4 (80.42) -> student 9 (73.18)
+
+=== Round 96/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (80.42) -> student 8 (74.96)
+  kd-train: teacher 5 (79.94) -> student 1 (79.50)
+  oracle-train: oracle -> student 9 : 79.40
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0786 | ValLoss Δ: +0.0914
+  oracle-gain in this round: -2.84
+  kd-train: teacher 3 (80.32) -> student 7 (78.80)
+  kd-train: teacher 6 (80.86) -> student 2 (77.80)
+
+=== Round 97/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (80.42) -> student 2 (78.70)
+  kd-train: teacher 3 (80.32) -> student 9 (76.56)
+  kd-train: teacher 5 (79.94) -> student 1 (79.56)
+  kd-train: teacher 6 (80.86) -> student 7 (78.66)
+  oracle-train: oracle -> student 8 : 79.44
+  oracle-gain in this round: 0.00 | TrainLoss Δ: +0.0669 | ValLoss Δ: +0.0538
+  oracle-gain in this round: -2.48
+
+=== Round 98/100 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 79.76
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0342 | ValLoss Δ: -0.0070
+  oracle-gain in this round: 0.46
+  kd-train: teacher 4 (80.42) -> student 8 (76.96)
+  kd-train: teacher 3 (80.32) -> student 7 (78.62)
+  kd-train: teacher 5 (79.94) -> student 9 (79.20)
+  kd-train: teacher 6 (80.86) -> student 2 (77.88)
+
+=== Round 99/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (80.42) -> student 7 (78.46)
+  kd-train: teacher 3 (80.32) -> student 8 (79.04)
+  kd-train: teacher 6 (80.86) -> student 2 (78.42)
+  oracle-train: oracle -> student 5 : 79.94
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0234 | ValLoss Δ: -0.0047
+  oracle-gain in this round: 0.54
+  kd-train: teacher 1 (80.22) -> student 9 (79.34)
+
+=== Round 100/100 (MWM_AccDiff) ===
+  kd-train: teacher 4 (80.42) -> student 2 (80.10)
+  kd-train: teacher 8 (80.36) -> student 1 (80.22)
+  oracle-train: oracle -> student 3 : 80.32
+  oracle-gain in this round: 0.00 | TrainLoss Δ: -0.0582 | ValLoss Δ: -0.0381
+  oracle-gain in this round: 1.50
+  kd-train: teacher 5 (80.48) -> student 9 (79.20)
+  kd-train: teacher 6 (80.86) -> student 7 (77.84)
+M0: oracle_total_gain=0.00, non_oracle_total_gain=0.00
+M1: oracle_total_gain=-2.14, non_oracle_total_gain=72.76
+M2: oracle_total_gain=29.26, non_oracle_total_gain=39.36
+M3: oracle_total_gain=23.20, non_oracle_total_gain=48.68
+M4: oracle_total_gain=25.18, non_oracle_total_gain=41.58
+M5: oracle_total_gain=59.58, non_oracle_total_gain=10.28
+M6: oracle_total_gain=12.50, non_oracle_total_gain=58.26
+M7: oracle_total_gain=5.60, non_oracle_total_gain=63.44
+M8: oracle_total_gain=4.00, non_oracle_total_gain=65.78
+M9: oracle_total_gain=14.24, non_oracle_total_gain=57.48
+End time: 2026-04-23 01:57:53
+Duration: 1:47:48.182882
+avg_ens_acc = 81.36
+avg_learner_acc = 80.0
+avg_ens_conf = 0.8
+Mean pairwise 0/1 disagreement: 0.117
+M1_acc= 79.98
+M2_acc= 79.64
+M3_acc= 81.47
+M4_acc= 80.09
+M5_acc= 80.0
+M6_acc= 80.74
+M7_acc= 78.72
+M8_acc= 79.93
+M9_acc= 79.44
+std_dev= 0.73
+acc_var= 0.53
+

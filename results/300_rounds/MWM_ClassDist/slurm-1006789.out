@@ -1,0 +1,3779 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Start time: 2026-04-27 02:18:02
+
+=== Round 1/200 (MWM_AccDiff) ===
+  kd-train: teacher 10 (10.24) -> student 21 (10.12)
+  kd-train: teacher 17 (12.08) -> student 20 (9.48)
+  kd-train: teacher 2 (11.10) -> student 7 (10.00)
+  kd-train: teacher 27 (10.50) -> student 26 (9.56)
+  kd-train: teacher 14 (10.80) -> student 11 (9.76)
+  kd-train: teacher 16 (10.84) -> student 3 (9.94)
+  kd-train: teacher 28 (11.56) -> student 13 (9.48)
+  oracle-train: oracle -> student 6 : 10.10
+  oracle-gain in this round: 28.88
+  kd-train: teacher 15 (11.18) -> student 9 (7.42)
+  kd-train: teacher 4 (13.66) -> student 18 (9.46)
+  kd-train: teacher 12 (11.12) -> student 29 (8.24)
+  kd-train: teacher 24 (10.52) -> student 22 (10.10)
+  kd-train: teacher 5 (10.62) -> student 25 (10.00)
+  kd-train: teacher 19 (10.14) -> student 1 (9.56)
+  kd-train: teacher 8 (10.58) -> student 23 (9.84)
+
+=== Round 2/200 (MWM_AccDiff) ===
+  kd-train: teacher 12 (11.12) -> student 27 (10.50)
+  kd-train: teacher 4 (13.66) -> student 7 (8.92)
+  kd-train: teacher 3 (10.66) -> student 1 (10.14)
+  kd-train: teacher 15 (11.18) -> student 11 (10.28)
+  kd-train: teacher 6 (38.98) -> student 5 (10.62)
+  kd-train: teacher 23 (11.24) -> student 10 (10.24)
+  kd-train: teacher 29 (11.94) -> student 26 (10.20)
+  kd-train: teacher 17 (12.08) -> student 19 (10.14)
+  kd-train: teacher 18 (14.42) -> student 13 (10.00)
+  kd-train: teacher 16 (10.84) -> student 24 (10.52)
+  oracle-train: oracle -> student 25 : 10.66
+  oracle-gain in this round: 20.30
+  kd-train: teacher 22 (10.72) -> student 8 (10.58)
+  kd-train: teacher 14 (10.80) -> student 9 (9.98)
+  kd-train: teacher 28 (11.56) -> student 21 (10.24)
+  kd-train: teacher 2 (11.10) -> student 20 (10.00)
+
+=== Round 3/200 (MWM_AccDiff) ===
+  kd-train: teacher 12 (11.12) -> student 1 (10.34)
+  kd-train: teacher 15 (11.18) -> student 27 (8.56)
+  oracle-train: oracle -> student 16 : 10.84
+  oracle-gain in this round: 24.30
+  kd-train: teacher 4 (13.66) -> student 9 (10.58)
+  kd-train: teacher 23 (11.24) -> student 10 (10.78)
+  kd-train: teacher 25 (30.96) -> student 21 (10.08)
+  kd-train: teacher 5 (37.56) -> student 20 (10.12)
+  kd-train: teacher 13 (14.32) -> student 19 (10.00)
+  kd-train: teacher 29 (11.94) -> student 3 (10.66)
+  kd-train: teacher 28 (11.56) -> student 22 (10.72)
+  kd-train: teacher 6 (38.98) -> student 26 (9.84)
+  kd-train: teacher 18 (14.42) -> student 11 (9.96)
+  kd-train: teacher 2 (11.10) -> student 14 (10.80)
+  kd-train: teacher 17 (12.08) -> student 8 (10.60)
+  kd-train: teacher 7 (15.76) -> student 24 (10.38)
+
+=== Round 4/200 (MWM_AccDiff) ===
+  kd-train: teacher 5 (37.56) -> student 15 (11.18)
+  kd-train: teacher 18 (14.42) -> student 1 (9.96)
+  kd-train: teacher 9 (15.72) -> student 29 (11.94)
+  kd-train: teacher 11 (15.32) -> student 10 (11.48)
+  kd-train: teacher 25 (30.96) -> student 17 (12.08)
+  kd-train: teacher 7 (15.76) -> student 8 (10.06)
+  oracle-train: oracle -> student 3 : 12.60
+  oracle-gain in this round: 31.34
+  kd-train: teacher 19 (15.08) -> student 28 (11.56)
+  kd-train: teacher 13 (14.32) -> student 2 (11.10)
+  kd-train: teacher 26 (34.64) -> student 22 (10.66)
+  kd-train: teacher 6 (38.98) -> student 27 (9.98)
+  kd-train: teacher 20 (33.78) -> student 12 (11.12)
+  kd-train: teacher 16 (35.14) -> student 14 (10.94)
+  kd-train: teacher 21 (25.04) -> student 4 (13.66)
+  kd-train: teacher 24 (15.24) -> student 23 (11.24)
+
+=== Round 5/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (25.32) -> student 18 (14.42)
+  kd-train: teacher 27 (27.68) -> student 2 (14.06)
+  kd-train: teacher 17 (29.90) -> student 24 (15.24)
+  kd-train: teacher 22 (33.06) -> student 11 (15.32)
+  oracle-train: oracle -> student 13 : 14.32
+  oracle-gain in this round: 24.70
+  kd-train: teacher 16 (35.14) -> student 9 (15.72)
+  kd-train: teacher 26 (34.64) -> student 7 (15.76)
+  kd-train: teacher 5 (37.56) -> student 1 (14.44)
+  kd-train: teacher 3 (43.94) -> student 28 (10.46)
+  kd-train: teacher 6 (38.98) -> student 23 (14.12)
+  kd-train: teacher 20 (33.78) -> student 29 (15.60)
+  kd-train: teacher 15 (34.00) -> student 19 (15.08)
+  kd-train: teacher 25 (30.96) -> student 8 (14.96)
+  kd-train: teacher 12 (31.32) -> student 10 (15.38)
+  kd-train: teacher 14 (32.74) -> student 21 (25.04)
+
+=== Round 6/200 (MWM_AccDiff) ===
+  kd-train: teacher 3 (43.94) -> student 27 (27.68)
+  kd-train: teacher 13 (39.02) -> student 17 (29.90)
+  kd-train: teacher 23 (37.48) -> student 24 (29.64)
+  kd-train: teacher 15 (34.00) -> student 14 (32.74)
+  kd-train: teacher 20 (33.78) -> student 12 (31.32)
+  kd-train: teacher 16 (35.14) -> student 9 (30.90)
+  kd-train: teacher 5 (37.56) -> student 4 (25.32)
+  kd-train: teacher 6 (38.98) -> student 18 (14.28)
+  kd-train: teacher 1 (36.82) -> student 7 (33.04)
+  oracle-train: oracle -> student 21 : 29.82
+  oracle-gain in this round: 12.78
+  kd-train: teacher 28 (33.80) -> student 8 (30.60)
+  kd-train: teacher 26 (34.64) -> student 25 (30.96)
+  kd-train: teacher 19 (33.38) -> student 10 (31.42)
+  kd-train: teacher 22 (33.06) -> student 29 (32.58)
+  kd-train: teacher 11 (33.20) -> student 2 (27.50)
+
+=== Round 7/200 (MWM_AccDiff) ===
+  kd-train: teacher 16 (35.14) -> student 7 (34.48)
+  kd-train: teacher 5 (37.56) -> student 22 (33.06)
+  kd-train: teacher 17 (38.30) -> student 8 (32.80)
+  kd-train: teacher 23 (37.48) -> student 10 (33.84)
+  kd-train: teacher 26 (34.64) -> student 2 (33.26)
+  oracle-train: oracle -> student 19 : 33.38
+  oracle-gain in this round: 8.94
+  kd-train: teacher 3 (43.94) -> student 20 (33.78)
+  kd-train: teacher 27 (37.66) -> student 28 (33.80)
+  kd-train: teacher 6 (38.98) -> student 29 (32.92)
+  kd-train: teacher 21 (42.60) -> student 12 (33.20)
+  kd-train: teacher 1 (36.82) -> student 14 (34.18)
+  kd-train: teacher 4 (36.28) -> student 9 (34.36)
+  kd-train: teacher 18 (36.26) -> student 25 (34.20)
+  kd-train: teacher 24 (37.04) -> student 15 (34.00)
+  kd-train: teacher 13 (39.02) -> student 11 (33.20)
+
+=== Round 8/200 (MWM_AccDiff) ===
+  kd-train: teacher 3 (43.94) -> student 24 (37.04)
+  kd-train: teacher 27 (37.66) -> student 2 (34.70)
+  kd-train: teacher 23 (37.48) -> student 25 (35.48)
+  kd-train: teacher 6 (38.98) -> student 18 (36.26)
+  kd-train: teacher 20 (41.76) -> student 26 (34.64)
+  kd-train: teacher 22 (37.38) -> student 1 (36.82)
+  kd-train: teacher 21 (42.60) -> student 28 (34.70)
+  kd-train: teacher 19 (42.32) -> student 16 (35.14)
+  kd-train: teacher 13 (39.02) -> student 9 (36.14)
+  kd-train: teacher 11 (38.24) -> student 4 (36.28)
+  kd-train: teacher 10 (37.48) -> student 29 (37.12)
+  kd-train: teacher 12 (40.02) -> student 15 (36.14)
+  kd-train: teacher 5 (37.56) -> student 7 (34.50)
+  kd-train: teacher 17 (38.30) -> student 14 (36.26)
+  oracle-train: oracle -> student 8 : 36.98
+  oracle-gain in this round: 11.40
+
+=== Round 9/200 (MWM_AccDiff) ===
+  kd-train: teacher 8 (48.38) -> student 24 (36.56)
+  kd-train: teacher 12 (40.02) -> student 23 (37.48)
+  oracle-train: oracle -> student 16 : 38.08
+  oracle-gain in this round: 11.02
+  kd-train: teacher 19 (42.32) -> student 7 (36.98)
+  kd-train: teacher 4 (38.68) -> student 27 (37.66)
+  kd-train: teacher 6 (38.98) -> student 29 (36.62)
+  kd-train: teacher 13 (39.02) -> student 2 (34.16)
+  kd-train: teacher 17 (38.30) -> student 1 (35.88)
+  kd-train: teacher 28 (40.44) -> student 22 (37.38)
+  kd-train: teacher 15 (39.22) -> student 10 (37.48)
+  kd-train: teacher 20 (41.76) -> student 25 (37.00)
+  kd-train: teacher 26 (38.72) -> student 9 (38.18)
+  kd-train: teacher 21 (42.60) -> student 14 (36.76)
+  kd-train: teacher 18 (38.38) -> student 11 (38.24)
+  kd-train: teacher 3 (43.94) -> student 5 (37.56)
+
+=== Round 10/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (39.22) -> student 5 (39.02)
+  kd-train: teacher 25 (39.94) -> student 13 (39.02)
+  kd-train: teacher 14 (42.32) -> student 4 (38.68)
+  kd-train: teacher 8 (48.38) -> student 17 (38.30)
+  kd-train: teacher 3 (43.94) -> student 18 (38.38)
+  oracle-train: oracle -> student 29 : 38.66
+  oracle-gain in this round: 11.66
+  kd-train: teacher 20 (41.76) -> student 26 (38.72)
+  kd-train: teacher 28 (40.44) -> student 9 (38.90)
+  kd-train: teacher 21 (42.60) -> student 2 (38.58)
+  kd-train: teacher 23 (39.12) -> student 1 (37.08)
+  kd-train: teacher 16 (49.10) -> student 10 (36.40)
+  kd-train: teacher 7 (40.82) -> student 22 (38.90)
+  kd-train: teacher 12 (40.02) -> student 6 (38.98)
+  kd-train: teacher 19 (42.32) -> student 27 (37.88)
+  kd-train: teacher 24 (47.82) -> student 11 (36.78)
+
+=== Round 11/200 (MWM_AccDiff) ===
+  kd-train: teacher 18 (41.26) -> student 1 (39.14)
+  kd-train: teacher 19 (42.32) -> student 25 (39.94)
+  kd-train: teacher 20 (41.76) -> student 28 (40.44)
+  kd-train: teacher 14 (42.32) -> student 26 (40.40)
+  kd-train: teacher 3 (43.94) -> student 7 (40.82)
+  kd-train: teacher 21 (42.60) -> student 9 (40.46)
+  kd-train: teacher 10 (44.44) -> student 13 (39.64)
+  kd-train: teacher 11 (43.36) -> student 12 (40.02)
+  kd-train: teacher 17 (46.66) -> student 4 (39.56)
+  kd-train: teacher 29 (50.32) -> student 5 (37.84)
+  oracle-train: oracle -> student 6 : 32.26
+  oracle-gain in this round: 14.78
+  kd-train: teacher 24 (47.82) -> student 2 (39.28)
+  kd-train: teacher 8 (48.38) -> student 15 (39.22)
+  kd-train: teacher 27 (41.84) -> student 22 (40.86)
+  kd-train: teacher 16 (49.10) -> student 23 (39.12)
+
+=== Round 12/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (46.40) -> student 27 (41.84)
+  kd-train: teacher 4 (45.44) -> student 19 (42.32)
+  kd-train: teacher 10 (44.44) -> student 14 (42.32)
+  kd-train: teacher 16 (49.10) -> student 28 (38.26)
+  kd-train: teacher 11 (43.36) -> student 1 (40.00)
+  oracle-train: oracle -> student 9 : 41.98
+  oracle-gain in this round: 4.26
+  kd-train: teacher 2 (46.04) -> student 25 (41.16)
+  kd-train: teacher 5 (45.06) -> student 13 (42.26)
+  kd-train: teacher 6 (47.04) -> student 7 (41.22)
+  kd-train: teacher 29 (50.32) -> student 26 (35.62)
+  kd-train: teacher 8 (48.38) -> student 22 (41.22)
+  kd-train: teacher 17 (46.66) -> student 18 (41.26)
+  kd-train: teacher 24 (47.82) -> student 12 (40.26)
+  kd-train: teacher 3 (43.94) -> student 21 (42.60)
+  kd-train: teacher 15 (45.34) -> student 20 (41.76)
+
+=== Round 13/200 (MWM_AccDiff) ===
+  kd-train: teacher 26 (47.06) -> student 11 (43.36)
+  kd-train: teacher 6 (47.04) -> student 15 (45.34)
+  kd-train: teacher 19 (45.88) -> student 4 (45.44)
+  kd-train: teacher 17 (46.66) -> student 3 (43.94)
+  kd-train: teacher 29 (50.32) -> student 20 (42.16)
+  kd-train: teacher 22 (47.60) -> student 21 (36.28)
+  oracle-train: oracle -> student 12 : 45.64
+  oracle-gain in this round: 10.48
+  kd-train: teacher 8 (48.38) -> student 13 (42.94)
+  kd-train: teacher 7 (45.88) -> student 1 (41.84)
+  kd-train: teacher 9 (46.24) -> student 18 (45.56)
+  kd-train: teacher 24 (47.82) -> student 28 (45.06)
+  kd-train: teacher 27 (46.06) -> student 25 (44.96)
+  kd-train: teacher 23 (46.40) -> student 5 (45.06)
+  kd-train: teacher 16 (49.10) -> student 14 (42.68)
+  kd-train: teacher 2 (46.04) -> student 10 (44.44)
+
+=== Round 14/200 (MWM_AccDiff) ===
+  kd-train: teacher 22 (47.60) -> student 18 (45.04)
+  kd-train: teacher 16 (49.10) -> student 10 (44.74)
+  kd-train: teacher 26 (47.06) -> student 14 (45.42)
+  kd-train: teacher 13 (48.30) -> student 11 (43.70)
+  oracle-train: oracle -> student 3 : 45.00
+  oracle-gain in this round: 13.88
+  kd-train: teacher 17 (46.66) -> student 19 (45.88)
+  kd-train: teacher 27 (46.06) -> student 1 (44.32)
+  kd-train: teacher 12 (56.12) -> student 28 (44.68)
+  kd-train: teacher 24 (47.82) -> student 15 (45.02)
+  kd-train: teacher 6 (47.04) -> student 5 (45.30)
+  kd-train: teacher 23 (46.40) -> student 2 (46.04)
+  kd-train: teacher 9 (46.24) -> student 20 (46.04)
+  kd-train: teacher 8 (48.38) -> student 25 (44.88)
+  kd-train: teacher 29 (50.32) -> student 21 (44.70)
+  kd-train: teacher 4 (46.54) -> student 7 (45.88)
+
+=== Round 15/200 (MWM_AccDiff) ===
+  kd-train: teacher 12 (56.12) -> student 7 (45.28)
+  kd-train: teacher 25 (47.04) -> student 17 (46.66)
+  kd-train: teacher 13 (48.30) -> student 21 (44.02)
+  kd-train: teacher 8 (48.38) -> student 23 (46.40)
+  kd-train: teacher 5 (47.42) -> student 4 (46.54)
+  kd-train: teacher 24 (47.82) -> student 10 (46.42)
+  kd-train: teacher 22 (47.60) -> student 20 (46.44)
+  kd-train: teacher 29 (50.32) -> student 19 (45.66)
+  kd-train: teacher 3 (58.88) -> student 2 (42.44)
+  kd-train: teacher 6 (47.04) -> student 18 (46.64)
+  oracle-train: oracle -> student 15 : 46.76
+  oracle-gain in this round: 3.94
+  kd-train: teacher 26 (47.06) -> student 1 (45.22)
+  kd-train: teacher 11 (47.42) -> student 9 (46.24)
+  kd-train: teacher 16 (49.10) -> student 27 (46.06)
+  kd-train: teacher 28 (53.96) -> student 14 (45.44)
+
+=== Round 16/200 (MWM_AccDiff) ===
+  kd-train: teacher 12 (56.12) -> student 27 (46.16)
+  kd-train: teacher 3 (58.88) -> student 4 (45.24)
+  kd-train: teacher 13 (48.30) -> student 23 (47.46)
+  kd-train: teacher 24 (47.82) -> student 1 (45.52)
+  kd-train: teacher 8 (48.38) -> student 20 (47.44)
+  kd-train: teacher 14 (53.04) -> student 26 (47.06)
+  kd-train: teacher 15 (50.70) -> student 10 (47.22)
+  kd-train: teacher 28 (53.96) -> student 6 (47.04)
+  kd-train: teacher 2 (56.72) -> student 17 (44.96)
+  kd-train: teacher 16 (49.10) -> student 5 (47.42)
+  kd-train: teacher 7 (54.88) -> student 25 (47.04)
+  kd-train: teacher 19 (48.20) -> student 22 (47.60)
+  oracle-train: oracle -> student 18 : 45.60
+  oracle-gain in this round: 6.24
+  kd-train: teacher 9 (49.28) -> student 11 (47.42)
+  kd-train: teacher 29 (50.32) -> student 21 (47.36)
+
+=== Round 17/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (54.22) -> student 21 (47.94)
+  kd-train: teacher 12 (56.12) -> student 20 (47.64)
+  kd-train: teacher 17 (53.38) -> student 10 (48.22)
+  kd-train: teacher 14 (53.04) -> student 5 (47.12)
+  kd-train: teacher 3 (58.88) -> student 23 (47.42)
+  kd-train: teacher 28 (53.96) -> student 19 (48.20)
+  oracle-train: oracle -> student 22 : 47.58
+  oracle-gain in this round: 7.28
+  kd-train: teacher 2 (56.72) -> student 13 (48.30)
+  kd-train: teacher 18 (51.84) -> student 9 (49.28)
+  kd-train: teacher 26 (52.76) -> student 16 (49.10)
+  kd-train: teacher 15 (50.70) -> student 6 (49.66)
+  kd-train: teacher 25 (53.08) -> student 8 (48.38)
+  kd-train: teacher 29 (50.32) -> student 1 (46.08)
+  kd-train: teacher 4 (56.88) -> student 11 (47.46)
+  kd-train: teacher 7 (54.88) -> student 24 (47.82)
+
+=== Round 18/200 (MWM_AccDiff) ===
+  kd-train: teacher 2 (56.72) -> student 14 (53.04)
+  kd-train: teacher 24 (53.28) -> student 8 (52.14)
+  oracle-train: oracle -> student 26 : 52.76
+  oracle-gain in this round: 2.98
+  kd-train: teacher 27 (54.22) -> student 5 (52.84)
+  kd-train: teacher 4 (56.88) -> student 9 (50.44)
+  kd-train: teacher 11 (55.40) -> student 19 (52.16)
+  kd-train: teacher 17 (53.38) -> student 13 (53.06)
+  kd-train: teacher 7 (54.88) -> student 10 (51.00)
+  kd-train: teacher 20 (56.28) -> student 21 (51.20)
+  kd-train: teacher 28 (53.96) -> student 18 (51.84)
+  kd-train: teacher 12 (56.12) -> student 29 (50.32)
+  kd-train: teacher 3 (58.88) -> student 6 (49.66)
+  kd-train: teacher 22 (54.86) -> student 15 (50.70)
+  kd-train: teacher 25 (53.08) -> student 1 (46.52)
+  kd-train: teacher 23 (56.12) -> student 16 (49.64)
+
+=== Round 19/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (55.70) -> student 28 (53.96)
+  kd-train: teacher 6 (56.14) -> student 21 (54.12)
+  kd-train: teacher 23 (56.12) -> student 24 (53.28)
+  kd-train: teacher 11 (55.40) -> student 10 (54.36)
+  kd-train: teacher 15 (56.32) -> student 17 (53.38)
+  oracle-train: oracle -> student 29 : 51.34
+  oracle-gain in this round: 9.36
+  kd-train: teacher 26 (55.74) -> student 13 (54.26)
+  kd-train: teacher 2 (56.72) -> student 19 (54.64)
+  kd-train: teacher 12 (56.12) -> student 16 (53.70)
+  kd-train: teacher 7 (54.88) -> student 1 (51.78)
+  kd-train: teacher 9 (55.10) -> student 18 (54.42)
+  kd-train: teacher 4 (56.88) -> student 8 (52.34)
+  kd-train: teacher 22 (54.86) -> student 27 (54.22)
+  kd-train: teacher 20 (56.28) -> student 25 (53.08)
+  kd-train: teacher 3 (58.88) -> student 5 (52.32)
+
+=== Round 20/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (56.32) -> student 21 (54.80)
+  kd-train: teacher 26 (55.74) -> student 5 (55.18)
+  kd-train: teacher 23 (56.12) -> student 28 (54.72)
+  kd-train: teacher 14 (55.70) -> student 24 (55.26)
+  oracle-train: oracle -> student 10 : 55.18
+  oracle-gain in this round: 4.72
+  kd-train: teacher 11 (55.40) -> student 1 (54.32)
+  kd-train: teacher 29 (60.70) -> student 17 (53.04)
+  kd-train: teacher 20 (56.28) -> student 27 (53.98)
+  kd-train: teacher 16 (56.08) -> student 7 (54.88)
+  kd-train: teacher 3 (58.88) -> student 13 (52.98)
+  kd-train: teacher 19 (56.64) -> student 25 (54.40)
+  kd-train: teacher 4 (56.88) -> student 18 (54.36)
+  kd-train: teacher 6 (56.14) -> student 9 (55.10)
+  kd-train: teacher 12 (56.12) -> student 22 (54.86)
+  kd-train: teacher 2 (56.72) -> student 8 (54.36)
+
+=== Round 21/200 (MWM_AccDiff) ===
+  kd-train: teacher 17 (58.56) -> student 7 (52.80)
+  kd-train: teacher 4 (56.88) -> student 9 (55.38)
+  kd-train: teacher 23 (56.12) -> student 14 (55.70)
+  kd-train: teacher 15 (56.32) -> student 22 (55.76)
+  kd-train: teacher 10 (59.90) -> student 24 (50.82)
+  kd-train: teacher 2 (56.72) -> student 16 (56.08)
+  kd-train: teacher 19 (56.64) -> student 26 (55.74)
+  kd-train: teacher 18 (56.48) -> student 11 (55.40)
+  kd-train: teacher 29 (60.70) -> student 28 (53.36)
+  kd-train: teacher 20 (56.28) -> student 25 (55.78)
+  kd-train: teacher 3 (58.88) -> student 5 (50.44)
+  kd-train: teacher 6 (56.14) -> student 1 (54.94)
+  oracle-train: oracle -> student 8 : 54.58
+  oracle-gain in this round: -4.74
+  kd-train: teacher 13 (57.88) -> student 21 (55.26)
+  kd-train: teacher 12 (56.12) -> student 27 (55.86)
+
+=== Round 22/200 (MWM_AccDiff) ===
+  kd-train: teacher 7 (57.96) -> student 11 (55.42)
+  kd-train: teacher 18 (56.48) -> student 1 (54.52)
+  kd-train: teacher 24 (58.32) -> student 23 (56.12)
+  kd-train: teacher 2 (56.72) -> student 20 (56.28)
+  kd-train: teacher 10 (59.90) -> student 27 (54.64)
+  kd-train: teacher 4 (56.88) -> student 6 (56.14)
+  oracle-train: oracle -> student 9 : 56.22
+  oracle-gain in this round: 0.94
+  kd-train: teacher 26 (56.72) -> student 14 (56.08)
+  kd-train: teacher 3 (58.88) -> student 16 (54.90)
+  kd-train: teacher 29 (60.70) -> student 25 (54.56)
+  kd-train: teacher 13 (57.88) -> student 22 (55.80)
+  kd-train: teacher 28 (57.72) -> student 12 (56.12)
+  kd-train: teacher 17 (58.56) -> student 21 (54.96)
+  kd-train: teacher 19 (56.64) -> student 15 (56.32)
+  kd-train: teacher 5 (58.02) -> student 8 (49.84)
+
+=== Round 23/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 56.88
+  oracle-gain in this round: 2.18
+  kd-train: teacher 11 (57.12) -> student 19 (56.64)
+  kd-train: teacher 17 (58.56) -> student 14 (55.96)
+  kd-train: teacher 8 (58.72) -> student 21 (56.28)
+  kd-train: teacher 13 (57.88) -> student 26 (56.72)
+  kd-train: teacher 7 (57.96) -> student 20 (55.70)
+  kd-train: teacher 5 (58.02) -> student 23 (56.66)
+  kd-train: teacher 10 (59.90) -> student 16 (55.86)
+  kd-train: teacher 28 (57.72) -> student 2 (56.72)
+  kd-train: teacher 24 (58.32) -> student 18 (56.48)
+  kd-train: teacher 29 (60.70) -> student 6 (55.04)
+  kd-train: teacher 25 (57.10) -> student 22 (56.80)
+  kd-train: teacher 3 (58.88) -> student 15 (56.46)
+  kd-train: teacher 9 (57.16) -> student 1 (54.84)
+  kd-train: teacher 12 (58.30) -> student 27 (56.26)
+
+=== Round 24/200 (MWM_AccDiff) ===
+  kd-train: teacher 8 (58.72) -> student 19 (55.88)
+  kd-train: teacher 15 (57.92) -> student 27 (56.84)
+  kd-train: teacher 14 (58.10) -> student 11 (57.12)
+  kd-train: teacher 4 (59.06) -> student 20 (54.46)
+  kd-train: teacher 3 (58.88) -> student 23 (57.46)
+  kd-train: teacher 13 (57.88) -> student 26 (57.08)
+  oracle-train: oracle -> student 28 : 57.72
+  oracle-gain in this round: 4.44
+  kd-train: teacher 24 (58.32) -> student 25 (57.10)
+  kd-train: teacher 7 (57.96) -> student 1 (51.88)
+  kd-train: teacher 6 (59.40) -> student 16 (56.92)
+  kd-train: teacher 29 (60.70) -> student 2 (54.84)
+  kd-train: teacher 5 (58.02) -> student 9 (57.16)
+  kd-train: teacher 17 (58.56) -> student 21 (56.68)
+  kd-train: teacher 10 (59.90) -> student 18 (55.10)
+  kd-train: teacher 12 (58.30) -> student 22 (56.34)
+
+=== Round 25/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (59.06) -> student 16 (57.32)
+  kd-train: teacher 2 (58.10) -> student 1 (57.66)
+  kd-train: teacher 3 (58.88) -> student 7 (57.96)
+  kd-train: teacher 8 (58.72) -> student 26 (57.84)
+  kd-train: teacher 9 (58.84) -> student 11 (56.52)
+  kd-train: teacher 29 (60.70) -> student 18 (54.92)
+  kd-train: teacher 6 (59.40) -> student 27 (57.04)
+  kd-train: teacher 17 (58.56) -> student 13 (57.88)
+  oracle-train: oracle -> student 25 : 55.60
+  oracle-gain in this round: 2.70
+  kd-train: teacher 12 (58.30) -> student 23 (57.76)
+  kd-train: teacher 24 (58.32) -> student 22 (58.02)
+  kd-train: teacher 10 (59.90) -> student 19 (57.18)
+  kd-train: teacher 28 (62.16) -> student 21 (55.74)
+  kd-train: teacher 14 (58.10) -> student 5 (58.02)
+  kd-train: teacher 20 (58.48) -> student 15 (57.92)
+
+=== Round 26/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (58.86) -> student 14 (58.10)
+  kd-train: teacher 29 (60.70) -> student 11 (56.78)
+  kd-train: teacher 3 (58.88) -> student 7 (58.20)
+  kd-train: teacher 20 (58.48) -> student 24 (58.32)
+  kd-train: teacher 16 (58.78) -> student 2 (58.10)
+  kd-train: teacher 18 (60.24) -> student 13 (57.22)
+  oracle-train: oracle -> student 22 : 55.36
+  oracle-gain in this round: 3.46
+  kd-train: teacher 6 (59.40) -> student 23 (57.70)
+  kd-train: teacher 9 (58.84) -> student 21 (58.22)
+  kd-train: teacher 10 (59.90) -> student 5 (56.98)
+  kd-train: teacher 8 (58.72) -> student 25 (58.30)
+  kd-train: teacher 17 (58.56) -> student 12 (58.30)
+  kd-train: teacher 26 (58.50) -> student 1 (57.54)
+  kd-train: teacher 28 (62.16) -> student 19 (54.06)
+  kd-train: teacher 4 (59.06) -> student 27 (57.84)
+
+=== Round 27/200 (MWM_AccDiff) ===
+  kd-train: teacher 29 (60.70) -> student 14 (57.56)
+  kd-train: teacher 16 (58.78) -> student 25 (58.64)
+  kd-train: teacher 21 (58.92) -> student 5 (56.98)
+  kd-train: teacher 3 (58.88) -> student 8 (58.72)
+  oracle-train: oracle -> student 26 : 58.50
+  oracle-gain in this round: 3.50
+  kd-train: teacher 15 (58.86) -> student 1 (57.86)
+  kd-train: teacher 13 (58.94) -> student 20 (58.48)
+  kd-train: teacher 10 (59.90) -> student 23 (58.20)
+  kd-train: teacher 19 (62.02) -> student 12 (55.90)
+  kd-train: teacher 9 (58.84) -> student 11 (58.52)
+  kd-train: teacher 22 (58.82) -> student 17 (58.56)
+  kd-train: teacher 6 (59.40) -> student 7 (58.40)
+  kd-train: teacher 18 (60.24) -> student 2 (56.40)
+  kd-train: teacher 4 (59.06) -> student 27 (58.44)
+  kd-train: teacher 28 (62.16) -> student 24 (57.52)
+
+=== Round 28/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (59.80) -> student 24 (58.60)
+  kd-train: teacher 28 (62.16) -> student 23 (57.92)
+  kd-train: teacher 6 (59.40) -> student 9 (58.84)
+  kd-train: teacher 26 (62.00) -> student 7 (57.72)
+  kd-train: teacher 4 (59.06) -> student 3 (58.88)
+  kd-train: teacher 19 (62.02) -> student 17 (56.96)
+  kd-train: teacher 10 (59.90) -> student 20 (58.36)
+  kd-train: teacher 25 (59.06) -> student 16 (58.78)
+  kd-train: teacher 13 (58.94) -> student 1 (58.76)
+  oracle-train: oracle -> student 15 : 58.86
+  oracle-gain in this round: 1.84
+  kd-train: teacher 8 (59.80) -> student 22 (58.82)
+  kd-train: teacher 18 (60.24) -> student 2 (56.52)
+  kd-train: teacher 21 (58.92) -> student 27 (58.90)
+  kd-train: teacher 29 (60.70) -> student 11 (58.02)
+  kd-train: teacher 12 (59.96) -> student 5 (57.92)
+
+=== Round 29/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 56.94
+  oracle-gain in this round: 5.48
+  kd-train: teacher 15 (60.70) -> student 21 (58.92)
+  kd-train: teacher 19 (62.02) -> student 27 (57.70)
+  kd-train: teacher 23 (60.60) -> student 24 (58.66)
+  kd-train: teacher 10 (59.90) -> student 14 (59.80)
+  kd-train: teacher 28 (62.16) -> student 16 (57.78)
+  kd-train: teacher 9 (59.94) -> student 4 (59.06)
+  kd-train: teacher 29 (60.70) -> student 13 (58.94)
+  kd-train: teacher 3 (59.82) -> student 2 (56.48)
+  kd-train: teacher 26 (62.00) -> student 5 (56.06)
+  kd-train: teacher 12 (59.96) -> student 6 (59.40)
+  kd-train: teacher 18 (60.24) -> student 25 (59.06)
+  kd-train: teacher 22 (59.88) -> student 20 (59.38)
+  kd-train: teacher 17 (60.14) -> student 11 (59.20)
+  kd-train: teacher 7 (60.26) -> student 8 (59.80)
+
+=== Round 30/200 (MWM_AccDiff) ===
+  kd-train: teacher 5 (60.92) -> student 20 (58.92)
+  kd-train: teacher 1 (62.42) -> student 12 (59.96)
+  kd-train: teacher 17 (60.14) -> student 2 (58.36)
+  kd-train: teacher 29 (60.70) -> student 16 (50.56)
+  kd-train: teacher 23 (60.60) -> student 10 (59.90)
+  kd-train: teacher 21 (60.42) -> student 9 (59.94)
+  kd-train: teacher 26 (62.00) -> student 14 (57.60)
+  kd-train: teacher 15 (60.70) -> student 3 (59.82)
+  oracle-train: oracle -> student 25 : 59.84
+  oracle-gain in this round: 3.56
+  kd-train: teacher 18 (60.24) -> student 4 (59.58)
+  kd-train: teacher 19 (62.02) -> student 6 (57.96)
+  kd-train: teacher 28 (62.16) -> student 24 (58.48)
+  kd-train: teacher 27 (61.38) -> student 22 (59.88)
+  kd-train: teacher 11 (61.12) -> student 13 (58.46)
+  kd-train: teacher 7 (60.26) -> student 8 (59.98)
+
+=== Round 31/200 (MWM_AccDiff) ===
+  kd-train: teacher 22 (61.52) -> student 18 (60.24)
+  kd-train: teacher 4 (60.70) -> student 2 (57.72)
+  kd-train: teacher 5 (60.92) -> student 21 (60.42)
+  kd-train: teacher 24 (60.70) -> student 23 (60.60)
+  kd-train: teacher 1 (62.42) -> student 15 (60.70)
+  oracle-train: oracle -> student 10 : 59.18
+  oracle-gain in this round: 5.12
+  kd-train: teacher 25 (63.40) -> student 9 (58.56)
+  kd-train: teacher 27 (61.38) -> student 3 (59.24)
+  kd-train: teacher 13 (61.28) -> student 16 (59.68)
+  kd-train: teacher 29 (60.70) -> student 17 (60.14)
+  kd-train: teacher 26 (62.00) -> student 14 (56.94)
+  kd-train: teacher 11 (61.12) -> student 12 (60.26)
+  kd-train: teacher 6 (61.08) -> student 7 (60.26)
+  kd-train: teacher 19 (62.02) -> student 20 (58.66)
+  kd-train: teacher 28 (62.16) -> student 8 (59.28)
+
+=== Round 32/200 (MWM_AccDiff) ===
+  kd-train: teacher 10 (64.30) -> student 17 (56.62)
+  kd-train: teacher 26 (62.00) -> student 23 (60.32)
+  kd-train: teacher 8 (61.44) -> student 7 (60.72)
+  kd-train: teacher 28 (62.16) -> student 29 (60.70)
+  kd-train: teacher 22 (61.52) -> student 4 (60.70)
+  kd-train: teacher 13 (61.28) -> student 5 (60.92)
+  oracle-train: oracle -> student 12 : 60.54
+  oracle-gain in this round: -1.02
+  kd-train: teacher 25 (63.40) -> student 16 (58.82)
+  kd-train: teacher 15 (61.86) -> student 21 (60.68)
+  kd-train: teacher 3 (61.30) -> student 14 (59.52)
+  kd-train: teacher 19 (62.02) -> student 20 (58.36)
+  kd-train: teacher 18 (61.60) -> student 24 (60.70)
+  kd-train: teacher 27 (61.38) -> student 6 (61.08)
+  kd-train: teacher 11 (61.12) -> student 2 (59.44)
+  kd-train: teacher 1 (62.42) -> student 9 (61.02)
+
+=== Round 33/200 (MWM_AccDiff) ===
+  kd-train: teacher 8 (61.44) -> student 27 (61.38)
+  kd-train: teacher 23 (61.80) -> student 4 (60.82)
+  kd-train: teacher 1 (62.42) -> student 11 (61.12)
+  kd-train: teacher 19 (62.02) -> student 21 (59.94)
+  kd-train: teacher 10 (64.30) -> student 29 (55.36)
+  kd-train: teacher 9 (62.34) -> student 16 (59.44)
+  kd-train: teacher 26 (62.00) -> student 7 (60.20)
+  kd-train: teacher 24 (61.98) -> student 6 (60.52)
+  kd-train: teacher 15 (61.86) -> student 13 (61.28)
+  kd-train: teacher 18 (61.60) -> student 3 (61.30)
+  kd-train: teacher 20 (62.16) -> student 5 (59.52)
+  kd-train: teacher 28 (62.16) -> student 12 (59.52)
+  kd-train: teacher 25 (63.40) -> student 14 (58.32)
+  kd-train: teacher 22 (61.52) -> student 2 (60.90)
+  oracle-train: oracle -> student 17 : 58.40
+  oracle-gain in this round: 4.48
+
+=== Round 34/200 (MWM_AccDiff) ===
+  kd-train: teacher 10 (64.30) -> student 4 (59.06)
+  kd-train: teacher 25 (63.40) -> student 13 (60.44)
+  kd-train: teacher 17 (62.88) -> student 7 (58.24)
+  kd-train: teacher 23 (61.80) -> student 29 (61.22)
+  kd-train: teacher 24 (61.98) -> student 27 (60.60)
+  kd-train: teacher 15 (61.86) -> student 22 (61.52)
+  kd-train: teacher 1 (62.42) -> student 8 (61.44)
+  kd-train: teacher 26 (62.00) -> student 16 (61.24)
+  oracle-train: oracle -> student 21 : 61.08
+  oracle-gain in this round: 1.78
+  kd-train: teacher 18 (61.60) -> student 2 (59.36)
+  kd-train: teacher 20 (62.16) -> student 3 (60.96)
+  kd-train: teacher 12 (62.74) -> student 14 (59.94)
+  kd-train: teacher 9 (62.34) -> student 11 (60.66)
+  kd-train: teacher 19 (62.02) -> student 5 (61.08)
+  kd-train: teacher 28 (62.16) -> student 6 (60.22)
+
+=== Round 35/200 (MWM_AccDiff) ===
+  kd-train: teacher 25 (63.40) -> student 29 (60.54)
+  kd-train: teacher 17 (62.88) -> student 7 (61.20)
+  kd-train: teacher 21 (62.86) -> student 22 (59.12)
+  kd-train: teacher 1 (62.42) -> student 15 (61.86)
+  kd-train: teacher 26 (62.00) -> student 18 (61.60)
+  kd-train: teacher 10 (64.30) -> student 8 (59.64)
+  kd-train: teacher 20 (62.16) -> student 6 (61.52)
+  kd-train: teacher 19 (62.02) -> student 2 (60.16)
+  kd-train: teacher 12 (62.74) -> student 16 (60.16)
+  kd-train: teacher 13 (62.54) -> student 27 (60.86)
+  kd-train: teacher 4 (63.42) -> student 5 (60.74)
+  kd-train: teacher 9 (62.34) -> student 14 (61.68)
+  kd-train: teacher 28 (62.16) -> student 3 (61.26)
+  kd-train: teacher 24 (61.98) -> student 23 (61.80)
+  oracle-train: oracle -> student 11 : 61.16
+  oracle-gain in this round: 4.24
+
+=== Round 36/200 (MWM_AccDiff) ===
+  kd-train: teacher 10 (64.30) -> student 15 (60.10)
+  kd-train: teacher 14 (62.20) -> student 2 (62.02)
+  kd-train: teacher 17 (62.88) -> student 23 (60.80)
+  oracle-train: oracle -> student 20 : 62.16
+  oracle-gain in this round: 0.84
+  kd-train: teacher 21 (62.86) -> student 26 (62.00)
+  kd-train: teacher 1 (62.42) -> student 28 (62.16)
+  kd-train: teacher 5 (63.20) -> student 6 (60.52)
+  kd-train: teacher 16 (63.00) -> student 24 (61.98)
+  kd-train: teacher 13 (62.54) -> student 29 (62.04)
+  kd-train: teacher 9 (62.34) -> student 7 (61.98)
+  kd-train: teacher 25 (63.40) -> student 18 (59.06)
+  kd-train: teacher 4 (63.42) -> student 8 (60.90)
+  kd-train: teacher 12 (62.74) -> student 3 (58.80)
+  kd-train: teacher 22 (62.64) -> student 19 (62.02)
+  kd-train: teacher 11 (65.40) -> student 27 (59.84)
+
+=== Round 37/200 (MWM_AccDiff) ===
+  kd-train: teacher 5 (63.20) -> student 26 (61.12)
+  kd-train: teacher 25 (63.40) -> student 19 (61.62)
+  kd-train: teacher 27 (64.48) -> student 24 (60.92)
+  kd-train: teacher 11 (65.40) -> student 6 (59.96)
+  kd-train: teacher 10 (64.30) -> student 7 (60.88)
+  kd-train: teacher 23 (63.68) -> student 8 (60.98)
+  kd-train: teacher 20 (63.00) -> student 18 (61.54)
+  oracle-train: oracle -> student 9 : 62.34
+  oracle-gain in this round: 3.48
+  kd-train: teacher 17 (62.88) -> student 29 (62.26)
+  kd-train: teacher 12 (62.74) -> student 28 (62.38)
+  kd-train: teacher 22 (62.64) -> student 2 (60.68)
+  kd-train: teacher 16 (63.00) -> student 15 (62.24)
+  kd-train: teacher 13 (62.54) -> student 1 (62.42)
+  kd-train: teacher 4 (63.42) -> student 14 (62.20)
+  kd-train: teacher 21 (62.86) -> student 3 (59.22)
+
+=== Round 38/200 (MWM_AccDiff) ===
+  kd-train: teacher 21 (62.86) -> student 15 (62.30)
+  kd-train: teacher 27 (64.48) -> student 7 (60.84)
+  kd-train: teacher 24 (64.34) -> student 3 (61.18)
+  kd-train: teacher 12 (62.74) -> student 1 (61.42)
+  kd-train: teacher 17 (62.88) -> student 2 (61.28)
+  kd-train: teacher 4 (63.42) -> student 13 (62.54)
+  kd-train: teacher 20 (63.00) -> student 28 (61.72)
+  kd-train: teacher 23 (63.68) -> student 26 (61.28)
+  kd-train: teacher 10 (64.30) -> student 29 (60.06)
+  kd-train: teacher 9 (65.82) -> student 6 (61.24)
+  kd-train: teacher 5 (63.20) -> student 18 (61.86)
+  oracle-train: oracle -> student 22 : 62.64
+  oracle-gain in this round: 0.84
+  kd-train: teacher 25 (63.40) -> student 19 (61.06)
+  kd-train: teacher 16 (63.00) -> student 14 (62.36)
+  kd-train: teacher 11 (65.40) -> student 8 (60.74)
+
+=== Round 39/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (63.68) -> student 7 (62.66)
+  kd-train: teacher 27 (64.48) -> student 15 (60.54)
+  kd-train: teacher 11 (65.40) -> student 19 (61.64)
+  kd-train: teacher 29 (64.08) -> student 13 (62.64)
+  oracle-train: oracle -> student 28 : 60.30
+  oracle-gain in this round: 3.08
+  kd-train: teacher 3 (63.50) -> student 21 (62.86)
+  kd-train: teacher 5 (63.20) -> student 20 (63.00)
+  kd-train: teacher 6 (64.40) -> student 26 (62.30)
+  kd-train: teacher 9 (65.82) -> student 14 (61.60)
+  kd-train: teacher 16 (63.00) -> student 1 (62.24)
+  kd-train: teacher 25 (63.40) -> student 8 (62.72)
+  kd-train: teacher 4 (63.42) -> student 17 (62.88)
+  kd-train: teacher 10 (64.30) -> student 18 (62.44)
+  kd-train: teacher 24 (64.34) -> student 2 (57.02)
+  kd-train: teacher 22 (63.48) -> student 12 (62.74)
+
+=== Round 40/200 (MWM_AccDiff) ===
+  kd-train: teacher 3 (63.50) -> student 4 (63.42)
+  kd-train: teacher 23 (63.68) -> student 8 (63.42)
+  kd-train: teacher 27 (64.48) -> student 20 (62.82)
+  kd-train: teacher 2 (64.94) -> student 16 (63.00)
+  kd-train: teacher 10 (64.30) -> student 19 (63.06)
+  oracle-train: oracle -> student 28 : 63.38
+  oracle-gain in this round: 3.18
+  kd-train: teacher 9 (65.82) -> student 21 (61.90)
+  kd-train: teacher 6 (64.40) -> student 17 (62.80)
+  kd-train: teacher 13 (63.82) -> student 5 (63.20)
+  kd-train: teacher 29 (64.08) -> student 26 (63.32)
+  kd-train: teacher 14 (63.78) -> student 25 (63.40)
+  kd-train: teacher 15 (64.46) -> student 7 (62.60)
+  kd-train: teacher 11 (65.40) -> student 12 (60.44)
+  kd-train: teacher 24 (64.34) -> student 18 (62.02)
+  kd-train: teacher 22 (63.48) -> student 1 (63.36)
+
+=== Round 41/200 (MWM_AccDiff) ===
+  kd-train: teacher 11 (65.40) -> student 7 (63.30)
+  kd-train: teacher 20 (64.52) -> student 21 (63.32)
+  kd-train: teacher 24 (64.34) -> student 23 (63.68)
+  kd-train: teacher 12 (66.22) -> student 4 (62.76)
+  kd-train: teacher 17 (64.64) -> student 3 (63.50)
+  oracle-train: oracle -> student 19 : 61.64
+  oracle-gain in this round: 4.00
+  kd-train: teacher 15 (64.46) -> student 13 (63.82)
+  kd-train: teacher 26 (64.04) -> student 14 (63.78)
+  kd-train: teacher 9 (65.82) -> student 5 (63.10)
+  kd-train: teacher 27 (64.48) -> student 16 (63.52)
+  kd-train: teacher 2 (64.94) -> student 18 (63.98)
+  kd-train: teacher 6 (64.40) -> student 22 (63.48)
+  kd-train: teacher 29 (64.08) -> student 1 (61.98)
+  kd-train: teacher 28 (66.56) -> student 8 (62.92)
+  kd-train: teacher 10 (64.30) -> student 25 (63.86)
+
+=== Round 42/200 (MWM_AccDiff) ===
+  kd-train: teacher 7 (66.36) -> student 16 (62.14)
+  kd-train: teacher 12 (66.22) -> student 23 (62.82)
+  kd-train: teacher 11 (65.40) -> student 26 (64.04)
+  kd-train: teacher 2 (64.94) -> student 1 (64.46)
+  kd-train: teacher 15 (64.46) -> student 6 (64.40)
+  kd-train: teacher 27 (64.48) -> student 10 (64.30)
+  kd-train: teacher 20 (64.52) -> student 3 (62.38)
+  kd-train: teacher 9 (65.82) -> student 25 (63.98)
+  kd-train: teacher 8 (65.22) -> student 29 (64.08)
+  kd-train: teacher 19 (65.64) -> student 13 (62.56)
+  kd-train: teacher 4 (65.70) -> student 21 (63.30)
+  kd-train: teacher 17 (64.64) -> student 24 (64.34)
+  kd-train: teacher 28 (66.56) -> student 14 (61.76)
+  oracle-train: oracle -> student 18 : 63.90
+  oracle-gain in this round: -0.34
+  kd-train: teacher 22 (64.86) -> student 5 (64.16)
+
+=== Round 43/200 (MWM_AccDiff) ===
+  kd-train: teacher 12 (66.22) -> student 23 (63.56)
+  kd-train: teacher 13 (65.12) -> student 27 (64.48)
+  oracle-train: oracle -> student 10 : 63.90
+  oracle-gain in this round: 3.08
+  kd-train: teacher 7 (66.36) -> student 24 (62.90)
+  kd-train: teacher 11 (65.40) -> student 29 (64.00)
+  kd-train: teacher 2 (64.94) -> student 20 (64.52)
+  kd-train: teacher 8 (65.22) -> student 26 (64.04)
+  kd-train: teacher 16 (64.88) -> student 3 (63.60)
+  kd-train: teacher 1 (65.06) -> student 17 (64.64)
+  kd-train: teacher 4 (65.70) -> student 21 (63.94)
+  kd-train: teacher 19 (65.64) -> student 14 (63.56)
+  kd-train: teacher 9 (65.82) -> student 18 (63.56)
+  kd-train: teacher 25 (65.80) -> student 5 (63.26)
+  kd-train: teacher 22 (64.86) -> student 15 (64.46)
+  kd-train: teacher 28 (66.56) -> student 6 (62.18)
+
+=== Round 44/200 (MWM_AccDiff) ===
+  kd-train: teacher 10 (66.98) -> student 15 (62.86)
+  kd-train: teacher 9 (65.82) -> student 16 (64.88)
+  kd-train: teacher 7 (66.36) -> student 23 (64.44)
+  kd-train: teacher 21 (65.16) -> student 1 (65.06)
+  kd-train: teacher 14 (66.58) -> student 17 (64.18)
+  kd-train: teacher 11 (65.40) -> student 13 (65.12)
+  kd-train: teacher 4 (65.70) -> student 22 (64.86)
+  kd-train: teacher 29 (65.56) -> student 2 (64.94)
+  kd-train: teacher 19 (65.64) -> student 3 (62.94)
+  kd-train: teacher 8 (65.22) -> student 6 (65.14)
+  kd-train: teacher 25 (65.80) -> student 5 (64.14)
+  oracle-train: oracle -> student 24 : 63.44
+  oracle-gain in this round: 0.94
+  kd-train: teacher 28 (66.56) -> student 26 (61.48)
+  kd-train: teacher 18 (65.74) -> student 20 (64.22)
+  kd-train: teacher 12 (66.22) -> student 27 (63.02)
+
+=== Round 45/200 (MWM_AccDiff) ===
+  kd-train: teacher 9 (65.82) -> student 13 (64.94)
+  kd-train: teacher 28 (66.56) -> student 20 (64.82)
+  kd-train: teacher 10 (66.98) -> student 3 (63.20)
+  kd-train: teacher 17 (66.40) -> student 27 (63.94)
+  kd-train: teacher 7 (66.36) -> student 5 (64.12)
+  kd-train: teacher 19 (65.64) -> student 2 (64.86)
+  kd-train: teacher 4 (65.70) -> student 21 (65.16)
+  kd-train: teacher 25 (65.80) -> student 23 (64.56)
+  kd-train: teacher 12 (66.22) -> student 24 (64.38)
+  kd-train: teacher 6 (65.42) -> student 8 (65.22)
+  kd-train: teacher 22 (65.52) -> student 26 (65.12)
+  kd-train: teacher 29 (65.56) -> student 1 (63.88)
+  kd-train: teacher 14 (66.58) -> student 16 (61.40)
+  kd-train: teacher 18 (65.74) -> student 15 (64.92)
+  oracle-train: oracle -> student 11 : 65.40
+  oracle-gain in this round: 2.24
+
+=== Round 46/200 (MWM_AccDiff) ===
+  kd-train: teacher 19 (65.64) -> student 1 (64.84)
+  kd-train: teacher 14 (66.58) -> student 20 (60.92)
+  kd-train: teacher 7 (66.36) -> student 8 (64.10)
+  kd-train: teacher 11 (67.64) -> student 3 (63.58)
+  kd-train: teacher 17 (66.40) -> student 5 (63.86)
+  oracle-train: oracle -> student 22 : 65.52
+  oracle-gain in this round: 3.18
+  kd-train: teacher 10 (66.98) -> student 16 (63.64)
+  kd-train: teacher 4 (65.70) -> student 21 (64.68)
+  kd-train: teacher 28 (66.56) -> student 13 (63.80)
+  kd-train: teacher 18 (65.74) -> student 2 (63.56)
+  kd-train: teacher 25 (65.80) -> student 23 (64.42)
+  kd-train: teacher 9 (65.82) -> student 27 (64.72)
+  kd-train: teacher 24 (66.66) -> student 15 (64.54)
+  kd-train: teacher 12 (66.22) -> student 26 (64.22)
+  kd-train: teacher 29 (65.56) -> student 6 (65.42)
+
+=== Round 47/200 (MWM_AccDiff) ===
+  kd-train: teacher 22 (68.70) -> student 2 (64.34)
+  kd-train: teacher 14 (66.58) -> student 13 (64.82)
+  kd-train: teacher 24 (66.66) -> student 27 (65.20)
+  kd-train: teacher 10 (66.98) -> student 16 (63.72)
+  kd-train: teacher 17 (66.40) -> student 23 (65.16)
+  kd-train: teacher 20 (66.08) -> student 4 (65.70)
+  kd-train: teacher 7 (66.36) -> student 8 (65.46)
+  kd-train: teacher 12 (66.22) -> student 19 (65.64)
+  kd-train: teacher 11 (67.64) -> student 6 (64.62)
+  kd-train: teacher 15 (66.42) -> student 26 (65.60)
+  kd-train: teacher 25 (65.80) -> student 29 (65.56)
+  kd-train: teacher 3 (67.14) -> student 21 (64.90)
+  oracle-train: oracle -> student 18 : 65.74
+  oracle-gain in this round: 0.32
+  kd-train: teacher 28 (66.56) -> student 5 (65.08)
+  kd-train: teacher 9 (65.82) -> student 1 (63.84)
+
+=== Round 48/200 (MWM_AccDiff) ===
+  kd-train: teacher 3 (67.14) -> student 4 (64.54)
+  kd-train: teacher 24 (66.66) -> student 26 (65.82)
+  kd-train: teacher 20 (66.08) -> student 1 (63.58)
+  kd-train: teacher 17 (66.40) -> student 6 (65.34)
+  kd-train: teacher 7 (66.36) -> student 27 (65.50)
+  kd-train: teacher 12 (66.22) -> student 19 (65.62)
+  kd-train: teacher 28 (66.56) -> student 23 (64.98)
+  kd-train: teacher 18 (66.06) -> student 25 (65.80)
+  kd-train: teacher 13 (66.16) -> student 9 (65.82)
+  oracle-train: oracle -> student 21 : 65.98
+  oracle-gain in this round: -3.36
+  kd-train: teacher 11 (67.64) -> student 5 (64.54)
+  kd-train: teacher 22 (68.70) -> student 29 (64.52)
+  kd-train: teacher 14 (66.58) -> student 16 (64.10)
+  kd-train: teacher 15 (66.42) -> student 8 (65.08)
+  kd-train: teacher 10 (66.98) -> student 2 (64.86)
+
+=== Round 49/200 (MWM_AccDiff) ===
+  kd-train: teacher 13 (66.16) -> student 25 (65.86)
+  kd-train: teacher 11 (67.64) -> student 5 (62.90)
+  oracle-train: oracle -> student 21 : 62.62
+  oracle-gain in this round: 3.62
+  kd-train: teacher 10 (66.98) -> student 8 (64.78)
+  kd-train: teacher 20 (66.08) -> student 9 (65.94)
+  kd-train: teacher 27 (66.58) -> student 26 (64.58)
+  kd-train: teacher 17 (66.40) -> student 16 (65.50)
+  kd-train: teacher 28 (66.56) -> student 4 (65.30)
+  kd-train: teacher 22 (68.70) -> student 23 (63.34)
+  kd-train: teacher 14 (66.58) -> student 29 (65.58)
+  kd-train: teacher 7 (66.36) -> student 1 (64.98)
+  kd-train: teacher 15 (66.42) -> student 6 (65.66)
+  kd-train: teacher 12 (66.22) -> student 19 (65.64)
+  kd-train: teacher 3 (67.14) -> student 18 (66.06)
+  kd-train: teacher 24 (66.66) -> student 2 (63.36)
+
+=== Round 50/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (66.58) -> student 29 (64.82)
+  kd-train: teacher 3 (67.14) -> student 4 (64.88)
+  kd-train: teacher 23 (66.48) -> student 13 (66.16)
+  oracle-train: oracle -> student 19 : 66.08
+  oracle-gain in this round: -4.08
+  kd-train: teacher 6 (66.58) -> student 20 (66.08)
+  kd-train: teacher 15 (66.42) -> student 25 (66.22)
+  kd-train: teacher 10 (66.98) -> student 26 (63.72)
+  kd-train: teacher 7 (66.36) -> student 1 (65.52)
+  kd-train: teacher 28 (66.56) -> student 12 (66.22)
+  kd-train: teacher 5 (66.58) -> student 16 (64.96)
+  kd-train: teacher 17 (66.40) -> student 21 (66.24)
+  kd-train: teacher 11 (67.64) -> student 8 (64.06)
+  kd-train: teacher 22 (68.70) -> student 9 (64.46)
+  kd-train: teacher 24 (66.66) -> student 2 (64.56)
+  kd-train: teacher 14 (66.58) -> student 18 (65.46)
+
+=== Round 51/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 23 : 66.48
+  oracle-gain in this round: -0.36
+  kd-train: teacher 27 (66.58) -> student 7 (66.36)
+  kd-train: teacher 9 (67.32) -> student 20 (65.32)
+  kd-train: teacher 5 (66.58) -> student 1 (66.38)
+  kd-train: teacher 10 (66.98) -> student 4 (65.42)
+  kd-train: teacher 12 (66.62) -> student 25 (65.22)
+  kd-train: teacher 3 (67.14) -> student 13 (65.40)
+  kd-train: teacher 22 (68.70) -> student 26 (63.84)
+  kd-train: teacher 6 (66.58) -> student 15 (66.42)
+  kd-train: teacher 28 (66.56) -> student 18 (66.46)
+  kd-train: teacher 11 (67.64) -> student 19 (62.00)
+  kd-train: teacher 8 (67.78) -> student 16 (63.68)
+  kd-train: teacher 21 (67.30) -> student 29 (64.84)
+  kd-train: teacher 14 (66.58) -> student 17 (66.40)
+  kd-train: teacher 24 (66.66) -> student 2 (64.62)
+
+=== Round 52/200 (MWM_AccDiff) ===
+  kd-train: teacher 22 (68.70) -> student 15 (64.90)
+  kd-train: teacher 5 (66.58) -> student 1 (64.34)
+  kd-train: teacher 8 (67.78) -> student 20 (65.68)
+  kd-train: teacher 26 (66.76) -> student 23 (66.12)
+  oracle-train: oracle -> student 28 : 66.56
+  oracle-gain in this round: -0.20
+  kd-train: teacher 9 (67.32) -> student 7 (65.14)
+  kd-train: teacher 3 (67.14) -> student 13 (66.10)
+  kd-train: teacher 19 (66.62) -> student 29 (66.28)
+  kd-train: teacher 12 (66.62) -> student 16 (66.54)
+  kd-train: teacher 14 (66.58) -> student 6 (66.58)
+  kd-train: teacher 21 (67.30) -> student 17 (65.52)
+  kd-train: teacher 4 (66.72) -> student 27 (66.58)
+  kd-train: teacher 11 (67.64) -> student 2 (64.56)
+  kd-train: teacher 24 (66.66) -> student 18 (65.96)
+  kd-train: teacher 10 (66.98) -> student 25 (65.58)
+
+=== Round 53/200 (MWM_AccDiff) ===
+  kd-train: teacher 12 (66.62) -> student 1 (61.78)
+  kd-train: teacher 22 (68.70) -> student 2 (66.56)
+  kd-train: teacher 24 (66.66) -> student 14 (66.58)
+  kd-train: teacher 26 (66.76) -> student 23 (66.12)
+  kd-train: teacher 16 (66.62) -> student 13 (66.54)
+  kd-train: teacher 18 (67.40) -> student 25 (64.32)
+  kd-train: teacher 4 (66.72) -> student 28 (66.36)
+  oracle-train: oracle -> student 15 : 66.62
+  oracle-gain in this round: -4.52
+  kd-train: teacher 3 (67.14) -> student 20 (65.16)
+  kd-train: teacher 10 (66.98) -> student 6 (65.66)
+  kd-train: teacher 21 (67.30) -> student 17 (65.08)
+  kd-train: teacher 9 (67.32) -> student 27 (64.70)
+  kd-train: teacher 11 (67.64) -> student 7 (64.04)
+  kd-train: teacher 19 (66.62) -> student 5 (66.58)
+  kd-train: teacher 8 (67.78) -> student 29 (63.06)
+
+=== Round 54/200 (MWM_AccDiff) ===
+  kd-train: teacher 18 (67.40) -> student 6 (64.46)
+  kd-train: teacher 4 (66.72) -> student 13 (66.26)
+  kd-train: teacher 24 (66.66) -> student 2 (66.32)
+  kd-train: teacher 29 (67.54) -> student 20 (65.08)
+  kd-train: teacher 3 (67.14) -> student 17 (65.08)
+  kd-train: teacher 21 (67.30) -> student 28 (66.26)
+  oracle-train: oracle -> student 12 : 66.62
+  oracle-gain in this round: -0.34
+  kd-train: teacher 10 (66.98) -> student 5 (65.36)
+  kd-train: teacher 25 (66.84) -> student 23 (65.72)
+  kd-train: teacher 26 (66.76) -> student 19 (66.62)
+  kd-train: teacher 16 (66.62) -> student 1 (63.90)
+  kd-train: teacher 22 (68.70) -> student 15 (62.10)
+  kd-train: teacher 9 (67.32) -> student 27 (64.74)
+  kd-train: teacher 11 (67.64) -> student 14 (64.54)
+  kd-train: teacher 8 (67.78) -> student 7 (63.82)
+
+=== Round 55/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 66.58
+  oracle-gain in this round: 1.54
+  kd-train: teacher 8 (67.78) -> student 27 (64.56)
+  kd-train: teacher 21 (67.30) -> student 5 (65.96)
+  kd-train: teacher 26 (66.76) -> student 24 (66.66)
+  kd-train: teacher 22 (68.70) -> student 14 (64.64)
+  kd-train: teacher 15 (68.02) -> student 23 (65.62)
+  kd-train: teacher 9 (67.32) -> student 17 (65.54)
+  kd-train: teacher 29 (67.54) -> student 19 (65.42)
+  kd-train: teacher 4 (66.72) -> student 1 (66.08)
+  kd-train: teacher 6 (66.86) -> student 20 (66.08)
+  kd-train: teacher 10 (66.98) -> student 16 (66.62)
+  kd-train: teacher 25 (66.84) -> student 12 (66.28)
+  kd-train: teacher 18 (67.40) -> student 13 (64.08)
+  kd-train: teacher 11 (67.64) -> student 28 (65.14)
+  kd-train: teacher 3 (67.14) -> student 2 (66.12)
+
+=== Round 56/200 (MWM_AccDiff) ===
+  kd-train: teacher 8 (67.78) -> student 27 (64.90)
+  kd-train: teacher 11 (67.64) -> student 20 (66.30)
+  oracle-train: oracle -> student 26 : 66.76
+  oracle-gain in this round: -0.08
+  kd-train: teacher 14 (67.36) -> student 5 (66.30)
+  kd-train: teacher 13 (67.58) -> student 17 (65.16)
+  kd-train: teacher 9 (67.32) -> student 25 (66.84)
+  kd-train: teacher 18 (67.40) -> student 19 (66.72)
+  kd-train: teacher 23 (66.94) -> student 1 (63.94)
+  kd-train: teacher 21 (67.30) -> student 4 (66.72)
+  kd-train: teacher 15 (68.02) -> student 16 (63.88)
+  kd-train: teacher 7 (68.12) -> student 2 (65.20)
+  kd-train: teacher 3 (67.14) -> student 6 (66.86)
+  kd-train: teacher 10 (66.98) -> student 12 (66.88)
+  kd-train: teacher 29 (67.54) -> student 24 (66.38)
+  kd-train: teacher 22 (68.70) -> student 28 (64.02)
+
+=== Round 57/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 23 : 66.94
+  oracle-gain in this round: 1.44
+  kd-train: teacher 29 (67.54) -> student 25 (66.22)
+  kd-train: teacher 8 (67.78) -> student 27 (66.10)
+  kd-train: teacher 13 (67.58) -> student 4 (65.92)
+  kd-train: teacher 11 (67.64) -> student 10 (66.98)
+  kd-train: teacher 21 (67.30) -> student 17 (66.76)
+  kd-train: teacher 22 (68.70) -> student 20 (65.14)
+  kd-train: teacher 7 (68.12) -> student 19 (66.00)
+  kd-train: teacher 16 (67.22) -> student 5 (67.02)
+  kd-train: teacher 18 (67.40) -> student 2 (66.32)
+  kd-train: teacher 9 (67.32) -> student 26 (66.68)
+  kd-train: teacher 15 (68.02) -> student 24 (65.80)
+  kd-train: teacher 3 (67.14) -> student 1 (63.94)
+  kd-train: teacher 14 (67.36) -> student 12 (66.62)
+  kd-train: teacher 28 (68.06) -> student 6 (64.80)
+
+=== Round 58/200 (MWM_AccDiff) ===
+  kd-train: teacher 2 (67.32) -> student 1 (66.68)
+  kd-train: teacher 11 (67.64) -> student 26 (66.94)
+  kd-train: teacher 7 (68.12) -> student 10 (66.22)
+  kd-train: teacher 15 (68.02) -> student 25 (66.14)
+  kd-train: teacher 23 (68.38) -> student 27 (65.20)
+  kd-train: teacher 22 (68.70) -> student 17 (65.52)
+  kd-train: teacher 13 (67.58) -> student 3 (67.14)
+  kd-train: teacher 29 (67.54) -> student 20 (66.80)
+  kd-train: teacher 24 (67.46) -> student 9 (67.32)
+  kd-train: teacher 18 (67.40) -> student 4 (67.12)
+  oracle-train: oracle -> student 21 : 67.30
+  oracle-gain in this round: 3.38
+  kd-train: teacher 12 (67.90) -> student 19 (66.42)
+  kd-train: teacher 14 (67.36) -> student 16 (67.22)
+  kd-train: teacher 8 (67.78) -> student 5 (66.90)
+  kd-train: teacher 28 (68.06) -> student 6 (66.26)
+
+=== Round 59/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (67.40) -> student 2 (67.32)
+  kd-train: teacher 11 (67.64) -> student 6 (66.40)
+  kd-train: teacher 15 (68.02) -> student 17 (66.50)
+  kd-train: teacher 24 (67.46) -> student 16 (66.74)
+  kd-train: teacher 23 (68.38) -> student 10 (65.66)
+  kd-train: teacher 7 (68.12) -> student 27 (65.54)
+  kd-train: teacher 21 (70.68) -> student 25 (65.50)
+  kd-train: teacher 13 (67.58) -> student 19 (66.78)
+  kd-train: teacher 18 (67.40) -> student 9 (67.06)
+  kd-train: teacher 22 (68.70) -> student 20 (65.64)
+  kd-train: teacher 29 (67.54) -> student 1 (66.58)
+  kd-train: teacher 28 (68.06) -> student 26 (66.10)
+  oracle-train: oracle -> student 14 : 67.36
+  oracle-gain in this round: -1.34
+  kd-train: teacher 8 (67.78) -> student 5 (66.76)
+  kd-train: teacher 12 (67.90) -> student 3 (66.42)
+
+=== Round 60/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (68.02) -> student 5 (66.26)
+  oracle-train: oracle -> student 4 : 67.40
+  oracle-gain in this round: -1.24
+  kd-train: teacher 24 (67.46) -> student 1 (66.16)
+  kd-train: teacher 23 (68.38) -> student 9 (66.18)
+  kd-train: teacher 8 (67.78) -> student 16 (66.60)
+  kd-train: teacher 12 (67.90) -> student 17 (65.08)
+  kd-train: teacher 28 (68.06) -> student 18 (67.40)
+  kd-train: teacher 13 (67.58) -> student 3 (67.12)
+  kd-train: teacher 29 (67.54) -> student 10 (67.32)
+  kd-train: teacher 7 (68.12) -> student 2 (66.22)
+  kd-train: teacher 26 (67.52) -> student 27 (67.36)
+  kd-train: teacher 11 (67.64) -> student 19 (66.84)
+  kd-train: teacher 21 (70.68) -> student 14 (66.02)
+  kd-train: teacher 20 (67.62) -> student 25 (67.02)
+  kd-train: teacher 22 (68.70) -> student 6 (65.90)
+
+=== Round 61/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (68.02) -> student 27 (66.20)
+  kd-train: teacher 23 (68.38) -> student 19 (65.12)
+  kd-train: teacher 14 (69.88) -> student 10 (64.10)
+  kd-train: teacher 7 (68.12) -> student 3 (65.68)
+  kd-train: teacher 28 (68.06) -> student 25 (66.06)
+  kd-train: teacher 11 (67.64) -> student 1 (66.28)
+  kd-train: teacher 12 (67.90) -> student 16 (66.34)
+  kd-train: teacher 29 (67.54) -> student 17 (67.16)
+  kd-train: teacher 13 (67.58) -> student 5 (66.96)
+  kd-train: teacher 21 (70.68) -> student 9 (63.78)
+  kd-train: teacher 22 (68.70) -> student 2 (65.28)
+  kd-train: teacher 26 (67.52) -> student 6 (67.26)
+  kd-train: teacher 8 (67.78) -> student 18 (66.36)
+  oracle-train: oracle -> student 24 : 67.46
+  oracle-gain in this round: 0.42
+  kd-train: teacher 20 (67.62) -> student 4 (66.16)
+
+=== Round 62/200 (MWM_AccDiff) ===
+  kd-train: teacher 9 (69.06) -> student 16 (65.88)
+  kd-train: teacher 15 (68.02) -> student 5 (67.40)
+  oracle-train: oracle -> student 26 : 67.52
+  oracle-gain in this round: 0.54
+  kd-train: teacher 23 (68.38) -> student 3 (65.82)
+  kd-train: teacher 11 (67.64) -> student 1 (67.34)
+  kd-train: teacher 28 (68.06) -> student 27 (66.96)
+  kd-train: teacher 14 (69.88) -> student 6 (65.78)
+  kd-train: teacher 12 (67.90) -> student 29 (67.54)
+  kd-train: teacher 7 (68.12) -> student 10 (66.44)
+  kd-train: teacher 8 (67.78) -> student 20 (67.62)
+  kd-train: teacher 19 (67.84) -> student 13 (67.58)
+  kd-train: teacher 24 (67.88) -> student 4 (67.38)
+  kd-train: teacher 2 (68.34) -> student 18 (65.64)
+  kd-train: teacher 22 (68.70) -> student 25 (65.90)
+  kd-train: teacher 21 (70.68) -> student 17 (65.78)
+
+=== Round 63/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (68.02) -> student 8 (67.78)
+  kd-train: teacher 12 (67.90) -> student 1 (64.50)
+  kd-train: teacher 16 (68.38) -> student 20 (67.06)
+  oracle-train: oracle -> student 19 : 67.84
+  oracle-gain in this round: -0.64
+  kd-train: teacher 23 (68.38) -> student 5 (66.74)
+  kd-train: teacher 2 (68.34) -> student 13 (67.08)
+  kd-train: teacher 6 (68.06) -> student 11 (67.64)
+  kd-train: teacher 21 (70.68) -> student 25 (65.70)
+  kd-train: teacher 14 (69.88) -> student 29 (66.64)
+  kd-train: teacher 26 (68.06) -> student 27 (67.48)
+  kd-train: teacher 28 (68.06) -> student 18 (67.04)
+  kd-train: teacher 9 (69.06) -> student 3 (66.52)
+  kd-train: teacher 22 (68.70) -> student 10 (66.78)
+  kd-train: teacher 17 (68.66) -> student 4 (65.48)
+  kd-train: teacher 7 (68.12) -> student 24 (67.88)
+
+=== Round 64/200 (MWM_AccDiff) ===
+  kd-train: teacher 17 (68.66) -> student 18 (66.42)
+  kd-train: teacher 25 (69.20) -> student 13 (66.86)
+  kd-train: teacher 9 (69.06) -> student 29 (67.02)
+  kd-train: teacher 22 (68.70) -> student 27 (67.20)
+  kd-train: teacher 14 (69.88) -> student 5 (65.00)
+  kd-train: teacher 24 (68.62) -> student 20 (67.20)
+  kd-train: teacher 10 (68.26) -> student 12 (67.90)
+  kd-train: teacher 7 (68.12) -> student 26 (68.06)
+  kd-train: teacher 23 (68.38) -> student 19 (67.20)
+  kd-train: teacher 4 (68.06) -> student 1 (66.74)
+  kd-train: teacher 16 (68.38) -> student 28 (68.06)
+  kd-train: teacher 2 (68.34) -> student 11 (67.20)
+  oracle-train: oracle -> student 15 : 68.02
+  oracle-gain in this round: 1.40
+  kd-train: teacher 3 (68.08) -> student 6 (68.06)
+  kd-train: teacher 21 (70.68) -> student 8 (66.66)
+
+=== Round 65/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (69.42) -> student 27 (67.26)
+  kd-train: teacher 5 (68.66) -> student 10 (68.26)
+  kd-train: teacher 8 (69.54) -> student 20 (65.88)
+  kd-train: teacher 9 (69.06) -> student 3 (68.08)
+  kd-train: teacher 13 (68.82) -> student 7 (68.12)
+  kd-train: teacher 11 (68.38) -> student 1 (66.00)
+  kd-train: teacher 14 (69.88) -> student 29 (67.30)
+  oracle-train: oracle -> student 2 : 68.34
+  oracle-gain in this round: -2.68
+  kd-train: teacher 25 (69.20) -> student 28 (67.46)
+  kd-train: teacher 26 (68.98) -> student 6 (67.74)
+  kd-train: teacher 21 (70.68) -> student 18 (66.64)
+  kd-train: teacher 19 (69.50) -> student 12 (67.86)
+  kd-train: teacher 22 (68.70) -> student 16 (68.38)
+  kd-train: teacher 17 (68.66) -> student 4 (68.06)
+  kd-train: teacher 24 (68.62) -> student 23 (68.38)
+
+=== Round 66/200 (MWM_AccDiff) ===
+  kd-train: teacher 18 (69.18) -> student 6 (67.64)
+  kd-train: teacher 14 (69.88) -> student 27 (66.66)
+  kd-train: teacher 26 (68.98) -> student 12 (68.28)
+  kd-train: teacher 7 (69.04) -> student 3 (67.92)
+  kd-train: teacher 15 (69.42) -> student 17 (68.66)
+  kd-train: teacher 19 (69.50) -> student 29 (66.36)
+  kd-train: teacher 28 (68.90) -> student 11 (68.38)
+  kd-train: teacher 25 (69.20) -> student 16 (67.30)
+  kd-train: teacher 23 (68.72) -> student 22 (68.70)
+  kd-train: teacher 10 (68.76) -> student 1 (67.24)
+  kd-train: teacher 9 (69.06) -> student 20 (67.74)
+  oracle-train: oracle -> student 24 : 68.62
+  oracle-gain in this round: -0.76
+  kd-train: teacher 21 (70.68) -> student 4 (66.56)
+  kd-train: teacher 13 (68.82) -> student 5 (68.66)
+  kd-train: teacher 8 (69.54) -> student 2 (65.66)
+
+=== Round 67/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 23 : 68.72
+  oracle-gain in this round: -2.24
+  kd-train: teacher 28 (68.90) -> student 1 (67.90)
+  kd-train: teacher 9 (69.06) -> student 10 (68.76)
+  kd-train: teacher 8 (69.54) -> student 4 (68.24)
+  kd-train: teacher 14 (69.88) -> student 20 (66.04)
+  kd-train: teacher 21 (70.68) -> student 29 (67.18)
+  kd-train: teacher 25 (69.20) -> student 2 (68.32)
+  kd-train: teacher 26 (68.98) -> student 13 (68.82)
+  kd-train: teacher 15 (69.42) -> student 3 (68.10)
+  kd-train: teacher 17 (69.86) -> student 6 (67.64)
+  kd-train: teacher 19 (69.50) -> student 24 (67.86)
+  kd-train: teacher 7 (69.04) -> student 5 (68.20)
+  kd-train: teacher 11 (69.36) -> student 22 (68.32)
+  kd-train: teacher 18 (69.18) -> student 12 (68.40)
+  kd-train: teacher 27 (70.16) -> student 16 (66.76)
+
+=== Round 68/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (70.16) -> student 13 (63.94)
+  oracle-train: oracle -> student 26 : 68.98
+  oracle-gain in this round: 1.08
+  kd-train: teacher 15 (69.42) -> student 6 (67.98)
+  kd-train: teacher 25 (69.20) -> student 1 (68.26)
+  kd-train: teacher 17 (69.86) -> student 3 (66.86)
+  kd-train: teacher 10 (69.20) -> student 29 (68.76)
+  kd-train: teacher 9 (69.06) -> student 7 (69.04)
+  kd-train: teacher 21 (70.68) -> student 4 (65.84)
+  kd-train: teacher 16 (69.48) -> student 5 (67.86)
+  kd-train: teacher 24 (69.12) -> student 28 (68.90)
+  kd-train: teacher 19 (69.50) -> student 22 (67.74)
+  kd-train: teacher 18 (69.18) -> student 20 (68.86)
+  kd-train: teacher 11 (69.36) -> student 2 (68.12)
+  kd-train: teacher 8 (69.54) -> student 12 (67.08)
+  kd-train: teacher 14 (69.88) -> student 23 (66.48)
+
+=== Round 69/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (69.88) -> student 29 (67.32)
+  kd-train: teacher 15 (69.42) -> student 22 (68.64)
+  kd-train: teacher 8 (69.54) -> student 4 (68.64)
+  kd-train: teacher 27 (70.16) -> student 3 (66.24)
+  kd-train: teacher 21 (70.68) -> student 6 (65.82)
+  kd-train: teacher 20 (69.28) -> student 2 (68.58)
+  kd-train: teacher 16 (69.48) -> student 7 (68.24)
+  kd-train: teacher 17 (69.86) -> student 5 (67.88)
+  kd-train: teacher 25 (69.20) -> student 9 (69.06)
+  kd-train: teacher 19 (69.50) -> student 13 (67.90)
+  kd-train: teacher 23 (70.76) -> student 28 (67.44)
+  kd-train: teacher 10 (69.20) -> student 1 (67.52)
+  oracle-train: oracle -> student 18 : 69.18
+  oracle-gain in this round: -0.60
+  kd-train: teacher 11 (69.36) -> student 24 (69.12)
+  kd-train: teacher 26 (70.06) -> student 12 (68.02)
+
+=== Round 70/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (70.16) -> student 12 (67.56)
+  kd-train: teacher 14 (69.88) -> student 29 (68.42)
+  kd-train: teacher 17 (69.86) -> student 18 (68.58)
+  kd-train: teacher 16 (69.48) -> student 11 (69.36)
+  kd-train: teacher 26 (70.06) -> student 4 (69.22)
+  kd-train: teacher 21 (70.68) -> student 9 (67.76)
+  kd-train: teacher 8 (69.54) -> student 1 (68.32)
+  kd-train: teacher 13 (69.52) -> student 10 (69.20)
+  kd-train: teacher 23 (70.76) -> student 22 (67.62)
+  oracle-train: oracle -> student 15 : 69.42
+  oracle-gain in this round: 2.68
+  kd-train: teacher 6 (70.42) -> student 5 (67.46)
+  kd-train: teacher 19 (69.50) -> student 20 (69.28)
+  kd-train: teacher 28 (70.00) -> student 3 (68.34)
+  kd-train: teacher 7 (69.62) -> student 25 (69.20)
+  kd-train: teacher 24 (69.62) -> student 2 (68.76)
+
+=== Round 71/200 (MWM_AccDiff) ===
+  kd-train: teacher 21 (70.68) -> student 10 (68.56)
+  kd-train: teacher 26 (70.06) -> student 2 (68.56)
+  kd-train: teacher 23 (70.76) -> student 29 (68.00)
+  kd-train: teacher 27 (70.16) -> student 4 (68.88)
+  kd-train: teacher 28 (70.00) -> student 19 (69.50)
+  kd-train: teacher 17 (69.86) -> student 22 (69.32)
+  kd-train: teacher 15 (72.10) -> student 9 (67.34)
+  kd-train: teacher 24 (69.62) -> student 16 (69.48)
+  kd-train: teacher 5 (69.70) -> student 13 (69.52)
+  kd-train: teacher 6 (70.42) -> student 20 (67.08)
+  kd-train: teacher 7 (69.62) -> student 1 (67.98)
+  kd-train: teacher 25 (70.06) -> student 3 (68.74)
+  kd-train: teacher 18 (69.90) -> student 11 (68.84)
+  oracle-train: oracle -> student 8 : 69.54
+  oracle-gain in this round: -2.90
+  kd-train: teacher 14 (69.88) -> student 12 (69.10)
+
+=== Round 72/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 69.62
+  oracle-gain in this round: -1.00
+  kd-train: teacher 21 (70.68) -> student 22 (66.58)
+  kd-train: teacher 23 (70.76) -> student 8 (66.64)
+  kd-train: teacher 27 (70.16) -> student 24 (69.62)
+  kd-train: teacher 2 (69.96) -> student 19 (68.70)
+  kd-train: teacher 14 (69.88) -> student 10 (69.58)
+  kd-train: teacher 17 (69.86) -> student 5 (69.70)
+  kd-train: teacher 6 (70.42) -> student 11 (67.80)
+  kd-train: teacher 15 (72.10) -> student 16 (67.70)
+  kd-train: teacher 18 (69.90) -> student 4 (69.04)
+  kd-train: teacher 25 (70.06) -> student 20 (68.30)
+  kd-train: teacher 28 (70.00) -> student 13 (68.64)
+  kd-train: teacher 12 (70.04) -> student 3 (68.32)
+  kd-train: teacher 29 (69.74) -> student 1 (68.10)
+  kd-train: teacher 26 (70.06) -> student 9 (68.14)
+
+=== Round 73/200 (MWM_AccDiff) ===
+  kd-train: teacher 28 (70.00) -> student 1 (67.78)
+  kd-train: teacher 21 (70.68) -> student 5 (66.92)
+  kd-train: teacher 25 (70.06) -> student 13 (69.18)
+  oracle-train: oracle -> student 29 : 69.74
+  oracle-gain in this round: -8.40
+  kd-train: teacher 26 (70.06) -> student 19 (68.20)
+  kd-train: teacher 15 (72.10) -> student 20 (67.96)
+  kd-train: teacher 12 (70.04) -> student 11 (69.10)
+  kd-train: teacher 23 (70.76) -> student 22 (68.44)
+  kd-train: teacher 6 (70.42) -> student 16 (68.54)
+  kd-train: teacher 14 (69.88) -> student 4 (69.34)
+  kd-train: teacher 18 (69.90) -> student 8 (69.28)
+  kd-train: teacher 27 (70.16) -> student 3 (68.62)
+  kd-train: teacher 17 (69.86) -> student 9 (69.50)
+  kd-train: teacher 24 (70.08) -> student 7 (68.62)
+  kd-train: teacher 2 (69.96) -> student 10 (69.18)
+
+=== Round 74/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (72.10) -> student 10 (67.36)
+  kd-train: teacher 18 (69.90) -> student 1 (68.78)
+  kd-train: teacher 20 (70.74) -> student 29 (61.34)
+  kd-train: teacher 23 (70.76) -> student 3 (68.02)
+  kd-train: teacher 27 (70.16) -> student 14 (69.88)
+  kd-train: teacher 26 (70.06) -> student 13 (68.92)
+  kd-train: teacher 21 (70.68) -> student 9 (68.58)
+  kd-train: teacher 25 (70.06) -> student 16 (68.98)
+  kd-train: teacher 12 (70.04) -> student 11 (69.16)
+  kd-train: teacher 24 (70.08) -> student 4 (68.68)
+  kd-train: teacher 28 (70.00) -> student 8 (69.38)
+  kd-train: teacher 2 (69.96) -> student 7 (69.58)
+  kd-train: teacher 6 (70.42) -> student 19 (68.80)
+  kd-train: teacher 5 (70.22) -> student 22 (68.82)
+  oracle-train: oracle -> student 17 : 69.86
+  oracle-gain in this round: 0.48
+
+=== Round 75/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (70.16) -> student 29 (69.54)
+  kd-train: teacher 24 (70.08) -> student 10 (69.64)
+  kd-train: teacher 5 (70.22) -> student 7 (69.34)
+  kd-train: teacher 15 (72.10) -> student 4 (68.00)
+  kd-train: teacher 20 (70.74) -> student 13 (67.76)
+  oracle-train: oracle -> student 19 : 69.98
+  oracle-gain in this round: -2.30
+  kd-train: teacher 14 (70.30) -> student 22 (69.16)
+  kd-train: teacher 26 (70.06) -> student 18 (69.90)
+  kd-train: teacher 17 (70.34) -> student 1 (67.36)
+  kd-train: teacher 12 (70.04) -> student 28 (70.00)
+  kd-train: teacher 21 (70.68) -> student 16 (68.78)
+  kd-train: teacher 9 (70.48) -> student 8 (69.18)
+  kd-train: teacher 25 (70.06) -> student 2 (69.96)
+  kd-train: teacher 6 (70.42) -> student 3 (68.92)
+  kd-train: teacher 23 (70.76) -> student 11 (68.98)
+
+=== Round 76/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (70.30) -> student 29 (69.78)
+  oracle-train: oracle -> student 4 : 70.02
+  oracle-gain in this round: -2.02
+  kd-train: teacher 8 (70.32) -> student 10 (69.62)
+  kd-train: teacher 9 (70.48) -> student 22 (69.62)
+  kd-train: teacher 20 (70.74) -> student 19 (67.68)
+  kd-train: teacher 24 (70.08) -> student 1 (66.62)
+  kd-train: teacher 23 (70.76) -> student 13 (68.66)
+  kd-train: teacher 6 (70.42) -> student 11 (69.06)
+  kd-train: teacher 3 (70.42) -> student 7 (69.60)
+  kd-train: teacher 15 (72.10) -> student 16 (68.04)
+  kd-train: teacher 17 (70.34) -> student 12 (70.04)
+  kd-train: teacher 5 (70.22) -> student 26 (70.06)
+  kd-train: teacher 28 (70.66) -> student 2 (68.64)
+  kd-train: teacher 21 (70.68) -> student 18 (69.16)
+  kd-train: teacher 27 (70.16) -> student 25 (70.06)
+
+=== Round 77/200 (MWM_AccDiff) ===
+  kd-train: teacher 8 (70.32) -> student 27 (70.16)
+  kd-train: teacher 15 (72.10) -> student 11 (68.08)
+  kd-train: teacher 23 (70.76) -> student 12 (67.92)
+  kd-train: teacher 19 (71.04) -> student 4 (68.00)
+  kd-train: teacher 20 (70.74) -> student 26 (68.68)
+  kd-train: teacher 28 (70.66) -> student 16 (69.78)
+  kd-train: teacher 6 (70.42) -> student 5 (70.22)
+  kd-train: teacher 10 (70.68) -> student 29 (69.34)
+  kd-train: teacher 13 (70.54) -> student 2 (69.42)
+  kd-train: teacher 9 (70.48) -> student 22 (69.70)
+  kd-train: teacher 17 (70.34) -> student 1 (70.02)
+  kd-train: teacher 3 (70.42) -> student 24 (70.08)
+  kd-train: teacher 18 (70.76) -> student 25 (68.38)
+  kd-train: teacher 21 (70.68) -> student 7 (69.22)
+  oracle-train: oracle -> student 14 : 70.30
+  oracle-gain in this round: -0.54
+
+=== Round 78/200 (MWM_AccDiff) ===
+  kd-train: teacher 13 (70.54) -> student 14 (69.76)
+  kd-train: teacher 10 (70.68) -> student 16 (69.28)
+  kd-train: teacher 20 (70.74) -> student 12 (68.36)
+  kd-train: teacher 15 (72.10) -> student 4 (68.12)
+  kd-train: teacher 3 (70.42) -> student 11 (69.92)
+  kd-train: teacher 21 (70.68) -> student 29 (68.94)
+  kd-train: teacher 23 (70.76) -> student 22 (66.84)
+  kd-train: teacher 7 (70.72) -> student 27 (68.96)
+  kd-train: teacher 19 (71.04) -> student 25 (68.22)
+  kd-train: teacher 9 (70.48) -> student 17 (70.34)
+  kd-train: teacher 6 (70.42) -> student 2 (69.68)
+  kd-train: teacher 26 (70.38) -> student 1 (67.58)
+  oracle-train: oracle -> student 8 : 70.32
+  oracle-gain in this round: -2.44
+  kd-train: teacher 28 (70.66) -> student 5 (69.50)
+  kd-train: teacher 18 (70.76) -> student 24 (69.74)
+
+=== Round 79/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (70.76) -> student 25 (67.32)
+  kd-train: teacher 20 (70.74) -> student 11 (69.14)
+  kd-train: teacher 15 (72.10) -> student 27 (68.78)
+  oracle-train: oracle -> student 3 : 70.42
+  oracle-gain in this round: -0.94
+  kd-train: teacher 10 (70.68) -> student 14 (69.54)
+  kd-train: teacher 7 (70.72) -> student 5 (68.98)
+  kd-train: teacher 13 (70.54) -> student 24 (70.12)
+  kd-train: teacher 19 (71.04) -> student 8 (67.88)
+  kd-train: teacher 18 (70.76) -> student 22 (69.46)
+  kd-train: teacher 28 (70.66) -> student 6 (70.42)
+  kd-train: teacher 29 (70.52) -> student 26 (70.38)
+  kd-train: teacher 2 (70.52) -> student 17 (70.42)
+  kd-train: teacher 21 (70.68) -> student 12 (69.46)
+  kd-train: teacher 4 (70.74) -> student 16 (69.28)
+  kd-train: teacher 9 (70.48) -> student 1 (69.66)
+
+=== Round 80/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (70.76) -> student 11 (69.42)
+  kd-train: teacher 18 (70.76) -> student 6 (68.62)
+  kd-train: teacher 4 (70.74) -> student 24 (69.82)
+  kd-train: teacher 15 (72.10) -> student 8 (68.62)
+  kd-train: teacher 1 (70.84) -> student 27 (69.20)
+  kd-train: teacher 7 (70.72) -> student 14 (69.82)
+  oracle-train: oracle -> student 9 : 70.48
+  oracle-gain in this round: -0.42
+  kd-train: teacher 17 (70.84) -> student 22 (67.72)
+  kd-train: teacher 13 (70.54) -> student 29 (70.52)
+  kd-train: teacher 10 (70.68) -> student 26 (70.30)
+  kd-train: teacher 21 (70.68) -> student 16 (69.88)
+  kd-train: teacher 20 (70.74) -> student 25 (70.50)
+  kd-train: teacher 19 (71.04) -> student 12 (69.46)
+  kd-train: teacher 2 (70.52) -> student 3 (69.48)
+  kd-train: teacher 28 (70.66) -> student 5 (70.40)
+
+=== Round 81/200 (MWM_AccDiff) ===
+  kd-train: teacher 8 (72.48) -> student 24 (68.90)
+  kd-train: teacher 20 (70.74) -> student 16 (69.70)
+  kd-train: teacher 4 (70.74) -> student 14 (69.86)
+  kd-train: teacher 1 (70.84) -> student 6 (68.58)
+  kd-train: teacher 7 (70.72) -> student 3 (70.06)
+  kd-train: teacher 11 (71.06) -> student 22 (69.24)
+  kd-train: teacher 19 (71.04) -> student 29 (68.44)
+  kd-train: teacher 23 (70.76) -> student 27 (69.50)
+  kd-train: teacher 21 (70.68) -> student 9 (70.06)
+  oracle-train: oracle -> student 2 : 70.52
+  oracle-gain in this round: -1.22
+  kd-train: teacher 10 (70.68) -> student 26 (70.42)
+  kd-train: teacher 28 (70.66) -> student 13 (70.54)
+  kd-train: teacher 17 (70.84) -> student 25 (69.18)
+  kd-train: teacher 15 (72.10) -> student 12 (69.02)
+  kd-train: teacher 18 (70.76) -> student 5 (69.58)
+
+=== Round 82/200 (MWM_AccDiff) ===
+  kd-train: teacher 1 (70.84) -> student 29 (69.82)
+  kd-train: teacher 4 (70.74) -> student 3 (70.36)
+  kd-train: teacher 10 (70.68) -> student 2 (69.30)
+  kd-train: teacher 20 (70.74) -> student 14 (70.10)
+  kd-train: teacher 17 (70.84) -> student 5 (69.42)
+  oracle-train: oracle -> student 28 : 70.66
+  oracle-gain in this round: -1.10
+  kd-train: teacher 24 (71.38) -> student 13 (69.38)
+  kd-train: teacher 11 (71.06) -> student 6 (69.42)
+  kd-train: teacher 9 (70.88) -> student 21 (70.68)
+  kd-train: teacher 15 (72.10) -> student 16 (64.84)
+  kd-train: teacher 23 (70.76) -> student 22 (69.82)
+  kd-train: teacher 8 (72.48) -> student 12 (66.50)
+  kd-train: teacher 19 (71.04) -> student 27 (68.74)
+  kd-train: teacher 7 (70.72) -> student 25 (70.58)
+  kd-train: teacher 18 (70.76) -> student 26 (70.02)
+
+=== Round 83/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 70.72
+  oracle-gain in this round: -3.82
+  kd-train: teacher 8 (72.48) -> student 27 (68.72)
+  kd-train: teacher 4 (70.74) -> student 2 (70.44)
+  kd-train: teacher 11 (71.06) -> student 5 (69.10)
+  kd-train: teacher 23 (70.76) -> student 3 (70.50)
+  kd-train: teacher 14 (70.86) -> student 6 (70.12)
+  kd-train: teacher 17 (70.84) -> student 22 (70.18)
+  kd-train: teacher 20 (70.74) -> student 10 (70.68)
+  kd-train: teacher 19 (71.04) -> student 13 (69.56)
+  kd-train: teacher 15 (72.10) -> student 16 (69.32)
+  kd-train: teacher 12 (71.28) -> student 29 (69.00)
+  kd-train: teacher 24 (71.38) -> student 28 (69.56)
+  kd-train: teacher 9 (70.88) -> student 26 (69.88)
+  kd-train: teacher 18 (70.76) -> student 21 (70.62)
+  kd-train: teacher 1 (70.84) -> student 25 (70.68)
+
+=== Round 84/200 (MWM_AccDiff) ===
+  kd-train: teacher 9 (70.88) -> student 27 (69.78)
+  oracle-train: oracle -> student 4 : 70.74
+  oracle-gain in this round: 0.64
+  kd-train: teacher 11 (71.06) -> student 6 (67.92)
+  kd-train: teacher 18 (70.76) -> student 3 (70.24)
+  kd-train: teacher 20 (70.74) -> student 26 (70.60)
+  kd-train: teacher 12 (71.28) -> student 25 (67.96)
+  kd-train: teacher 17 (70.84) -> student 5 (70.14)
+  kd-train: teacher 19 (71.04) -> student 29 (68.42)
+  kd-train: teacher 23 (70.76) -> student 22 (70.36)
+  kd-train: teacher 2 (70.90) -> student 16 (68.76)
+  kd-train: teacher 24 (71.38) -> student 28 (68.54)
+  kd-train: teacher 1 (70.84) -> student 10 (70.42)
+  kd-train: teacher 14 (70.86) -> student 21 (70.06)
+  kd-train: teacher 15 (72.10) -> student 13 (67.02)
+  kd-train: teacher 8 (72.48) -> student 7 (66.90)
+
+=== Round 85/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 70.76
+  oracle-gain in this round: 0.68
+  kd-train: teacher 1 (70.84) -> student 28 (70.42)
+  kd-train: teacher 17 (70.84) -> student 13 (70.02)
+  kd-train: teacher 14 (70.86) -> student 26 (69.68)
+  kd-train: teacher 19 (71.04) -> student 16 (69.40)
+  kd-train: teacher 23 (70.76) -> student 10 (70.52)
+  kd-train: teacher 4 (71.38) -> student 6 (69.28)
+  kd-train: teacher 15 (72.10) -> student 25 (67.62)
+  kd-train: teacher 8 (72.48) -> student 22 (67.66)
+  kd-train: teacher 12 (71.28) -> student 21 (69.48)
+  kd-train: teacher 9 (70.88) -> student 5 (69.58)
+  kd-train: teacher 2 (70.90) -> student 3 (69.48)
+  kd-train: teacher 18 (70.76) -> student 20 (70.74)
+  kd-train: teacher 11 (71.06) -> student 27 (69.60)
+  kd-train: teacher 24 (71.38) -> student 29 (68.46)
+
+=== Round 86/200 (MWM_AccDiff) ===
+  kd-train: teacher 11 (71.06) -> student 23 (70.76)
+  kd-train: teacher 14 (70.86) -> student 13 (70.30)
+  kd-train: teacher 9 (70.88) -> student 25 (69.78)
+  kd-train: teacher 7 (71.44) -> student 20 (69.10)
+  kd-train: teacher 1 (70.84) -> student 27 (70.56)
+  kd-train: teacher 17 (70.84) -> student 10 (70.40)
+  kd-train: teacher 4 (71.38) -> student 6 (69.02)
+  kd-train: teacher 8 (72.48) -> student 16 (67.98)
+  kd-train: teacher 12 (71.28) -> student 22 (69.38)
+  kd-train: teacher 2 (70.90) -> student 28 (69.92)
+  kd-train: teacher 19 (71.04) -> student 5 (69.48)
+  oracle-train: oracle -> student 18 : 70.76
+  oracle-gain in this round: 0.56
+  kd-train: teacher 21 (70.76) -> student 3 (69.52)
+  kd-train: teacher 24 (71.38) -> student 29 (69.04)
+  kd-train: teacher 15 (72.10) -> student 26 (67.96)
+
+=== Round 87/200 (MWM_AccDiff) ===
+  kd-train: teacher 11 (71.06) -> student 23 (70.80)
+  kd-train: teacher 24 (71.38) -> student 10 (69.74)
+  kd-train: teacher 9 (70.88) -> student 21 (70.76)
+  kd-train: teacher 8 (72.48) -> student 26 (69.88)
+  kd-train: teacher 14 (70.86) -> student 1 (70.84)
+  kd-train: teacher 4 (71.38) -> student 6 (70.20)
+  kd-train: teacher 19 (71.04) -> student 29 (70.58)
+  kd-train: teacher 7 (71.44) -> student 22 (69.94)
+  kd-train: teacher 16 (71.64) -> student 25 (69.94)
+  kd-train: teacher 3 (71.44) -> student 13 (70.26)
+  kd-train: teacher 12 (71.28) -> student 27 (70.22)
+  kd-train: teacher 18 (71.32) -> student 28 (70.72)
+  oracle-train: oracle -> student 17 : 70.84
+  oracle-gain in this round: 0.32
+  kd-train: teacher 15 (72.10) -> student 20 (66.76)
+  kd-train: teacher 2 (70.90) -> student 5 (68.78)
+
+=== Round 88/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (72.10) -> student 10 (66.96)
+  kd-train: teacher 4 (71.38) -> student 29 (69.68)
+  kd-train: teacher 7 (71.44) -> student 28 (69.50)
+  kd-train: teacher 2 (70.90) -> student 1 (69.92)
+  kd-train: teacher 17 (71.16) -> student 23 (70.76)
+  kd-train: teacher 18 (71.32) -> student 26 (70.80)
+  kd-train: teacher 8 (72.48) -> student 20 (68.86)
+  kd-train: teacher 12 (71.28) -> student 25 (70.60)
+  kd-train: teacher 11 (71.06) -> student 9 (70.88)
+  kd-train: teacher 19 (71.04) -> student 27 (70.64)
+  kd-train: teacher 13 (71.44) -> student 6 (68.82)
+  kd-train: teacher 16 (71.64) -> student 22 (68.32)
+  kd-train: teacher 24 (71.38) -> student 21 (69.62)
+  kd-train: teacher 3 (71.44) -> student 5 (66.72)
+  oracle-train: oracle -> student 14 : 70.86
+  oracle-gain in this round: -2.98
+
+=== Round 89/200 (MWM_AccDiff) ===
+  kd-train: teacher 16 (71.64) -> student 26 (70.26)
+  kd-train: teacher 11 (71.06) -> student 10 (70.40)
+  kd-train: teacher 4 (71.38) -> student 20 (70.12)
+  kd-train: teacher 24 (71.38) -> student 6 (69.98)
+  kd-train: teacher 9 (71.22) -> student 21 (70.32)
+  oracle-train: oracle -> student 22 : 70.96
+  oracle-gain in this round: -1.04
+  kd-train: teacher 8 (72.48) -> student 29 (68.56)
+  kd-train: teacher 17 (71.16) -> student 1 (67.82)
+  kd-train: teacher 13 (71.44) -> student 27 (68.52)
+  kd-train: teacher 3 (71.44) -> student 23 (69.88)
+  kd-train: teacher 12 (71.28) -> student 28 (70.22)
+  kd-train: teacher 19 (71.04) -> student 2 (70.90)
+  kd-train: teacher 18 (71.32) -> student 5 (70.44)
+  kd-train: teacher 7 (71.44) -> student 25 (69.74)
+  kd-train: teacher 15 (72.10) -> student 14 (67.88)
+
+=== Round 90/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 23 : 71.26
+  oracle-gain in this round: -0.86
+  kd-train: teacher 24 (71.38) -> student 19 (71.04)
+  kd-train: teacher 3 (71.44) -> student 11 (71.06)
+  kd-train: teacher 28 (72.24) -> student 25 (66.22)
+  kd-train: teacher 6 (71.76) -> student 29 (69.54)
+  kd-train: teacher 15 (72.10) -> student 20 (69.58)
+  kd-train: teacher 4 (71.38) -> student 1 (68.86)
+  kd-train: teacher 7 (71.44) -> student 22 (69.92)
+  kd-train: teacher 26 (71.40) -> student 10 (70.36)
+  kd-train: teacher 12 (71.28) -> student 17 (71.16)
+  kd-train: teacher 18 (71.32) -> student 9 (71.22)
+  kd-train: teacher 16 (71.64) -> student 27 (69.66)
+  kd-train: teacher 13 (71.44) -> student 5 (70.06)
+  kd-train: teacher 14 (71.80) -> student 21 (70.06)
+  kd-train: teacher 8 (72.48) -> student 2 (67.62)
+
+=== Round 91/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 71.38
+  oracle-gain in this round: -0.44
+  kd-train: teacher 14 (71.80) -> student 17 (71.30)
+  kd-train: teacher 26 (71.40) -> student 12 (71.28)
+  kd-train: teacher 7 (71.44) -> student 20 (71.10)
+  kd-train: teacher 13 (71.44) -> student 10 (71.00)
+  kd-train: teacher 3 (71.44) -> student 29 (71.14)
+  kd-train: teacher 15 (72.10) -> student 21 (68.42)
+  kd-train: teacher 8 (72.48) -> student 9 (69.74)
+  kd-train: teacher 16 (71.64) -> student 22 (70.38)
+  kd-train: teacher 6 (71.76) -> student 27 (69.94)
+  kd-train: teacher 2 (71.74) -> student 23 (70.40)
+  kd-train: teacher 25 (71.50) -> student 5 (70.64)
+  kd-train: teacher 28 (72.24) -> student 11 (70.12)
+  kd-train: teacher 19 (71.40) -> student 1 (69.54)
+  kd-train: teacher 24 (71.38) -> student 18 (71.32)
+
+=== Round 92/200 (MWM_AccDiff) ===
+  kd-train: teacher 16 (71.64) -> student 4 (70.94)
+  kd-train: teacher 15 (72.10) -> student 27 (69.88)
+  kd-train: teacher 7 (71.44) -> student 19 (71.40)
+  kd-train: teacher 29 (71.74) -> student 12 (69.92)
+  kd-train: teacher 14 (71.80) -> student 26 (71.40)
+  kd-train: teacher 28 (72.24) -> student 21 (69.44)
+  oracle-train: oracle -> student 22 : 71.42
+  oracle-gain in this round: -0.68
+  kd-train: teacher 23 (71.68) -> student 10 (70.78)
+  kd-train: teacher 13 (71.44) -> student 24 (71.38)
+  kd-train: teacher 6 (71.76) -> student 20 (69.80)
+  kd-train: teacher 2 (71.74) -> student 17 (70.68)
+  kd-train: teacher 25 (71.50) -> student 18 (71.02)
+  kd-train: teacher 9 (72.50) -> student 5 (69.40)
+  kd-train: teacher 8 (72.48) -> student 11 (69.36)
+  kd-train: teacher 3 (71.44) -> student 1 (69.80)
+
+=== Round 93/200 (MWM_AccDiff) ===
+  kd-train: teacher 2 (71.74) -> student 27 (70.62)
+  kd-train: teacher 8 (72.48) -> student 19 (69.78)
+  kd-train: teacher 11 (71.72) -> student 10 (70.66)
+  kd-train: teacher 7 (71.44) -> student 17 (71.40)
+  kd-train: teacher 15 (72.10) -> student 4 (70.52)
+  oracle-train: oracle -> student 3 : 71.44
+  oracle-gain in this round: -2.46
+  kd-train: teacher 14 (71.80) -> student 1 (69.86)
+  kd-train: teacher 23 (71.68) -> student 22 (70.74)
+  kd-train: teacher 16 (71.64) -> student 20 (70.80)
+  kd-train: teacher 13 (71.44) -> student 5 (71.24)
+  kd-train: teacher 6 (71.76) -> student 12 (70.22)
+  kd-train: teacher 29 (71.74) -> student 26 (70.58)
+  kd-train: teacher 9 (72.50) -> student 24 (70.26)
+  kd-train: teacher 25 (71.50) -> student 18 (71.08)
+  kd-train: teacher 28 (72.24) -> student 21 (70.36)
+
+=== Round 94/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (73.20) -> student 3 (68.98)
+  kd-train: teacher 11 (71.72) -> student 13 (71.44)
+  kd-train: teacher 16 (71.64) -> student 7 (71.44)
+  kd-train: teacher 15 (72.10) -> student 20 (70.96)
+  kd-train: teacher 23 (71.68) -> student 1 (69.78)
+  oracle-train: oracle -> student 25 : 71.50
+  oracle-gain in this round: -0.72
+  kd-train: teacher 6 (71.76) -> student 12 (70.68)
+  kd-train: teacher 9 (72.50) -> student 24 (70.22)
+  kd-train: teacher 29 (71.74) -> student 26 (71.18)
+  kd-train: teacher 19 (72.46) -> student 10 (69.90)
+  kd-train: teacher 2 (71.74) -> student 18 (71.34)
+  kd-train: teacher 22 (72.14) -> student 5 (70.08)
+  kd-train: teacher 8 (72.48) -> student 17 (69.74)
+  kd-train: teacher 14 (71.80) -> student 21 (71.44)
+  kd-train: teacher 28 (72.24) -> student 27 (70.72)
+
+=== Round 95/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 71.30
+  oracle-gain in this round: -2.38
+  kd-train: teacher 11 (71.72) -> student 26 (70.88)
+  kd-train: teacher 23 (71.68) -> student 17 (71.10)
+  kd-train: teacher 8 (72.48) -> student 10 (69.60)
+  kd-train: teacher 22 (72.14) -> student 20 (70.66)
+  kd-train: teacher 4 (73.20) -> student 12 (68.82)
+  kd-train: teacher 14 (71.80) -> student 1 (70.00)
+  kd-train: teacher 6 (71.76) -> student 21 (70.58)
+  kd-train: teacher 2 (71.74) -> student 25 (70.78)
+  kd-train: teacher 29 (71.74) -> student 3 (70.74)
+  kd-train: teacher 16 (71.64) -> student 24 (71.24)
+  kd-train: teacher 9 (72.50) -> student 13 (68.50)
+  kd-train: teacher 15 (72.10) -> student 18 (70.34)
+  kd-train: teacher 19 (72.46) -> student 27 (69.70)
+  kd-train: teacher 28 (72.24) -> student 5 (69.76)
+
+=== Round 96/200 (MWM_AccDiff) ===
+  kd-train: teacher 2 (71.74) -> student 10 (71.18)
+  kd-train: teacher 8 (72.48) -> student 26 (68.78)
+  oracle-train: oracle -> student 16 : 71.64
+  oracle-gain in this round: -1.38
+  kd-train: teacher 19 (72.46) -> student 17 (70.22)
+  kd-train: teacher 22 (72.14) -> student 3 (70.64)
+  kd-train: teacher 11 (71.72) -> student 5 (71.32)
+  kd-train: teacher 23 (71.68) -> student 18 (71.60)
+  kd-train: teacher 29 (71.74) -> student 13 (70.36)
+  kd-train: teacher 9 (72.50) -> student 7 (68.92)
+  kd-train: teacher 28 (72.24) -> student 24 (70.30)
+  kd-train: teacher 14 (71.80) -> student 12 (70.66)
+  kd-train: teacher 6 (71.76) -> student 1 (69.16)
+  kd-train: teacher 25 (72.38) -> student 27 (69.94)
+  kd-train: teacher 4 (73.20) -> student 21 (68.00)
+  kd-train: teacher 15 (72.10) -> student 20 (70.20)
+
+=== Round 97/200 (MWM_AccDiff) ===
+  kd-train: teacher 7 (72.30) -> student 16 (70.26)
+  kd-train: teacher 2 (71.74) -> student 1 (70.66)
+  kd-train: teacher 4 (73.20) -> student 13 (69.64)
+  kd-train: teacher 8 (72.48) -> student 5 (69.66)
+  kd-train: teacher 19 (72.46) -> student 17 (69.68)
+  kd-train: teacher 3 (71.78) -> student 24 (71.56)
+  kd-train: teacher 6 (71.76) -> student 23 (71.68)
+  kd-train: teacher 25 (72.38) -> student 20 (69.38)
+  kd-train: teacher 22 (72.14) -> student 29 (71.74)
+  kd-train: teacher 9 (72.50) -> student 10 (67.82)
+  kd-train: teacher 14 (71.80) -> student 21 (70.72)
+  kd-train: teacher 18 (71.88) -> student 12 (70.94)
+  kd-train: teacher 28 (72.24) -> student 27 (70.50)
+  oracle-train: oracle -> student 11 : 71.72
+  oracle-gain in this round: -3.30
+  kd-train: teacher 15 (72.10) -> student 26 (70.58)
+
+=== Round 98/200 (MWM_AccDiff) ===
+  kd-train: teacher 18 (71.88) -> student 6 (71.76)
+  kd-train: teacher 23 (72.50) -> student 24 (68.98)
+  kd-train: teacher 16 (71.90) -> student 29 (71.44)
+  kd-train: teacher 14 (71.80) -> student 1 (69.22)
+  kd-train: teacher 9 (72.50) -> student 11 (68.42)
+  kd-train: teacher 8 (72.48) -> student 10 (69.84)
+  kd-train: teacher 7 (72.30) -> student 3 (71.78)
+  kd-train: teacher 20 (72.26) -> student 5 (69.78)
+  kd-train: teacher 4 (73.20) -> student 21 (69.16)
+  oracle-train: oracle -> student 2 : 71.74
+  oracle-gain in this round: -2.90
+  kd-train: teacher 22 (72.14) -> student 13 (71.08)
+  kd-train: teacher 19 (72.46) -> student 26 (69.44)
+  kd-train: teacher 25 (72.38) -> student 12 (69.58)
+  kd-train: teacher 15 (72.10) -> student 17 (71.20)
+  kd-train: teacher 28 (72.24) -> student 27 (70.84)
+
+=== Round 99/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (71.80) -> student 24 (71.30)
+  kd-train: teacher 15 (72.10) -> student 1 (70.90)
+  kd-train: teacher 22 (72.14) -> student 10 (70.78)
+  kd-train: teacher 20 (72.26) -> student 3 (70.26)
+  kd-train: teacher 4 (73.20) -> student 12 (68.68)
+  kd-train: teacher 19 (72.46) -> student 17 (69.72)
+  oracle-train: oracle -> student 11 : 71.68
+  oracle-gain in this round: -2.54
+  kd-train: teacher 9 (72.50) -> student 2 (68.84)
+  kd-train: teacher 7 (72.30) -> student 6 (70.06)
+  kd-train: teacher 16 (71.90) -> student 5 (70.94)
+  kd-train: teacher 25 (72.38) -> student 13 (69.92)
+  kd-train: teacher 18 (71.88) -> student 27 (71.14)
+  kd-train: teacher 28 (72.24) -> student 26 (70.38)
+  kd-train: teacher 23 (72.50) -> student 21 (67.92)
+  kd-train: teacher 8 (72.48) -> student 29 (69.52)
+
+=== Round 100/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (72.50) -> student 11 (69.14)
+  kd-train: teacher 15 (72.10) -> student 10 (71.16)
+  kd-train: teacher 16 (71.90) -> student 18 (71.88)
+  kd-train: teacher 19 (72.46) -> student 26 (70.20)
+  kd-train: teacher 20 (72.26) -> student 6 (70.16)
+  kd-train: teacher 22 (72.14) -> student 17 (70.62)
+  kd-train: teacher 7 (72.30) -> student 1 (69.54)
+  kd-train: teacher 28 (72.24) -> student 29 (70.42)
+  kd-train: teacher 4 (73.20) -> student 24 (69.16)
+  kd-train: teacher 21 (71.98) -> student 3 (71.30)
+  kd-train: teacher 2 (72.08) -> student 13 (71.24)
+  kd-train: teacher 9 (72.50) -> student 5 (68.90)
+  kd-train: teacher 25 (72.38) -> student 27 (69.68)
+  oracle-train: oracle -> student 14 : 71.80
+  oracle-gain in this round: 0.54
+  kd-train: teacher 8 (72.48) -> student 12 (69.48)
+
+=== Round 101/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (73.20) -> student 12 (66.96)
+  kd-train: teacher 8 (72.48) -> student 24 (69.84)
+  kd-train: teacher 14 (72.34) -> student 29 (70.20)
+  kd-train: teacher 7 (72.30) -> student 18 (70.54)
+  kd-train: teacher 21 (71.98) -> student 1 (70.80)
+  kd-train: teacher 23 (72.50) -> student 26 (68.82)
+  kd-train: teacher 19 (72.46) -> student 13 (70.00)
+  kd-train: teacher 2 (72.08) -> student 16 (71.90)
+  kd-train: teacher 20 (72.26) -> student 3 (71.96)
+  kd-train: teacher 15 (72.10) -> student 17 (71.66)
+  kd-train: teacher 25 (72.38) -> student 5 (70.28)
+  kd-train: teacher 9 (72.50) -> student 27 (69.72)
+  kd-train: teacher 28 (72.24) -> student 10 (71.16)
+  kd-train: teacher 22 (72.14) -> student 6 (71.54)
+  oracle-train: oracle -> student 11 : 71.94
+  oracle-gain in this round: 0.36
+
+=== Round 102/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (72.34) -> student 13 (71.24)
+  kd-train: teacher 23 (72.50) -> student 29 (69.84)
+  kd-train: teacher 11 (72.30) -> student 1 (71.46)
+  kd-train: teacher 4 (73.20) -> student 27 (69.18)
+  kd-train: teacher 18 (72.36) -> student 17 (71.00)
+  kd-train: teacher 7 (72.30) -> student 10 (71.64)
+  oracle-train: oracle -> student 22 : 72.14
+  oracle-gain in this round: -0.84
+  kd-train: teacher 28 (72.24) -> student 21 (71.98)
+  kd-train: teacher 20 (72.26) -> student 5 (71.94)
+  kd-train: teacher 16 (72.20) -> student 15 (72.10)
+  kd-train: teacher 25 (72.38) -> student 3 (71.06)
+  kd-train: teacher 9 (72.50) -> student 26 (70.56)
+  kd-train: teacher 19 (72.46) -> student 6 (70.98)
+  kd-train: teacher 8 (72.48) -> student 12 (70.90)
+  kd-train: teacher 24 (72.24) -> student 2 (72.08)
+
+=== Round 103/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (72.50) -> student 12 (68.06)
+  kd-train: teacher 11 (72.30) -> student 5 (70.48)
+  kd-train: teacher 4 (73.20) -> student 13 (69.34)
+  kd-train: teacher 20 (72.26) -> student 17 (70.72)
+  kd-train: teacher 25 (72.38) -> student 22 (71.30)
+  kd-train: teacher 24 (72.24) -> student 1 (69.84)
+  kd-train: teacher 16 (72.20) -> student 29 (71.28)
+  kd-train: teacher 7 (72.30) -> student 26 (70.66)
+  kd-train: teacher 28 (72.24) -> student 3 (71.30)
+  kd-train: teacher 19 (72.46) -> student 2 (69.90)
+  oracle-train: oracle -> student 15 : 71.48
+  oracle-gain in this round: 1.10
+  kd-train: teacher 8 (72.48) -> student 6 (70.32)
+  kd-train: teacher 9 (72.50) -> student 10 (68.74)
+  kd-train: teacher 14 (72.34) -> student 21 (70.38)
+  kd-train: teacher 18 (72.36) -> student 27 (70.30)
+
+=== Round 104/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (72.34) -> student 2 (71.60)
+  kd-train: teacher 15 (72.58) -> student 5 (70.02)
+  kd-train: teacher 7 (72.30) -> student 16 (72.20)
+  kd-train: teacher 23 (72.50) -> student 29 (69.96)
+  kd-train: teacher 18 (72.36) -> student 3 (71.24)
+  kd-train: teacher 4 (73.20) -> student 26 (69.58)
+  kd-train: teacher 22 (73.32) -> student 21 (69.50)
+  kd-train: teacher 20 (72.26) -> student 1 (70.80)
+  kd-train: teacher 8 (72.48) -> student 10 (71.06)
+  kd-train: teacher 19 (72.46) -> student 17 (70.88)
+  kd-train: teacher 12 (72.38) -> student 28 (72.24)
+  oracle-train: oracle -> student 24 : 72.24
+  oracle-gain in this round: -4.58
+  kd-train: teacher 25 (72.38) -> student 27 (71.02)
+  kd-train: teacher 9 (72.50) -> student 6 (70.44)
+  kd-train: teacher 11 (72.30) -> student 13 (71.72)
+
+=== Round 105/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (72.34) -> student 2 (71.64)
+  kd-train: teacher 18 (72.36) -> student 6 (70.96)
+  kd-train: teacher 23 (72.50) -> student 17 (69.56)
+  kd-train: teacher 20 (72.26) -> student 16 (71.80)
+  oracle-train: oracle -> student 10 : 71.94
+  oracle-gain in this round: -3.54
+  kd-train: teacher 11 (72.30) -> student 3 (71.62)
+  kd-train: teacher 12 (72.38) -> student 26 (70.80)
+  kd-train: teacher 4 (73.20) -> student 27 (69.36)
+  kd-train: teacher 7 (72.30) -> student 21 (71.76)
+  kd-train: teacher 9 (72.50) -> student 28 (70.50)
+  kd-train: teacher 22 (73.32) -> student 24 (67.66)
+  kd-train: teacher 25 (72.38) -> student 5 (70.70)
+  kd-train: teacher 15 (72.58) -> student 13 (69.92)
+  kd-train: teacher 19 (72.46) -> student 1 (70.62)
+  kd-train: teacher 8 (72.48) -> student 29 (70.56)
+
+=== Round 106/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (72.34) -> student 24 (71.30)
+  kd-train: teacher 4 (73.20) -> student 29 (68.62)
+  oracle-train: oracle -> student 20 : 72.26
+  oracle-gain in this round: -3.80
+  kd-train: teacher 15 (72.58) -> student 6 (70.10)
+  kd-train: teacher 19 (72.46) -> student 27 (71.28)
+  kd-train: teacher 7 (72.30) -> student 2 (72.06)
+  kd-train: teacher 9 (72.50) -> student 13 (70.72)
+  kd-train: teacher 11 (72.30) -> student 21 (71.64)
+  kd-train: teacher 25 (72.38) -> student 28 (71.24)
+  kd-train: teacher 26 (72.30) -> student 1 (71.56)
+  kd-train: teacher 18 (72.36) -> student 3 (71.30)
+  kd-train: teacher 22 (73.32) -> student 10 (68.40)
+  kd-train: teacher 8 (72.48) -> student 17 (71.00)
+  kd-train: teacher 12 (72.38) -> student 5 (71.16)
+  kd-train: teacher 23 (72.50) -> student 16 (69.80)
+
+=== Round 107/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 72.30
+  oracle-gain in this round: -4.20
+  kd-train: teacher 8 (72.48) -> student 29 (71.16)
+  kd-train: teacher 12 (72.38) -> student 26 (72.30)
+  kd-train: teacher 23 (72.50) -> student 3 (70.98)
+  kd-train: teacher 9 (72.50) -> student 6 (71.88)
+  kd-train: teacher 14 (72.34) -> student 1 (70.22)
+  kd-train: teacher 24 (72.92) -> student 16 (71.02)
+  kd-train: teacher 13 (72.56) -> student 2 (70.72)
+  kd-train: teacher 19 (72.46) -> student 17 (71.20)
+  kd-train: teacher 25 (72.38) -> student 5 (71.88)
+  kd-train: teacher 15 (72.58) -> student 21 (70.10)
+  kd-train: teacher 10 (72.46) -> student 27 (71.24)
+  kd-train: teacher 22 (73.32) -> student 20 (68.46)
+  kd-train: teacher 18 (72.36) -> student 11 (72.30)
+  kd-train: teacher 4 (73.20) -> student 28 (69.18)
+
+=== Round 108/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (73.20) -> student 7 (68.10)
+  kd-train: teacher 18 (72.36) -> student 20 (71.86)
+  kd-train: teacher 22 (73.32) -> student 21 (70.34)
+  kd-train: teacher 8 (72.48) -> student 26 (70.58)
+  kd-train: teacher 24 (72.92) -> student 27 (68.66)
+  kd-train: teacher 13 (72.56) -> student 17 (70.08)
+  kd-train: teacher 23 (72.50) -> student 5 (70.34)
+  kd-train: teacher 2 (72.48) -> student 16 (70.74)
+  kd-train: teacher 19 (72.46) -> student 3 (70.90)
+  kd-train: teacher 25 (72.38) -> student 11 (71.10)
+  kd-train: teacher 10 (72.46) -> student 6 (70.94)
+  kd-train: teacher 15 (72.58) -> student 28 (69.72)
+  kd-train: teacher 12 (72.38) -> student 29 (71.22)
+  oracle-train: oracle -> student 14 : 72.34
+  oracle-gain in this round: 2.58
+  kd-train: teacher 9 (72.50) -> student 1 (67.98)
+
+=== Round 109/200 (MWM_AccDiff) ===
+  kd-train: teacher 7 (73.46) -> student 27 (70.98)
+  kd-train: teacher 15 (72.58) -> student 6 (70.16)
+  kd-train: teacher 13 (72.56) -> student 17 (70.92)
+  kd-train: teacher 14 (74.92) -> student 26 (70.06)
+  kd-train: teacher 22 (73.32) -> student 28 (67.96)
+  kd-train: teacher 2 (72.48) -> student 5 (72.18)
+  kd-train: teacher 23 (72.50) -> student 16 (71.56)
+  kd-train: teacher 9 (72.50) -> student 3 (71.66)
+  kd-train: teacher 11 (72.86) -> student 21 (71.44)
+  kd-train: teacher 10 (72.46) -> student 1 (72.06)
+  kd-train: teacher 19 (72.46) -> student 12 (72.38)
+  oracle-train: oracle -> student 18 : 72.36
+  oracle-gain in this round: -2.72
+  kd-train: teacher 8 (72.48) -> student 25 (72.38)
+  kd-train: teacher 24 (72.92) -> student 29 (71.26)
+  kd-train: teacher 4 (73.20) -> student 20 (71.30)
+
+=== Round 110/200 (MWM_AccDiff) ===
+  kd-train: teacher 7 (73.46) -> student 16 (69.26)
+  kd-train: teacher 27 (72.74) -> student 12 (71.34)
+  kd-train: teacher 4 (73.20) -> student 29 (70.66)
+  kd-train: teacher 15 (72.58) -> student 1 (69.90)
+  kd-train: teacher 8 (72.48) -> student 10 (72.46)
+  kd-train: teacher 14 (74.92) -> student 18 (69.64)
+  kd-train: teacher 17 (73.14) -> student 6 (70.58)
+  kd-train: teacher 13 (72.56) -> student 5 (71.80)
+  kd-train: teacher 24 (72.92) -> student 3 (71.82)
+  oracle-train: oracle -> student 2 : 72.48
+  oracle-gain in this round: -3.54
+  kd-train: teacher 11 (72.86) -> student 28 (70.66)
+  kd-train: teacher 9 (72.50) -> student 19 (72.46)
+  kd-train: teacher 25 (72.66) -> student 20 (71.58)
+  kd-train: teacher 22 (73.32) -> student 26 (69.08)
+  kd-train: teacher 23 (72.50) -> student 21 (71.88)
+
+=== Round 111/200 (MWM_AccDiff) ===
+  kd-train: teacher 11 (72.86) -> student 1 (66.20)
+  kd-train: teacher 7 (73.46) -> student 3 (69.96)
+  kd-train: teacher 4 (73.20) -> student 5 (71.12)
+  kd-train: teacher 24 (72.92) -> student 26 (71.48)
+  kd-train: teacher 13 (72.56) -> student 20 (72.28)
+  kd-train: teacher 27 (72.74) -> student 6 (71.42)
+  kd-train: teacher 10 (72.52) -> student 12 (72.36)
+  kd-train: teacher 23 (72.50) -> student 9 (72.50)
+  kd-train: teacher 17 (73.14) -> student 28 (71.48)
+  kd-train: teacher 14 (74.92) -> student 19 (71.22)
+  kd-train: teacher 25 (72.66) -> student 16 (72.06)
+  kd-train: teacher 15 (72.58) -> student 21 (72.16)
+  kd-train: teacher 18 (74.56) -> student 2 (68.94)
+  kd-train: teacher 22 (73.32) -> student 29 (71.46)
+  oracle-train: oracle -> student 8 : 72.48
+  oracle-gain in this round: -3.42
+
+=== Round 112/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 23 : 72.50
+  oracle-gain in this round: -1.26
+  kd-train: teacher 11 (72.86) -> student 16 (71.38)
+  kd-train: teacher 17 (73.14) -> student 12 (70.72)
+  kd-train: teacher 2 (73.06) -> student 26 (71.66)
+  kd-train: teacher 24 (72.92) -> student 6 (71.18)
+  kd-train: teacher 7 (73.46) -> student 29 (70.56)
+  kd-train: teacher 13 (72.56) -> student 10 (72.52)
+  kd-train: teacher 15 (72.58) -> student 9 (71.64)
+  kd-train: teacher 27 (72.74) -> student 19 (71.70)
+  kd-train: teacher 3 (72.78) -> student 20 (71.46)
+  kd-train: teacher 18 (74.56) -> student 8 (69.06)
+  kd-train: teacher 22 (73.32) -> student 5 (69.02)
+  kd-train: teacher 25 (72.66) -> student 1 (71.02)
+  kd-train: teacher 14 (74.92) -> student 21 (70.52)
+  kd-train: teacher 4 (73.20) -> student 28 (69.84)
+
+=== Round 113/200 (MWM_AccDiff) ===
+  kd-train: teacher 15 (72.58) -> student 10 (72.38)
+  kd-train: teacher 11 (72.86) -> student 16 (71.44)
+  kd-train: teacher 27 (72.74) -> student 29 (72.26)
+  kd-train: teacher 4 (73.20) -> student 23 (71.24)
+  kd-train: teacher 22 (73.32) -> student 21 (71.22)
+  kd-train: teacher 8 (73.98) -> student 5 (70.42)
+  oracle-train: oracle -> student 13 : 72.56
+  oracle-gain in this round: -0.10
+  kd-train: teacher 24 (72.92) -> student 1 (71.18)
+  kd-train: teacher 7 (73.46) -> student 20 (70.40)
+  kd-train: teacher 17 (73.14) -> student 6 (71.48)
+  kd-train: teacher 3 (72.78) -> student 19 (71.56)
+  kd-train: teacher 18 (74.56) -> student 28 (69.34)
+  kd-train: teacher 25 (72.66) -> student 12 (72.22)
+  kd-train: teacher 14 (74.92) -> student 9 (69.30)
+  kd-train: teacher 2 (73.06) -> student 26 (71.08)
+
+=== Round 114/200 (MWM_AccDiff) ===
+  kd-train: teacher 11 (72.86) -> student 23 (72.30)
+  kd-train: teacher 27 (72.74) -> student 26 (72.42)
+  kd-train: teacher 9 (73.26) -> student 16 (71.50)
+  kd-train: teacher 4 (73.20) -> student 28 (72.32)
+  kd-train: teacher 20 (72.70) -> student 15 (72.58)
+  kd-train: teacher 17 (73.14) -> student 6 (71.76)
+  kd-train: teacher 2 (73.06) -> student 21 (71.96)
+  kd-train: teacher 24 (72.92) -> student 13 (72.46)
+  oracle-train: oracle -> student 25 : 72.66
+  oracle-gain in this round: -4.14
+  kd-train: teacher 22 (73.32) -> student 29 (70.90)
+  kd-train: teacher 14 (74.92) -> student 19 (70.98)
+  kd-train: teacher 8 (73.98) -> student 12 (71.32)
+  kd-train: teacher 7 (73.46) -> student 5 (71.78)
+  kd-train: teacher 3 (72.78) -> student 1 (69.16)
+  kd-train: teacher 18 (74.56) -> student 10 (69.64)
+
+=== Round 115/200 (MWM_AccDiff) ===
+  kd-train: teacher 8 (73.98) -> student 23 (71.80)
+  kd-train: teacher 10 (73.20) -> student 28 (71.78)
+  kd-train: teacher 24 (72.92) -> student 1 (69.68)
+  oracle-train: oracle -> student 3 : 72.78
+  oracle-gain in this round: -5.42
+  kd-train: teacher 18 (74.56) -> student 29 (70.36)
+  kd-train: teacher 7 (73.46) -> student 26 (70.84)
+  kd-train: teacher 14 (74.92) -> student 16 (69.82)
+  kd-train: teacher 21 (73.58) -> student 25 (68.52)
+  kd-train: teacher 19 (73.40) -> student 12 (71.00)
+  kd-train: teacher 4 (73.20) -> student 5 (72.10)
+  kd-train: teacher 17 (73.14) -> student 6 (72.52)
+  kd-train: teacher 9 (73.26) -> student 27 (72.74)
+  kd-train: teacher 22 (73.32) -> student 15 (71.62)
+  kd-train: teacher 2 (73.06) -> student 20 (72.70)
+  kd-train: teacher 13 (73.08) -> student 11 (72.86)
+
+=== Round 116/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (73.20) -> student 29 (72.50)
+  kd-train: teacher 14 (74.92) -> student 3 (67.36)
+  kd-train: teacher 23 (73.20) -> student 12 (72.00)
+  kd-train: teacher 21 (73.58) -> student 1 (71.20)
+  kd-train: teacher 22 (73.32) -> student 20 (71.72)
+  kd-train: teacher 17 (73.14) -> student 16 (72.50)
+  kd-train: teacher 7 (73.46) -> student 26 (71.14)
+  kd-train: teacher 9 (73.26) -> student 11 (71.94)
+  kd-train: teacher 2 (73.06) -> student 25 (72.82)
+  kd-train: teacher 10 (73.20) -> student 15 (72.36)
+  kd-train: teacher 13 (73.08) -> student 6 (72.60)
+  kd-train: teacher 8 (73.98) -> student 28 (71.24)
+  kd-train: teacher 19 (73.40) -> student 27 (71.42)
+  oracle-train: oracle -> student 24 : 72.92
+  oracle-gain in this round: -0.78
+  kd-train: teacher 18 (74.56) -> student 5 (69.72)
+
+=== Round 117/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (73.20) -> student 28 (72.04)
+  kd-train: teacher 9 (73.26) -> student 26 (71.84)
+  kd-train: teacher 5 (73.10) -> student 1 (71.00)
+  kd-train: teacher 17 (73.14) -> student 16 (73.10)
+  kd-train: teacher 14 (74.92) -> student 6 (70.82)
+  kd-train: teacher 10 (73.20) -> student 24 (72.14)
+  kd-train: teacher 19 (73.40) -> student 29 (71.72)
+  kd-train: teacher 7 (73.46) -> student 11 (71.92)
+  kd-train: teacher 22 (73.32) -> student 13 (73.08)
+  oracle-train: oracle -> student 2 : 73.06
+  oracle-gain in this round: 0.30
+  kd-train: teacher 3 (73.56) -> student 20 (69.58)
+  kd-train: teacher 8 (73.98) -> student 12 (71.42)
+  kd-train: teacher 18 (74.56) -> student 15 (71.14)
+  kd-train: teacher 21 (73.58) -> student 27 (71.74)
+  kd-train: teacher 4 (73.20) -> student 25 (72.50)
+
+=== Round 118/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (73.20) -> student 11 (73.02)
+  kd-train: teacher 15 (73.88) -> student 27 (71.12)
+  kd-train: teacher 8 (73.98) -> student 29 (69.68)
+  kd-train: teacher 9 (73.26) -> student 26 (72.72)
+  kd-train: teacher 4 (73.20) -> student 1 (71.68)
+  kd-train: teacher 21 (73.58) -> student 25 (72.18)
+  kd-train: teacher 3 (73.56) -> student 24 (71.64)
+  kd-train: teacher 7 (73.46) -> student 6 (71.86)
+  kd-train: teacher 10 (73.20) -> student 5 (73.10)
+  kd-train: teacher 19 (73.40) -> student 20 (72.02)
+  kd-train: teacher 22 (73.32) -> student 13 (72.18)
+  kd-train: teacher 2 (73.36) -> student 12 (73.06)
+  kd-train: teacher 18 (74.56) -> student 16 (70.42)
+  kd-train: teacher 14 (74.92) -> student 28 (70.28)
+  oracle-train: oracle -> student 17 : 73.14
+  oracle-gain in this round: -5.54
+
+=== Round 119/200 (MWM_AccDiff) ===
+  kd-train: teacher 7 (73.46) -> student 16 (71.48)
+  kd-train: teacher 15 (73.88) -> student 5 (70.46)
+  kd-train: teacher 2 (73.36) -> student 27 (72.48)
+  kd-train: teacher 23 (73.20) -> student 25 (72.60)
+  oracle-train: oracle -> student 4 : 73.20
+  oracle-gain in this round: -0.30
+  kd-train: teacher 21 (73.58) -> student 29 (72.18)
+  kd-train: teacher 8 (73.98) -> student 26 (71.32)
+  kd-train: teacher 10 (73.20) -> student 13 (72.80)
+  kd-train: teacher 19 (73.40) -> student 6 (71.66)
+  kd-train: teacher 22 (73.32) -> student 28 (72.16)
+  kd-train: teacher 3 (73.56) -> student 20 (71.08)
+  kd-train: teacher 14 (74.92) -> student 12 (71.22)
+  kd-train: teacher 24 (73.20) -> student 11 (72.48)
+  kd-train: teacher 18 (74.56) -> student 17 (67.60)
+  kd-train: teacher 9 (73.26) -> student 1 (71.46)
+
+=== Round 120/200 (MWM_AccDiff) ===
+  kd-train: teacher 19 (73.40) -> student 24 (73.20)
+  kd-train: teacher 7 (73.46) -> student 11 (71.80)
+  kd-train: teacher 15 (73.88) -> student 27 (70.24)
+  kd-train: teacher 9 (73.26) -> student 26 (72.70)
+  oracle-train: oracle -> student 10 : 73.20
+  oracle-gain in this round: -4.74
+  kd-train: teacher 21 (73.58) -> student 29 (71.96)
+  kd-train: teacher 8 (73.98) -> student 6 (70.80)
+  kd-train: teacher 14 (74.92) -> student 20 (70.44)
+  kd-train: teacher 12 (73.32) -> student 25 (72.26)
+  kd-train: teacher 3 (73.56) -> student 28 (71.64)
+  kd-train: teacher 22 (73.32) -> student 17 (72.22)
+  kd-train: teacher 23 (73.20) -> student 1 (71.76)
+  kd-train: teacher 5 (73.26) -> student 4 (72.90)
+  kd-train: teacher 18 (74.56) -> student 16 (70.34)
+  kd-train: teacher 2 (73.36) -> student 13 (71.94)
+
+=== Round 121/200 (MWM_AccDiff) ===
+  kd-train: teacher 20 (73.38) -> student 11 (72.66)
+  kd-train: teacher 21 (73.58) -> student 17 (71.74)
+  kd-train: teacher 8 (73.98) -> student 10 (68.46)
+  kd-train: teacher 19 (73.40) -> student 16 (72.22)
+  kd-train: teacher 18 (74.56) -> student 13 (69.84)
+  kd-train: teacher 4 (73.66) -> student 27 (71.92)
+  kd-train: teacher 12 (73.32) -> student 9 (73.26)
+  kd-train: teacher 22 (73.32) -> student 23 (73.20)
+  kd-train: teacher 7 (73.46) -> student 1 (72.24)
+  kd-train: teacher 3 (73.56) -> student 25 (72.30)
+  kd-train: teacher 26 (73.84) -> student 6 (71.62)
+  oracle-train: oracle -> student 5 : 73.26
+  oracle-gain in this round: -4.04
+  kd-train: teacher 14 (74.92) -> student 28 (70.98)
+  kd-train: teacher 2 (73.36) -> student 24 (72.88)
+  kd-train: teacher 15 (73.88) -> student 29 (70.86)
+
+=== Round 122/200 (MWM_AccDiff) ===
+  kd-train: teacher 21 (73.58) -> student 1 (70.64)
+  kd-train: teacher 10 (73.60) -> student 17 (71.80)
+  kd-train: teacher 14 (74.92) -> student 5 (69.22)
+  kd-train: teacher 20 (73.38) -> student 13 (72.42)
+  kd-train: teacher 18 (74.56) -> student 16 (71.68)
+  kd-train: teacher 15 (73.88) -> student 23 (71.80)
+  kd-train: teacher 26 (73.84) -> student 9 (71.60)
+  kd-train: teacher 19 (73.40) -> student 11 (72.10)
+  kd-train: teacher 2 (73.36) -> student 25 (72.80)
+  kd-train: teacher 7 (73.46) -> student 27 (72.20)
+  oracle-train: oracle -> student 12 : 73.32
+  oracle-gain in this round: -2.46
+  kd-train: teacher 22 (73.32) -> student 28 (73.20)
+  kd-train: teacher 4 (73.66) -> student 24 (72.04)
+  kd-train: teacher 3 (73.56) -> student 6 (72.04)
+  kd-train: teacher 8 (73.98) -> student 29 (70.60)
+
+=== Round 123/200 (MWM_AccDiff) ===
+  kd-train: teacher 7 (73.46) -> student 16 (71.94)
+  kd-train: teacher 14 (74.92) -> student 17 (69.68)
+  kd-train: teacher 26 (73.84) -> student 27 (71.78)
+  kd-train: teacher 19 (73.40) -> student 23 (72.10)
+  kd-train: teacher 20 (73.38) -> student 1 (72.30)
+  kd-train: teacher 3 (73.56) -> student 24 (71.88)
+  kd-train: teacher 2 (73.36) -> student 5 (72.34)
+  kd-train: teacher 22 (73.32) -> student 13 (72.78)
+  kd-train: teacher 10 (73.60) -> student 6 (71.84)
+  kd-train: teacher 15 (73.88) -> student 28 (70.62)
+  kd-train: teacher 18 (74.56) -> student 25 (71.06)
+  kd-train: teacher 21 (73.58) -> student 29 (71.76)
+  kd-train: teacher 8 (73.98) -> student 12 (70.86)
+  oracle-train: oracle -> student 11 : 73.32
+  oracle-gain in this round: -4.74
+  kd-train: teacher 4 (73.66) -> student 9 (71.68)
+
+=== Round 124/200 (MWM_AccDiff) ===
+  kd-train: teacher 19 (73.40) -> student 5 (72.36)
+  kd-train: teacher 20 (73.38) -> student 28 (72.48)
+  kd-train: teacher 26 (73.84) -> student 23 (71.28)
+  kd-train: teacher 4 (73.66) -> student 27 (71.38)
+  kd-train: teacher 3 (73.56) -> student 17 (72.08)
+  kd-train: teacher 15 (73.88) -> student 9 (71.06)
+  oracle-train: oracle -> student 12 : 73.14
+  oracle-gain in this round: -0.18
+  kd-train: teacher 2 (73.36) -> student 24 (72.78)
+  kd-train: teacher 7 (73.46) -> student 25 (72.18)
+  kd-train: teacher 22 (73.32) -> student 13 (72.88)
+  kd-train: teacher 10 (73.60) -> student 1 (70.68)
+  kd-train: teacher 18 (74.56) -> student 16 (70.24)
+  kd-train: teacher 8 (73.98) -> student 6 (71.98)
+  kd-train: teacher 21 (73.58) -> student 29 (71.94)
+  kd-train: teacher 14 (74.92) -> student 11 (68.58)
+
+=== Round 125/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (74.92) -> student 24 (70.58)
+  kd-train: teacher 7 (73.46) -> student 12 (72.96)
+  kd-train: teacher 10 (73.60) -> student 28 (72.18)
+  kd-train: teacher 3 (73.56) -> student 5 (72.22)
+  kd-train: teacher 19 (73.40) -> student 11 (73.08)
+  kd-train: teacher 4 (73.66) -> student 6 (71.82)
+  kd-train: teacher 15 (73.88) -> student 25 (70.56)
+  oracle-train: oracle -> student 22 : 73.32
+  oracle-gain in this round: 0.02
+  kd-train: teacher 17 (73.46) -> student 1 (72.58)
+  kd-train: teacher 2 (73.36) -> student 16 (73.18)
+  kd-train: teacher 26 (73.84) -> student 27 (71.56)
+  kd-train: teacher 18 (74.56) -> student 13 (70.48)
+  kd-train: teacher 21 (73.58) -> student 23 (72.12)
+  kd-train: teacher 20 (73.38) -> student 9 (73.14)
+  kd-train: teacher 8 (73.98) -> student 29 (71.16)
+
+=== Round 126/200 (MWM_AccDiff) ===
+  kd-train: teacher 21 (73.58) -> student 20 (73.38)
+  kd-train: teacher 26 (73.84) -> student 28 (71.88)
+  kd-train: teacher 17 (73.46) -> student 5 (73.10)
+  kd-train: teacher 4 (73.66) -> student 6 (70.88)
+  kd-train: teacher 14 (74.92) -> student 29 (71.52)
+  kd-train: teacher 13 (73.66) -> student 27 (72.16)
+  oracle-train: oracle -> student 2 : 73.36
+  oracle-gain in this round: 2.22
+  kd-train: teacher 8 (73.98) -> student 9 (72.26)
+  kd-train: teacher 15 (73.88) -> student 11 (71.26)
+  kd-train: teacher 12 (73.82) -> student 23 (71.96)
+  kd-train: teacher 3 (73.56) -> student 24 (72.82)
+  kd-train: teacher 18 (74.56) -> student 16 (67.92)
+  kd-train: teacher 7 (73.46) -> student 22 (73.34)
+  kd-train: teacher 19 (73.40) -> student 1 (72.66)
+  kd-train: teacher 10 (73.60) -> student 25 (72.48)
+
+=== Round 127/200 (MWM_AccDiff) ===
+  kd-train: teacher 13 (73.66) -> student 9 (72.12)
+  kd-train: teacher 14 (74.92) -> student 20 (70.56)
+  kd-train: teacher 26 (73.84) -> student 28 (71.40)
+  kd-train: teacher 8 (73.98) -> student 23 (71.98)
+  kd-train: teacher 11 (73.52) -> student 5 (73.08)
+  kd-train: teacher 12 (73.82) -> student 16 (72.24)
+  oracle-train: oracle -> student 19 : 73.40
+  oracle-gain in this round: -3.44
+  kd-train: teacher 21 (73.58) -> student 25 (72.58)
+  kd-train: teacher 7 (73.46) -> student 1 (71.62)
+  kd-train: teacher 15 (73.88) -> student 29 (72.14)
+  kd-train: teacher 2 (75.58) -> student 6 (70.56)
+  kd-train: teacher 10 (73.60) -> student 27 (72.64)
+  kd-train: teacher 3 (73.56) -> student 22 (73.02)
+  kd-train: teacher 4 (73.66) -> student 17 (73.46)
+  kd-train: teacher 18 (74.56) -> student 24 (71.92)
+
+=== Round 128/200 (MWM_AccDiff) ===
+  kd-train: teacher 21 (73.58) -> student 24 (73.34)
+  kd-train: teacher 14 (74.92) -> student 19 (69.96)
+  kd-train: teacher 15 (73.88) -> student 1 (70.06)
+  kd-train: teacher 10 (73.60) -> student 28 (73.40)
+  kd-train: teacher 18 (74.56) -> student 16 (71.98)
+  kd-train: teacher 29 (73.92) -> student 23 (71.70)
+  kd-train: teacher 13 (73.66) -> student 20 (72.86)
+  kd-train: teacher 4 (73.66) -> student 6 (73.02)
+  kd-train: teacher 3 (73.56) -> student 7 (73.46)
+  kd-train: teacher 2 (75.58) -> student 9 (71.80)
+  kd-train: teacher 26 (73.84) -> student 27 (72.30)
+  kd-train: teacher 12 (73.82) -> student 17 (72.46)
+  kd-train: teacher 8 (73.98) -> student 25 (72.32)
+  kd-train: teacher 22 (73.70) -> student 5 (72.64)
+  oracle-train: oracle -> student 11 : 73.52
+  oracle-gain in this round: -1.04
+
+=== Round 129/200 (MWM_AccDiff) ===
+  kd-train: teacher 12 (73.82) -> student 6 (72.34)
+  kd-train: teacher 2 (75.58) -> student 27 (71.62)
+  kd-train: teacher 4 (73.66) -> student 16 (73.60)
+  kd-train: teacher 13 (73.66) -> student 9 (73.10)
+  kd-train: teacher 29 (73.92) -> student 7 (71.94)
+  kd-train: teacher 15 (73.88) -> student 23 (71.94)
+  kd-train: teacher 19 (74.02) -> student 17 (71.88)
+  kd-train: teacher 1 (73.88) -> student 5 (71.94)
+  kd-train: teacher 26 (73.84) -> student 20 (71.98)
+  kd-train: teacher 22 (73.70) -> student 11 (72.48)
+  kd-train: teacher 10 (73.60) -> student 3 (73.56)
+  oracle-train: oracle -> student 21 : 73.58
+  oracle-gain in this round: -1.56
+  kd-train: teacher 14 (74.92) -> student 25 (68.44)
+  kd-train: teacher 18 (74.56) -> student 24 (70.60)
+  kd-train: teacher 8 (73.98) -> student 28 (71.32)
+
+=== Round 130/200 (MWM_AccDiff) ===
+  kd-train: teacher 12 (73.82) -> student 6 (72.40)
+  kd-train: teacher 26 (73.84) -> student 25 (72.70)
+  kd-train: teacher 1 (73.88) -> student 28 (72.68)
+  kd-train: teacher 8 (73.98) -> student 20 (72.52)
+  oracle-train: oracle -> student 10 : 73.60
+  oracle-gain in this round: -2.46
+  kd-train: teacher 19 (74.02) -> student 17 (72.52)
+  kd-train: teacher 4 (73.66) -> student 3 (73.42)
+  kd-train: teacher 5 (74.46) -> student 27 (72.48)
+  kd-train: teacher 22 (73.70) -> student 11 (73.04)
+  kd-train: teacher 13 (73.66) -> student 24 (73.32)
+  kd-train: teacher 2 (75.58) -> student 16 (70.96)
+  kd-train: teacher 29 (73.92) -> student 9 (73.06)
+  kd-train: teacher 18 (74.56) -> student 21 (72.02)
+  kd-train: teacher 15 (73.88) -> student 7 (72.46)
+  kd-train: teacher 14 (74.92) -> student 23 (71.14)
+
+=== Round 131/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (74.18) -> student 24 (72.28)
+  oracle-train: oracle -> student 4 : 73.66
+  oracle-gain in this round: -2.52
+  kd-train: teacher 15 (73.88) -> student 7 (73.06)
+  kd-train: teacher 26 (73.84) -> student 28 (73.24)
+  kd-train: teacher 5 (74.46) -> student 17 (71.34)
+  kd-train: teacher 8 (73.98) -> student 20 (73.08)
+  kd-train: teacher 19 (74.02) -> student 23 (72.54)
+  kd-train: teacher 14 (74.92) -> student 16 (71.78)
+  kd-train: teacher 12 (73.82) -> student 21 (73.62)
+  kd-train: teacher 1 (73.88) -> student 13 (73.66)
+  kd-train: teacher 22 (73.70) -> student 3 (73.18)
+  kd-train: teacher 2 (75.58) -> student 25 (71.66)
+  kd-train: teacher 9 (74.22) -> student 10 (71.14)
+  kd-train: teacher 18 (74.56) -> student 11 (72.44)
+  kd-train: teacher 29 (73.92) -> student 6 (72.96)
+
+=== Round 132/200 (MWM_AccDiff) ===
+  kd-train: teacher 1 (73.88) -> student 11 (73.58)
+  kd-train: teacher 27 (74.18) -> student 7 (72.50)
+  kd-train: teacher 2 (75.58) -> student 4 (71.14)
+  kd-train: teacher 5 (74.46) -> student 6 (72.24)
+  kd-train: teacher 10 (74.40) -> student 17 (72.42)
+  kd-train: teacher 16 (74.48) -> student 28 (71.74)
+  kd-train: teacher 19 (74.02) -> student 23 (72.68)
+  oracle-train: oracle -> student 12 : 73.82
+  oracle-gain in this round: -1.26
+  kd-train: teacher 14 (74.92) -> student 13 (72.52)
+  kd-train: teacher 29 (73.92) -> student 20 (73.12)
+  kd-train: teacher 26 (73.84) -> student 22 (73.70)
+  kd-train: teacher 9 (74.22) -> student 3 (71.20)
+  kd-train: teacher 8 (73.98) -> student 25 (72.88)
+  kd-train: teacher 18 (74.56) -> student 21 (70.62)
+  kd-train: teacher 15 (73.88) -> student 24 (73.34)
+
+=== Round 133/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (74.18) -> student 23 (73.06)
+  kd-train: teacher 11 (74.08) -> student 20 (73.18)
+  kd-train: teacher 4 (75.24) -> student 24 (71.94)
+  oracle-train: oracle -> student 26 : 73.84
+  oracle-gain in this round: -2.52
+  kd-train: teacher 14 (74.92) -> student 17 (72.68)
+  kd-train: teacher 1 (73.88) -> student 3 (72.66)
+  kd-train: teacher 16 (74.48) -> student 12 (72.56)
+  kd-train: teacher 29 (73.92) -> student 7 (73.56)
+  kd-train: teacher 9 (74.22) -> student 15 (73.88)
+  kd-train: teacher 5 (74.46) -> student 25 (72.98)
+  kd-train: teacher 10 (74.40) -> student 6 (73.10)
+  kd-train: teacher 2 (75.58) -> student 13 (71.82)
+  kd-train: teacher 18 (74.56) -> student 21 (73.08)
+  kd-train: teacher 8 (73.98) -> student 28 (73.48)
+  kd-train: teacher 19 (74.02) -> student 22 (73.32)
+
+=== Round 134/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (74.18) -> student 23 (72.56)
+  kd-train: teacher 5 (74.46) -> student 26 (71.32)
+  kd-train: teacher 24 (74.04) -> student 20 (73.20)
+  kd-train: teacher 19 (74.02) -> student 25 (73.28)
+  kd-train: teacher 4 (75.24) -> student 13 (72.16)
+  kd-train: teacher 18 (74.56) -> student 7 (72.32)
+  kd-train: teacher 29 (73.92) -> student 1 (73.88)
+  kd-train: teacher 9 (74.22) -> student 3 (72.42)
+  kd-train: teacher 16 (74.48) -> student 6 (72.14)
+  kd-train: teacher 14 (74.92) -> student 28 (72.32)
+  kd-train: teacher 2 (75.58) -> student 15 (71.80)
+  kd-train: teacher 10 (74.40) -> student 22 (72.68)
+  kd-train: teacher 11 (74.08) -> student 21 (72.86)
+  kd-train: teacher 8 (73.98) -> student 12 (73.40)
+  oracle-train: oracle -> student 17 : 73.84
+  oracle-gain in this round: -2.82
+
+=== Round 135/200 (MWM_AccDiff) ===
+  kd-train: teacher 5 (74.46) -> student 20 (73.04)
+  kd-train: teacher 10 (74.40) -> student 15 (73.10)
+  kd-train: teacher 1 (74.64) -> student 7 (72.52)
+  kd-train: teacher 2 (75.58) -> student 17 (71.02)
+  kd-train: teacher 27 (74.18) -> student 22 (73.08)
+  kd-train: teacher 24 (74.04) -> student 26 (73.28)
+  oracle-train: oracle -> student 29 : 73.92
+  oracle-gain in this round: -3.66
+  kd-train: teacher 9 (74.22) -> student 6 (73.36)
+  kd-train: teacher 19 (74.02) -> student 28 (73.52)
+  kd-train: teacher 14 (74.92) -> student 13 (72.68)
+  kd-train: teacher 18 (74.56) -> student 23 (72.38)
+  kd-train: teacher 16 (74.48) -> student 21 (73.10)
+  kd-train: teacher 8 (73.98) -> student 12 (73.82)
+  kd-train: teacher 4 (75.24) -> student 25 (70.64)
+  kd-train: teacher 11 (74.08) -> student 3 (72.78)
+
+=== Round 136/200 (MWM_AccDiff) ===
+  kd-train: teacher 5 (74.46) -> student 26 (72.64)
+  kd-train: teacher 4 (75.24) -> student 29 (70.26)
+  kd-train: teacher 10 (74.40) -> student 21 (73.10)
+  kd-train: teacher 11 (74.08) -> student 12 (73.46)
+  kd-train: teacher 27 (74.18) -> student 3 (71.66)
+  kd-train: teacher 24 (74.04) -> student 22 (73.74)
+  kd-train: teacher 1 (74.64) -> student 6 (71.88)
+  kd-train: teacher 14 (74.92) -> student 7 (72.66)
+  kd-train: teacher 13 (74.10) -> student 23 (73.08)
+  kd-train: teacher 19 (74.02) -> student 17 (73.70)
+  kd-train: teacher 16 (74.48) -> student 28 (72.82)
+  kd-train: teacher 9 (74.22) -> student 15 (72.82)
+  kd-train: teacher 2 (75.58) -> student 25 (70.98)
+  oracle-train: oracle -> student 8 : 73.98
+  oracle-gain in this round: 0.12
+  kd-train: teacher 18 (74.56) -> student 20 (72.44)
+
+=== Round 137/200 (MWM_AccDiff) ===
+  kd-train: teacher 24 (74.04) -> student 3 (73.62)
+  kd-train: teacher 8 (74.10) -> student 29 (73.82)
+  kd-train: teacher 1 (74.64) -> student 7 (72.62)
+  kd-train: teacher 4 (75.24) -> student 20 (72.10)
+  kd-train: teacher 10 (74.40) -> student 12 (73.48)
+  kd-train: teacher 16 (74.48) -> student 23 (72.88)
+  kd-train: teacher 9 (74.22) -> student 22 (73.62)
+  kd-train: teacher 11 (74.08) -> student 6 (73.96)
+  kd-train: teacher 13 (74.10) -> student 26 (73.56)
+  kd-train: teacher 27 (74.18) -> student 19 (74.02)
+  kd-train: teacher 18 (74.56) -> student 25 (73.08)
+  kd-train: teacher 5 (74.46) -> student 28 (73.36)
+  kd-train: teacher 2 (75.58) -> student 15 (72.18)
+  kd-train: teacher 14 (74.92) -> student 21 (73.00)
+  oracle-train: oracle -> student 17 : 74.02
+  oracle-gain in this round: -1.16
+
+=== Round 138/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (74.18) -> student 22 (73.18)
+  kd-train: teacher 4 (75.24) -> student 15 (70.46)
+  kd-train: teacher 13 (74.10) -> student 12 (73.30)
+  kd-train: teacher 10 (74.40) -> student 3 (70.96)
+  kd-train: teacher 1 (74.64) -> student 20 (72.58)
+  kd-train: teacher 9 (74.22) -> student 17 (72.86)
+  kd-train: teacher 14 (74.92) -> student 29 (72.52)
+  kd-train: teacher 16 (74.48) -> student 26 (72.66)
+  kd-train: teacher 19 (74.08) -> student 7 (73.66)
+  kd-train: teacher 18 (74.56) -> student 28 (72.88)
+  kd-train: teacher 5 (74.46) -> student 21 (72.22)
+  kd-train: teacher 2 (75.58) -> student 6 (72.34)
+  kd-train: teacher 11 (74.08) -> student 25 (73.74)
+  oracle-train: oracle -> student 24 : 74.04
+  oracle-gain in this round: -3.58
+  kd-train: teacher 8 (74.10) -> student 23 (73.48)
+
+=== Round 139/200 (MWM_AccDiff) ===
+  kd-train: teacher 18 (74.56) -> student 22 (72.52)
+  kd-train: teacher 1 (74.64) -> student 12 (72.92)
+  kd-train: teacher 4 (75.24) -> student 24 (70.46)
+  kd-train: teacher 16 (74.48) -> student 26 (72.94)
+  kd-train: teacher 2 (75.58) -> student 23 (72.00)
+  kd-train: teacher 27 (74.18) -> student 15 (73.40)
+  kd-train: teacher 17 (74.36) -> student 20 (73.06)
+  kd-train: teacher 9 (74.22) -> student 21 (73.12)
+  kd-train: teacher 13 (74.10) -> student 7 (73.54)
+  oracle-train: oracle -> student 11 : 74.08
+  oracle-gain in this round: -0.86
+  kd-train: teacher 14 (74.92) -> student 6 (72.68)
+  kd-train: teacher 19 (74.08) -> student 29 (74.02)
+  kd-train: teacher 8 (74.10) -> student 28 (73.74)
+  kd-train: teacher 5 (74.46) -> student 3 (72.38)
+  kd-train: teacher 10 (74.40) -> student 25 (72.86)
+
+=== Round 140/200 (MWM_AccDiff) ===
+  kd-train: teacher 24 (74.56) -> student 26 (72.40)
+  kd-train: teacher 18 (74.56) -> student 7 (72.96)
+  kd-train: teacher 10 (74.40) -> student 25 (72.94)
+  kd-train: teacher 5 (74.46) -> student 22 (72.98)
+  kd-train: teacher 13 (74.10) -> student 21 (73.32)
+  kd-train: teacher 27 (74.18) -> student 11 (73.22)
+  oracle-train: oracle -> student 19 : 74.08
+  oracle-gain in this round: -5.28
+  kd-train: teacher 8 (74.10) -> student 15 (73.54)
+  kd-train: teacher 17 (74.36) -> student 12 (73.26)
+  kd-train: teacher 9 (74.22) -> student 3 (73.14)
+  kd-train: teacher 2 (75.58) -> student 23 (70.90)
+  kd-train: teacher 16 (74.48) -> student 6 (72.00)
+  kd-train: teacher 1 (74.64) -> student 29 (72.48)
+  kd-train: teacher 14 (74.92) -> student 28 (71.94)
+  kd-train: teacher 4 (75.24) -> student 20 (72.42)
+
+=== Round 141/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (74.18) -> student 12 (73.44)
+  kd-train: teacher 14 (74.92) -> student 19 (68.80)
+  kd-train: teacher 8 (74.10) -> student 3 (73.40)
+  kd-train: teacher 10 (74.40) -> student 23 (73.32)
+  kd-train: teacher 2 (75.58) -> student 26 (72.16)
+  kd-train: teacher 17 (74.36) -> student 29 (73.50)
+  kd-train: teacher 1 (74.64) -> student 20 (73.22)
+  kd-train: teacher 5 (74.46) -> student 25 (73.18)
+  kd-train: teacher 13 (74.10) -> student 22 (73.68)
+  oracle-train: oracle -> student 21 : 73.96
+  oracle-gain in this round: -2.02
+  kd-train: teacher 16 (74.48) -> student 6 (72.16)
+  kd-train: teacher 9 (74.22) -> student 11 (73.70)
+  kd-train: teacher 24 (74.56) -> student 28 (72.48)
+  kd-train: teacher 18 (74.56) -> student 15 (72.88)
+  kd-train: teacher 4 (75.24) -> student 7 (72.58)
+
+=== Round 142/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (74.18) -> student 12 (73.72)
+  kd-train: teacher 5 (74.46) -> student 26 (73.18)
+  kd-train: teacher 16 (74.48) -> student 20 (73.84)
+  kd-train: teacher 9 (74.22) -> student 13 (74.10)
+  kd-train: teacher 1 (74.64) -> student 15 (73.24)
+  kd-train: teacher 10 (74.40) -> student 11 (73.30)
+  kd-train: teacher 14 (74.92) -> student 7 (71.58)
+  kd-train: teacher 24 (74.56) -> student 22 (71.80)
+  kd-train: teacher 19 (74.92) -> student 6 (71.26)
+  kd-train: teacher 2 (75.58) -> student 21 (71.94)
+  kd-train: teacher 29 (74.16) -> student 3 (70.14)
+  kd-train: teacher 18 (74.56) -> student 23 (72.50)
+  kd-train: teacher 17 (74.36) -> student 25 (73.64)
+  oracle-train: oracle -> student 8 : 74.10
+  oracle-gain in this round: -1.00
+  kd-train: teacher 4 (75.24) -> student 28 (70.34)
+
+=== Round 143/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 73.90
+  oracle-gain in this round: -2.62
+  kd-train: teacher 27 (74.18) -> student 13 (73.74)
+  kd-train: teacher 1 (74.64) -> student 15 (73.06)
+  kd-train: teacher 17 (74.36) -> student 26 (73.42)
+  kd-train: teacher 19 (74.92) -> student 28 (72.28)
+  kd-train: teacher 16 (74.48) -> student 8 (73.10)
+  kd-train: teacher 5 (74.46) -> student 23 (73.74)
+  kd-train: teacher 4 (75.24) -> student 21 (72.68)
+  kd-train: teacher 29 (74.16) -> student 20 (73.80)
+  kd-train: teacher 2 (75.58) -> student 22 (72.58)
+  kd-train: teacher 24 (74.56) -> student 25 (72.90)
+  kd-train: teacher 9 (74.22) -> student 3 (73.18)
+  kd-train: teacher 10 (74.40) -> student 6 (73.32)
+  kd-train: teacher 18 (74.56) -> student 11 (73.02)
+  kd-train: teacher 14 (74.92) -> student 12 (72.70)
+
+=== Round 144/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (75.24) -> student 7 (71.28)
+  kd-train: teacher 5 (74.46) -> student 15 (73.26)
+  kd-train: teacher 17 (74.36) -> student 23 (73.56)
+  kd-train: teacher 27 (74.18) -> student 13 (73.88)
+  oracle-train: oracle -> student 29 : 74.16
+  oracle-gain in this round: -0.66
+  kd-train: teacher 1 (74.64) -> student 11 (73.96)
+  kd-train: teacher 16 (74.48) -> student 28 (73.02)
+  kd-train: teacher 14 (74.92) -> student 6 (72.60)
+  kd-train: teacher 8 (75.00) -> student 25 (69.88)
+  kd-train: teacher 2 (75.58) -> student 12 (71.54)
+  kd-train: teacher 19 (74.92) -> student 26 (72.60)
+  kd-train: teacher 9 (74.22) -> student 3 (72.72)
+  kd-train: teacher 10 (74.40) -> student 22 (73.38)
+  kd-train: teacher 18 (74.56) -> student 20 (73.00)
+  kd-train: teacher 24 (74.56) -> student 21 (72.84)
+
+=== Round 145/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (74.92) -> student 13 (72.68)
+  kd-train: teacher 18 (74.56) -> student 6 (73.16)
+  kd-train: teacher 1 (74.64) -> student 12 (72.38)
+  kd-train: teacher 17 (74.36) -> student 29 (73.50)
+  kd-train: teacher 8 (75.00) -> student 23 (72.88)
+  kd-train: teacher 2 (75.58) -> student 20 (71.88)
+  kd-train: teacher 19 (74.92) -> student 21 (72.56)
+  kd-train: teacher 24 (74.56) -> student 22 (72.76)
+  kd-train: teacher 10 (74.40) -> student 28 (73.38)
+  kd-train: teacher 7 (74.36) -> student 26 (73.58)
+  kd-train: teacher 9 (74.22) -> student 11 (73.62)
+  kd-train: teacher 16 (74.48) -> student 15 (73.30)
+  kd-train: teacher 5 (74.46) -> student 3 (73.22)
+  oracle-train: oracle -> student 27 : 74.18
+  oracle-gain in this round: -1.88
+  kd-train: teacher 4 (75.24) -> student 25 (70.82)
+
+=== Round 146/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 23 : 74.02
+  oracle-gain in this round: -1.94
+  kd-train: teacher 5 (74.46) -> student 20 (73.26)
+  kd-train: teacher 2 (75.58) -> student 27 (72.30)
+  kd-train: teacher 17 (74.36) -> student 12 (73.60)
+  kd-train: teacher 24 (74.56) -> student 15 (73.22)
+  kd-train: teacher 10 (74.40) -> student 21 (74.08)
+  kd-train: teacher 1 (74.64) -> student 13 (72.86)
+  kd-train: teacher 7 (74.36) -> student 29 (73.98)
+  kd-train: teacher 18 (74.56) -> student 26 (73.26)
+  kd-train: teacher 4 (75.24) -> student 25 (72.34)
+  kd-train: teacher 16 (74.48) -> student 28 (73.64)
+  kd-train: teacher 9 (74.22) -> student 3 (72.30)
+  kd-train: teacher 8 (75.00) -> student 6 (73.24)
+  kd-train: teacher 19 (74.92) -> student 22 (71.56)
+  kd-train: teacher 14 (74.92) -> student 11 (72.46)
+
+=== Round 147/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (75.24) -> student 26 (72.24)
+  kd-train: teacher 7 (74.36) -> student 28 (73.76)
+  kd-train: teacher 19 (74.92) -> student 23 (72.08)
+  oracle-train: oracle -> student 22 : 74.10
+  oracle-gain in this round: -3.24
+  kd-train: teacher 1 (74.64) -> student 20 (72.90)
+  kd-train: teacher 2 (75.58) -> student 21 (71.86)
+  kd-train: teacher 14 (74.92) -> student 12 (72.36)
+  kd-train: teacher 16 (74.48) -> student 6 (72.92)
+  kd-train: teacher 17 (74.36) -> student 27 (73.52)
+  kd-train: teacher 9 (74.22) -> student 13 (73.92)
+  kd-train: teacher 18 (74.56) -> student 29 (72.72)
+  kd-train: teacher 24 (74.56) -> student 11 (72.48)
+  kd-train: teacher 8 (75.00) -> student 15 (72.50)
+  kd-train: teacher 5 (74.46) -> student 3 (72.18)
+  kd-train: teacher 10 (74.40) -> student 25 (72.84)
+
+=== Round 148/200 (MWM_AccDiff) ===
+  kd-train: teacher 1 (74.64) -> student 28 (72.96)
+  kd-train: teacher 4 (75.24) -> student 23 (72.90)
+  kd-train: teacher 8 (75.00) -> student 26 (69.76)
+  kd-train: teacher 5 (74.46) -> student 6 (73.44)
+  kd-train: teacher 10 (74.40) -> student 12 (73.54)
+  kd-train: teacher 17 (74.36) -> student 15 (73.66)
+  kd-train: teacher 7 (74.36) -> student 29 (73.86)
+  kd-train: teacher 19 (74.92) -> student 13 (72.20)
+  kd-train: teacher 16 (74.48) -> student 20 (72.98)
+  kd-train: teacher 2 (75.58) -> student 22 (70.86)
+  kd-train: teacher 9 (74.22) -> student 3 (71.00)
+  kd-train: teacher 24 (74.56) -> student 25 (72.68)
+  kd-train: teacher 18 (74.56) -> student 21 (73.66)
+  kd-train: teacher 14 (74.92) -> student 11 (72.52)
+  oracle-train: oracle -> student 27 : 73.76
+  oracle-gain in this round: -1.82
+
+=== Round 149/200 (MWM_AccDiff) ===
+  kd-train: teacher 1 (74.64) -> student 28 (73.10)
+  kd-train: teacher 17 (74.36) -> student 12 (73.40)
+  kd-train: teacher 21 (74.28) -> student 6 (73.60)
+  kd-train: teacher 24 (74.56) -> student 22 (72.52)
+  kd-train: teacher 7 (74.36) -> student 3 (72.22)
+  kd-train: teacher 8 (75.00) -> student 26 (72.56)
+  oracle-train: oracle -> student 9 : 74.22
+  oracle-gain in this round: -3.02
+  kd-train: teacher 10 (74.40) -> student 20 (73.44)
+  kd-train: teacher 4 (75.24) -> student 15 (72.22)
+  kd-train: teacher 2 (75.58) -> student 11 (71.82)
+  kd-train: teacher 14 (74.92) -> student 25 (72.42)
+  kd-train: teacher 18 (74.56) -> student 13 (72.96)
+  kd-train: teacher 19 (74.92) -> student 27 (71.94)
+  kd-train: teacher 5 (74.46) -> student 29 (73.04)
+  kd-train: teacher 16 (74.48) -> student 23 (73.40)
+
+=== Round 150/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 74.36
+  oracle-gain in this round: -0.48
+  kd-train: teacher 24 (74.56) -> student 26 (73.36)
+  kd-train: teacher 27 (75.44) -> student 20 (71.88)
+  kd-train: teacher 1 (74.64) -> student 3 (72.80)
+  kd-train: teacher 14 (74.92) -> student 6 (73.34)
+  kd-train: teacher 18 (74.56) -> student 13 (73.52)
+  kd-train: teacher 16 (74.48) -> student 29 (73.54)
+  kd-train: teacher 5 (74.46) -> student 25 (73.66)
+  kd-train: teacher 23 (74.70) -> student 28 (73.40)
+  kd-train: teacher 10 (74.40) -> student 22 (74.14)
+  kd-train: teacher 19 (74.92) -> student 12 (73.38)
+  kd-train: teacher 2 (75.58) -> student 15 (72.28)
+  kd-train: teacher 8 (75.00) -> student 11 (72.10)
+  kd-train: teacher 17 (74.36) -> student 21 (74.28)
+  kd-train: teacher 4 (75.24) -> student 9 (71.20)
+
+=== Round 151/200 (MWM_AccDiff) ===
+  kd-train: teacher 5 (74.46) -> student 21 (74.40)
+  kd-train: teacher 14 (74.92) -> student 26 (73.10)
+  kd-train: teacher 4 (75.24) -> student 15 (72.10)
+  kd-train: teacher 1 (74.64) -> student 6 (73.72)
+  kd-train: teacher 19 (74.92) -> student 28 (72.66)
+  kd-train: teacher 10 (74.40) -> student 3 (72.38)
+  kd-train: teacher 16 (74.48) -> student 13 (74.24)
+  kd-train: teacher 23 (74.70) -> student 22 (73.56)
+  kd-train: teacher 29 (74.70) -> student 20 (73.24)
+  kd-train: teacher 2 (75.58) -> student 12 (68.40)
+  kd-train: teacher 18 (74.56) -> student 25 (74.36)
+  kd-train: teacher 27 (75.44) -> student 9 (72.12)
+  kd-train: teacher 24 (74.56) -> student 7 (73.88)
+  kd-train: teacher 8 (75.00) -> student 11 (73.90)
+  oracle-train: oracle -> student 17 : 74.36
+  oracle-gain in this round: -1.96
+
+=== Round 152/200 (MWM_AccDiff) ===
+  kd-train: teacher 1 (74.64) -> student 12 (73.24)
+  kd-train: teacher 8 (75.00) -> student 20 (72.10)
+  kd-train: teacher 4 (75.24) -> student 13 (72.42)
+  oracle-train: oracle -> student 10 : 74.40
+  oracle-gain in this round: -2.74
+  kd-train: teacher 23 (74.70) -> student 7 (73.18)
+  kd-train: teacher 29 (74.70) -> student 11 (72.94)
+  kd-train: teacher 19 (74.92) -> student 17 (72.40)
+  kd-train: teacher 14 (74.92) -> student 6 (73.08)
+  kd-train: teacher 16 (74.48) -> student 26 (74.06)
+  kd-train: teacher 18 (74.56) -> student 25 (73.96)
+  kd-train: teacher 5 (74.46) -> student 9 (74.20)
+  kd-train: teacher 22 (74.70) -> student 3 (71.78)
+  kd-train: teacher 24 (74.56) -> student 21 (73.72)
+  kd-train: teacher 2 (75.58) -> student 15 (71.50)
+  kd-train: teacher 27 (75.44) -> student 28 (71.48)
+
+=== Round 153/200 (MWM_AccDiff) ===
+  kd-train: teacher 1 (74.64) -> student 28 (73.94)
+  kd-train: teacher 2 (75.58) -> student 17 (73.38)
+  kd-train: teacher 18 (74.56) -> student 7 (74.02)
+  kd-train: teacher 8 (75.00) -> student 10 (71.66)
+  kd-train: teacher 4 (75.24) -> student 20 (72.78)
+  kd-train: teacher 22 (74.70) -> student 11 (73.90)
+  oracle-train: oracle -> student 13 : 74.08
+  oracle-gain in this round: -2.98
+  kd-train: teacher 24 (74.56) -> student 6 (73.86)
+  kd-train: teacher 29 (74.70) -> student 12 (73.62)
+  kd-train: teacher 23 (74.70) -> student 15 (73.82)
+  kd-train: teacher 16 (74.48) -> student 3 (73.68)
+  kd-train: teacher 5 (74.46) -> student 9 (73.96)
+  kd-train: teacher 19 (74.92) -> student 26 (73.32)
+  kd-train: teacher 14 (74.92) -> student 25 (73.52)
+  kd-train: teacher 27 (75.44) -> student 21 (70.44)
+
+=== Round 154/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (74.70) -> student 11 (73.26)
+  kd-train: teacher 27 (75.44) -> student 13 (71.10)
+  kd-train: teacher 19 (74.92) -> student 25 (72.88)
+  kd-train: teacher 22 (74.70) -> student 5 (74.46)
+  kd-train: teacher 4 (75.24) -> student 20 (72.52)
+  kd-train: teacher 10 (74.60) -> student 12 (73.92)
+  kd-train: teacher 2 (75.58) -> student 26 (72.90)
+  kd-train: teacher 8 (75.00) -> student 6 (72.10)
+  kd-train: teacher 29 (74.70) -> student 7 (73.08)
+  kd-train: teacher 16 (74.48) -> student 3 (73.10)
+  kd-train: teacher 24 (74.56) -> student 9 (73.88)
+  kd-train: teacher 18 (74.56) -> student 15 (74.18)
+  kd-train: teacher 14 (74.92) -> student 28 (73.06)
+  kd-train: teacher 1 (74.64) -> student 21 (73.70)
+  oracle-train: oracle -> student 17 : 74.44
+  oracle-gain in this round: 0.56
+
+=== Round 155/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (74.70) -> student 28 (73.64)
+  kd-train: teacher 19 (74.92) -> student 25 (72.88)
+  kd-train: teacher 1 (74.64) -> student 26 (74.06)
+  kd-train: teacher 27 (75.44) -> student 20 (71.42)
+  kd-train: teacher 14 (74.92) -> student 5 (72.58)
+  kd-train: teacher 13 (74.76) -> student 21 (73.00)
+  kd-train: teacher 17 (75.00) -> student 15 (72.70)
+  kd-train: teacher 24 (74.56) -> student 16 (74.48)
+  kd-train: teacher 10 (74.60) -> student 3 (74.34)
+  kd-train: teacher 22 (74.70) -> student 7 (73.76)
+  kd-train: teacher 8 (75.00) -> student 12 (72.94)
+  oracle-train: oracle -> student 18 : 74.56
+  oracle-gain in this round: -2.70
+  kd-train: teacher 2 (75.58) -> student 11 (71.46)
+  kd-train: teacher 29 (74.70) -> student 6 (73.46)
+  kd-train: teacher 4 (75.24) -> student 9 (71.80)
+
+=== Round 156/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (75.24) -> student 18 (71.86)
+  kd-train: teacher 23 (74.70) -> student 28 (74.40)
+  kd-train: teacher 9 (75.20) -> student 25 (72.42)
+  kd-train: teacher 29 (74.70) -> student 21 (73.94)
+  kd-train: teacher 1 (74.64) -> student 3 (71.64)
+  kd-train: teacher 8 (75.00) -> student 10 (74.60)
+  kd-train: teacher 13 (74.76) -> student 20 (73.76)
+  kd-train: teacher 17 (75.00) -> student 6 (72.72)
+  kd-train: teacher 22 (74.70) -> student 7 (74.48)
+  kd-train: teacher 19 (74.92) -> student 5 (73.10)
+  oracle-train: oracle -> student 24 : 74.56
+  oracle-gain in this round: -1.20
+  kd-train: teacher 14 (74.92) -> student 16 (73.52)
+  kd-train: teacher 2 (75.58) -> student 11 (71.88)
+  kd-train: teacher 27 (75.44) -> student 12 (72.82)
+  kd-train: teacher 15 (74.94) -> student 26 (72.92)
+
+=== Round 157/200 (MWM_AccDiff) ===
+  kd-train: teacher 2 (75.58) -> student 6 (69.86)
+  kd-train: teacher 23 (74.70) -> student 7 (74.04)
+  kd-train: teacher 14 (74.92) -> student 5 (72.32)
+  kd-train: teacher 9 (75.20) -> student 21 (73.14)
+  kd-train: teacher 17 (75.00) -> student 11 (73.22)
+  kd-train: teacher 1 (74.64) -> student 20 (74.16)
+  kd-train: teacher 19 (74.92) -> student 12 (73.78)
+  kd-train: teacher 13 (74.76) -> student 10 (73.96)
+  kd-train: teacher 22 (74.70) -> student 16 (74.06)
+  kd-train: teacher 29 (74.70) -> student 3 (73.80)
+  kd-train: teacher 4 (75.24) -> student 24 (73.36)
+  kd-train: teacher 15 (74.94) -> student 26 (73.64)
+  oracle-train: oracle -> student 18 : 74.38
+  oracle-gain in this round: 0.46
+  kd-train: teacher 8 (75.00) -> student 25 (73.78)
+  kd-train: teacher 27 (75.44) -> student 28 (71.32)
+
+=== Round 158/200 (MWM_AccDiff) ===
+  kd-train: teacher 2 (75.58) -> student 16 (73.32)
+  kd-train: teacher 8 (75.00) -> student 26 (73.46)
+  kd-train: teacher 9 (75.20) -> student 25 (73.44)
+  oracle-train: oracle -> student 22 : 74.70
+  oracle-gain in this round: -1.06
+  kd-train: teacher 19 (74.92) -> student 7 (73.38)
+  kd-train: teacher 13 (74.76) -> student 10 (73.98)
+  kd-train: teacher 29 (74.70) -> student 24 (74.20)
+  kd-train: teacher 6 (75.18) -> student 20 (73.20)
+  kd-train: teacher 4 (75.24) -> student 5 (73.32)
+  kd-train: teacher 17 (75.00) -> student 12 (73.44)
+  kd-train: teacher 18 (74.84) -> student 28 (73.74)
+  kd-train: teacher 23 (74.70) -> student 1 (74.64)
+  kd-train: teacher 14 (74.92) -> student 21 (73.48)
+  kd-train: teacher 15 (74.94) -> student 3 (71.88)
+  kd-train: teacher 27 (75.44) -> student 11 (72.68)
+
+=== Round 159/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (74.70) -> student 11 (74.30)
+  kd-train: teacher 18 (74.84) -> student 1 (74.00)
+  kd-train: teacher 17 (75.00) -> student 7 (73.08)
+  kd-train: teacher 4 (75.24) -> student 3 (72.44)
+  kd-train: teacher 14 (74.92) -> student 10 (73.92)
+  kd-train: teacher 2 (75.58) -> student 26 (71.88)
+  kd-train: teacher 9 (75.20) -> student 16 (72.36)
+  kd-train: teacher 13 (74.76) -> student 20 (74.22)
+  kd-train: teacher 29 (74.70) -> student 24 (74.14)
+  oracle-train: oracle -> student 25 : 74.34
+  oracle-gain in this round: -2.52
+  kd-train: teacher 6 (75.18) -> student 5 (72.62)
+  kd-train: teacher 15 (74.94) -> student 12 (73.42)
+  kd-train: teacher 8 (75.00) -> student 21 (73.26)
+  kd-train: teacher 19 (74.92) -> student 22 (73.64)
+  kd-train: teacher 27 (75.44) -> student 28 (71.84)
+
+=== Round 160/200 (MWM_AccDiff) ===
+  kd-train: teacher 2 (75.58) -> student 7 (72.74)
+  kd-train: teacher 8 (75.00) -> student 5 (71.60)
+  kd-train: teacher 15 (74.94) -> student 12 (72.98)
+  kd-train: teacher 18 (74.84) -> student 10 (74.12)
+  oracle-train: oracle -> student 3 : 74.42
+  oracle-gain in this round: -3.72
+  kd-train: teacher 19 (74.92) -> student 28 (73.82)
+  kd-train: teacher 23 (74.70) -> student 20 (74.20)
+  kd-train: teacher 17 (75.00) -> student 22 (72.82)
+  kd-train: teacher 29 (74.70) -> student 24 (74.06)
+  kd-train: teacher 9 (75.20) -> student 21 (72.86)
+  kd-train: teacher 6 (75.18) -> student 26 (72.72)
+  kd-train: teacher 13 (74.76) -> student 1 (74.06)
+  kd-train: teacher 27 (75.44) -> student 25 (71.82)
+  kd-train: teacher 14 (74.92) -> student 11 (73.86)
+  kd-train: teacher 4 (75.24) -> student 16 (72.00)
+
+=== Round 161/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 23 : 74.70
+  oracle-gain in this round: -1.90
+  kd-train: teacher 17 (75.00) -> student 7 (73.72)
+  kd-train: teacher 1 (74.74) -> student 3 (70.70)
+  kd-train: teacher 2 (75.58) -> student 16 (72.64)
+  kd-train: teacher 8 (75.00) -> student 26 (73.96)
+  kd-train: teacher 6 (75.18) -> student 21 (73.54)
+  kd-train: teacher 22 (75.44) -> student 11 (72.06)
+  kd-train: teacher 19 (74.92) -> student 12 (73.90)
+  kd-train: teacher 14 (74.92) -> student 29 (74.70)
+  kd-train: teacher 13 (74.76) -> student 20 (74.60)
+  kd-train: teacher 4 (75.24) -> student 24 (73.72)
+  kd-train: teacher 15 (74.94) -> student 25 (73.96)
+  kd-train: teacher 9 (75.20) -> student 10 (72.60)
+  kd-train: teacher 18 (74.84) -> student 5 (74.08)
+  kd-train: teacher 27 (75.44) -> student 28 (70.68)
+
+=== Round 162/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (75.24) -> student 23 (72.80)
+  kd-train: teacher 15 (74.94) -> student 5 (72.50)
+  kd-train: teacher 17 (75.00) -> student 28 (73.52)
+  kd-train: teacher 14 (74.92) -> student 20 (73.96)
+  kd-train: teacher 22 (75.44) -> student 24 (73.66)
+  kd-train: teacher 2 (75.58) -> student 26 (72.78)
+  kd-train: teacher 9 (75.20) -> student 21 (73.08)
+  kd-train: teacher 19 (74.92) -> student 7 (73.68)
+  oracle-train: oracle -> student 25 : 74.74
+  oracle-gain in this round: -2.66
+  kd-train: teacher 6 (75.18) -> student 12 (73.24)
+  kd-train: teacher 13 (74.76) -> student 1 (74.74)
+  kd-train: teacher 18 (74.84) -> student 29 (74.50)
+  kd-train: teacher 3 (74.90) -> student 10 (74.40)
+  kd-train: teacher 27 (75.44) -> student 16 (72.68)
+  kd-train: teacher 8 (75.00) -> student 11 (73.68)
+
+=== Round 163/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (74.92) -> student 13 (74.76)
+  kd-train: teacher 17 (75.00) -> student 24 (73.82)
+  kd-train: teacher 8 (75.00) -> student 12 (73.92)
+  kd-train: teacher 6 (75.18) -> student 16 (73.38)
+  kd-train: teacher 9 (75.20) -> student 7 (73.32)
+  kd-train: teacher 20 (75.08) -> student 5 (73.40)
+  kd-train: teacher 15 (74.94) -> student 21 (73.98)
+  kd-train: teacher 23 (75.72) -> student 25 (72.08)
+  kd-train: teacher 19 (74.92) -> student 10 (74.50)
+  kd-train: teacher 2 (75.58) -> student 29 (70.36)
+  oracle-train: oracle -> student 18 : 74.84
+  oracle-gain in this round: 1.04
+  kd-train: teacher 22 (75.44) -> student 26 (72.46)
+  kd-train: teacher 3 (74.90) -> student 1 (74.78)
+  kd-train: teacher 4 (75.24) -> student 11 (72.68)
+  kd-train: teacher 27 (75.44) -> student 28 (72.32)
+
+=== Round 164/200 (MWM_AccDiff) ===
+  kd-train: teacher 17 (75.00) -> student 7 (74.88)
+  kd-train: teacher 15 (74.94) -> student 1 (74.60)
+  kd-train: teacher 25 (75.12) -> student 3 (74.90)
+  kd-train: teacher 4 (75.24) -> student 10 (73.74)
+  kd-train: teacher 16 (75.18) -> student 29 (74.18)
+  kd-train: teacher 27 (75.44) -> student 21 (73.54)
+  kd-train: teacher 22 (75.44) -> student 11 (71.92)
+  kd-train: teacher 20 (75.08) -> student 5 (74.74)
+  kd-train: teacher 8 (75.00) -> student 19 (74.92)
+  kd-train: teacher 23 (75.72) -> student 28 (73.58)
+  kd-train: teacher 6 (75.18) -> student 13 (74.74)
+  kd-train: teacher 2 (75.58) -> student 12 (73.32)
+  kd-train: teacher 9 (75.20) -> student 26 (73.82)
+  oracle-train: oracle -> student 14 : 74.92
+  oracle-gain in this round: -0.20
+  kd-train: teacher 18 (75.88) -> student 24 (73.36)
+
+=== Round 165/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (75.24) -> student 12 (73.60)
+  kd-train: teacher 15 (74.94) -> student 10 (74.76)
+  kd-train: teacher 8 (75.00) -> student 14 (74.72)
+  kd-train: teacher 23 (75.72) -> student 29 (72.46)
+  kd-train: teacher 17 (75.00) -> student 13 (74.60)
+  kd-train: teacher 20 (75.08) -> student 19 (74.64)
+  kd-train: teacher 16 (75.18) -> student 1 (74.28)
+  kd-train: teacher 9 (75.20) -> student 11 (73.90)
+  kd-train: teacher 25 (75.12) -> student 24 (74.52)
+  kd-train: teacher 18 (75.88) -> student 28 (72.04)
+  kd-train: teacher 6 (75.18) -> student 26 (74.40)
+  kd-train: teacher 2 (75.58) -> student 7 (72.90)
+  oracle-train: oracle -> student 5 : 74.88
+  oracle-gain in this round: 3.48
+  kd-train: teacher 22 (75.44) -> student 3 (73.42)
+  kd-train: teacher 27 (75.44) -> student 21 (73.28)
+
+=== Round 166/200 (MWM_AccDiff) ===
+  kd-train: teacher 4 (75.24) -> student 7 (73.02)
+  kd-train: teacher 5 (78.36) -> student 21 (72.86)
+  kd-train: teacher 27 (75.44) -> student 13 (73.42)
+  kd-train: teacher 14 (75.16) -> student 17 (75.00)
+  kd-train: teacher 22 (75.44) -> student 24 (73.92)
+  kd-train: teacher 1 (75.08) -> student 3 (74.86)
+  kd-train: teacher 20 (75.08) -> student 8 (75.00)
+  kd-train: teacher 23 (75.72) -> student 26 (72.86)
+  kd-train: teacher 18 (75.88) -> student 29 (73.52)
+  oracle-train: oracle -> student 28 : 75.02
+  oracle-gain in this round: -4.84
+  kd-train: teacher 9 (75.20) -> student 12 (73.80)
+  kd-train: teacher 6 (75.18) -> student 19 (74.64)
+  kd-train: teacher 2 (75.58) -> student 11 (73.18)
+  kd-train: teacher 16 (75.18) -> student 10 (74.06)
+  kd-train: teacher 25 (75.12) -> student 15 (74.94)
+
+=== Round 167/200 (MWM_AccDiff) ===
+  kd-train: teacher 21 (75.58) -> student 10 (73.24)
+  kd-train: teacher 23 (75.72) -> student 28 (70.18)
+  kd-train: teacher 8 (75.30) -> student 19 (74.86)
+  kd-train: teacher 27 (75.44) -> student 15 (73.84)
+  kd-train: teacher 6 (75.18) -> student 25 (75.12)
+  kd-train: teacher 26 (75.36) -> student 24 (74.32)
+  kd-train: teacher 5 (78.36) -> student 13 (72.94)
+  kd-train: teacher 3 (75.32) -> student 29 (74.48)
+  kd-train: teacher 22 (75.44) -> student 12 (74.28)
+  kd-train: teacher 16 (75.18) -> student 20 (75.08)
+  kd-train: teacher 2 (75.58) -> student 7 (73.64)
+  kd-train: teacher 18 (75.88) -> student 11 (71.50)
+  oracle-train: oracle -> student 14 : 75.16
+  oracle-gain in this round: -0.68
+  kd-train: teacher 9 (75.20) -> student 1 (75.08)
+  kd-train: teacher 4 (75.24) -> student 17 (75.00)
+
+=== Round 168/200 (MWM_AccDiff) ===
+  kd-train: teacher 23 (75.72) -> student 7 (73.82)
+  kd-train: teacher 27 (75.44) -> student 14 (74.48)
+  kd-train: teacher 8 (75.30) -> student 20 (74.86)
+  kd-train: teacher 13 (77.74) -> student 11 (71.16)
+  kd-train: teacher 25 (75.22) -> student 9 (75.20)
+  kd-train: teacher 4 (75.24) -> student 1 (74.76)
+  oracle-train: oracle -> student 6 : 75.18
+  oracle-gain in this round: 3.96
+  kd-train: teacher 22 (75.44) -> student 28 (74.74)
+  kd-train: teacher 3 (75.32) -> student 24 (74.78)
+  kd-train: teacher 5 (78.36) -> student 10 (72.08)
+  kd-train: teacher 17 (76.12) -> student 12 (73.90)
+  kd-train: teacher 26 (75.36) -> student 16 (75.18)
+  kd-train: teacher 2 (75.58) -> student 29 (74.26)
+  kd-train: teacher 18 (75.88) -> student 15 (74.02)
+  kd-train: teacher 21 (75.58) -> student 19 (73.24)
+
+=== Round 169/200 (MWM_AccDiff) ===
+  kd-train: teacher 10 (76.98) -> student 9 (73.82)
+  kd-train: teacher 2 (75.58) -> student 4 (75.24)
+  kd-train: teacher 27 (75.44) -> student 14 (74.86)
+  kd-train: teacher 5 (78.36) -> student 24 (73.60)
+  kd-train: teacher 23 (75.72) -> student 20 (74.80)
+  kd-train: teacher 3 (75.32) -> student 25 (75.22)
+  kd-train: teacher 18 (75.88) -> student 16 (74.76)
+  kd-train: teacher 13 (77.74) -> student 12 (73.60)
+  kd-train: teacher 6 (79.14) -> student 19 (72.34)
+  kd-train: teacher 22 (75.44) -> student 7 (75.02)
+  kd-train: teacher 26 (75.36) -> student 1 (74.50)
+  kd-train: teacher 17 (76.12) -> student 15 (74.64)
+  kd-train: teacher 21 (75.58) -> student 28 (74.20)
+  oracle-train: oracle -> student 8 : 75.30
+  oracle-gain in this round: -1.60
+  kd-train: teacher 11 (76.88) -> student 29 (73.04)
+
+=== Round 170/200 (MWM_AccDiff) ===
+  kd-train: teacher 24 (77.88) -> student 8 (73.70)
+  kd-train: teacher 17 (76.12) -> student 4 (75.24)
+  kd-train: teacher 13 (77.74) -> student 16 (73.00)
+  kd-train: teacher 23 (75.72) -> student 14 (75.08)
+  kd-train: teacher 18 (75.88) -> student 26 (75.36)
+  kd-train: teacher 20 (75.64) -> student 3 (75.32)
+  kd-train: teacher 1 (75.72) -> student 27 (75.44)
+  kd-train: teacher 12 (75.66) -> student 22 (75.44)
+  oracle-train: oracle -> student 2 : 75.58
+  oracle-gain in this round: -3.78
+  kd-train: teacher 10 (76.98) -> student 29 (74.64)
+  kd-train: teacher 19 (76.76) -> student 15 (74.54)
+  kd-train: teacher 21 (75.58) -> student 28 (75.40)
+  kd-train: teacher 5 (78.36) -> student 25 (74.12)
+  kd-train: teacher 11 (76.88) -> student 7 (74.48)
+  kd-train: teacher 6 (79.14) -> student 9 (73.70)
+
+=== Round 171/200 (MWM_AccDiff) ===
+  kd-train: teacher 24 (77.88) -> student 21 (75.58)
+  kd-train: teacher 10 (76.98) -> student 15 (75.68)
+  kd-train: teacher 9 (78.26) -> student 7 (75.50)
+  kd-train: teacher 17 (76.12) -> student 18 (75.88)
+  kd-train: teacher 27 (76.42) -> student 3 (74.94)
+  kd-train: teacher 19 (76.76) -> student 23 (75.72)
+  kd-train: teacher 28 (76.44) -> student 16 (75.90)
+  kd-train: teacher 13 (77.74) -> student 20 (75.64)
+  kd-train: teacher 5 (78.36) -> student 4 (75.28)
+  kd-train: teacher 6 (79.14) -> student 26 (75.28)
+  kd-train: teacher 8 (77.08) -> student 12 (75.66)
+  kd-train: teacher 29 (76.18) -> student 1 (75.72)
+  kd-train: teacher 25 (79.06) -> student 22 (73.36)
+  oracle-train: oracle -> student 14 : 76.04
+  oracle-gain in this round: -5.12
+  kd-train: teacher 11 (76.88) -> student 2 (71.80)
+
+=== Round 172/200 (MWM_AccDiff) ===
+  kd-train: teacher 22 (77.14) -> student 27 (76.42)
+  kd-train: teacher 24 (77.88) -> student 23 (76.02)
+  kd-train: teacher 26 (78.60) -> student 12 (74.90)
+  oracle-train: oracle -> student 19 : 76.76
+  oracle-gain in this round: -5.56
+  kd-train: teacher 13 (77.74) -> student 7 (75.96)
+  kd-train: teacher 2 (77.74) -> student 29 (76.18)
+  kd-train: teacher 6 (79.14) -> student 14 (70.92)
+  kd-train: teacher 25 (79.06) -> student 16 (74.50)
+  kd-train: teacher 4 (77.60) -> student 21 (76.20)
+  kd-train: teacher 9 (78.26) -> student 3 (75.44)
+  kd-train: teacher 10 (76.98) -> student 1 (75.84)
+  kd-train: teacher 8 (77.08) -> student 28 (76.44)
+  kd-train: teacher 11 (76.88) -> student 17 (76.12)
+  kd-train: teacher 5 (78.36) -> student 18 (75.08)
+  kd-train: teacher 20 (77.56) -> student 15 (76.40)
+
+=== Round 173/200 (MWM_AccDiff) ===
+  kd-train: teacher 26 (78.60) -> student 21 (75.84)
+  kd-train: teacher 4 (77.60) -> student 16 (77.16)
+  kd-train: teacher 14 (78.74) -> student 27 (76.36)
+  kd-train: teacher 5 (78.36) -> student 7 (75.78)
+  kd-train: teacher 13 (77.74) -> student 11 (76.88)
+  kd-train: teacher 20 (77.56) -> student 23 (77.18)
+  kd-train: teacher 24 (77.88) -> student 10 (76.98)
+  kd-train: teacher 6 (79.14) -> student 19 (71.20)
+  kd-train: teacher 17 (77.48) -> student 1 (76.96)
+  kd-train: teacher 9 (78.26) -> student 29 (76.34)
+  kd-train: teacher 2 (77.74) -> student 22 (77.14)
+  kd-train: teacher 25 (79.06) -> student 28 (75.00)
+  kd-train: teacher 18 (78.16) -> student 3 (76.50)
+  oracle-train: oracle -> student 8 : 77.08
+  oracle-gain in this round: -5.32
+  kd-train: teacher 12 (78.08) -> student 15 (76.78)
+
+=== Round 174/200 (MWM_AccDiff) ===
+  kd-train: teacher 2 (77.74) -> student 4 (77.60)
+  oracle-train: oracle -> student 20 : 77.56
+  oracle-gain in this round: 2.46
+  kd-train: teacher 6 (79.14) -> student 11 (76.00)
+  kd-train: teacher 26 (78.60) -> student 8 (71.76)
+  kd-train: teacher 13 (77.74) -> student 17 (77.48)
+  kd-train: teacher 25 (79.06) -> student 15 (76.04)
+  kd-train: teacher 7 (77.64) -> student 1 (76.66)
+  kd-train: teacher 21 (77.94) -> student 23 (76.98)
+  kd-train: teacher 12 (78.08) -> student 28 (77.52)
+  kd-train: teacher 5 (78.36) -> student 16 (76.42)
+  kd-train: teacher 19 (78.56) -> student 10 (75.94)
+  kd-train: teacher 14 (78.74) -> student 22 (76.10)
+  kd-train: teacher 9 (78.26) -> student 27 (76.98)
+  kd-train: teacher 18 (78.16) -> student 3 (76.68)
+  kd-train: teacher 24 (77.88) -> student 29 (77.28)
+
+=== Round 175/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (78.74) -> student 15 (76.30)
+  kd-train: teacher 8 (78.48) -> student 23 (76.78)
+  kd-train: teacher 26 (78.60) -> student 27 (76.76)
+  kd-train: teacher 18 (78.16) -> student 3 (76.90)
+  kd-train: teacher 19 (78.56) -> student 11 (76.64)
+  kd-train: teacher 9 (78.26) -> student 16 (76.76)
+  kd-train: teacher 24 (77.88) -> student 1 (77.48)
+  kd-train: teacher 12 (78.08) -> student 13 (77.74)
+  kd-train: teacher 29 (77.90) -> student 7 (77.64)
+  oracle-train: oracle -> student 2 : 77.74
+  oracle-gain in this round: -1.44
+  kd-train: teacher 5 (78.36) -> student 4 (76.64)
+  kd-train: teacher 6 (79.14) -> student 10 (75.66)
+  kd-train: teacher 21 (77.94) -> student 17 (77.48)
+  kd-train: teacher 20 (80.02) -> student 28 (75.74)
+  kd-train: teacher 25 (79.06) -> student 22 (75.38)
+
+=== Round 176/200 (MWM_AccDiff) ===
+  kd-train: teacher 20 (80.02) -> student 11 (75.38)
+  kd-train: teacher 6 (79.14) -> student 15 (75.80)
+  kd-train: teacher 14 (78.74) -> student 3 (75.66)
+  kd-train: teacher 26 (78.60) -> student 16 (75.78)
+  kd-train: teacher 21 (77.94) -> student 1 (77.54)
+  kd-train: teacher 8 (78.48) -> student 7 (77.04)
+  kd-train: teacher 4 (78.16) -> student 10 (77.52)
+  kd-train: teacher 12 (78.08) -> student 29 (77.90)
+  kd-train: teacher 9 (78.26) -> student 17 (76.98)
+  kd-train: teacher 25 (79.06) -> student 23 (75.02)
+  kd-train: teacher 18 (78.16) -> student 13 (77.16)
+  oracle-train: oracle -> student 24 : 77.88
+  oracle-gain in this round: -5.16
+  kd-train: teacher 5 (78.36) -> student 2 (76.30)
+  kd-train: teacher 27 (77.98) -> student 28 (77.90)
+  kd-train: teacher 19 (78.56) -> student 22 (76.02)
+
+=== Round 177/200 (MWM_AccDiff) ===
+  kd-train: teacher 25 (79.06) -> student 13 (76.14)
+  oracle-train: oracle -> student 4 : 78.16
+  oracle-gain in this round: -4.92
+  kd-train: teacher 14 (78.74) -> student 27 (77.98)
+  kd-train: teacher 1 (78.36) -> student 12 (78.08)
+  kd-train: teacher 26 (78.60) -> student 7 (76.40)
+  kd-train: teacher 20 (80.02) -> student 17 (76.22)
+  kd-train: teacher 29 (78.50) -> student 28 (77.04)
+  kd-train: teacher 11 (78.38) -> student 18 (78.16)
+  kd-train: teacher 15 (78.46) -> student 16 (77.44)
+  kd-train: teacher 6 (79.14) -> student 10 (75.56)
+  kd-train: teacher 9 (78.26) -> student 3 (76.46)
+  kd-train: teacher 5 (78.36) -> student 21 (77.94)
+  kd-train: teacher 2 (79.92) -> student 24 (72.72)
+  kd-train: teacher 19 (78.56) -> student 22 (76.66)
+  kd-train: teacher 8 (78.48) -> student 23 (77.24)
+
+=== Round 178/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (78.74) -> student 24 (77.88)
+  kd-train: teacher 1 (78.36) -> student 18 (77.92)
+  kd-train: teacher 6 (79.14) -> student 28 (76.56)
+  kd-train: teacher 8 (78.48) -> student 10 (77.52)
+  oracle-train: oracle -> student 9 : 78.26
+  oracle-gain in this round: -7.26
+  kd-train: teacher 19 (78.56) -> student 23 (75.58)
+  kd-train: teacher 2 (79.92) -> student 4 (73.24)
+  kd-train: teacher 29 (78.50) -> student 7 (77.40)
+  kd-train: teacher 15 (78.46) -> student 13 (77.54)
+  kd-train: teacher 26 (78.60) -> student 22 (76.70)
+  kd-train: teacher 5 (78.36) -> student 21 (77.88)
+  kd-train: teacher 25 (79.06) -> student 27 (76.30)
+  kd-train: teacher 20 (80.02) -> student 12 (76.22)
+  kd-train: teacher 17 (78.54) -> student 16 (76.80)
+  kd-train: teacher 11 (78.38) -> student 3 (72.66)
+
+=== Round 179/200 (MWM_AccDiff) ===
+  kd-train: teacher 20 (80.02) -> student 24 (76.24)
+  oracle-train: oracle -> student 4 : 78.10
+  oracle-gain in this round: -5.36
+  kd-train: teacher 17 (78.54) -> student 13 (76.72)
+  kd-train: teacher 1 (78.36) -> student 12 (77.72)
+  kd-train: teacher 26 (78.60) -> student 3 (76.60)
+  kd-train: teacher 25 (79.06) -> student 9 (71.00)
+  kd-train: teacher 2 (79.92) -> student 16 (75.62)
+  kd-train: teacher 5 (78.36) -> student 21 (77.30)
+  kd-train: teacher 19 (78.56) -> student 10 (76.58)
+  kd-train: teacher 29 (78.50) -> student 27 (76.80)
+  kd-train: teacher 15 (78.46) -> student 18 (76.98)
+  kd-train: teacher 11 (78.38) -> student 7 (77.02)
+  kd-train: teacher 8 (78.48) -> student 28 (76.96)
+  kd-train: teacher 6 (79.14) -> student 22 (76.24)
+  kd-train: teacher 14 (78.74) -> student 23 (76.12)
+
+=== Round 180/200 (MWM_AccDiff) ===
+  kd-train: teacher 8 (78.48) -> student 27 (77.52)
+  kd-train: teacher 17 (78.54) -> student 18 (77.36)
+  kd-train: teacher 29 (78.50) -> student 21 (77.34)
+  kd-train: teacher 11 (78.38) -> student 1 (78.36)
+  kd-train: teacher 6 (79.14) -> student 4 (72.74)
+  kd-train: teacher 20 (80.02) -> student 13 (75.72)
+  kd-train: teacher 15 (78.46) -> student 16 (78.00)
+  kd-train: teacher 2 (79.92) -> student 23 (74.98)
+  oracle-train: oracle -> student 5 : 78.36
+  oracle-gain in this round: 1.34
+  kd-train: teacher 25 (79.06) -> student 7 (76.24)
+  kd-train: teacher 19 (78.56) -> student 10 (76.98)
+  kd-train: teacher 3 (78.56) -> student 22 (77.10)
+  kd-train: teacher 24 (79.14) -> student 28 (75.68)
+  kd-train: teacher 14 (78.74) -> student 12 (76.42)
+  kd-train: teacher 26 (78.60) -> student 9 (76.82)
+
+=== Round 181/200 (MWM_AccDiff) ===
+  kd-train: teacher 8 (78.48) -> student 13 (78.22)
+  kd-train: teacher 6 (79.14) -> student 18 (77.70)
+  kd-train: teacher 29 (78.50) -> student 4 (78.02)
+  kd-train: teacher 24 (79.14) -> student 10 (77.02)
+  kd-train: teacher 20 (80.02) -> student 12 (74.82)
+  kd-train: teacher 19 (78.56) -> student 21 (77.66)
+  kd-train: teacher 3 (78.56) -> student 23 (77.82)
+  kd-train: teacher 17 (78.54) -> student 1 (77.78)
+  kd-train: teacher 2 (79.92) -> student 22 (77.04)
+  kd-train: teacher 5 (79.70) -> student 16 (76.60)
+  kd-train: teacher 15 (78.46) -> student 28 (78.34)
+  kd-train: teacher 26 (78.60) -> student 9 (78.02)
+  kd-train: teacher 25 (79.06) -> student 27 (77.10)
+  oracle-train: oracle -> student 11 : 78.38
+  oracle-gain in this round: -5.08
+  kd-train: teacher 14 (78.74) -> student 7 (76.62)
+
+=== Round 182/200 (MWM_AccDiff) ===
+  kd-train: teacher 5 (79.70) -> student 10 (75.94)
+  kd-train: teacher 3 (78.56) -> student 8 (78.48)
+  kd-train: teacher 20 (80.02) -> student 23 (77.64)
+  kd-train: teacher 28 (78.88) -> student 4 (77.94)
+  kd-train: teacher 16 (79.62) -> student 13 (77.00)
+  kd-train: teacher 19 (78.56) -> student 12 (78.10)
+  kd-train: teacher 29 (78.50) -> student 1 (78.18)
+  kd-train: teacher 2 (79.92) -> student 11 (73.30)
+  kd-train: teacher 6 (79.14) -> student 7 (75.50)
+  oracle-train: oracle -> student 15 : 78.46
+  oracle-gain in this round: -2.66
+  kd-train: teacher 24 (79.14) -> student 9 (77.58)
+  kd-train: teacher 26 (78.60) -> student 22 (78.18)
+  kd-train: teacher 25 (79.06) -> student 27 (77.76)
+  kd-train: teacher 17 (78.54) -> student 21 (78.24)
+  kd-train: teacher 14 (78.74) -> student 18 (77.94)
+
+=== Round 183/200 (MWM_AccDiff) ===
+  kd-train: teacher 26 (78.60) -> student 4 (77.92)
+  kd-train: teacher 20 (80.02) -> student 11 (76.60)
+  kd-train: teacher 5 (79.70) -> student 22 (76.12)
+  oracle-train: oracle -> student 29 : 78.50
+  oracle-gain in this round: 1.62
+  kd-train: teacher 16 (79.62) -> student 12 (76.36)
+  kd-train: teacher 6 (79.14) -> student 9 (75.88)
+  kd-train: teacher 10 (78.76) -> student 7 (77.74)
+  kd-train: teacher 14 (78.74) -> student 21 (77.88)
+  kd-train: teacher 3 (78.56) -> student 23 (78.10)
+  kd-train: teacher 24 (79.14) -> student 18 (76.54)
+  kd-train: teacher 19 (78.56) -> student 8 (77.96)
+  kd-train: teacher 17 (78.54) -> student 1 (78.12)
+  kd-train: teacher 28 (78.88) -> student 13 (77.00)
+  kd-train: teacher 25 (79.06) -> student 27 (77.08)
+  kd-train: teacher 2 (79.92) -> student 15 (75.80)
+
+=== Round 184/200 (MWM_AccDiff) ===
+  kd-train: teacher 6 (79.14) -> student 21 (78.06)
+  kd-train: teacher 20 (80.02) -> student 23 (76.68)
+  kd-train: teacher 16 (79.62) -> student 13 (77.74)
+  kd-train: teacher 29 (80.12) -> student 7 (75.12)
+  kd-train: teacher 25 (79.06) -> student 9 (78.06)
+  kd-train: teacher 27 (79.12) -> student 17 (78.54)
+  kd-train: teacher 14 (78.74) -> student 3 (78.56)
+  oracle-train: oracle -> student 15 : 78.44
+  oracle-gain in this round: -5.18
+  kd-train: teacher 26 (78.60) -> student 1 (77.56)
+  kd-train: teacher 10 (78.76) -> student 19 (78.56)
+  kd-train: teacher 5 (79.70) -> student 12 (77.12)
+  kd-train: teacher 2 (79.92) -> student 8 (76.88)
+  kd-train: teacher 11 (78.92) -> student 4 (78.16)
+  kd-train: teacher 24 (79.14) -> student 18 (77.48)
+  kd-train: teacher 28 (78.88) -> student 22 (78.38)
+
+=== Round 185/200 (MWM_AccDiff) ===
+  kd-train: teacher 24 (79.14) -> student 8 (77.74)
+  kd-train: teacher 28 (78.88) -> student 1 (78.58)
+  kd-train: teacher 2 (79.92) -> student 17 (76.86)
+  kd-train: teacher 27 (79.12) -> student 9 (77.80)
+  kd-train: teacher 20 (80.02) -> student 18 (76.60)
+  kd-train: teacher 6 (79.14) -> student 4 (77.76)
+  kd-train: teacher 16 (79.62) -> student 19 (76.72)
+  kd-train: teacher 10 (78.76) -> student 26 (78.60)
+  kd-train: teacher 29 (80.12) -> student 15 (73.26)
+  kd-train: teacher 12 (79.56) -> student 7 (76.80)
+  kd-train: teacher 5 (79.70) -> student 22 (77.40)
+  kd-train: teacher 25 (79.06) -> student 3 (77.92)
+  kd-train: teacher 21 (79.32) -> student 23 (77.36)
+  oracle-train: oracle -> student 14 : 78.74
+  oracle-gain in this round: -4.92
+  kd-train: teacher 11 (78.92) -> student 13 (78.06)
+
+=== Round 186/200 (MWM_AccDiff) ===
+  kd-train: teacher 5 (79.70) -> student 15 (78.12)
+  kd-train: teacher 29 (80.12) -> student 17 (77.72)
+  kd-train: teacher 11 (78.92) -> student 1 (78.40)
+  kd-train: teacher 20 (80.02) -> student 14 (73.82)
+  oracle-train: oracle -> student 3 : 78.82
+  oracle-gain in this round: 0.78
+  kd-train: teacher 2 (79.92) -> student 9 (76.38)
+  kd-train: teacher 25 (79.06) -> student 4 (78.40)
+  kd-train: teacher 16 (79.62) -> student 26 (78.00)
+  kd-train: teacher 6 (79.14) -> student 7 (78.28)
+  kd-train: teacher 12 (79.56) -> student 23 (78.06)
+  kd-train: teacher 27 (79.12) -> student 10 (78.76)
+  kd-train: teacher 28 (78.88) -> student 18 (78.72)
+  kd-train: teacher 22 (79.46) -> student 19 (78.14)
+  kd-train: teacher 21 (79.32) -> student 8 (77.92)
+  kd-train: teacher 24 (79.14) -> student 13 (77.68)
+
+=== Round 187/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (79.12) -> student 7 (78.94)
+  kd-train: teacher 21 (79.32) -> student 1 (78.48)
+  kd-train: teacher 5 (79.70) -> student 8 (77.28)
+  kd-train: teacher 20 (80.02) -> student 19 (75.82)
+  kd-train: teacher 29 (80.12) -> student 10 (77.22)
+  kd-train: teacher 12 (79.56) -> student 4 (76.56)
+  kd-train: teacher 3 (79.60) -> student 23 (77.20)
+  kd-train: teacher 26 (79.14) -> student 15 (78.68)
+  kd-train: teacher 6 (79.14) -> student 11 (78.92)
+  oracle-train: oracle -> student 25 : 79.06
+  oracle-gain in this round: 1.16
+  kd-train: teacher 22 (79.46) -> student 18 (78.16)
+  kd-train: teacher 14 (79.48) -> student 9 (77.56)
+  kd-train: teacher 2 (79.92) -> student 13 (76.94)
+  kd-train: teacher 24 (79.14) -> student 28 (78.88)
+  kd-train: teacher 16 (79.62) -> student 17 (77.58)
+
+=== Round 188/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (79.48) -> student 15 (78.46)
+  kd-train: teacher 3 (79.60) -> student 4 (77.96)
+  kd-train: teacher 26 (79.14) -> student 28 (78.90)
+  kd-train: teacher 20 (80.02) -> student 23 (77.54)
+  kd-train: teacher 29 (80.12) -> student 18 (76.18)
+  kd-train: teacher 25 (80.22) -> student 9 (75.88)
+  kd-train: teacher 24 (79.14) -> student 11 (78.94)
+  kd-train: teacher 22 (79.46) -> student 17 (78.38)
+  kd-train: teacher 16 (79.62) -> student 10 (77.34)
+  kd-train: teacher 12 (79.56) -> student 8 (78.32)
+  kd-train: teacher 2 (79.92) -> student 13 (76.74)
+  kd-train: teacher 6 (79.14) -> student 1 (78.84)
+  kd-train: teacher 5 (79.70) -> student 7 (76.42)
+  kd-train: teacher 21 (79.32) -> student 19 (78.60)
+  oracle-train: oracle -> student 27 : 79.12
+  oracle-gain in this round: 1.00
+
+=== Round 189/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 26 : 79.14
+  oracle-gain in this round: 0.76
+  kd-train: teacher 5 (79.70) -> student 8 (77.60)
+  kd-train: teacher 27 (80.12) -> student 10 (76.84)
+  kd-train: teacher 29 (80.12) -> student 17 (75.74)
+  kd-train: teacher 16 (79.62) -> student 23 (77.60)
+  kd-train: teacher 28 (79.64) -> student 19 (78.72)
+  kd-train: teacher 3 (79.60) -> student 7 (78.02)
+  kd-train: teacher 22 (79.46) -> student 13 (78.66)
+  kd-train: teacher 2 (79.92) -> student 18 (77.30)
+  kd-train: teacher 14 (79.48) -> student 4 (77.60)
+  kd-train: teacher 25 (80.22) -> student 11 (77.36)
+  kd-train: teacher 6 (79.14) -> student 1 (79.02)
+  kd-train: teacher 12 (79.56) -> student 15 (78.44)
+  kd-train: teacher 21 (79.32) -> student 24 (79.14)
+  kd-train: teacher 20 (80.02) -> student 9 (76.24)
+
+=== Round 190/200 (MWM_AccDiff) ===
+  kd-train: teacher 14 (79.48) -> student 24 (78.84)
+  kd-train: teacher 27 (80.12) -> student 11 (78.78)
+  kd-train: teacher 3 (79.60) -> student 9 (78.76)
+  kd-train: teacher 26 (79.90) -> student 23 (77.60)
+  kd-train: teacher 21 (79.32) -> student 6 (79.14)
+  oracle-train: oracle -> student 13 : 79.32
+  oracle-gain in this round: 1.08
+  kd-train: teacher 12 (79.56) -> student 4 (76.80)
+  kd-train: teacher 29 (80.12) -> student 18 (77.46)
+  kd-train: teacher 16 (79.62) -> student 8 (78.80)
+  kd-train: teacher 20 (80.02) -> student 10 (77.70)
+  kd-train: teacher 28 (79.64) -> student 15 (78.86)
+  kd-train: teacher 5 (79.70) -> student 17 (78.50)
+  kd-train: teacher 2 (79.92) -> student 19 (77.80)
+  kd-train: teacher 25 (80.22) -> student 7 (77.46)
+  kd-train: teacher 22 (79.46) -> student 1 (79.14)
+
+=== Round 191/200 (MWM_AccDiff) ===
+  kd-train: teacher 26 (79.90) -> student 4 (77.22)
+  kd-train: teacher 12 (79.56) -> student 6 (79.02)
+  kd-train: teacher 20 (80.02) -> student 24 (78.00)
+  kd-train: teacher 16 (79.62) -> student 23 (78.48)
+  kd-train: teacher 28 (79.64) -> student 9 (78.38)
+  kd-train: teacher 14 (79.48) -> student 1 (79.10)
+  kd-train: teacher 3 (79.60) -> student 17 (78.92)
+  kd-train: teacher 22 (79.46) -> student 21 (79.32)
+  kd-train: teacher 25 (80.22) -> student 18 (77.32)
+  kd-train: teacher 29 (80.12) -> student 10 (77.08)
+  kd-train: teacher 2 (79.92) -> student 7 (77.44)
+  kd-train: teacher 27 (80.12) -> student 19 (77.52)
+  kd-train: teacher 13 (80.40) -> student 15 (77.24)
+  kd-train: teacher 5 (79.70) -> student 8 (78.00)
+  oracle-train: oracle -> student 11 : 79.46
+  oracle-gain in this round: -7.76
+
+=== Round 192/200 (MWM_AccDiff) ===
+  kd-train: teacher 5 (79.70) -> student 15 (78.10)
+  kd-train: teacher 12 (79.56) -> student 1 (78.54)
+  kd-train: teacher 29 (80.12) -> student 9 (77.00)
+  kd-train: teacher 14 (79.48) -> student 24 (78.56)
+  kd-train: teacher 20 (80.02) -> student 23 (77.28)
+  kd-train: teacher 2 (79.92) -> student 7 (78.06)
+  kd-train: teacher 16 (79.62) -> student 17 (78.04)
+  kd-train: teacher 13 (80.40) -> student 11 (71.70)
+  kd-train: teacher 27 (80.12) -> student 10 (77.16)
+  kd-train: teacher 28 (79.64) -> student 4 (77.60)
+  kd-train: teacher 26 (79.90) -> student 19 (77.66)
+  kd-train: teacher 22 (79.46) -> student 21 (79.10)
+  oracle-train: oracle -> student 6 : 79.14
+  oracle-gain in this round: 0.70
+  kd-train: teacher 3 (79.60) -> student 8 (78.30)
+  kd-train: teacher 25 (80.22) -> student 18 (76.74)
+
+=== Round 193/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (80.12) -> student 7 (76.72)
+  kd-train: teacher 2 (79.92) -> student 23 (78.28)
+  kd-train: teacher 29 (80.12) -> student 11 (77.20)
+  kd-train: teacher 20 (80.02) -> student 24 (77.48)
+  kd-train: teacher 5 (79.70) -> student 14 (79.48)
+  kd-train: teacher 26 (79.90) -> student 8 (77.94)
+  kd-train: teacher 3 (79.60) -> student 21 (78.84)
+  oracle-train: oracle -> student 22 : 79.46
+  oracle-gain in this round: -6.76
+  kd-train: teacher 13 (80.40) -> student 9 (77.24)
+  kd-train: teacher 6 (79.84) -> student 18 (78.14)
+  kd-train: teacher 16 (79.62) -> student 10 (78.36)
+  kd-train: teacher 28 (79.64) -> student 19 (78.22)
+  kd-train: teacher 25 (80.22) -> student 17 (77.30)
+  kd-train: teacher 12 (79.56) -> student 15 (79.10)
+  kd-train: teacher 1 (79.52) -> student 4 (77.62)
+
+=== Round 194/200 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 79.52
+  oracle-gain in this round: 0.34
+  kd-train: teacher 27 (80.12) -> student 23 (76.80)
+  kd-train: teacher 5 (79.70) -> student 10 (77.54)
+  kd-train: teacher 6 (79.84) -> student 18 (78.06)
+  kd-train: teacher 25 (80.22) -> student 19 (76.98)
+  kd-train: teacher 13 (80.40) -> student 17 (76.38)
+  kd-train: teacher 20 (80.02) -> student 8 (76.56)
+  kd-train: teacher 28 (79.64) -> student 4 (77.52)
+  kd-train: teacher 16 (79.62) -> student 7 (78.06)
+  kd-train: teacher 2 (79.92) -> student 9 (76.92)
+  kd-train: teacher 26 (79.90) -> student 15 (77.40)
+  kd-train: teacher 12 (79.56) -> student 11 (79.18)
+  kd-train: teacher 3 (79.60) -> student 24 (78.40)
+  kd-train: teacher 29 (80.12) -> student 22 (72.70)
+  kd-train: teacher 21 (79.54) -> student 14 (79.38)
+
+=== Round 195/200 (MWM_AccDiff) ===
+  kd-train: teacher 6 (79.84) -> student 12 (79.56)
+  kd-train: teacher 29 (80.12) -> student 17 (75.60)
+  kd-train: teacher 26 (79.90) -> student 19 (78.24)
+  kd-train: teacher 20 (80.02) -> student 15 (77.68)
+  kd-train: teacher 27 (80.12) -> student 23 (77.68)
+  kd-train: teacher 13 (80.40) -> student 8 (77.42)
+  kd-train: teacher 16 (79.62) -> student 14 (78.70)
+  kd-train: teacher 28 (79.64) -> student 10 (78.76)
+  kd-train: teacher 25 (80.22) -> student 24 (78.46)
+  oracle-train: oracle -> student 21 : 79.54
+  oracle-gain in this round: 0.88
+  kd-train: teacher 2 (79.92) -> student 18 (78.12)
+  kd-train: teacher 5 (79.70) -> student 11 (78.46)
+  kd-train: teacher 3 (79.60) -> student 22 (79.02)
+  kd-train: teacher 1 (79.86) -> student 9 (78.38)
+  kd-train: teacher 7 (79.56) -> student 4 (77.54)
+
+=== Round 196/200 (MWM_AccDiff) ===
+  kd-train: teacher 21 (80.42) -> student 10 (77.38)
+  kd-train: teacher 29 (80.12) -> student 9 (77.78)
+  kd-train: teacher 2 (79.92) -> student 23 (78.52)
+  kd-train: teacher 1 (79.86) -> student 11 (79.36)
+  oracle-train: oracle -> student 3 : 79.60
+  oracle-gain in this round: 0.70
+  kd-train: teacher 28 (79.64) -> student 4 (78.14)
+  kd-train: teacher 26 (79.90) -> student 14 (78.38)
+  kd-train: teacher 20 (80.02) -> student 15 (77.96)
+  kd-train: teacher 13 (80.40) -> student 24 (77.48)
+  kd-train: teacher 6 (79.84) -> student 17 (78.52)
+  kd-train: teacher 12 (79.60) -> student 7 (79.56)
+  kd-train: teacher 16 (79.62) -> student 22 (79.32)
+  kd-train: teacher 25 (80.22) -> student 8 (77.82)
+  kd-train: teacher 5 (79.70) -> student 19 (78.62)
+  kd-train: teacher 27 (80.12) -> student 18 (77.96)
+
+=== Round 197/200 (MWM_AccDiff) ===
+  kd-train: teacher 27 (80.12) -> student 24 (77.94)
+  kd-train: teacher 3 (80.30) -> student 17 (78.66)
+  kd-train: teacher 1 (79.86) -> student 14 (78.66)
+  kd-train: teacher 20 (80.02) -> student 8 (77.96)
+  kd-train: teacher 28 (79.64) -> student 4 (76.88)
+  kd-train: teacher 13 (80.40) -> student 23 (76.74)
+  kd-train: teacher 5 (79.70) -> student 7 (79.62)
+  kd-train: teacher 21 (80.42) -> student 9 (76.72)
+  oracle-train: oracle -> student 12 : 79.60
+  oracle-gain in this round: 0.64
+  kd-train: teacher 25 (80.22) -> student 19 (77.32)
+  kd-train: teacher 29 (80.12) -> student 15 (77.48)
+  kd-train: teacher 26 (79.90) -> student 16 (79.62)
+  kd-train: teacher 6 (79.84) -> student 22 (79.32)
+  kd-train: teacher 11 (80.30) -> student 18 (76.90)
+  kd-train: teacher 2 (79.92) -> student 10 (78.52)
+
+=== Round 198/200 (MWM_AccDiff) ===
+  kd-train: teacher 11 (80.30) -> student 10 (77.90)
+  kd-train: teacher 7 (79.92) -> student 23 (78.30)
+  kd-train: teacher 21 (80.42) -> student 19 (78.06)
+  kd-train: teacher 13 (80.40) -> student 17 (77.80)
+  kd-train: teacher 29 (80.12) -> student 18 (78.06)
+  kd-train: teacher 26 (79.90) -> student 14 (78.88)
+  kd-train: teacher 1 (79.86) -> student 16 (79.54)
+  kd-train: teacher 3 (80.30) -> student 24 (78.06)
+  kd-train: teacher 12 (80.24) -> student 22 (78.34)
+  kd-train: teacher 6 (79.84) -> student 28 (79.64)
+  oracle-train: oracle -> student 5 : 79.70
+  oracle-gain in this round: 0.58
+  kd-train: teacher 27 (80.12) -> student 9 (78.22)
+  kd-train: teacher 25 (80.22) -> student 8 (78.08)
+  kd-train: teacher 2 (79.92) -> student 15 (78.58)
+  kd-train: teacher 20 (80.02) -> student 4 (77.06)
+
+=== Round 199/200 (MWM_AccDiff) ===
+  kd-train: teacher 21 (80.42) -> student 15 (77.50)
+  kd-train: teacher 11 (80.30) -> student 10 (77.72)
+  kd-train: teacher 27 (80.12) -> student 9 (78.88)
+  kd-train: teacher 5 (80.28) -> student 22 (78.30)
+  kd-train: teacher 7 (79.92) -> student 17 (79.12)
+  kd-train: teacher 13 (80.40) -> student 23 (77.66)
+  kd-train: teacher 28 (80.32) -> student 19 (79.22)
+  kd-train: teacher 29 (80.12) -> student 18 (78.76)
+  oracle-train: oracle -> student 6 : 79.84
+  oracle-gain in this round: 0.60
+  kd-train: teacher 25 (80.22) -> student 24 (78.64)
+  kd-train: teacher 3 (80.30) -> student 8 (77.80)
+  kd-train: teacher 2 (79.92) -> student 16 (79.58)
+  kd-train: teacher 26 (79.90) -> student 1 (79.86)
+  kd-train: teacher 12 (80.24) -> student 14 (78.48)
+  kd-train: teacher 20 (80.02) -> student 4 (77.68)
+
+=== Round 200/200 (MWM_AccDiff) ===
+  kd-train: teacher 11 (80.30) -> student 15 (78.06)
+  kd-train: teacher 20 (80.02) -> student 16 (78.80)
+  oracle-train: oracle -> student 26 : 79.90
+  oracle-gain in this round: 0.60
+  kd-train: teacher 27 (80.12) -> student 14 (78.76)
+  kd-train: teacher 29 (80.12) -> student 7 (79.92)
+  kd-train: teacher 3 (80.30) -> student 17 (78.06)
+  kd-train: teacher 2 (79.92) -> student 4 (78.54)
+  kd-train: teacher 13 (80.40) -> student 22 (77.26)
+  kd-train: teacher 25 (80.22) -> student 8 (78.36)
+  kd-train: teacher 6 (80.44) -> student 18 (76.64)
+  kd-train: teacher 12 (80.24) -> student 24 (78.30)
+  kd-train: teacher 21 (80.42) -> student 23 (77.24)
+  kd-train: teacher 1 (80.28) -> student 9 (78.26)
+  kd-train: teacher 28 (80.32) -> student 10 (77.72)
+  kd-train: teacher 5 (80.28) -> student 19 (78.04)
+M0: oracle_total_gain=0.00, non_oracle_total_gain=0.00
+M1: oracle_total_gain=5.82, non_oracle_total_gain=64.90
+M2: oracle_total_gain=-13.04, non_oracle_total_gain=81.86
+M3: oracle_total_gain=34.16, non_oracle_total_gain=36.20
+M4: oracle_total_gain=-13.98, non_oracle_total_gain=77.56
+M5: oracle_total_gain=1.36, non_oracle_total_gain=68.30
+M6: oracle_total_gain=48.92, non_oracle_total_gain=21.42
+M7: oracle_total_gain=-12.28, non_oracle_total_gain=82.36
+M8: oracle_total_gain=-9.90, non_oracle_total_gain=77.12
+M9: oracle_total_gain=-2.02, non_oracle_total_gain=73.68
+M10: oracle_total_gain=-0.56, non_oracle_total_gain=68.08
+M11: oracle_total_gain=-18.48, non_oracle_total_gain=89.02
+M12: oracle_total_gain=5.86, non_oracle_total_gain=63.26
+M13: oracle_total_gain=22.70, non_oracle_total_gain=48.22
+M14: oracle_total_gain=-12.66, non_oracle_total_gain=81.00
+M15: oracle_total_gain=-1.40, non_oracle_total_gain=67.64
+M16: oracle_total_gain=33.94, non_oracle_total_gain=35.12
+M17: oracle_total_gain=-5.64, non_oracle_total_gain=72.44
+M18: oracle_total_gain=2.26, non_oracle_total_gain=64.72
+M19: oracle_total_gain=-8.36, non_oracle_total_gain=76.14
+M20: oracle_total_gain=-0.50, non_oracle_total_gain=71.04
+M21: oracle_total_gain=15.50, non_oracle_total_gain=54.80
+M22: oracle_total_gain=1.16, non_oracle_total_gain=67.12
+M23: oracle_total_gain=-7.12, non_oracle_total_gain=75.98
+M24: oracle_total_gain=-14.70, non_oracle_total_gain=82.92
+M25: oracle_total_gain=17.68, non_oracle_total_gain=52.54
+M26: oracle_total_gain=6.86, non_oracle_total_gain=64.08
+M27: oracle_total_gain=-2.70, non_oracle_total_gain=72.32
+M28: oracle_total_gain=4.56, non_oracle_total_gain=64.20
+M29: oracle_total_gain=9.92, non_oracle_total_gain=61.96
+End time: 2026-04-27 12:17:48
+Duration: 9:59:45.698371
+
+===== Distilling Ensemble → Single Model =====
+[Distill Epoch 1/100] Loss=2.2136 ValAcc=55.08
+[Distill Epoch 2/100] Loss=1.2633 ValAcc=62.62
+[Distill Epoch 3/100] Loss=0.7640 ValAcc=68.34
+[Distill Epoch 4/100] Loss=0.5479 ValAcc=72.38
+[Distill Epoch 5/100] Loss=0.4170 ValAcc=74.18
+[Distill Epoch 6/100] Loss=0.3427 ValAcc=75.48
+[Distill Epoch 7/100] Loss=0.2980 ValAcc=75.90
+[Distill Epoch 8/100] Loss=0.2644 ValAcc=76.28
+[Distill Epoch 9/100] Loss=0.2353 ValAcc=77.20
+[Distill Epoch 10/100] Loss=0.2196 ValAcc=77.52
+[Distill Epoch 11/100] Loss=0.2051 ValAcc=77.96
+[Distill Epoch 12/100] Loss=0.1904 ValAcc=78.10
+[Distill Epoch 13/100] Loss=0.1812 ValAcc=78.56
+[Distill Epoch 14/100] Loss=0.1724 ValAcc=78.34
+[Distill Epoch 15/100] Loss=0.1640 ValAcc=78.80
+[Distill Epoch 16/100] Loss=0.1608 ValAcc=78.94
+[Distill Epoch 17/100] Loss=0.1547 ValAcc=78.56
+[Distill Epoch 18/100] Loss=0.1504 ValAcc=79.22
+[Distill Epoch 19/100] Loss=0.1446 ValAcc=79.66
+[Distill Epoch 20/100] Loss=0.1404 ValAcc=79.50
+[Distill Epoch 21/100] Loss=0.1365 ValAcc=79.80
+[Distill Epoch 22/100] Loss=0.1346 ValAcc=79.74
+[Distill Epoch 23/100] Loss=0.1317 ValAcc=80.18
+[Distill Epoch 24/100] Loss=0.1279 ValAcc=79.58
+[Distill Epoch 25/100] Loss=0.1256 ValAcc=80.00
+[Distill Epoch 26/100] Loss=0.1227 ValAcc=80.04
+[Distill Epoch 27/100] Loss=0.1199 ValAcc=79.92
+[Distill Epoch 28/100] Loss=0.1194 ValAcc=80.08
+[Distill Epoch 29/100] Loss=0.1181 ValAcc=80.18
+[Distill Epoch 30/100] Loss=0.1159 ValAcc=80.54
+[Distill Epoch 31/100] Loss=0.1141 ValAcc=80.00
+[Distill Epoch 32/100] Loss=0.1120 ValAcc=80.06
+[Distill Epoch 33/100] Loss=0.1107 ValAcc=80.32
+[Distill Epoch 34/100] Loss=0.1091 ValAcc=80.04
+[Distill Epoch 35/100] Loss=0.1079 ValAcc=80.50
+[Distill Epoch 36/100] Loss=0.1066 ValAcc=80.26
+[Distill Epoch 37/100] Loss=0.1051 ValAcc=80.84
+[Distill Epoch 38/100] Loss=0.1030 ValAcc=80.46
+[Distill Epoch 39/100] Loss=0.1042 ValAcc=80.46
+[Distill Epoch 40/100] Loss=0.1017 ValAcc=80.44
+[Distill Epoch 41/100] Loss=0.1005 ValAcc=80.48
+[Distill Epoch 42/100] Loss=0.1004 ValAcc=80.64
+[Distill Epoch 43/100] Loss=0.0991 ValAcc=80.58
+[Distill Epoch 44/100] Loss=0.0986 ValAcc=80.44
+[Distill Epoch 45/100] Loss=0.0988 ValAcc=80.92
+[Distill Epoch 46/100] Loss=0.0970 ValAcc=80.76
+[Distill Epoch 47/100] Loss=0.0961 ValAcc=80.62
+[Distill Epoch 48/100] Loss=0.0951 ValAcc=81.02
+[Distill Epoch 49/100] Loss=0.0941 ValAcc=80.80
+[Distill Epoch 50/100] Loss=0.0930 ValAcc=80.60
+[Distill Epoch 51/100] Loss=0.0928 ValAcc=80.66
+[Distill Epoch 52/100] Loss=0.0922 ValAcc=80.68
+[Distill Epoch 53/100] Loss=0.0923 ValAcc=80.52
+[Distill Epoch 54/100] Loss=0.0911 ValAcc=80.96
+[Distill Epoch 55/100] Loss=0.0908 ValAcc=80.80
+[Distill Epoch 56/100] Loss=0.0897 ValAcc=80.88
+[Distill Epoch 57/100] Loss=0.0901 ValAcc=80.64
+[Distill Epoch 58/100] Loss=0.0895 ValAcc=80.74
+[Distill Epoch 59/100] Loss=0.0887 ValAcc=80.74
+[Distill Epoch 60/100] Loss=0.0877 ValAcc=80.38
+[Distill Epoch 61/100] Loss=0.0869 ValAcc=80.52
+[Distill Epoch 62/100] Loss=0.0873 ValAcc=80.62
+[Distill Epoch 63/100] Loss=0.0868 ValAcc=80.62
+[Distill Epoch 64/100] Loss=0.0862 ValAcc=80.56
+[Distill Epoch 65/100] Loss=0.0848 ValAcc=80.74
+[Distill Epoch 66/100] Loss=0.0852 ValAcc=80.68
+[Distill Epoch 67/100] Loss=0.0847 ValAcc=80.16
+[Distill Epoch 68/100] Loss=0.0845 ValAcc=80.38
+[Distill Epoch 69/100] Loss=0.0840 ValAcc=80.54
+[Distill Epoch 70/100] Loss=0.0840 ValAcc=80.80
+[Distill Epoch 71/100] Loss=0.0835 ValAcc=80.92
+[Distill Epoch 72/100] Loss=0.0826 ValAcc=80.60
+[Distill Epoch 73/100] Loss=0.0822 ValAcc=80.92
+[Distill Epoch 74/100] Loss=0.0827 ValAcc=80.98
+[Distill Epoch 75/100] Loss=0.0817 ValAcc=80.42
+[Distill Epoch 76/100] Loss=0.0819 ValAcc=80.88
+[Distill Epoch 77/100] Loss=0.0809 ValAcc=80.78
+[Distill Epoch 78/100] Loss=0.0807 ValAcc=81.14
+[Distill Epoch 79/100] Loss=0.0807 ValAcc=80.70
+[Distill Epoch 80/100] Loss=0.0802 ValAcc=80.76
+[Distill Epoch 81/100] Loss=0.0798 ValAcc=80.88
+[Distill Epoch 82/100] Loss=0.0798 ValAcc=80.80
+[Distill Epoch 83/100] Loss=0.0795 ValAcc=81.02
+[Distill Epoch 84/100] Loss=0.0787 ValAcc=80.92
+[Distill Epoch 85/100] Loss=0.0785 ValAcc=80.92
+[Distill Epoch 86/100] Loss=0.0788 ValAcc=81.00
+[Distill Epoch 87/100] Loss=0.0782 ValAcc=80.86
+[Distill Epoch 88/100] Loss=0.0780 ValAcc=80.88
+[Distill Epoch 89/100] Loss=0.0778 ValAcc=80.82
+[Distill Epoch 90/100] Loss=0.0772 ValAcc=81.06
+[Distill Epoch 91/100] Loss=0.0777 ValAcc=81.20
+[Distill Epoch 92/100] Loss=0.0775 ValAcc=81.08
+[Distill Epoch 93/100] Loss=0.0769 ValAcc=81.34
+[Distill Epoch 94/100] Loss=0.0766 ValAcc=81.18
+[Distill Epoch 95/100] Loss=0.0769 ValAcc=81.00
+[Distill Epoch 96/100] Loss=0.0763 ValAcc=81.04
+[Distill Epoch 97/100] Loss=0.0765 ValAcc=81.10
+[Distill Epoch 98/100] Loss=0.0760 ValAcc=81.22
+[Distill Epoch 99/100] Loss=0.0753 ValAcc=80.96
+[Distill Epoch 100/100] Loss=0.0756 ValAcc=80.94
+
+Distilled Student Test Accuracy: 81.37
+81.27
+81.46
+81.27
+avg_ens_acc = 81.27
+avg_learner_acc = 79.19
+avg_ens_conf = 0.78
+Mean pairwise 0/1 disagreement: 0.127
+M1_acc= 80.16
+M2_acc= 79.39
+M3_acc= 80.79
+M4_acc= 77.52
+M5_acc= 80.21
+M6_acc= 80.19
+M7_acc= 80.17
+M8_acc= 77.86
+M9_acc= 78.27
+M10_acc= 78.37
+M11_acc= 79.56
+M12_acc= 80.11
+M13_acc= 80.42
+M14_acc= 79.13
+M15_acc= 77.78
+M16_acc= 79.8
+M17_acc= 78.74
+M18_acc= 76.11
+M19_acc= 77.78
+M20_acc= 79.99
+M21_acc= 80.12
+M22_acc= 78.54
+M23_acc= 77.78
+M24_acc= 77.91
+M25_acc= 80.09
+M26_acc= 80.08
+M27_acc= 79.89
+M28_acc= 79.78
+M29_acc= 79.99
+std_dev= 1.14
+acc_var= 1.3
+

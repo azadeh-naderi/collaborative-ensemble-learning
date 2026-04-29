@@ -60,21 +60,21 @@ Even if losses are equivalent at the output:
 
 (A) Deep networks are non-convex
 
-    Many parameter configurations give same output
+-Many parameter configurations give same output
     
-    Different losses bias which one is chosen
+-Different losses bias which one is chosen
     
 (B) Losses differ in gradient structure
 
-    CE (one-hot) → sharp, sparse gradients
+-CE (one-hot) → sharp, sparse gradients
     
-    KL (soft targets) → dense, smooth gradients
+-KL (soft targets) → dense, smooth gradients
 
 👉 Leads to:
 
-    different optimization trajectories
+-different optimization trajectories
     
-    different implicit biases
+-different implicit biases
     
 We observed:
 
@@ -83,5 +83,7 @@ CE direction ≠ KL direction
 Now we can state rigorously:
 
 ✔ They have the same global optimum in output space
+
 ✔ But they follow different paths in parameter space
+
 ✔ And land in different regions of feature space

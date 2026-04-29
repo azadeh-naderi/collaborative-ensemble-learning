@@ -55,21 +55,33 @@ Since the loss also worsens, this looks like a genuine optimization mismatch / d
 
 # 4/29/2026
 Why this happens (core intuition)?
+
 Even if losses are equivalent at the output:
+
 (A) Deep networks are non-convex
+
     Many parameter configurations give same output
+    
     Different losses bias which one is chosen
+    
 (B) Losses differ in gradient structure
+
     CE (one-hot) → sharp, sparse gradients
+    
     KL (soft targets) → dense, smooth gradients
 
 👉 Leads to:
+
     different optimization trajectories
+    
     different implicit biases
     
 We observed:
+
 CE direction ≠ KL direction
+
 Now we can state rigorously:
+
 ✔ They have the same global optimum in output space
 ✔ But they follow different paths in parameter space
 ✔ And land in different regions of feature space

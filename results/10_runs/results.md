@@ -1,6 +1,6 @@
 ## results 
 
-| Policy           | student_test_acc        | student_test_acc_no_oracle | avg_ens_acc            | avg_learner_acc        | avg_ens_conf              | mean_pairwise_disagreement | model_acc_std           | model_acc_var |
+| Policy           | Distilled_student_test_acc        | Distilled_student_test_acc_no_oracle | avg_ens_acc            | avg_learner_acc        | avg_ens_conf              | mean_pairwise_disagreement | model_acc_std           | model_acc_var |
 |------------------|------------------------|----------------------------|------------------------|------------------------|----------------------------|------------------------------|--------------------------|---------------|
 | AccDiff          | 83.93 ± 0.29 (0.084)   | 83.85 ± 0.30 (0.088)       | 83.11 ± 0.42 (0.176)   | 81.24 ± 0.33 (0.112)   | 0.809 ± 0.007 (4.8e-05)    | 0.117 ± 0.010 (1.06e-04)     | 1.53 ± 0.52 (0.268)     | 2.615         |
 | ClassDist        | 84.02 ± 0.31 (0.096)   | 83.91 ± 0.32 (0.101)       | 83.42 ± 0.41 (0.169)   | 81.63 ± 0.35 (0.123)   | 0.811 ± 0.007 (5.1e-05)    | **0.115 ± 0.010 (1.02e-04)** | 1.49 ± 0.50 (0.250)     | 2.430         |

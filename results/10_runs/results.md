@@ -1,6 +1,6 @@
 ## results 
 
-| Policy        | student_test_acc        | student_test_acc_no_oracle | ensemble_acc_logprob    | ensemble_acc_prob       | ensemble_acc_logit      | avg_ens_acc            | avg_learner_acc        | avg_ens_conf              | mean_pairwise_disagreement | model_acc_std           | model_acc_var |
+| Policy        | distilled_student_test_acc        | distilled_student_test_acc_no_oracle | ensemble_acc_logprob    | ensemble_acc_prob       | ensemble_acc_logit      | avg_ens_acc            | avg_learner_acc        | avg_ens_conf              | mean_pairwise_disagreement | model_acc_std           | model_acc_var |
 |---------------|------------------------|----------------------------|--------------------------|--------------------------|--------------------------|------------------------|------------------------|----------------------------|------------------------------|--------------------------|---------------|
 | AccDiff       | 83.93 ± 0.29 (0.084)   | 83.85 ± 0.30 (0.088)       | 83.11 ± 0.42 (0.176)     | 83.09 ± 0.45 (0.199)     | 83.11 ± 0.42 (0.176)     | 83.11 ± 0.42 (0.176)   | 81.24 ± 0.33 (0.112)   | 0.809 ± 0.007 (4.8e-05)    | 0.117 ± 0.010 (1.06e-04)     | 1.53 ± 0.52 (0.268)     | 2.615         |
 | MWM_AccDiff   | 84.69 ± 0.31 (0.097)   | 84.56 ± 0.32 (0.104)       | 84.55 ± 0.36 (0.127)     | 84.58 ± 0.37 (0.138)     | 84.55 ± 0.36 (0.127)     | 84.55 ± 0.36 (0.127)   | 82.57 ± 0.40 (0.162)   | 0.820 ± 0.007 (4.2e-05)    | 0.120 ± 0.010 (9.6e-05)      | 1.44 ± 0.47 (0.222)     | 2.110         |

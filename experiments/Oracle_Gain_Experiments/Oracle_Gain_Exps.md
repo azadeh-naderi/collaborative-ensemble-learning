@@ -87,3 +87,5 @@ Now we can state rigorously:
 ✔ But they follow different paths in parameter space
 
 ✔ And land in different regions of feature space
+
+### Note added later: I don't think it is because the teacher's predictions are uncertain or weak (mostly mentioned as the reason in the ML literature). It looks more like the reason is that CE and KL are optimizing in different regions in the manifold (feature space). Because when I remove the KL part, CE gain is not negative anymore, although we still use the same weak/uncertain teacher's pseudo labels. 

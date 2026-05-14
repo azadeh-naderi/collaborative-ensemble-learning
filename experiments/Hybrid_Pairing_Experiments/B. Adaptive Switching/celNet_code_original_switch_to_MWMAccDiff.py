@@ -104,9 +104,9 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # experiments settings
 model_class = ResNet
 num_models = 10
-n_rounds = 200
+n_rounds = 220
 
-switch_to = "MWM_AccDiff"
+
 
 window_size = 5
 oracle_negative_patience = 2

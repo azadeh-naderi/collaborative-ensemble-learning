@@ -33,6 +33,15 @@ but rather:
 
 That means you want oracle learning to improve things that peer learning cannot, and peer learning to improve things that oracle learning does not already fix.
 
+# Better Research Question
+
+Instead of asking: Can I get maximum OG and maximum NG?
+
+ask:Can I reduce redundancy between oracle learning and peer learning so both contribute unique improvements?
+
+That is probably the real issue.
+
+
 ## A) Patience-Based Oracle Blocking
 
 To reduce negative Oracle gain in MWM pairing policies, we used a patience-based Oracle blocking mechanism. After each Oracle update, the student’s validation accuracy gain is measured:

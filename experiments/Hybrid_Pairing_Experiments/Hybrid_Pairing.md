@@ -33,7 +33,7 @@ but rather:
 
 That means you want oracle learning to improve things that peer learning cannot, and peer learning to improve things that oracle learning does not already fix.
 
-# Better Research Question
+#### Better Research Question
 
 Instead of asking: Can I get maximum OG and maximum NG?
 
@@ -69,7 +69,7 @@ AccDiff often maximizes early Oracle learning, while MWM_AccDiff tends to improv
 
 Using a moving average helps avoid switching due to noisy single-round fluctuations, while patience ensures switching only occurs when negative Oracle behavior persists consistently.
 
-Update result: changing sensitivity, because the initial policy (AccDiff) wasn't switched (to MWM_AccDiff)
+#### Update result: changing sensitivity, because the initial policy (AccDiff) wasn't switched (to MWM_AccDiff)
 
   - window_size = 5
   - oracle_negative_patience = 2

@@ -47,6 +47,9 @@ That is probably the real issue.
 To reduce negative Oracle gain in MWM pairing policies, we used a patience-based Oracle blocking mechanism. After each Oracle update, the student’s validation accuracy gain is measured:
 Δoracle = Acc(after) − Acc(before). If the Oracle gain is negative, a counter for that model is increased; otherwise, the counter is reset. Once a model reaches a predefined patience threshold (patience = 2), that model is blocked from future Oracle pairings while still participating in peer-to-peer KD training.
 
+#### Update result: It worked and og in not negative anymore but it does not reach the final ens_acc without removing oracle. So using moving average oracle gain: if the average_og is negative over the last 3 updates, then the model will be removed from oracle pairing. 
+
+
 ## B) Adaptive Switching via Average Oracle Gain
 
 This experiment introduces an adaptive pairing strategy that dynamically switches policies when Oracle learning becomes unstable during collaborative ensemble training.

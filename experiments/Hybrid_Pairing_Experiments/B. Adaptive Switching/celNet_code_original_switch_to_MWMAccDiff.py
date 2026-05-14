@@ -106,15 +106,20 @@ model_class = ResNet
 num_models = 10
 n_rounds = 200
 
+switch_to = "MWM_AccDiff"
+
+window_size = 5
+oracle_negative_patience = 2
+oracle_negative_threshold = 0.5
+min_round_before_switch = 80
+
 pairing_strategy = "AccDiff"
 switch_to = "MWM_AccDiff"
 current_pairing_strategy = pairing_strategy
 strategy_switched = False
-oracle_negative_threshold = 0.0
-oracle_negative_patience = 3
-window_size = 5
+
 oracle_gain_window = []
-min_round_before_switch = 40
+
 negative_oracle_counter = 0
 
 

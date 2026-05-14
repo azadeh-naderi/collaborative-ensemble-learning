@@ -17,4 +17,27 @@ MWM_AccDiff:
 To reduce negative Oracle gain in MWM pairing policies, we used a patience-based Oracle blocking mechanism. After each Oracle update, the student’s validation accuracy gain is measured:
 Δoracle = Acc(after) − Acc(before). If the Oracle gain is negative, a counter for that model is increased; otherwise, the counter is reset. Once a model reaches a predefined patience threshold (patience = 2), that model is blocked from future Oracle pairings while still participating in peer-to-peer KD training.
 
+## B) Adaptive Switching via Moving-Average Oracle Gain
+
+This experiment introduces an adaptive pairing strategy that dynamically switches policies when Oracle learning becomes unstable during collaborative ensemble training.
+
+Training begins with an Oracle-focused policy such as AccDiff, which typically produces strong early learning gains by pairing weak learners with stronger models or the Oracle. During training, the framework continuously tracks Oracle gain: oracle_gain = student_accuracy_after_oracle - student_accuracy_before_oracle
+
+A moving average of recent Oracle gains is computed over a sliding window. If the moving-average Oracle gain remains negative for several consecutive rounds (patience), the training policy automatically switches to another strategy such as MWM_AccDiff.
+
+Example configuration:
+  - pairing_strategy = "AccDiff"
+  - switch_to = "MWM_AccDiff"
+  - window_size = 5
+  - oracle_negative_patience = 3
+  - oracle_negative_threshold = 0.0
+  - min_round_before_switch = 40
+
+The motivation is that:
+
+AccDiff often maximizes early Oracle learning, while MWM_AccDiff tends to improve later-stage peer-to-peer learning and knowledge diffusion.
+
+Using a moving average helps avoid switching due to noisy single-round fluctuations, while patience ensures switching only occurs when negative Oracle behavior persists consistently.
+
+
 

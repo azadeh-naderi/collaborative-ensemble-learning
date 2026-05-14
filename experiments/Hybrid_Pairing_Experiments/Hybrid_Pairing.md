@@ -69,5 +69,10 @@ AccDiff often maximizes early Oracle learning, while MWM_AccDiff tends to improv
 
 Using a moving average helps avoid switching due to noisy single-round fluctuations, while patience ensures switching only occurs when negative Oracle behavior persists consistently.
 
+Update result: changing sensitivity, because the initial policy (AccDiff) wasn't switched (to MWM_AccDiff)
 
+  -window_size = 5
+  -oracle_negative_patience = 2
+  -oracle_negative_threshold = 0.5
+  -min_round_before_switch = 80
 

@@ -11,6 +11,27 @@ MWM_AccDiff:
   - oracle gain eventually becomes negative
   - but non-oracle gain becomes extremely strong
 
+from plot, this looks like a compensation trade-off:
+
+Final gain≈Oracle gain+Non-oracle gain
+
+So when OG goes up, NG goes down; when NG goes up, OG goes down. That is why final accuracy can stay almost the same.
+
+The key point is: you may not be able to maximize both independently with one fixed policy, because the two gains compete for the same limited resources:
+
+  - only one update per student per round
+  - only one oracle interaction per round
+  - same models are used for both oracle and peer learning
+  - oracle training can make models more similar, reducing useful peer diversity
+  - peer diffusion can move models away from oracle-aligned direction, reducing later oracle benefit
+
+So the goal should not be simply:
+  - maximize OG and maximize NG separately
+
+but rather:
+  - maximize non-overlapping / complementary OG and NG.
+
+That means you want oracle learning to improve things that peer learning cannot, and peer learning to improve things that oracle learning does not already fix.
 
 ## A) Patience-Based Oracle Blocking
 

@@ -1,0 +1,2236 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Start time: 2026-05-13 22:06:16
+
+=== Round 1/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 7.42
+  oracle-gain in this round: 29.10
+  kd-train: teacher 4 (13.66) -> student 1 (9.56)
+  kd-train: teacher 2 (11.10) -> student 3 (9.94)
+  kd-train: teacher 5 (10.62) -> student 7 (10.00)
+  kd-train: teacher 8 (10.58) -> student 6 (10.10)
+Recent oracle gain moving average (1/5): 29.1000
+
+=== Round 2/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 9.42
+  oracle-gain in this round: 22.14
+  kd-train: teacher 9 (36.52) -> student 6 (10.44)
+  kd-train: teacher 4 (13.66) -> student 7 (10.58)
+  kd-train: teacher 1 (11.18) -> student 8 (10.58)
+  kd-train: teacher 2 (11.10) -> student 5 (10.62)
+Recent oracle gain moving average (2/5): 25.6200
+
+=== Round 3/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 9.50
+  oracle-gain in this round: 32.82
+  kd-train: teacher 9 (36.52) -> student 8 (10.28)
+  kd-train: teacher 6 (33.54) -> student 2 (11.10)
+  kd-train: teacher 3 (31.56) -> student 1 (11.18)
+  kd-train: teacher 7 (14.64) -> student 4 (13.66)
+Recent oracle gain moving average (3/5): 28.0200
+
+=== Round 4/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 13.28
+  oracle-gain in this round: 21.42
+  kd-train: teacher 5 (42.32) -> student 7 (14.64)
+  kd-train: teacher 9 (36.52) -> student 2 (26.92)
+  kd-train: teacher 8 (33.62) -> student 1 (28.66)
+  kd-train: teacher 6 (33.54) -> student 3 (31.56)
+Recent oracle gain moving average (4/5): 26.3700
+
+=== Round 5/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 32.30
+  oracle-gain in this round: 11.32
+  kd-train: teacher 5 (42.32) -> student 3 (32.38)
+  kd-train: teacher 7 (37.96) -> student 2 (32.46)
+  kd-train: teacher 9 (36.52) -> student 6 (33.54)
+  kd-train: teacher 4 (34.70) -> student 8 (33.62)
+Recent oracle gain moving average (5/5): 23.3600
+
+=== Round 6/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 33.92
+  oracle-gain in this round: 11.78
+  kd-train: teacher 1 (43.62) -> student 4 (34.70)
+  kd-train: teacher 5 (42.32) -> student 6 (34.98)
+  kd-train: teacher 3 (39.52) -> student 2 (35.36)
+  kd-train: teacher 7 (37.96) -> student 9 (36.52)
+Recent oracle gain moving average (5/5): 19.8960
+
+=== Round 7/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 34.48
+  oracle-gain in this round: 12.48
+  kd-train: teacher 8 (45.70) -> student 7 (37.96)
+  kd-train: teacher 1 (43.62) -> student 2 (39.24)
+  kd-train: teacher 5 (42.32) -> student 4 (39.42)
+  kd-train: teacher 6 (41.40) -> student 3 (39.52)
+Recent oracle gain moving average (5/5): 17.9640
+
+=== Round 8/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 38.96
+  oracle-gain in this round: 11.18
+  kd-train: teacher 9 (46.96) -> student 7 (39.82)
+  kd-train: teacher 8 (45.70) -> student 2 (40.52)
+  kd-train: teacher 1 (43.62) -> student 6 (41.40)
+  kd-train: teacher 5 (42.32) -> student 4 (42.12)
+Recent oracle gain moving average (5/5): 13.6360
+
+=== Round 9/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 40.10
+  oracle-gain in this round: 12.12
+  kd-train: teacher 3 (50.14) -> student 4 (41.84)
+  kd-train: teacher 9 (46.96) -> student 5 (42.32)
+  kd-train: teacher 7 (45.98) -> student 2 (43.38)
+  kd-train: teacher 8 (45.70) -> student 1 (43.62)
+Recent oracle gain moving average (5/5): 11.7760
+
+=== Round 10/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 42.68
+  oracle-gain in this round: 8.84
+  kd-train: teacher 6 (52.22) -> student 1 (43.86)
+  kd-train: teacher 3 (50.14) -> student 5 (44.74)
+  kd-train: teacher 9 (46.96) -> student 2 (45.32)
+  kd-train: teacher 7 (45.98) -> student 8 (45.70)
+Recent oracle gain moving average (5/5): 11.2800
+
+=== Round 11/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 45.16
+  oracle-gain in this round: 7.50
+  kd-train: teacher 6 (52.22) -> student 2 (45.34)
+  kd-train: teacher 4 (51.52) -> student 7 (45.98)
+  kd-train: teacher 3 (50.14) -> student 9 (46.96)
+  kd-train: teacher 1 (48.72) -> student 5 (47.32)
+Recent oracle gain moving average (5/5): 10.4240
+
+=== Round 12/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 46.10
+  oracle-gain in this round: 9.08
+  kd-train: teacher 8 (52.66) -> student 9 (47.42)
+  kd-train: teacher 6 (52.22) -> student 2 (47.66)
+  kd-train: teacher 4 (51.52) -> student 1 (48.72)
+  kd-train: teacher 3 (50.14) -> student 7 (50.12)
+Recent oracle gain moving average (5/5): 9.7440
+
+=== Round 13/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 48.20
+  oracle-gain in this round: 9.66
+  kd-train: teacher 5 (55.18) -> student 7 (48.92)
+  kd-train: teacher 8 (52.66) -> student 9 (49.86)
+  kd-train: teacher 6 (52.22) -> student 3 (50.14)
+  kd-train: teacher 4 (51.52) -> student 2 (50.62)
+Recent oracle gain moving average (5/5): 9.4400
+
+=== Round 14/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 49.18
+  oracle-gain in this round: 3.74
+  kd-train: teacher 1 (57.86) -> student 9 (50.76)
+  kd-train: teacher 5 (55.18) -> student 2 (51.00)
+  kd-train: teacher 8 (52.66) -> student 7 (51.28)
+  kd-train: teacher 6 (52.22) -> student 4 (51.52)
+Recent oracle gain moving average (5/5): 7.7640
+
+=== Round 15/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 51.60
+  oracle-gain in this round: 6.42
+  kd-train: teacher 1 (57.86) -> student 6 (52.22)
+  kd-train: teacher 9 (56.58) -> student 4 (52.44)
+  kd-train: teacher 5 (55.18) -> student 8 (52.66)
+  kd-train: teacher 2 (53.56) -> student 3 (52.92)
+Recent oracle gain moving average (5/5): 7.2800
+
+=== Round 16/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 44.24
+  oracle-gain in this round: 11.38
+  kd-train: teacher 7 (58.02) -> student 8 (48.80)
+  kd-train: teacher 1 (57.86) -> student 2 (53.56)
+  kd-train: teacher 6 (56.68) -> student 5 (55.18)
+  kd-train: teacher 9 (56.58) -> student 4 (56.42)
+Recent oracle gain moving average (5/5): 8.0560
+
+=== Round 17/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 55.40
+  oracle-gain in this round: 7.88
+  kd-train: teacher 7 (58.02) -> student 3 (55.62)
+  kd-train: teacher 1 (57.86) -> student 4 (55.68)
+  kd-train: teacher 2 (57.00) -> student 9 (56.58)
+  kd-train: teacher 8 (56.84) -> student 6 (56.68)
+Recent oracle gain moving average (5/5): 7.8160
+
+=== Round 18/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 54.14
+  oracle-gain in this round: 4.68
+  kd-train: teacher 5 (63.28) -> student 6 (56.18)
+  kd-train: teacher 3 (58.08) -> student 8 (56.84)
+  kd-train: teacher 7 (58.02) -> student 2 (57.00)
+  kd-train: teacher 1 (57.86) -> student 4 (57.02)
+Recent oracle gain moving average (5/5): 6.8200
+
+=== Round 19/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 54.42
+  oracle-gain in this round: 8.74
+  kd-train: teacher 5 (63.28) -> student 8 (56.22)
+  kd-train: teacher 6 (60.36) -> student 1 (57.86)
+  kd-train: teacher 9 (58.82) -> student 4 (57.98)
+  kd-train: teacher 3 (58.08) -> student 7 (58.02)
+Recent oracle gain moving average (5/5): 7.8200
+
+=== Round 20/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 55.72
+  oracle-gain in this round: 6.60
+  kd-train: teacher 5 (63.28) -> student 1 (57.20)
+  kd-train: teacher 2 (63.16) -> student 7 (57.44)
+  kd-train: teacher 8 (61.28) -> student 3 (58.08)
+  kd-train: teacher 6 (60.36) -> student 9 (58.82)
+Recent oracle gain moving average (5/5): 7.8560
+
+=== Round 21/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 58.72
+  oracle-gain in this round: 2.52
+  kd-train: teacher 5 (63.28) -> student 9 (58.82)
+  kd-train: teacher 2 (63.16) -> student 7 (59.68)
+  kd-train: teacher 4 (62.32) -> student 6 (60.36)
+  kd-train: teacher 1 (61.36) -> student 8 (61.28)
+Recent oracle gain moving average (5/5): 6.0840
+
+=== Round 22/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 59.72
+  oracle-gain in this round: 2.48
+  kd-train: teacher 5 (63.28) -> student 6 (60.20)
+  kd-train: teacher 7 (63.22) -> student 3 (61.24)
+  kd-train: teacher 2 (63.16) -> student 1 (61.36)
+  kd-train: teacher 4 (62.32) -> student 9 (61.94)
+Recent oracle gain moving average (5/5): 5.0040
+
+=== Round 23/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 58.06
+  oracle-gain in this round: 5.78
+  kd-train: teacher 5 (63.28) -> student 1 (60.20)
+  kd-train: teacher 7 (63.22) -> student 8 (62.20)
+  kd-train: teacher 6 (63.20) -> student 4 (62.32)
+  kd-train: teacher 3 (63.18) -> student 2 (63.16)
+Recent oracle gain moving average (5/5): 5.2240
+
+=== Round 24/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 61.92
+  oracle-gain in this round: 0.86
+  kd-train: teacher 9 (63.84) -> student 1 (62.04)
+  kd-train: teacher 8 (63.66) -> student 3 (63.18)
+  kd-train: teacher 4 (63.66) -> student 6 (63.20)
+  kd-train: teacher 5 (63.28) -> student 7 (63.22)
+Recent oracle gain moving average (5/5): 3.6480
+
+=== Round 25/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 61.08
+  oracle-gain in this round: -0.12
+  kd-train: teacher 9 (63.84) -> student 1 (61.46)
+  kd-train: teacher 8 (63.66) -> student 3 (61.84)
+  kd-train: teacher 4 (63.66) -> student 2 (62.78)
+  kd-train: teacher 5 (63.28) -> student 7 (62.90)
+Recent oracle gain moving average (5/5): 2.3040
+
+=== Round 26/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 60.96
+  oracle-gain in this round: 4.30
+  kd-train: teacher 9 (63.84) -> student 3 (61.48)
+  kd-train: teacher 8 (63.66) -> student 7 (61.84)
+  kd-train: teacher 4 (63.66) -> student 1 (62.74)
+  kd-train: teacher 5 (63.28) -> student 2 (63.26)
+Recent oracle gain moving average (5/5): 2.6600
+
+=== Round 27/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 59.14
+  oracle-gain in this round: 4.30
+  kd-train: teacher 6 (65.26) -> student 7 (61.80)
+  kd-train: teacher 2 (64.50) -> student 1 (62.72)
+  kd-train: teacher 9 (63.84) -> student 5 (63.28)
+  kd-train: teacher 4 (63.66) -> student 8 (63.66)
+Recent oracle gain moving average (5/5): 3.0240
+
+=== Round 28/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 58.08
+  oracle-gain in this round: 7.96
+  kd-train: teacher 6 (65.26) -> student 5 (61.54)
+  kd-train: teacher 2 (64.50) -> student 8 (62.22)
+  kd-train: teacher 1 (64.16) -> student 3 (63.44)
+  kd-train: teacher 9 (63.84) -> student 4 (63.66)
+Recent oracle gain moving average (5/5): 3.4600
+
+=== Round 29/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 60.28
+  oracle-gain in this round: 4.24
+  kd-train: teacher 7 (66.04) -> student 4 (61.46)
+  kd-train: teacher 6 (65.26) -> student 8 (63.74)
+  kd-train: teacher 2 (64.50) -> student 9 (63.84)
+  kd-train: teacher 1 (64.16) -> student 3 (64.12)
+Recent oracle gain moving average (5/5): 4.1360
+
+=== Round 30/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 57.02
+  oracle-gain in this round: 7.30
+  kd-train: teacher 7 (66.04) -> student 9 (63.84)
+  kd-train: teacher 6 (65.26) -> student 1 (64.16)
+  kd-train: teacher 5 (64.52) -> student 3 (64.44)
+  kd-train: teacher 4 (64.52) -> student 2 (64.50)
+Recent oracle gain moving average (5/5): 5.6200
+
+=== Round 31/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 61.88
+  oracle-gain in this round: 5.20
+  kd-train: teacher 7 (66.04) -> student 1 (62.32)
+  kd-train: teacher 6 (65.26) -> student 8 (64.32)
+  kd-train: teacher 2 (64.70) -> student 4 (64.52)
+  kd-train: teacher 9 (64.54) -> student 5 (64.52)
+Recent oracle gain moving average (5/5): 5.8000
+
+=== Round 32/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 63.54
+  oracle-gain in this round: 1.72
+  kd-train: teacher 3 (67.08) -> student 5 (63.70)
+  kd-train: teacher 7 (66.04) -> student 9 (64.54)
+  kd-train: teacher 6 (65.26) -> student 2 (64.70)
+  kd-train: teacher 8 (65.18) -> student 1 (65.10)
+Recent oracle gain moving average (5/5): 5.2840
+
+=== Round 33/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 61.24
+  oracle-gain in this round: 5.38
+  kd-train: teacher 3 (67.08) -> student 1 (63.82)
+  kd-train: teacher 9 (66.48) -> student 5 (65.14)
+  kd-train: teacher 7 (66.04) -> student 8 (65.18)
+  kd-train: teacher 4 (65.26) -> student 6 (65.26)
+Recent oracle gain moving average (5/5): 4.7680
+
+=== Round 34/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 63.12
+  oracle-gain in this round: 3.46
+  kd-train: teacher 8 (67.14) -> student 5 (64.88)
+  kd-train: teacher 3 (67.08) -> student 4 (65.26)
+  kd-train: teacher 2 (66.62) -> student 7 (66.04)
+  kd-train: teacher 9 (66.48) -> student 1 (66.18)
+Recent oracle gain moving average (5/5): 4.6120
+
+=== Round 35/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 64.94
+  oracle-gain in this round: 1.24
+  kd-train: teacher 8 (67.14) -> student 7 (65.68)
+  kd-train: teacher 4 (67.14) -> student 9 (66.48)
+  kd-train: teacher 3 (67.08) -> student 6 (66.58)
+  kd-train: teacher 5 (66.82) -> student 2 (66.62)
+Recent oracle gain moving average (5/5): 3.4000
+
+=== Round 36/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 65.18
+  oracle-gain in this round: 1.20
+  kd-train: teacher 8 (67.14) -> student 1 (66.18)
+  kd-train: teacher 4 (67.14) -> student 7 (66.18)
+  kd-train: teacher 3 (67.08) -> student 2 (66.46)
+  kd-train: teacher 6 (66.92) -> student 5 (66.82)
+Recent oracle gain moving average (5/5): 2.6000
+
+=== Round 37/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 63.30
+  oracle-gain in this round: -0.86
+  kd-train: teacher 8 (67.14) -> student 7 (64.46)
+  kd-train: teacher 4 (67.14) -> student 2 (66.02)
+  kd-train: teacher 3 (67.08) -> student 9 (66.38)
+  kd-train: teacher 6 (66.92) -> student 1 (66.86)
+Recent oracle gain moving average (5/5): 2.0840
+
+=== Round 38/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 62.44
+  oracle-gain in this round: 6.56
+  kd-train: teacher 8 (67.14) -> student 2 (66.12)
+  kd-train: teacher 4 (67.14) -> student 1 (66.72)
+  kd-train: teacher 9 (67.10) -> student 6 (66.92)
+  kd-train: teacher 3 (67.08) -> student 7 (67.04)
+Recent oracle gain moving average (5/5): 2.3200
+
+=== Round 39/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 64.02
+  oracle-gain in this round: 3.94
+  kd-train: teacher 5 (69.00) -> student 1 (66.68)
+  kd-train: teacher 6 (68.24) -> student 3 (67.08)
+  kd-train: teacher 2 (67.96) -> student 9 (67.10)
+  kd-train: teacher 4 (67.14) -> student 8 (67.14)
+Recent oracle gain moving average (5/5): 2.4160
+
+=== Round 40/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 63.90
+  oracle-gain in this round: 5.04
+  kd-train: teacher 5 (69.00) -> student 4 (67.14)
+  kd-train: teacher 9 (68.48) -> student 3 (67.58)
+  kd-train: teacher 6 (68.24) -> student 1 (67.88)
+  kd-train: teacher 2 (67.96) -> student 7 (67.96)
+Recent oracle gain moving average (5/5): 3.1760
+
+=== Round 41/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 66.44
+  oracle-gain in this round: 3.66
+  kd-train: teacher 5 (69.00) -> student 3 (66.94)
+  kd-train: teacher 8 (68.94) -> student 2 (67.96)
+  kd-train: teacher 9 (68.48) -> student 1 (68.22)
+  kd-train: teacher 7 (68.32) -> student 6 (68.24)
+Recent oracle gain moving average (5/5): 3.6680
+
+=== Round 42/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 66.80
+  oracle-gain in this round: 1.50
+  kd-train: teacher 4 (70.10) -> student 6 (67.98)
+  kd-train: teacher 5 (69.00) -> student 1 (68.18)
+  kd-train: teacher 8 (68.94) -> student 7 (68.32)
+  kd-train: teacher 3 (68.90) -> student 9 (68.48)
+Recent oracle gain moving average (5/5): 4.1400
+
+=== Round 43/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 66.88
+  oracle-gain in this round: 1.28
+  kd-train: teacher 4 (70.10) -> student 9 (67.04)
+  kd-train: teacher 5 (69.00) -> student 2 (68.30)
+  kd-train: teacher 8 (68.94) -> student 1 (68.34)
+  kd-train: teacher 3 (68.90) -> student 7 (68.88)
+Recent oracle gain moving average (5/5): 3.0840
+
+=== Round 44/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 66.98
+  oracle-gain in this round: 1.08
+  kd-train: teacher 4 (70.10) -> student 1 (67.88)
+  kd-train: teacher 7 (69.04) -> student 2 (68.08)
+  kd-train: teacher 5 (69.00) -> student 6 (68.16)
+  kd-train: teacher 8 (68.94) -> student 3 (68.90)
+Recent oracle gain moving average (5/5): 2.5120
+
+=== Round 45/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 67.22
+  oracle-gain in this round: 2.20
+  kd-train: teacher 4 (70.10) -> student 2 (67.40)
+  kd-train: teacher 7 (69.04) -> student 9 (68.06)
+  kd-train: teacher 5 (69.00) -> student 3 (68.10)
+  kd-train: teacher 6 (68.96) -> student 8 (68.94)
+Recent oracle gain moving average (5/5): 1.9440
+
+=== Round 46/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 65.52
+  oracle-gain in this round: 2.18
+  kd-train: teacher 4 (70.10) -> student 9 (67.48)
+  kd-train: teacher 1 (69.42) -> student 2 (68.32)
+  kd-train: teacher 7 (69.04) -> student 8 (68.36)
+  kd-train: teacher 5 (69.00) -> student 6 (68.96)
+Recent oracle gain moving average (5/5): 1.6480
+
+=== Round 47/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 67.00
+  oracle-gain in this round: 1.28
+  kd-train: teacher 4 (70.10) -> student 3 (67.70)
+  kd-train: teacher 1 (69.42) -> student 2 (68.00)
+  kd-train: teacher 7 (69.04) -> student 9 (68.24)
+  kd-train: teacher 5 (69.00) -> student 8 (68.36)
+Recent oracle gain moving average (5/5): 1.6040
+
+=== Round 48/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 67.38
+  oracle-gain in this round: 2.22
+  kd-train: teacher 4 (70.10) -> student 2 (67.92)
+  kd-train: teacher 1 (69.42) -> student 3 (67.98)
+  kd-train: teacher 7 (69.04) -> student 6 (68.28)
+  kd-train: teacher 5 (69.00) -> student 8 (68.90)
+Recent oracle gain moving average (5/5): 1.7920
+
+=== Round 49/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 67.66
+  oracle-gain in this round: 2.96
+  kd-train: teacher 8 (70.78) -> student 2 (68.44)
+  kd-train: teacher 4 (70.10) -> student 5 (69.00)
+  kd-train: teacher 9 (69.60) -> student 7 (69.04)
+  kd-train: teacher 1 (69.42) -> student 3 (69.32)
+Recent oracle gain moving average (5/5): 2.1680
+
+=== Round 50/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 67.20
+  oracle-gain in this round: 3.20
+  kd-train: teacher 8 (70.78) -> student 7 (69.04)
+  kd-train: teacher 6 (70.62) -> student 2 (69.22)
+  kd-train: teacher 4 (70.10) -> student 1 (69.42)
+  kd-train: teacher 5 (69.60) -> student 9 (69.60)
+Recent oracle gain moving average (5/5): 2.3680
+
+=== Round 51/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 68.82
+  oracle-gain in this round: -2.96
+  kd-train: teacher 8 (70.78) -> student 9 (68.86)
+  kd-train: teacher 6 (70.62) -> student 1 (69.14)
+  kd-train: teacher 7 (70.40) -> student 5 (69.60)
+  kd-train: teacher 3 (70.40) -> student 4 (70.10)
+Recent oracle gain moving average (5/5): 1.3400
+
+=== Round 52/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 65.86
+  oracle-gain in this round: 7.16
+  kd-train: teacher 8 (70.78) -> student 1 (68.30)
+  kd-train: teacher 6 (70.62) -> student 5 (70.38)
+  kd-train: teacher 9 (70.52) -> student 3 (70.40)
+  kd-train: teacher 4 (70.44) -> student 7 (70.40)
+Recent oracle gain moving average (5/5): 2.5160
+
+=== Round 53/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 69.24
+  oracle-gain in this round: 0.52
+  kd-train: teacher 2 (73.02) -> student 3 (69.86)
+  kd-train: teacher 1 (71.14) -> student 5 (70.24)
+  kd-train: teacher 8 (70.78) -> student 4 (70.44)
+  kd-train: teacher 6 (70.62) -> student 9 (70.52)
+Recent oracle gain moving average (5/5): 2.1760
+
+=== Round 54/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 69.76
+  oracle-gain in this round: 0.72
+  kd-train: teacher 2 (73.02) -> student 7 (69.76)
+  kd-train: teacher 3 (71.80) -> student 9 (70.04)
+  kd-train: teacher 1 (71.14) -> student 6 (70.62)
+  kd-train: teacher 4 (70.98) -> student 8 (70.78)
+Recent oracle gain moving average (5/5): 1.7280
+
+=== Round 55/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 70.30
+  oracle-gain in this round: -1.84
+  kd-train: teacher 2 (73.02) -> student 9 (70.44)
+  kd-train: teacher 3 (71.80) -> student 5 (70.48)
+  kd-train: teacher 6 (71.34) -> student 7 (70.92)
+  kd-train: teacher 1 (71.14) -> student 4 (70.98)
+Recent oracle gain moving average (5/5): 0.7200
+
+=== Round 56/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 68.32
+  oracle-gain in this round: 0.22
+  kd-train: teacher 2 (73.02) -> student 8 (68.46)
+  kd-train: teacher 3 (71.80) -> student 5 (70.14)
+  kd-train: teacher 7 (71.66) -> student 1 (71.14)
+  kd-train: teacher 9 (71.46) -> student 6 (71.34)
+Recent oracle gain moving average (5/5): 1.3560
+
+=== Round 57/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 68.54
+  oracle-gain in this round: 3.50
+  kd-train: teacher 2 (73.02) -> student 6 (70.28)
+  kd-train: teacher 3 (71.80) -> student 1 (70.66)
+  kd-train: teacher 7 (71.66) -> student 5 (70.72)
+  kd-train: teacher 9 (71.46) -> student 8 (71.40)
+Recent oracle gain moving average (5/5): 0.6240
+
+=== Round 58/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 70.08
+  oracle-gain in this round: 1.32
+  kd-train: teacher 2 (73.02) -> student 8 (71.08)
+  kd-train: teacher 4 (72.04) -> student 6 (71.44)
+  kd-train: teacher 3 (71.80) -> student 9 (71.46)
+  kd-train: teacher 7 (71.66) -> student 5 (71.52)
+Recent oracle gain moving average (5/5): 0.7840
+
+=== Round 59/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 69.54
+  oracle-gain in this round: 0.48
+  kd-train: teacher 2 (73.02) -> student 6 (70.62)
+  kd-train: teacher 4 (72.04) -> student 9 (71.38)
+  kd-train: teacher 5 (72.02) -> student 1 (71.40)
+  kd-train: teacher 3 (71.80) -> student 7 (71.66)
+Recent oracle gain moving average (5/5): 0.7360
+
+=== Round 60/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 70.02
+  oracle-gain in this round: 2.14
+  kd-train: teacher 2 (73.02) -> student 9 (70.28)
+  kd-train: teacher 4 (72.04) -> student 1 (70.64)
+  kd-train: teacher 5 (72.02) -> student 6 (70.94)
+  kd-train: teacher 3 (71.80) -> student 7 (70.96)
+Recent oracle gain moving average (5/5): 1.5320
+
+=== Round 61/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 70.38
+  oracle-gain in this round: 0.74
+  kd-train: teacher 2 (73.02) -> student 6 (70.42)
+  kd-train: teacher 8 (72.16) -> student 7 (70.88)
+  kd-train: teacher 4 (72.04) -> student 9 (71.02)
+  kd-train: teacher 5 (72.02) -> student 3 (71.80)
+Recent oracle gain moving average (5/5): 1.6360
+
+=== Round 62/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 68.68
+  oracle-gain in this round: 3.34
+  kd-train: teacher 2 (73.02) -> student 7 (69.02)
+  kd-train: teacher 6 (72.50) -> student 1 (71.12)
+  kd-train: teacher 8 (72.16) -> student 3 (71.54)
+  kd-train: teacher 4 (72.04) -> student 5 (72.02)
+Recent oracle gain moving average (5/5): 1.6040
+
+=== Round 63/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 71.52
+  oracle-gain in this round: 0.54
+  kd-train: teacher 5 (73.28) -> student 9 (72.02)
+  kd-train: teacher 2 (73.02) -> student 1 (72.04)
+  kd-train: teacher 7 (72.50) -> student 4 (72.04)
+  kd-train: teacher 6 (72.50) -> student 8 (72.16)
+Recent oracle gain moving average (5/5): 1.4480
+
+=== Round 64/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 72.04
+  oracle-gain in this round: -0.54
+  kd-train: teacher 5 (73.28) -> student 3 (72.06)
+  kd-train: teacher 2 (73.02) -> student 8 (72.10)
+  kd-train: teacher 1 (72.92) -> student 9 (72.18)
+  kd-train: teacher 6 (72.50) -> student 7 (72.50)
+Recent oracle gain moving average (5/5): 1.2440
+
+=== Round 65/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 70.90
+  oracle-gain in this round: -2.44
+  kd-train: teacher 5 (73.28) -> student 4 (71.50)
+  kd-train: teacher 2 (73.02) -> student 7 (71.68)
+  kd-train: teacher 1 (72.92) -> student 8 (72.00)
+  kd-train: teacher 3 (72.88) -> student 6 (72.50)
+Recent oracle gain moving average (5/5): 0.3280
+
+=== Round 66/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 68.46
+  oracle-gain in this round: 4.82
+  kd-train: teacher 4 (73.68) -> student 8 (71.00)
+  kd-train: teacher 5 (73.28) -> student 6 (71.52)
+  kd-train: teacher 2 (73.02) -> student 7 (71.98)
+  kd-train: teacher 1 (72.92) -> student 3 (72.88)
+Recent oracle gain moving average (5/5): 1.1440
+
+=== Round 67/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 71.50
+  oracle-gain in this round: 0.30
+  kd-train: teacher 4 (73.68) -> student 7 (71.66)
+  kd-train: teacher 8 (73.56) -> student 3 (71.96)
+  kd-train: teacher 9 (73.28) -> student 1 (72.92)
+  kd-train: teacher 5 (73.28) -> student 2 (73.02)
+Recent oracle gain moving average (5/5): 0.5360
+
+=== Round 68/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 71.34
+  oracle-gain in this round: 0.60
+  kd-train: teacher 4 (73.68) -> student 7 (71.64)
+  kd-train: teacher 8 (73.56) -> student 6 (71.80)
+  kd-train: teacher 9 (73.28) -> student 2 (72.04)
+  kd-train: teacher 5 (73.28) -> student 3 (72.08)
+Recent oracle gain moving average (5/5): 0.5480
+
+=== Round 69/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 71.00
+  oracle-gain in this round: 1.32
+  kd-train: teacher 4 (73.68) -> student 1 (71.94)
+  kd-train: teacher 8 (73.56) -> student 7 (72.62)
+  kd-train: teacher 6 (73.40) -> student 3 (72.68)
+  kd-train: teacher 5 (73.28) -> student 9 (73.28)
+Recent oracle gain moving average (5/5): 0.9200
+
+=== Round 70/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 72.18
+  oracle-gain in this round: -2.14
+  kd-train: teacher 1 (74.40) -> student 2 (72.32)
+  kd-train: teacher 9 (74.20) -> student 3 (73.14)
+  kd-train: teacher 4 (73.68) -> student 5 (73.28)
+  kd-train: teacher 8 (73.56) -> student 6 (73.40)
+Recent oracle gain moving average (5/5): 0.9800
+
+=== Round 71/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 70.04
+  oracle-gain in this round: 3.62
+  kd-train: teacher 1 (74.40) -> student 6 (71.54)
+  kd-train: teacher 9 (74.20) -> student 2 (72.80)
+  kd-train: teacher 3 (73.70) -> student 5 (72.82)
+  kd-train: teacher 4 (73.68) -> student 8 (73.56)
+Recent oracle gain moving average (5/5): 0.7400
+
+=== Round 72/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 73.08
+  oracle-gain in this round: -1.22
+  kd-train: teacher 1 (74.40) -> student 6 (73.10)
+  kd-train: teacher 9 (74.20) -> student 8 (73.38)
+  kd-train: teacher 3 (73.70) -> student 2 (73.52)
+  kd-train: teacher 4 (73.68) -> student 7 (73.66)
+Recent oracle gain moving average (5/5): 0.4360
+
+=== Round 73/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 71.86
+  oracle-gain in this round: 0.52
+  kd-train: teacher 1 (74.40) -> student 2 (73.22)
+  kd-train: teacher 9 (74.20) -> student 8 (73.44)
+  kd-train: teacher 7 (73.92) -> student 4 (73.68)
+  kd-train: teacher 6 (73.92) -> student 3 (73.70)
+Recent oracle gain moving average (5/5): 0.4200
+
+=== Round 74/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 72.38
+  oracle-gain in this round: 2.54
+  kd-train: teacher 4 (74.52) -> student 3 (72.84)
+  kd-train: teacher 1 (74.40) -> student 2 (72.98)
+  kd-train: teacher 9 (74.20) -> student 8 (73.34)
+  kd-train: teacher 6 (73.92) -> student 7 (73.92)
+Recent oracle gain moving average (5/5): 0.6640
+
+=== Round 75/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 71.30
+  oracle-gain in this round: -1.34
+  kd-train: teacher 5 (74.92) -> student 2 (72.48)
+  kd-train: teacher 4 (74.52) -> student 3 (72.54)
+  kd-train: teacher 1 (74.40) -> student 7 (73.84)
+  kd-train: teacher 9 (74.20) -> student 6 (73.92)
+Recent oracle gain moving average (5/5): 0.8240
+
+=== Round 76/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 69.96
+  oracle-gain in this round: 0.06
+  kd-train: teacher 5 (74.92) -> student 2 (70.48)
+  kd-train: teacher 4 (74.52) -> student 6 (72.24)
+  kd-train: teacher 1 (74.40) -> student 3 (72.82)
+  kd-train: teacher 9 (74.20) -> student 7 (73.76)
+Recent oracle gain moving average (5/5): 0.1120
+
+=== Round 77/220 (AccDiff) ===
+  oracle-train: oracle -> student 8 : 70.02
+  oracle-gain in this round: 5.76
+  kd-train: teacher 5 (74.92) -> student 3 (71.64)
+  kd-train: teacher 4 (74.52) -> student 6 (71.98)
+  kd-train: teacher 1 (74.40) -> student 2 (72.02)
+  kd-train: teacher 7 (74.24) -> student 9 (74.20)
+Recent oracle gain moving average (5/5): 1.5080
+
+=== Round 78/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 72.30
+  oracle-gain in this round: -3.72
+  kd-train: teacher 8 (75.78) -> student 3 (72.52)
+  kd-train: teacher 5 (74.92) -> student 2 (73.64)
+  kd-train: teacher 4 (74.52) -> student 7 (74.24)
+  kd-train: teacher 1 (74.40) -> student 9 (74.34)
+Recent oracle gain moving average (5/5): 0.6600
+
+=== Round 79/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 68.58
+  oracle-gain in this round: 3.76
+  kd-train: teacher 8 (75.78) -> student 7 (73.04)
+  kd-train: teacher 5 (74.92) -> student 9 (73.32)
+  kd-train: teacher 4 (74.52) -> student 2 (73.34)
+  kd-train: teacher 1 (74.40) -> student 3 (73.56)
+Recent oracle gain moving average (5/5): 0.9040
+
+=== Round 80/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 72.34
+  oracle-gain in this round: 3.04
+  kd-train: teacher 8 (75.78) -> student 3 (72.40)
+  kd-train: teacher 5 (74.92) -> student 7 (73.18)
+  kd-train: teacher 4 (74.52) -> student 2 (73.36)
+  kd-train: teacher 1 (74.40) -> student 9 (73.60)
+Recent oracle gain moving average (5/5): 1.7800
+
+=== Round 81/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 71.92
+  oracle-gain in this round: -0.06
+  kd-train: teacher 8 (75.78) -> student 2 (72.92)
+  kd-train: teacher 6 (75.38) -> student 9 (73.48)
+  kd-train: teacher 5 (74.92) -> student 3 (73.58)
+  kd-train: teacher 4 (74.52) -> student 1 (74.40)
+Recent oracle gain moving average (5/5): 1.7560
+
+=== Round 82/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 71.86
+  oracle-gain in this round: 3.62
+  kd-train: teacher 8 (75.78) -> student 9 (72.20)
+  kd-train: teacher 6 (75.38) -> student 3 (72.42)
+  kd-train: teacher 5 (74.92) -> student 2 (73.12)
+  kd-train: teacher 4 (74.52) -> student 1 (73.74)
+Recent oracle gain moving average (5/5): 1.3280
+
+=== Round 83/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 71.46
+  oracle-gain in this round: 0.98
+  kd-train: teacher 8 (75.78) -> student 2 (72.90)
+  kd-train: teacher 7 (75.48) -> student 1 (73.88)
+  kd-train: teacher 6 (75.38) -> student 9 (73.94)
+  kd-train: teacher 5 (74.92) -> student 4 (74.52)
+Recent oracle gain moving average (5/5): 2.2680
+
+=== Round 84/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 71.88
+  oracle-gain in this round: 2.14
+  kd-train: teacher 8 (75.78) -> student 9 (72.02)
+  kd-train: teacher 7 (75.48) -> student 3 (72.44)
+  kd-train: teacher 6 (75.38) -> student 2 (73.46)
+  kd-train: teacher 5 (74.92) -> student 4 (73.74)
+Recent oracle gain moving average (5/5): 1.9440
+
+=== Round 85/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 71.30
+  oracle-gain in this round: -1.36
+  kd-train: teacher 8 (75.78) -> student 3 (71.82)
+  kd-train: teacher 7 (75.48) -> student 4 (72.76)
+  kd-train: teacher 6 (75.38) -> student 1 (74.02)
+  kd-train: teacher 5 (74.92) -> student 9 (74.24)
+Recent oracle gain moving average (5/5): 1.0640
+
+=== Round 86/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 69.94
+  oracle-gain in this round: 1.76
+  kd-train: teacher 8 (75.78) -> student 9 (72.04)
+  kd-train: teacher 7 (75.48) -> student 4 (73.32)
+  kd-train: teacher 6 (75.38) -> student 1 (74.06)
+  kd-train: teacher 5 (74.92) -> student 3 (74.40)
+Recent oracle gain moving average (5/5): 1.4280
+
+=== Round 87/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 71.70
+  oracle-gain in this round: 2.66
+  kd-train: teacher 8 (75.78) -> student 3 (73.68)
+  kd-train: teacher 7 (75.48) -> student 1 (73.74)
+  kd-train: teacher 6 (75.38) -> student 4 (74.40)
+  kd-train: teacher 5 (74.92) -> student 9 (74.52)
+Recent oracle gain moving average (5/5): 1.2360
+
+=== Round 88/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 72.78
+  oracle-gain in this round: 0.78
+  kd-train: teacher 8 (75.78) -> student 1 (73.30)
+  kd-train: teacher 7 (75.48) -> student 9 (73.96)
+  kd-train: teacher 6 (75.38) -> student 2 (74.36)
+  kd-train: teacher 5 (74.92) -> student 3 (74.90)
+Recent oracle gain moving average (5/5): 1.1960
+
+=== Round 89/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 72.98
+  oracle-gain in this round: 1.66
+  kd-train: teacher 8 (75.78) -> student 3 (73.02)
+  kd-train: teacher 7 (75.48) -> student 4 (73.56)
+  kd-train: teacher 6 (75.38) -> student 2 (74.20)
+  kd-train: teacher 5 (74.92) -> student 1 (74.78)
+Recent oracle gain moving average (5/5): 1.1000
+
+=== Round 90/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 73.56
+  oracle-gain in this round: 0.02
+  kd-train: teacher 8 (75.78) -> student 3 (74.04)
+  kd-train: teacher 7 (75.48) -> student 4 (74.08)
+  kd-train: teacher 6 (75.38) -> student 9 (74.64)
+  kd-train: teacher 5 (74.92) -> student 2 (74.90)
+Recent oracle gain moving average (5/5): 1.3760
+
+=== Round 91/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 73.58
+  oracle-gain in this round: 1.92
+  kd-train: teacher 8 (75.78) -> student 3 (73.88)
+  kd-train: teacher 7 (75.48) -> student 2 (74.36)
+  kd-train: teacher 6 (75.38) -> student 4 (74.54)
+  kd-train: teacher 9 (75.26) -> student 5 (74.92)
+Recent oracle gain moving average (5/5): 1.4080
+
+=== Round 92/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 74.20
+  oracle-gain in this round: -0.14
+  kd-train: teacher 8 (75.78) -> student 3 (74.46)
+  kd-train: teacher 1 (75.50) -> student 4 (75.00)
+  kd-train: teacher 7 (75.48) -> student 2 (75.06)
+  kd-train: teacher 6 (75.38) -> student 9 (75.26)
+Recent oracle gain moving average (5/5): 0.8480
+
+=== Round 93/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 71.62
+  oracle-gain in this round: 2.64
+  kd-train: teacher 8 (75.78) -> student 9 (72.94)
+  kd-train: teacher 1 (75.50) -> student 4 (73.90)
+  kd-train: teacher 7 (75.48) -> student 3 (74.06)
+  kd-train: teacher 6 (75.38) -> student 5 (74.06)
+Recent oracle gain moving average (5/5): 1.2200
+
+=== Round 94/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 72.28
+  oracle-gain in this round: 1.00
+  kd-train: teacher 8 (75.78) -> student 5 (73.30)
+  kd-train: teacher 1 (75.50) -> student 2 (74.26)
+  kd-train: teacher 7 (75.48) -> student 4 (74.34)
+  kd-train: teacher 6 (75.38) -> student 9 (74.60)
+Recent oracle gain moving average (5/5): 1.0880
+
+=== Round 95/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 73.28
+  oracle-gain in this round: 2.40
+  kd-train: teacher 8 (75.78) -> student 5 (73.34)
+  kd-train: teacher 1 (75.50) -> student 4 (73.56)
+  kd-train: teacher 7 (75.48) -> student 9 (73.92)
+  kd-train: teacher 6 (75.38) -> student 2 (74.38)
+Recent oracle gain moving average (5/5): 1.5640
+
+=== Round 96/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 73.00
+  oracle-gain in this round: -1.24
+  kd-train: teacher 8 (75.78) -> student 4 (74.52)
+  kd-train: teacher 3 (75.68) -> student 5 (74.68)
+  kd-train: teacher 1 (75.50) -> student 2 (75.30)
+  kd-train: teacher 7 (75.48) -> student 6 (75.38)
+Recent oracle gain moving average (5/5): 0.9320
+
+=== Round 97/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 71.76
+  oracle-gain in this round: 2.92
+  kd-train: teacher 2 (75.88) -> student 6 (72.98)
+  kd-train: teacher 8 (75.78) -> student 4 (74.38)
+  kd-train: teacher 3 (75.68) -> student 5 (74.82)
+  kd-train: teacher 1 (75.50) -> student 7 (75.48)
+Recent oracle gain moving average (5/5): 1.5440
+
+=== Round 98/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 73.32
+  oracle-gain in this round: 2.02
+  kd-train: teacher 2 (75.88) -> student 6 (74.02)
+  kd-train: teacher 8 (75.78) -> student 7 (74.40)
+  kd-train: teacher 3 (75.68) -> student 9 (74.68)
+  kd-train: teacher 1 (75.50) -> student 5 (74.90)
+Recent oracle gain moving average (5/5): 1.4200
+
+=== Round 99/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 74.16
+  oracle-gain in this round: 0.58
+  kd-train: teacher 2 (75.88) -> student 5 (75.20)
+  kd-train: teacher 8 (75.78) -> student 4 (75.34)
+  kd-train: teacher 3 (75.68) -> student 9 (75.38)
+  kd-train: teacher 6 (75.62) -> student 1 (75.50)
+Recent oracle gain moving average (5/5): 1.3360
+
+=== Round 100/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 73.44
+  oracle-gain in this round: -0.74
+  kd-train: teacher 2 (75.88) -> student 7 (74.74)
+  kd-train: teacher 8 (75.78) -> student 1 (75.38)
+  kd-train: teacher 3 (75.68) -> student 4 (75.42)
+  kd-train: teacher 9 (75.66) -> student 6 (75.62)
+Recent oracle gain moving average (5/5): 0.7080
+
+=== Round 101/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 72.70
+  oracle-gain in this round: -2.78
+  kd-train: teacher 2 (75.88) -> student 6 (72.84)
+  kd-train: teacher 8 (75.78) -> student 4 (73.80)
+  kd-train: teacher 7 (75.74) -> student 1 (74.10)
+  kd-train: teacher 3 (75.68) -> student 9 (75.66)
+Recent oracle gain moving average (5/5): 0.4000
+Moving-average oracle gain is negative (1/2)
+
+=== Round 102/220 (AccDiff) ===
+  oracle-train: oracle -> student 5 : 69.92
+  oracle-gain in this round: 6.08
+  kd-train: teacher 2 (75.88) -> student 1 (73.64)
+  kd-train: teacher 8 (75.78) -> student 4 (74.96)
+  kd-train: teacher 7 (75.74) -> student 9 (75.00)
+  kd-train: teacher 3 (75.68) -> student 6 (75.48)
+Recent oracle gain moving average (5/5): 1.0320
+
+=== Round 103/220 (AccDiff) ===
+  oracle-train: oracle -> student 6 : 71.48
+  oracle-gain in this round: 1.42
+  kd-train: teacher 5 (76.00) -> student 4 (72.04)
+  kd-train: teacher 2 (75.88) -> student 1 (73.66)
+  kd-train: teacher 8 (75.78) -> student 9 (74.58)
+  kd-train: teacher 7 (75.74) -> student 3 (75.68)
+Recent oracle gain moving average (5/5): 0.9120
+
+=== Round 104/220 (AccDiff) ===
+  oracle-train: oracle -> student 3 : 72.88
+  oracle-gain in this round: 2.04
+  kd-train: teacher 5 (76.00) -> student 6 (72.90)
+  kd-train: teacher 2 (75.88) -> student 9 (74.44)
+  kd-train: teacher 8 (75.78) -> student 4 (74.76)
+  kd-train: teacher 1 (75.74) -> student 7 (75.74)
+Recent oracle gain moving average (5/5): 1.2040
+
+=== Round 105/220 (AccDiff) ===
+  oracle-train: oracle -> student 9 : 73.38
+  oracle-gain in this round: 1.82
+  kd-train: teacher 6 (76.50) -> student 3 (74.92)
+  kd-train: teacher 5 (76.00) -> student 4 (75.16)
+  kd-train: teacher 2 (75.88) -> student 7 (75.60)
+  kd-train: teacher 8 (75.78) -> student 1 (75.74)
+Recent oracle gain moving average (5/5): 1.7160
+
+=== Round 106/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 72.16
+  oracle-gain in this round: 1.64
+  kd-train: teacher 3 (76.80) -> student 1 (74.70)
+  kd-train: teacher 6 (76.50) -> student 4 (75.04)
+  kd-train: teacher 5 (76.00) -> student 9 (75.20)
+  kd-train: teacher 2 (75.88) -> student 8 (75.78)
+Recent oracle gain moving average (5/5): 2.6000
+
+=== Round 107/220 (AccDiff) ===
+  oracle-train: oracle -> student 7 : 73.80
+  oracle-gain in this round: 1.64
+  kd-train: teacher 3 (76.80) -> student 8 (74.32)
+  kd-train: teacher 6 (76.50) -> student 1 (74.90)
+  kd-train: teacher 9 (76.34) -> student 4 (74.96)
+  kd-train: teacher 5 (76.00) -> student 2 (75.88)
+Recent oracle gain moving average (5/5): 1.7120
+
+=== Round 108/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 72.64
+  oracle-gain in this round: 0.60
+  kd-train: teacher 3 (76.80) -> student 4 (73.30)
+  kd-train: teacher 6 (76.50) -> student 8 (74.70)
+  kd-train: teacher 9 (76.34) -> student 7 (75.44)
+  kd-train: teacher 2 (76.06) -> student 5 (76.00)
+Recent oracle gain moving average (5/5): 1.5480
+
+=== Round 109/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 73.24
+  oracle-gain in this round: 0.66
+  kd-train: teacher 3 (76.80) -> student 4 (74.08)
+  kd-train: teacher 6 (76.50) -> student 8 (75.84)
+  kd-train: teacher 9 (76.34) -> student 5 (75.92)
+  kd-train: teacher 2 (76.06) -> student 7 (75.94)
+Recent oracle gain moving average (5/5): 1.2720
+
+=== Round 110/220 (AccDiff) ===
+  oracle-train: oracle -> student 1 : 73.90
+  oracle-gain in this round: 2.30
+  kd-train: teacher 3 (76.80) -> student 4 (74.96)
+  kd-train: teacher 6 (76.50) -> student 8 (75.92)
+  kd-train: teacher 9 (76.34) -> student 7 (76.04)
+  kd-train: teacher 5 (76.32) -> student 2 (76.06)
+Recent oracle gain moving average (5/5): 1.3680
+
+=== Round 111/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 74.86
+  oracle-gain in this round: -1.32
+  kd-train: teacher 3 (76.80) -> student 4 (74.98)
+  kd-train: teacher 7 (76.64) -> student 8 (76.12)
+  kd-train: teacher 6 (76.50) -> student 1 (76.20)
+  kd-train: teacher 9 (76.34) -> student 5 (76.32)
+Recent oracle gain moving average (5/5): 0.7760
+
+=== Round 112/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 73.54
+  oracle-gain in this round: -0.56
+  kd-train: teacher 3 (76.80) -> student 8 (73.66)
+  kd-train: teacher 7 (76.64) -> student 4 (75.78)
+  kd-train: teacher 6 (76.50) -> student 5 (75.94)
+  kd-train: teacher 1 (76.50) -> student 9 (76.34)
+Recent oracle gain moving average (5/5): 0.3360
+Moving-average oracle gain is negative (1/2)
+
+=== Round 113/220 (AccDiff) ===
+  oracle-train: oracle -> student 2 : 72.98
+  oracle-gain in this round: 3.28
+  kd-train: teacher 3 (76.80) -> student 9 (74.14)
+  kd-train: teacher 7 (76.64) -> student 8 (74.40)
+  kd-train: teacher 6 (76.50) -> student 5 (75.32)
+  kd-train: teacher 1 (76.50) -> student 4 (76.32)
+Recent oracle gain moving average (5/5): 0.8720
+
+=== Round 114/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 74.36
+  oracle-gain in this round: -3.00
+  kd-train: teacher 3 (76.80) -> student 9 (74.94)
+  kd-train: teacher 7 (76.64) -> student 8 (75.24)
+  kd-train: teacher 6 (76.50) -> student 2 (76.26)
+  kd-train: teacher 1 (76.50) -> student 5 (76.38)
+Recent oracle gain moving average (5/5): 0.1400
+Moving-average oracle gain is negative (1/2)
+
+=== Round 115/220 (AccDiff) ===
+  oracle-train: oracle -> student 4 : 71.36
+  oracle-gain in this round: 1.24
+  kd-train: teacher 3 (76.80) -> student 5 (74.36)
+  kd-train: teacher 2 (76.78) -> student 8 (75.40)
+  kd-train: teacher 7 (76.64) -> student 1 (76.50)
+  kd-train: teacher 9 (76.60) -> student 6 (76.50)
+Recent oracle gain moving average (5/5): -0.0720
+Moving-average oracle gain is negative (2/2)
+
+============================================================
+SWITCHING PAIRING STRATEGY
+AccDiff  --->  MWM_AccDiff
+Triggered at round 115
+Moving-average oracle gain = -0.0720
+============================================================
+
+
+=== Round 116/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 76.34
+  oracle-gain in this round: 0.30
+  kd-train: teacher 2 (76.78) -> student 8 (75.00)
+  kd-train: teacher 9 (76.60) -> student 6 (75.58)
+  kd-train: teacher 7 (76.64) -> student 4 (72.60)
+  kd-train: teacher 3 (76.80) -> student 5 (75.60)
+Recent oracle gain moving average (5/5): 0.2520
+Moving-average oracle gain is negative (1/2)
+
+=== Round 117/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 9 : 76.60
+  oracle-gain in this round: -3.38
+  kd-train: teacher 7 (76.64) -> student 5 (75.88)
+  kd-train: teacher 2 (76.78) -> student 8 (75.84)
+  kd-train: teacher 3 (76.80) -> student 6 (75.56)
+  kd-train: teacher 1 (76.64) -> student 4 (76.24)
+Recent oracle gain moving average (5/5): -0.3120
+Moving-average oracle gain is negative (2/2)
+
+=== Round 118/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (76.80) -> student 8 (74.52)
+  oracle-train: oracle -> student 4 : 75.76
+  oracle-gain in this round: -4.50
+  kd-train: teacher 1 (76.64) -> student 5 (75.56)
+  kd-train: teacher 2 (76.78) -> student 9 (73.22)
+  kd-train: teacher 7 (76.64) -> student 6 (74.60)
+Recent oracle gain moving average (5/5): -1.8680
+Moving-average oracle gain is negative (3/2)
+
+=== Round 119/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (76.78) -> student 6 (73.48)
+  kd-train: teacher 1 (76.64) -> student 8 (75.78)
+  kd-train: teacher 3 (76.80) -> student 4 (71.26)
+  oracle-train: oracle -> student 5 : 76.16
+  oracle-gain in this round: -3.70
+  kd-train: teacher 7 (76.64) -> student 9 (75.28)
+Recent oracle gain moving average (5/5): -2.0080
+Moving-average oracle gain is negative (4/2)
+
+=== Round 120/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 75.42
+  oracle-gain in this round: 1.68
+  kd-train: teacher 1 (76.64) -> student 6 (75.04)
+  kd-train: teacher 2 (76.78) -> student 8 (70.96)
+  kd-train: teacher 7 (76.64) -> student 9 (74.64)
+  kd-train: teacher 3 (76.80) -> student 5 (72.46)
+Recent oracle gain moving average (5/5): -1.9200
+Moving-average oracle gain is negative (5/2)
+
+=== Round 121/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (76.78) -> student 6 (73.64)
+  kd-train: teacher 3 (76.80) -> student 7 (76.64)
+  oracle-train: oracle -> student 9 : 76.52
+  oracle-gain in this round: -3.10
+  kd-train: teacher 1 (76.64) -> student 5 (74.58)
+  kd-train: teacher 4 (77.10) -> student 8 (74.78)
+Recent oracle gain moving average (5/5): -2.6000
+Moving-average oracle gain is negative (6/2)
+
+=== Round 122/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 76.26
+  oracle-gain in this round: -0.64
+  kd-train: teacher 3 (76.80) -> student 9 (73.42)
+  kd-train: teacher 1 (76.64) -> student 6 (75.58)
+  kd-train: teacher 4 (77.10) -> student 8 (74.22)
+  kd-train: teacher 2 (76.78) -> student 5 (75.34)
+Recent oracle gain moving average (5/5): -2.0520
+Moving-average oracle gain is negative (7/2)
+
+=== Round 123/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 75.62
+  oracle-gain in this round: -1.26
+  kd-train: teacher 1 (76.64) -> student 5 (75.72)
+  kd-train: teacher 4 (77.10) -> student 6 (74.00)
+  kd-train: teacher 2 (76.78) -> student 9 (74.94)
+  kd-train: teacher 3 (76.80) -> student 8 (74.62)
+Recent oracle gain moving average (5/5): -1.4040
+Moving-average oracle gain is negative (8/2)
+
+=== Round 124/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (76.78) -> student 6 (75.28)
+  oracle-train: oracle -> student 9 : 76.46
+  oracle-gain in this round: -1.38
+  kd-train: teacher 1 (76.64) -> student 5 (76.18)
+  kd-train: teacher 3 (76.80) -> student 8 (74.22)
+  kd-train: teacher 4 (77.10) -> student 7 (74.36)
+Recent oracle gain moving average (5/5): -0.9400
+Moving-average oracle gain is negative (9/2)
+
+=== Round 125/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (76.80) -> student 7 (75.64)
+  kd-train: teacher 4 (77.10) -> student 6 (75.24)
+  kd-train: teacher 1 (76.64) -> student 5 (74.96)
+  kd-train: teacher 2 (76.78) -> student 9 (75.08)
+  oracle-train: oracle -> student 8 : 75.52
+  oracle-gain in this round: -4.00
+Recent oracle gain moving average (5/5): -2.0760
+Moving-average oracle gain is negative (10/2)
+
+=== Round 126/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (76.78) -> student 7 (76.52)
+  kd-train: teacher 4 (77.10) -> student 6 (74.46)
+  oracle-train: oracle -> student 9 : 76.40
+  oracle-gain in this round: -1.96
+  kd-train: teacher 1 (76.64) -> student 5 (76.08)
+  kd-train: teacher 3 (76.80) -> student 8 (71.52)
+Recent oracle gain moving average (5/5): -1.8480
+Moving-average oracle gain is negative (11/2)
+
+=== Round 127/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (76.80) -> student 6 (75.34)
+  kd-train: teacher 4 (77.10) -> student 8 (75.20)
+  kd-train: teacher 2 (76.78) -> student 7 (75.36)
+  oracle-train: oracle -> student 5 : 76.34
+  oracle-gain in this round: -6.08
+  kd-train: teacher 1 (76.64) -> student 9 (74.44)
+Recent oracle gain moving average (5/5): -2.9360
+Moving-average oracle gain is negative (12/2)
+
+=== Round 128/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 76.64
+  oracle-gain in this round: -0.76
+  kd-train: teacher 2 (76.78) -> student 6 (75.92)
+  kd-train: teacher 4 (77.10) -> student 8 (75.20)
+  kd-train: teacher 3 (76.80) -> student 5 (70.26)
+  kd-train: teacher 9 (77.50) -> student 7 (76.10)
+Recent oracle gain moving average (5/5): -2.8360
+Moving-average oracle gain is negative (13/2)
+
+=== Round 129/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 76.04
+  oracle-gain in this round: -0.30
+  kd-train: teacher 2 (76.78) -> student 6 (75.50)
+  kd-train: teacher 4 (77.10) -> student 5 (73.88)
+  kd-train: teacher 9 (77.50) -> student 8 (75.80)
+  kd-train: teacher 3 (76.80) -> student 1 (75.88)
+Recent oracle gain moving average (5/5): -2.6200
+Moving-average oracle gain is negative (14/2)
+
+=== Round 130/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (77.10) -> student 6 (74.88)
+  kd-train: teacher 2 (76.78) -> student 7 (75.74)
+  kd-train: teacher 9 (77.50) -> student 5 (75.10)
+  oracle-train: oracle -> student 8 : 76.64
+  oracle-gain in this round: -1.50
+  kd-train: teacher 3 (76.80) -> student 1 (75.98)
+Recent oracle gain moving average (5/5): -2.1200
+Moving-average oracle gain is negative (15/2)
+
+=== Round 131/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (76.78) -> student 1 (76.54)
+  kd-train: teacher 4 (77.10) -> student 8 (75.14)
+  kd-train: teacher 3 (76.80) -> student 7 (76.20)
+  oracle-train: oracle -> student 5 : 76.72
+  oracle-gain in this round: -3.30
+  kd-train: teacher 9 (77.50) -> student 6 (75.56)
+Recent oracle gain moving average (5/5): -2.3880
+Moving-average oracle gain is negative (16/2)
+
+=== Round 132/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (77.10) -> student 8 (74.60)
+  oracle-train: oracle -> student 6 : 76.44
+  oracle-gain in this round: -1.64
+  kd-train: teacher 2 (76.78) -> student 7 (76.00)
+  kd-train: teacher 9 (77.50) -> student 5 (73.42)
+  kd-train: teacher 3 (76.80) -> student 1 (76.24)
+Recent oracle gain moving average (5/5): -1.5000
+Moving-average oracle gain is negative (17/2)
+
+=== Round 133/220 (MWM_AccDiff) ===
+  kd-train: teacher 9 (77.50) -> student 7 (76.24)
+  kd-train: teacher 4 (77.10) -> student 6 (74.80)
+  oracle-train: oracle -> student 8 : 76.74
+  oracle-gain in this round: -0.88
+  kd-train: teacher 3 (76.80) -> student 1 (75.56)
+  kd-train: teacher 2 (76.78) -> student 5 (76.18)
+Recent oracle gain moving average (5/5): -1.5240
+Moving-average oracle gain is negative (18/2)
+
+=== Round 134/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (77.10) -> student 8 (75.86)
+  kd-train: teacher 7 (77.52) -> student 3 (76.80)
+  oracle-train: oracle -> student 2 : 76.78
+  oracle-gain in this round: 0.96
+  kd-train: teacher 9 (77.50) -> student 5 (74.82)
+  kd-train: teacher 6 (76.94) -> student 1 (75.18)
+Recent oracle gain moving average (5/5): -1.2720
+Moving-average oracle gain is negative (19/2)
+
+=== Round 135/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (77.74) -> student 1 (70.88)
+  oracle-train: oracle -> student 4 : 77.10
+  oracle-gain in this round: 0.40
+  kd-train: teacher 8 (77.44) -> student 6 (76.94)
+  kd-train: teacher 7 (77.52) -> student 5 (75.54)
+  kd-train: teacher 9 (77.50) -> student 3 (76.72)
+Recent oracle gain moving average (5/5): -0.8920
+Moving-average oracle gain is negative (20/2)
+
+=== Round 136/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (77.50) -> student 5 (77.06)
+  kd-train: teacher 7 (77.52) -> student 1 (76.08)
+  kd-train: teacher 2 (77.74) -> student 3 (75.00)
+  kd-train: teacher 9 (77.50) -> student 6 (75.88)
+  oracle-train: oracle -> student 8 : 77.44
+  oracle-gain in this round: -2.14
+Recent oracle gain moving average (5/5): -0.6600
+Moving-average oracle gain is negative (21/2)
+
+=== Round 137/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 76.22
+  oracle-gain in this round: 0.32
+  kd-train: teacher 4 (77.50) -> student 3 (76.12)
+  kd-train: teacher 7 (77.52) -> student 8 (75.30)
+  kd-train: teacher 2 (77.74) -> student 5 (75.34)
+  kd-train: teacher 9 (77.50) -> student 6 (75.68)
+Recent oracle gain moving average (5/5): -0.2680
+Moving-average oracle gain is negative (22/2)
+
+=== Round 138/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (77.50) -> student 3 (76.84)
+  kd-train: teacher 7 (77.52) -> student 1 (76.54)
+  oracle-train: oracle -> student 8 : 77.06
+  oracle-gain in this round: -1.52
+  kd-train: teacher 9 (77.50) -> student 6 (76.46)
+  kd-train: teacher 2 (77.74) -> student 5 (75.44)
+Recent oracle gain moving average (5/5): -0.3960
+Moving-average oracle gain is negative (23/2)
+
+=== Round 139/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 76.98
+  oracle-gain in this round: -4.30
+  kd-train: teacher 7 (77.52) -> student 8 (75.54)
+  kd-train: teacher 4 (77.50) -> student 5 (76.60)
+  kd-train: teacher 2 (77.74) -> student 3 (75.86)
+  kd-train: teacher 9 (77.50) -> student 6 (76.34)
+Recent oracle gain moving average (5/5): -1.4480
+Moving-average oracle gain is negative (24/2)
+
+=== Round 140/220 (MWM_AccDiff) ===
+  kd-train: teacher 8 (77.66) -> student 3 (75.02)
+  kd-train: teacher 2 (77.74) -> student 1 (72.68)
+  oracle-train: oracle -> student 4 : 77.50
+  oracle-gain in this round: -0.58
+  kd-train: teacher 7 (77.52) -> student 5 (75.20)
+  kd-train: teacher 9 (77.50) -> student 6 (76.12)
+Recent oracle gain moving average (5/5): -1.6440
+Moving-average oracle gain is negative (25/2)
+
+=== Round 141/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 77.16
+  oracle-gain in this round: -0.82
+  kd-train: teacher 9 (77.50) -> student 4 (76.92)
+  kd-train: teacher 8 (77.66) -> student 6 (76.36)
+  kd-train: teacher 7 (77.52) -> student 5 (76.62)
+  kd-train: teacher 2 (77.74) -> student 3 (76.36)
+Recent oracle gain moving average (5/5): -1.3800
+Moving-average oracle gain is negative (26/2)
+
+=== Round 142/220 (MWM_AccDiff) ===
+  kd-train: teacher 8 (77.66) -> student 3 (76.40)
+  oracle-train: oracle -> student 9 : 77.50
+  oracle-gain in this round: -1.10
+  kd-train: teacher 4 (77.72) -> student 6 (76.18)
+  kd-train: teacher 7 (77.52) -> student 1 (76.34)
+  kd-train: teacher 2 (77.74) -> student 5 (75.98)
+Recent oracle gain moving average (5/5): -1.6640
+Moving-average oracle gain is negative (27/2)
+
+=== Round 143/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 77.52
+  oracle-gain in this round: -6.84
+  kd-train: teacher 8 (77.66) -> student 5 (76.48)
+  kd-train: teacher 1 (77.84) -> student 6 (76.02)
+  kd-train: teacher 2 (77.74) -> student 3 (76.42)
+  kd-train: teacher 4 (77.72) -> student 9 (76.40)
+Recent oracle gain moving average (5/5): -2.7280
+Moving-average oracle gain is negative (28/2)
+
+=== Round 144/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (77.72) -> student 7 (70.68)
+  kd-train: teacher 8 (77.66) -> student 5 (76.40)
+  oracle-train: oracle -> student 9 : 76.74
+  oracle-gain in this round: -2.40
+  kd-train: teacher 2 (77.74) -> student 3 (76.00)
+  kd-train: teacher 1 (77.84) -> student 6 (75.98)
+Recent oracle gain moving average (5/5): -2.3480
+Moving-average oracle gain is negative (29/2)
+
+=== Round 145/220 (MWM_AccDiff) ===
+  kd-train: teacher 8 (77.66) -> student 5 (76.72)
+  oracle-train: oracle -> student 6 : 77.18
+  oracle-gain in this round: -10.50
+  kd-train: teacher 1 (77.84) -> student 7 (75.80)
+  kd-train: teacher 2 (77.74) -> student 3 (75.90)
+  kd-train: teacher 4 (77.72) -> student 9 (74.34)
+Recent oracle gain moving average (5/5): -4.3320
+Moving-average oracle gain is negative (30/2)
+
+=== Round 146/220 (MWM_AccDiff) ===
+  kd-train: teacher 1 (77.84) -> student 7 (76.38)
+  kd-train: teacher 4 (77.72) -> student 5 (77.14)
+  kd-train: teacher 2 (77.74) -> student 3 (77.18)
+  oracle-train: oracle -> student 8 : 77.66
+  oracle-gain in this round: -2.10
+  kd-train: teacher 9 (78.52) -> student 6 (66.68)
+Recent oracle gain moving average (5/5): -4.5880
+Moving-average oracle gain is negative (31/2)
+
+=== Round 147/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 76.82
+  oracle-gain in this round: -0.82
+  kd-train: teacher 1 (77.84) -> student 3 (74.94)
+  kd-train: teacher 4 (77.72) -> student 6 (75.94)
+  kd-train: teacher 9 (78.52) -> student 8 (75.56)
+  kd-train: teacher 2 (77.74) -> student 5 (75.38)
+Recent oracle gain moving average (5/5): -4.5320
+Moving-average oracle gain is negative (32/2)
+
+=== Round 148/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (77.72) -> student 7 (76.00)
+  kd-train: teacher 1 (77.84) -> student 5 (76.60)
+  kd-train: teacher 9 (78.52) -> student 6 (76.52)
+  kd-train: teacher 2 (77.74) -> student 3 (74.82)
+  oracle-train: oracle -> student 8 : 77.02
+  oracle-gain in this round: -1.08
+Recent oracle gain moving average (5/5): -3.3800
+Moving-average oracle gain is negative (33/2)
+
+=== Round 149/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 77.04
+  oracle-gain in this round: -1.46
+  kd-train: teacher 1 (77.84) -> student 3 (75.88)
+  kd-train: teacher 4 (77.72) -> student 6 (76.86)
+  kd-train: teacher 9 (78.52) -> student 8 (75.94)
+  kd-train: teacher 2 (77.74) -> student 5 (75.76)
+Recent oracle gain moving average (5/5): -3.1920
+Moving-average oracle gain is negative (34/2)
+
+=== Round 150/220 (MWM_AccDiff) ===
+  kd-train: teacher 8 (77.76) -> student 3 (76.84)
+  kd-train: teacher 1 (77.84) -> student 7 (75.58)
+  oracle-train: oracle -> student 4 : 77.72
+  oracle-gain in this round: -1.00
+  kd-train: teacher 9 (78.52) -> student 6 (73.24)
+  kd-train: teacher 2 (77.74) -> student 5 (76.76)
+Recent oracle gain moving average (5/5): -1.2920
+Moving-average oracle gain is negative (35/2)
+
+=== Round 151/220 (MWM_AccDiff) ===
+  kd-train: teacher 1 (77.84) -> student 3 (75.86)
+  kd-train: teacher 8 (77.76) -> student 6 (76.64)
+  kd-train: teacher 7 (78.12) -> student 5 (75.68)
+  oracle-train: oracle -> student 2 : 77.74
+  oracle-gain in this round: -1.28
+  kd-train: teacher 9 (78.52) -> student 4 (76.72)
+Recent oracle gain moving average (5/5): -1.1280
+Moving-average oracle gain is negative (36/2)
+
+=== Round 152/220 (MWM_AccDiff) ===
+  kd-train: teacher 1 (77.84) -> student 2 (76.46)
+  kd-train: teacher 7 (78.12) -> student 3 (74.12)
+  kd-train: teacher 4 (78.00) -> student 6 (75.98)
+  kd-train: teacher 9 (78.52) -> student 5 (76.16)
+  oracle-train: oracle -> student 8 : 77.76
+  oracle-gain in this round: -1.86
+Recent oracle gain moving average (5/5): -1.3360
+Moving-average oracle gain is negative (37/2)
+
+=== Round 153/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.00) -> student 3 (75.80)
+  kd-train: teacher 1 (77.84) -> student 6 (75.76)
+  oracle-train: oracle -> student 2 : 77.78
+  oracle-gain in this round: -0.90
+  kd-train: teacher 9 (78.52) -> student 5 (74.32)
+  kd-train: teacher 7 (78.12) -> student 8 (75.90)
+Recent oracle gain moving average (5/5): -1.3000
+Moving-average oracle gain is negative (38/2)
+
+=== Round 154/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 77.84
+  oracle-gain in this round: -3.10
+  kd-train: teacher 7 (78.12) -> student 3 (76.26)
+  kd-train: teacher 4 (78.00) -> student 5 (75.72)
+  kd-train: teacher 9 (78.52) -> student 6 (76.30)
+  kd-train: teacher 8 (77.86) -> student 2 (76.88)
+Recent oracle gain moving average (5/5): -1.6280
+Moving-average oracle gain is negative (39/2)
+
+=== Round 155/220 (MWM_AccDiff) ===
+  kd-train: teacher 9 (78.52) -> student 3 (76.40)
+  kd-train: teacher 8 (77.86) -> student 1 (74.74)
+  kd-train: teacher 4 (78.00) -> student 2 (76.48)
+  kd-train: teacher 7 (78.12) -> student 5 (75.42)
+  oracle-train: oracle -> student 6 : 76.32
+  oracle-gain in this round: -2.48
+Recent oracle gain moving average (5/5): -1.9240
+Moving-average oracle gain is negative (40/2)
+
+=== Round 156/220 (MWM_AccDiff) ===
+  kd-train: teacher 8 (77.86) -> student 3 (77.12)
+  kd-train: teacher 4 (78.00) -> student 6 (73.84)
+  oracle-train: oracle -> student 2 : 77.40
+  oracle-gain in this round: -1.36
+  kd-train: teacher 7 (78.12) -> student 1 (76.60)
+  kd-train: teacher 9 (78.52) -> student 5 (76.30)
+Recent oracle gain moving average (5/5): -1.9400
+Moving-average oracle gain is negative (41/2)
+
+=== Round 157/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 77.36
+  oracle-gain in this round: -0.76
+  kd-train: teacher 4 (78.00) -> student 2 (76.04)
+  kd-train: teacher 8 (77.86) -> student 6 (76.50)
+  kd-train: teacher 7 (78.12) -> student 5 (75.18)
+  kd-train: teacher 9 (78.52) -> student 3 (73.62)
+Recent oracle gain moving average (5/5): -1.7200
+Moving-average oracle gain is negative (42/2)
+
+=== Round 158/220 (MWM_AccDiff) ===
+  kd-train: teacher 8 (77.86) -> student 1 (76.60)
+  kd-train: teacher 4 (78.00) -> student 6 (75.30)
+  kd-train: teacher 9 (78.52) -> student 3 (76.54)
+  kd-train: teacher 7 (78.12) -> student 2 (76.82)
+  oracle-train: oracle -> student 5 : 76.80
+  oracle-gain in this round: -4.36
+Recent oracle gain moving average (5/5): -2.4120
+Moving-average oracle gain is negative (43/2)
+
+=== Round 159/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 77.48
+  oracle-gain in this round: -1.26
+  kd-train: teacher 4 (78.00) -> student 6 (76.08)
+  kd-train: teacher 7 (78.12) -> student 5 (72.44)
+  kd-train: teacher 9 (78.52) -> student 3 (75.36)
+  kd-train: teacher 8 (77.86) -> student 2 (76.80)
+Recent oracle gain moving average (5/5): -2.0440
+Moving-average oracle gain is negative (44/2)
+
+=== Round 160/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.00) -> student 3 (74.66)
+  kd-train: teacher 8 (77.86) -> student 6 (76.58)
+  kd-train: teacher 9 (78.52) -> student 2 (76.44)
+  kd-train: teacher 7 (78.12) -> student 1 (76.22)
+  oracle-train: oracle -> student 5 : 77.42
+  oracle-gain in this round: -0.76
+Recent oracle gain moving average (5/5): -1.7000
+Moving-average oracle gain is negative (45/2)
+
+=== Round 161/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.00) -> student 2 (77.46)
+  kd-train: teacher 9 (78.52) -> student 6 (73.96)
+  kd-train: teacher 7 (78.12) -> student 5 (76.66)
+  oracle-train: oracle -> student 8 : 77.86
+  oracle-gain in this round: -4.40
+  kd-train: teacher 1 (78.56) -> student 3 (74.18)
+Recent oracle gain moving average (5/5): -2.3080
+Moving-average oracle gain is negative (46/2)
+
+=== Round 162/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 78.00
+  oracle-gain in this round: -0.44
+  kd-train: teacher 7 (78.12) -> student 3 (76.14)
+  kd-train: teacher 9 (78.52) -> student 8 (73.46)
+  kd-train: teacher 1 (78.56) -> student 6 (75.92)
+  kd-train: teacher 5 (78.12) -> student 2 (77.00)
+Recent oracle gain moving average (5/5): -2.2440
+Moving-average oracle gain is negative (47/2)
+
+=== Round 163/220 (MWM_AccDiff) ===
+  kd-train: teacher 9 (78.52) -> student 6 (76.04)
+  oracle-train: oracle -> student 5 : 78.12
+  oracle-gain in this round: -3.14
+  kd-train: teacher 1 (78.56) -> student 3 (76.48)
+  kd-train: teacher 7 (78.12) -> student 4 (77.56)
+  kd-train: teacher 8 (78.16) -> student 2 (77.26)
+Recent oracle gain moving average (5/5): -2.0000
+Moving-average oracle gain is negative (48/2)
+
+=== Round 164/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 77.84
+  oracle-gain in this round: -1.12
+  kd-train: teacher 7 (78.12) -> student 3 (76.74)
+  kd-train: teacher 1 (78.56) -> student 5 (74.98)
+  kd-train: teacher 9 (78.52) -> student 6 (75.14)
+  kd-train: teacher 8 (78.16) -> student 2 (76.32)
+Recent oracle gain moving average (5/5): -1.9720
+Moving-average oracle gain is negative (49/2)
+
+=== Round 165/220 (MWM_AccDiff) ===
+  kd-train: teacher 1 (78.56) -> student 3 (77.04)
+  oracle-train: oracle -> student 5 : 77.74
+  oracle-gain in this round: -2.28
+  kd-train: teacher 9 (78.52) -> student 6 (76.08)
+  kd-train: teacher 7 (78.12) -> student 4 (76.72)
+  kd-train: teacher 8 (78.16) -> student 2 (74.96)
+Recent oracle gain moving average (5/5): -2.2760
+Moving-average oracle gain is negative (50/2)
+
+=== Round 166/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 78.12
+  oracle-gain in this round: -2.36
+  kd-train: teacher 4 (78.46) -> student 3 (75.84)
+  kd-train: teacher 1 (78.56) -> student 5 (75.46)
+  kd-train: teacher 9 (78.52) -> student 6 (75.78)
+  kd-train: teacher 8 (78.16) -> student 2 (76.34)
+Recent oracle gain moving average (5/5): -1.8680
+Moving-average oracle gain is negative (51/2)
+
+=== Round 167/220 (MWM_AccDiff) ===
+  kd-train: teacher 1 (78.56) -> student 3 (75.60)
+  kd-train: teacher 4 (78.46) -> student 6 (77.28)
+  kd-train: teacher 9 (78.52) -> student 7 (75.76)
+  oracle-train: oracle -> student 5 : 77.08
+  oracle-gain in this round: -3.94
+  kd-train: teacher 8 (78.16) -> student 2 (76.54)
+Recent oracle gain moving average (5/5): -2.5680
+Moving-average oracle gain is negative (52/2)
+
+=== Round 168/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 77.52
+  oracle-gain in this round: -1.62
+  kd-train: teacher 4 (78.46) -> student 6 (76.66)
+  kd-train: teacher 9 (78.52) -> student 5 (73.14)
+  kd-train: teacher 1 (78.56) -> student 3 (75.34)
+  kd-train: teacher 8 (78.16) -> student 2 (77.78)
+Recent oracle gain moving average (5/5): -2.2640
+Moving-average oracle gain is negative (53/2)
+
+=== Round 169/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.46) -> student 7 (75.90)
+  kd-train: teacher 9 (78.52) -> student 6 (75.14)
+  oracle-train: oracle -> student 5 : 77.66
+  oracle-gain in this round: -1.24
+  kd-train: teacher 1 (78.56) -> student 3 (75.48)
+  kd-train: teacher 8 (78.16) -> student 2 (76.38)
+Recent oracle gain moving average (5/5): -2.2880
+Moving-average oracle gain is negative (54/2)
+
+=== Round 170/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 77.84
+  oracle-gain in this round: 0.50
+  kd-train: teacher 1 (78.56) -> student 2 (76.12)
+  kd-train: teacher 8 (78.16) -> student 5 (76.42)
+  kd-train: teacher 4 (78.46) -> student 6 (76.26)
+  kd-train: teacher 9 (78.52) -> student 3 (73.98)
+Recent oracle gain moving average (5/5): -1.7320
+Moving-average oracle gain is negative (55/2)
+
+=== Round 171/220 (MWM_AccDiff) ===
+  kd-train: teacher 7 (78.34) -> student 2 (75.14)
+  kd-train: teacher 1 (78.56) -> student 5 (78.18)
+  kd-train: teacher 4 (78.46) -> student 6 (76.62)
+  kd-train: teacher 9 (78.52) -> student 3 (75.62)
+  oracle-train: oracle -> student 8 : 78.16
+  oracle-gain in this round: -4.12
+Recent oracle gain moving average (5/5): -2.0840
+Moving-average oracle gain is negative (56/2)
+
+=== Round 172/220 (MWM_AccDiff) ===
+  kd-train: teacher 1 (78.56) -> student 2 (74.34)
+  kd-train: teacher 4 (78.46) -> student 3 (75.92)
+  kd-train: teacher 7 (78.34) -> student 6 (76.34)
+  kd-train: teacher 9 (78.52) -> student 8 (74.04)
+  oracle-train: oracle -> student 5 : 77.90
+  oracle-gain in this round: -0.86
+Recent oracle gain moving average (5/5): -1.4680
+Moving-average oracle gain is negative (57/2)
+
+=== Round 173/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.46) -> student 2 (76.12)
+  kd-train: teacher 9 (78.52) -> student 6 (74.26)
+  kd-train: teacher 7 (78.34) -> student 5 (77.04)
+  oracle-train: oracle -> student 8 : 78.00
+  oracle-gain in this round: -1.36
+  kd-train: teacher 1 (78.56) -> student 3 (75.32)
+Recent oracle gain moving average (5/5): -1.4160
+Moving-average oracle gain is negative (58/2)
+
+=== Round 174/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.46) -> student 2 (76.66)
+  kd-train: teacher 9 (78.52) -> student 3 (76.66)
+  kd-train: teacher 7 (78.34) -> student 8 (76.64)
+  kd-train: teacher 1 (78.56) -> student 6 (75.28)
+  oracle-train: oracle -> student 5 : 78.32
+  oracle-gain in this round: -8.52
+Recent oracle gain moving average (5/5): -2.8720
+Moving-average oracle gain is negative (59/2)
+
+=== Round 175/220 (MWM_AccDiff) ===
+  kd-train: teacher 1 (78.56) -> student 2 (76.16)
+  kd-train: teacher 4 (78.46) -> student 3 (76.30)
+  kd-train: teacher 7 (78.34) -> student 6 (76.66)
+  kd-train: teacher 9 (78.52) -> student 5 (69.80)
+  oracle-train: oracle -> student 8 : 77.40
+  oracle-gain in this round: 0.02
+Recent oracle gain moving average (5/5): -2.9680
+Moving-average oracle gain is negative (60/2)
+
+=== Round 176/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.46) -> student 3 (76.82)
+  kd-train: teacher 7 (78.34) -> student 2 (76.44)
+  kd-train: teacher 1 (78.56) -> student 5 (77.48)
+  oracle-train: oracle -> student 8 : 77.42
+  oracle-gain in this round: -0.94
+  kd-train: teacher 9 (78.52) -> student 6 (76.28)
+Recent oracle gain moving average (5/5): -2.3320
+Moving-average oracle gain is negative (61/2)
+
+=== Round 177/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.46) -> student 8 (76.48)
+  kd-train: teacher 1 (78.56) -> student 2 (75.78)
+  kd-train: teacher 7 (78.34) -> student 6 (77.22)
+  kd-train: teacher 9 (78.52) -> student 3 (76.40)
+  oracle-train: oracle -> student 5 : 77.82
+  oracle-gain in this round: -3.90
+Recent oracle gain moving average (5/5): -2.9400
+Moving-average oracle gain is negative (62/2)
+
+=== Round 178/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.46) -> student 3 (77.02)
+  kd-train: teacher 7 (78.34) -> student 2 (77.24)
+  kd-train: teacher 1 (78.56) -> student 5 (73.92)
+  oracle-train: oracle -> student 8 : 77.84
+  oracle-gain in this round: -1.74
+  kd-train: teacher 9 (78.52) -> student 6 (76.16)
+Recent oracle gain moving average (5/5): -3.0160
+Moving-average oracle gain is negative (63/2)
+
+=== Round 179/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 78.34
+  oracle-gain in this round: -2.24
+  kd-train: teacher 1 (78.56) -> student 2 (74.82)
+  kd-train: teacher 5 (78.46) -> student 6 (76.78)
+  kd-train: teacher 4 (78.46) -> student 3 (77.04)
+  kd-train: teacher 9 (78.52) -> student 8 (76.10)
+Recent oracle gain moving average (5/5): -1.7600
+Moving-average oracle gain is negative (64/2)
+
+=== Round 180/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.46) -> student 3 (76.86)
+  kd-train: teacher 1 (78.56) -> student 2 (75.92)
+  kd-train: teacher 5 (78.46) -> student 6 (76.42)
+  kd-train: teacher 9 (78.52) -> student 7 (76.10)
+  oracle-train: oracle -> student 8 : 77.48
+  oracle-gain in this round: 0.60
+Recent oracle gain moving average (5/5): -1.6440
+Moving-average oracle gain is negative (65/2)
+
+=== Round 181/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (78.46) -> student 7 (77.62)
+  kd-train: teacher 1 (78.56) -> student 2 (74.74)
+  oracle-train: oracle -> student 8 : 78.08
+  oracle-gain in this round: 0.56
+  kd-train: teacher 9 (78.52) -> student 6 (76.76)
+  kd-train: teacher 5 (78.46) -> student 3 (77.20)
+Recent oracle gain moving average (5/5): -1.3440
+Moving-average oracle gain is negative (66/2)
+
+=== Round 182/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 78.46
+  oracle-gain in this round: -3.40
+  kd-train: teacher 1 (78.56) -> student 6 (76.54)
+  kd-train: teacher 9 (78.52) -> student 3 (77.32)
+  kd-train: teacher 5 (78.46) -> student 7 (78.14)
+  kd-train: teacher 8 (78.64) -> student 2 (76.48)
+Recent oracle gain moving average (5/5): -1.2440
+Moving-average oracle gain is negative (67/2)
+
+=== Round 183/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 78.24
+  oracle-gain in this round: -2.36
+  kd-train: teacher 5 (78.46) -> student 6 (76.38)
+  kd-train: teacher 9 (78.52) -> student 3 (75.48)
+  kd-train: teacher 1 (78.56) -> student 4 (75.06)
+  kd-train: teacher 8 (78.64) -> student 2 (74.34)
+Recent oracle gain moving average (5/5): -1.3680
+Moving-average oracle gain is negative (68/2)
+
+=== Round 184/220 (MWM_AccDiff) ===
+  kd-train: teacher 8 (78.64) -> student 3 (75.92)
+  kd-train: teacher 1 (78.56) -> student 7 (75.88)
+  oracle-train: oracle -> student 4 : 78.22
+  oracle-gain in this round: -1.38
+  kd-train: teacher 5 (78.46) -> student 6 (77.46)
+  kd-train: teacher 9 (78.52) -> student 2 (76.48)
+Recent oracle gain moving average (5/5): -1.1960
+Moving-average oracle gain is negative (69/2)
+
+=== Round 185/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 78.16
+  oracle-gain in this round: -0.50
+  kd-train: teacher 5 (78.46) -> student 6 (77.84)
+  kd-train: teacher 1 (78.56) -> student 3 (74.50)
+  kd-train: teacher 9 (78.52) -> student 4 (76.84)
+  kd-train: teacher 8 (78.64) -> student 2 (76.36)
+Recent oracle gain moving average (5/5): -1.4160
+Moving-average oracle gain is negative (70/2)
+
+=== Round 186/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 4 : 78.26
+  oracle-gain in this round: -2.16
+  kd-train: teacher 5 (78.46) -> student 6 (77.64)
+  kd-train: teacher 1 (78.56) -> student 3 (76.80)
+  kd-train: teacher 8 (78.64) -> student 7 (77.66)
+  kd-train: teacher 9 (78.52) -> student 2 (76.60)
+Recent oracle gain moving average (5/5): -1.9600
+Moving-average oracle gain is negative (71/2)
+
+=== Round 187/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 6 : 77.78
+  oracle-gain in this round: 4.54
+  kd-train: teacher 9 (78.52) -> student 7 (77.06)
+  kd-train: teacher 1 (78.56) -> student 4 (76.10)
+  kd-train: teacher 5 (78.46) -> student 3 (77.70)
+  kd-train: teacher 8 (78.64) -> student 2 (76.66)
+Recent oracle gain moving average (5/5): -0.3720
+Moving-average oracle gain is negative (72/2)
+
+=== Round 188/220 (MWM_AccDiff) ===
+  kd-train: teacher 8 (78.64) -> student 3 (78.00)
+  kd-train: teacher 1 (78.56) -> student 2 (74.22)
+  kd-train: teacher 4 (78.66) -> student 9 (78.52)
+  kd-train: teacher 6 (82.32) -> student 7 (78.26)
+  oracle-train: oracle -> student 5 : 78.46
+  oracle-gain in this round: -2.52
+Recent oracle gain moving average (5/5): -0.4040
+Moving-average oracle gain is negative (73/2)
+
+=== Round 189/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 1 : 78.56
+  oracle-gain in this round: -1.92
+  kd-train: teacher 8 (78.64) -> student 3 (77.76)
+  kd-train: teacher 7 (79.08) -> student 2 (76.88)
+  kd-train: teacher 4 (78.66) -> student 5 (75.94)
+  kd-train: teacher 6 (82.32) -> student 9 (77.20)
+Recent oracle gain moving average (5/5): -0.5120
+Moving-average oracle gain is negative (74/2)
+
+=== Round 190/220 (MWM_AccDiff) ===
+  kd-train: teacher 6 (82.32) -> student 5 (78.54)
+  oracle-train: oracle -> student 3 : 78.32
+  oracle-gain in this round: 3.14
+  kd-train: teacher 4 (78.66) -> student 1 (76.64)
+  kd-train: teacher 9 (81.10) -> student 2 (76.12)
+  kd-train: teacher 7 (79.08) -> student 8 (78.64)
+Recent oracle gain moving average (5/5): 0.2160
+Moving-average oracle gain is negative (75/2)
+
+=== Round 191/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 79.08
+  oracle-gain in this round: -2.02
+  kd-train: teacher 5 (81.28) -> student 1 (78.70)
+  kd-train: teacher 6 (82.32) -> student 4 (78.66)
+  kd-train: teacher 3 (81.46) -> student 2 (78.48)
+  kd-train: teacher 9 (81.10) -> student 8 (78.54)
+Recent oracle gain moving average (5/5): 0.2440
+Moving-average oracle gain is negative (76/2)
+
+=== Round 192/220 (MWM_AccDiff) ===
+  kd-train: teacher 9 (81.10) -> student 4 (80.50)
+  kd-train: teacher 6 (82.32) -> student 2 (79.82)
+  kd-train: teacher 5 (81.28) -> student 7 (77.06)
+  kd-train: teacher 3 (81.46) -> student 1 (80.02)
+  oracle-train: oracle -> student 8 : 80.78
+  oracle-gain in this round: -4.16
+Recent oracle gain moving average (5/5): -1.4960
+Moving-average oracle gain is negative (77/2)
+
+=== Round 193/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 81.06
+  oracle-gain in this round: -6.42
+  kd-train: teacher 3 (81.46) -> student 4 (80.42)
+  kd-train: teacher 5 (81.28) -> student 1 (80.38)
+  kd-train: teacher 9 (81.10) -> student 8 (76.62)
+  kd-train: teacher 6 (82.32) -> student 2 (80.36)
+Recent oracle gain moving average (5/5): -2.2760
+Moving-average oracle gain is negative (78/2)
+
+=== Round 194/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (81.46) -> student 8 (80.62)
+  kd-train: teacher 6 (82.32) -> student 4 (79.76)
+  oracle-train: oracle -> student 2 : 80.60
+  oracle-gain in this round: -3.56
+  kd-train: teacher 5 (81.28) -> student 7 (74.64)
+  kd-train: teacher 9 (81.10) -> student 1 (80.30)
+Recent oracle gain moving average (5/5): -2.6040
+Moving-average oracle gain is negative (79/2)
+
+=== Round 195/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 81.04
+  oracle-gain in this round: -6.84
+  kd-train: teacher 4 (81.68) -> student 2 (77.04)
+  kd-train: teacher 3 (81.46) -> student 8 (81.26)
+  kd-train: teacher 5 (81.28) -> student 1 (79.64)
+  kd-train: teacher 6 (82.32) -> student 9 (81.10)
+Recent oracle gain moving average (5/5): -4.6000
+Moving-average oracle gain is negative (80/2)
+
+=== Round 196/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (81.68) -> student 7 (74.20)
+  oracle-train: oracle -> student 9 : 81.16
+  oracle-gain in this round: -6.94
+  kd-train: teacher 6 (82.32) -> student 2 (79.80)
+  kd-train: teacher 3 (81.46) -> student 1 (79.84)
+  kd-train: teacher 8 (81.76) -> student 5 (81.28)
+Recent oracle gain moving average (5/5): -5.5840
+Moving-average oracle gain is negative (81/2)
+
+=== Round 197/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (81.68) -> student 2 (80.62)
+  oracle-train: oracle -> student 3 : 81.46
+  oracle-gain in this round: 1.28
+  kd-train: teacher 7 (81.62) -> student 5 (80.54)
+  kd-train: teacher 8 (81.76) -> student 9 (74.22)
+  kd-train: teacher 6 (82.32) -> student 1 (79.92)
+Recent oracle gain moving average (5/5): -4.4960
+Moving-average oracle gain is negative (82/2)
+
+=== Round 198/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 81.62
+  oracle-gain in this round: -5.52
+  kd-train: teacher 4 (81.68) -> student 2 (81.38)
+  kd-train: teacher 6 (82.32) -> student 9 (79.98)
+  kd-train: teacher 8 (81.76) -> student 1 (80.42)
+  kd-train: teacher 3 (82.74) -> student 5 (79.12)
+Recent oracle gain moving average (5/5): -4.3160
+Moving-average oracle gain is negative (83/2)
+
+=== Round 199/220 (MWM_AccDiff) ===
+  kd-train: teacher 4 (81.68) -> student 2 (81.00)
+  kd-train: teacher 6 (82.32) -> student 7 (76.10)
+  kd-train: teacher 8 (81.76) -> student 9 (80.34)
+  oracle-train: oracle -> student 5 : 81.18
+  oracle-gain in this round: -3.78
+  kd-train: teacher 3 (82.74) -> student 1 (78.66)
+Recent oracle gain moving average (5/5): -4.3600
+Moving-average oracle gain is negative (84/2)
+
+=== Round 200/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (82.74) -> student 4 (81.68)
+  kd-train: teacher 6 (82.32) -> student 9 (79.78)
+  kd-train: teacher 8 (81.76) -> student 1 (79.30)
+  kd-train: teacher 7 (82.62) -> student 5 (77.40)
+  oracle-train: oracle -> student 2 : 81.30
+  oracle-gain in this round: 1.60
+Recent oracle gain moving average (5/5): -2.6720
+Moving-average oracle gain is negative (85/2)
+
+=== Round 201/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (82.90) -> student 4 (81.84)
+  kd-train: teacher 7 (82.62) -> student 5 (82.08)
+  kd-train: teacher 3 (82.74) -> student 9 (80.96)
+  kd-train: teacher 6 (82.32) -> student 1 (79.74)
+  oracle-train: oracle -> student 8 : 81.76
+  oracle-gain in this round: -9.62
+Recent oracle gain moving average (5/5): -3.2080
+Moving-average oracle gain is negative (86/2)
+
+=== Round 202/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (82.74) -> student 9 (79.86)
+  oracle-train: oracle -> student 6 : 82.32
+  oracle-gain in this round: 0.24
+  kd-train: teacher 5 (82.44) -> student 4 (81.20)
+  kd-train: teacher 7 (82.62) -> student 1 (80.38)
+  kd-train: teacher 2 (82.90) -> student 8 (72.14)
+Recent oracle gain moving average (5/5): -3.4160
+Moving-average oracle gain is negative (87/2)
+
+=== Round 203/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (82.74) -> student 4 (80.04)
+  kd-train: teacher 6 (82.56) -> student 1 (80.12)
+  oracle-train: oracle -> student 8 : 82.42
+  oracle-gain in this round: -5.54
+  kd-train: teacher 2 (82.90) -> student 5 (82.44)
+  kd-train: teacher 7 (82.62) -> student 9 (80.74)
+Recent oracle gain moving average (5/5): -3.4200
+Moving-average oracle gain is negative (88/2)
+
+=== Round 204/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (82.90) -> student 1 (77.94)
+  kd-train: teacher 3 (82.74) -> student 9 (79.60)
+  kd-train: teacher 5 (82.88) -> student 8 (76.88)
+  oracle-train: oracle -> student 6 : 82.56
+  oracle-gain in this round: 0.62
+  kd-train: teacher 7 (82.62) -> student 4 (80.34)
+Recent oracle gain moving average (5/5): -2.5400
+Moving-average oracle gain is negative (89/2)
+
+=== Round 205/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 82.62
+  oracle-gain in this round: -7.82
+  kd-train: teacher 6 (83.18) -> student 4 (80.02)
+  kd-train: teacher 2 (82.90) -> student 9 (80.16)
+  kd-train: teacher 3 (82.74) -> student 1 (81.28)
+  kd-train: teacher 5 (82.88) -> student 8 (81.08)
+Recent oracle gain moving average (5/5): -4.4240
+Moving-average oracle gain is negative (90/2)
+
+=== Round 206/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (82.74) -> student 4 (81.02)
+  kd-train: teacher 5 (82.88) -> student 1 (80.02)
+  kd-train: teacher 2 (82.90) -> student 9 (78.38)
+  kd-train: teacher 6 (83.18) -> student 7 (74.80)
+  oracle-train: oracle -> student 8 : 82.02
+  oracle-gain in this round: -5.56
+Recent oracle gain moving average (5/5): -3.6120
+Moving-average oracle gain is negative (91/2)
+
+=== Round 207/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 81.38
+  oracle-gain in this round: -4.14
+  kd-train: teacher 2 (82.90) -> student 9 (79.30)
+  kd-train: teacher 5 (82.88) -> student 4 (80.10)
+  kd-train: teacher 6 (83.18) -> student 8 (76.46)
+  kd-train: teacher 3 (82.74) -> student 1 (80.56)
+Recent oracle gain moving average (5/5): -4.4880
+Moving-average oracle gain is negative (92/2)
+
+=== Round 208/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (82.90) -> student 9 (79.76)
+  kd-train: teacher 5 (82.88) -> student 4 (80.10)
+  kd-train: teacher 6 (83.18) -> student 7 (77.24)
+  oracle-train: oracle -> student 8 : 80.66
+  oracle-gain in this round: -6.68
+  kd-train: teacher 3 (82.74) -> student 1 (80.38)
+Recent oracle gain moving average (5/5): -4.7160
+Moving-average oracle gain is negative (93/2)
+
+=== Round 209/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 82.60
+  oracle-gain in this round: -2.94
+  kd-train: teacher 2 (82.90) -> student 1 (80.16)
+  kd-train: teacher 3 (82.74) -> student 9 (80.30)
+  kd-train: teacher 6 (83.18) -> student 4 (80.08)
+  kd-train: teacher 5 (82.88) -> student 8 (73.98)
+Recent oracle gain moving average (5/5): -5.4280
+Moving-average oracle gain is negative (94/2)
+
+=== Round 210/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (82.74) -> student 4 (80.38)
+  kd-train: teacher 5 (82.88) -> student 1 (80.26)
+  kd-train: teacher 2 (82.90) -> student 9 (79.76)
+  kd-train: teacher 6 (83.18) -> student 7 (79.66)
+  oracle-train: oracle -> student 8 : 81.10
+  oracle-gain in this round: -3.42
+Recent oracle gain moving average (5/5): -4.5480
+Moving-average oracle gain is negative (95/2)
+
+=== Round 211/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 82.32
+  oracle-gain in this round: -6.66
+  kd-train: teacher 2 (82.90) -> student 1 (79.42)
+  kd-train: teacher 3 (82.74) -> student 4 (81.02)
+  kd-train: teacher 6 (83.18) -> student 9 (79.60)
+  kd-train: teacher 5 (82.88) -> student 8 (77.68)
+Recent oracle gain moving average (5/5): -4.7680
+Moving-average oracle gain is negative (96/2)
+
+=== Round 212/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (82.90) -> student 1 (80.86)
+  kd-train: teacher 3 (82.74) -> student 4 (81.80)
+  kd-train: teacher 5 (82.88) -> student 7 (75.66)
+  kd-train: teacher 6 (83.18) -> student 9 (80.86)
+  oracle-train: oracle -> student 8 : 82.26
+  oracle-gain in this round: -2.66
+Recent oracle gain moving average (5/5): -4.4720
+Moving-average oracle gain is negative (97/2)
+
+=== Round 213/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 82.48
+  oracle-gain in this round: -4.90
+  kd-train: teacher 3 (82.74) -> student 9 (81.04)
+  kd-train: teacher 5 (82.88) -> student 1 (80.22)
+  kd-train: teacher 6 (83.18) -> student 4 (79.88)
+  kd-train: teacher 2 (82.90) -> student 8 (79.60)
+Recent oracle gain moving average (5/5): -4.1160
+Moving-average oracle gain is negative (98/2)
+
+=== Round 214/220 (MWM_AccDiff) ===
+  kd-train: teacher 2 (82.90) -> student 1 (81.02)
+  kd-train: teacher 3 (82.74) -> student 9 (81.38)
+  kd-train: teacher 6 (83.18) -> student 4 (81.04)
+  kd-train: teacher 5 (82.88) -> student 7 (77.58)
+  oracle-train: oracle -> student 8 : 81.78
+  oracle-gain in this round: -3.86
+Recent oracle gain moving average (5/5): -4.3000
+Moving-average oracle gain is negative (99/2)
+
+=== Round 215/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 82.46
+  oracle-gain in this round: -5.08
+  kd-train: teacher 2 (82.90) -> student 1 (79.94)
+  kd-train: teacher 3 (82.74) -> student 9 (80.40)
+  kd-train: teacher 6 (83.18) -> student 4 (79.98)
+  kd-train: teacher 5 (82.88) -> student 8 (77.92)
+Recent oracle gain moving average (5/5): -4.6320
+Moving-average oracle gain is negative (100/2)
+
+=== Round 216/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (82.74) -> student 4 (80.90)
+  kd-train: teacher 5 (82.88) -> student 1 (80.20)
+  kd-train: teacher 2 (82.90) -> student 7 (77.38)
+  oracle-train: oracle -> student 8 : 81.98
+  oracle-gain in this round: -3.64
+  kd-train: teacher 6 (83.18) -> student 9 (80.92)
+Recent oracle gain moving average (5/5): -4.0280
+Moving-average oracle gain is negative (101/2)
+
+=== Round 217/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 3 : 82.74
+  oracle-gain in this round: 0.28
+  kd-train: teacher 5 (82.88) -> student 4 (80.50)
+  kd-train: teacher 7 (82.94) -> student 1 (80.30)
+  kd-train: teacher 2 (82.90) -> student 8 (78.34)
+  kd-train: teacher 6 (83.18) -> student 9 (80.46)
+Recent oracle gain moving average (5/5): -3.4400
+Moving-average oracle gain is negative (102/2)
+
+=== Round 218/220 (MWM_AccDiff) ===
+  kd-train: teacher 3 (83.02) -> student 9 (80.32)
+  kd-train: teacher 6 (83.18) -> student 4 (80.16)
+  kd-train: teacher 7 (82.94) -> student 1 (81.84)
+  oracle-train: oracle -> student 5 : 82.88
+  oracle-gain in this round: 0.70
+  kd-train: teacher 2 (82.90) -> student 8 (82.18)
+Recent oracle gain moving average (5/5): -2.3200
+Moving-average oracle gain is negative (103/2)
+
+=== Round 219/220 (MWM_AccDiff) ===
+  kd-train: teacher 7 (82.94) -> student 8 (82.12)
+  kd-train: teacher 6 (83.18) -> student 9 (80.78)
+  kd-train: teacher 5 (83.58) -> student 4 (80.88)
+  oracle-train: oracle -> student 2 : 82.90
+  oracle-gain in this round: 0.38
+  kd-train: teacher 3 (83.02) -> student 1 (81.58)
+Recent oracle gain moving average (5/5): -1.4720
+Moving-average oracle gain is negative (104/2)
+
+=== Round 220/220 (MWM_AccDiff) ===
+  oracle-train: oracle -> student 7 : 82.94
+  oracle-gain in this round: 1.22
+  kd-train: teacher 2 (83.28) -> student 4 (76.38)
+  kd-train: teacher 6 (83.18) -> student 8 (80.58)
+  kd-train: teacher 5 (83.58) -> student 9 (80.64)
+  kd-train: teacher 3 (83.02) -> student 1 (82.74)
+Recent oracle gain moving average (5/5): -0.2120
+Moving-average oracle gain is negative (105/2)
+M0: oracle_total_gain=0.00, non_oracle_total_gain=0.00
+M1: oracle_total_gain=22.42, non_oracle_total_gain=50.76
+M2: oracle_total_gain=24.94, non_oracle_total_gain=47.24
+M3: oracle_total_gain=77.50, non_oracle_total_gain=-4.42
+M4: oracle_total_gain=33.96, non_oracle_total_gain=33.26
+M5: oracle_total_gain=17.02, non_oracle_total_gain=55.94
+M6: oracle_total_gain=20.86, non_oracle_total_gain=52.22
+M7: oracle_total_gain=-43.28, non_oracle_total_gain=117.44
+M8: oracle_total_gain=-32.24, non_oracle_total_gain=102.82
+M9: oracle_total_gain=47.16, non_oracle_total_gain=25.78
+End time: 2026-05-14 01:38:38
+Duration: 3:32:22.449413
+
+===== Distilling Ensemble → Single Model =====
+[Distill Epoch 1/100] Loss=2.7387 ValAcc=56.22
+[Distill Epoch 2/100] Loss=1.7217 ValAcc=63.86
+[Distill Epoch 3/100] Loss=1.1718 ValAcc=67.44
+[Distill Epoch 4/100] Loss=0.8883 ValAcc=69.16
+[Distill Epoch 5/100] Loss=0.7370 ValAcc=71.70
+[Distill Epoch 6/100] Loss=0.5795 ValAcc=74.24
+[Distill Epoch 7/100] Loss=0.4909 ValAcc=74.34
+[Distill Epoch 8/100] Loss=0.4279 ValAcc=75.34
+[Distill Epoch 9/100] Loss=0.3787 ValAcc=77.04
+[Distill Epoch 10/100] Loss=0.3451 ValAcc=78.00
+[Distill Epoch 11/100] Loss=0.3178 ValAcc=77.42
+[Distill Epoch 12/100] Loss=0.2962 ValAcc=78.50
+[Distill Epoch 13/100] Loss=0.2681 ValAcc=78.88
+[Distill Epoch 14/100] Loss=0.2543 ValAcc=78.64
+[Distill Epoch 15/100] Loss=0.2431 ValAcc=79.84
+[Distill Epoch 16/100] Loss=0.2277 ValAcc=80.00
+[Distill Epoch 17/100] Loss=0.2180 ValAcc=80.42
+[Distill Epoch 18/100] Loss=0.2064 ValAcc=80.82
+[Distill Epoch 19/100] Loss=0.1984 ValAcc=80.74
+[Distill Epoch 20/100] Loss=0.1905 ValAcc=80.84
+[Distill Epoch 21/100] Loss=0.1842 ValAcc=80.62
+[Distill Epoch 22/100] Loss=0.1786 ValAcc=81.48
+[Distill Epoch 23/100] Loss=0.1729 ValAcc=81.64
+[Distill Epoch 24/100] Loss=0.1680 ValAcc=81.20
+[Distill Epoch 25/100] Loss=0.1623 ValAcc=81.98
+[Distill Epoch 26/100] Loss=0.1584 ValAcc=81.66
+[Distill Epoch 27/100] Loss=0.1563 ValAcc=81.90
+[Distill Epoch 28/100] Loss=0.1506 ValAcc=82.18
+[Distill Epoch 29/100] Loss=0.1487 ValAcc=81.96
+[Distill Epoch 30/100] Loss=0.1460 ValAcc=82.12
+[Distill Epoch 31/100] Loss=0.1440 ValAcc=81.90
+[Distill Epoch 32/100] Loss=0.1392 ValAcc=82.34
+[Distill Epoch 33/100] Loss=0.1378 ValAcc=82.36
+[Distill Epoch 34/100] Loss=0.1360 ValAcc=81.96
+[Distill Epoch 35/100] Loss=0.1340 ValAcc=82.48
+[Distill Epoch 36/100] Loss=0.1316 ValAcc=82.62
+[Distill Epoch 37/100] Loss=0.1309 ValAcc=82.18
+[Distill Epoch 38/100] Loss=0.1302 ValAcc=82.40
+[Distill Epoch 39/100] Loss=0.1253 ValAcc=81.60
+[Distill Epoch 40/100] Loss=0.1309 ValAcc=82.90
+[Distill Epoch 41/100] Loss=0.1234 ValAcc=83.08
+[Distill Epoch 42/100] Loss=0.1219 ValAcc=83.18
+[Distill Epoch 43/100] Loss=0.1198 ValAcc=83.02
+[Distill Epoch 44/100] Loss=0.1193 ValAcc=83.34
+[Distill Epoch 45/100] Loss=0.1176 ValAcc=83.46
+[Distill Epoch 46/100] Loss=0.1166 ValAcc=82.72
+[Distill Epoch 47/100] Loss=0.1147 ValAcc=83.10
+[Distill Epoch 48/100] Loss=0.1138 ValAcc=83.36
+[Distill Epoch 49/100] Loss=0.1127 ValAcc=83.32
+[Distill Epoch 50/100] Loss=0.1121 ValAcc=83.06
+[Distill Epoch 51/100] Loss=0.1088 ValAcc=83.28
+[Distill Epoch 52/100] Loss=0.1091 ValAcc=83.00
+[Distill Epoch 53/100] Loss=0.1077 ValAcc=82.90
+[Distill Epoch 54/100] Loss=0.1077 ValAcc=82.76
+[Distill Epoch 55/100] Loss=0.1056 ValAcc=83.18
+[Distill Epoch 56/100] Loss=0.1050 ValAcc=83.38
+[Distill Epoch 57/100] Loss=0.1048 ValAcc=83.48
+[Distill Epoch 58/100] Loss=0.1033 ValAcc=83.40
+[Distill Epoch 59/100] Loss=0.1024 ValAcc=83.36
+[Distill Epoch 60/100] Loss=0.1013 ValAcc=83.52
+[Distill Epoch 61/100] Loss=0.1017 ValAcc=83.06
+[Distill Epoch 62/100] Loss=0.1004 ValAcc=83.42
+[Distill Epoch 63/100] Loss=0.0998 ValAcc=83.20
+[Distill Epoch 64/100] Loss=0.0984 ValAcc=83.30
+[Distill Epoch 65/100] Loss=0.0982 ValAcc=83.36
+[Distill Epoch 66/100] Loss=0.0976 ValAcc=83.44
+[Distill Epoch 67/100] Loss=0.0974 ValAcc=83.68
+[Distill Epoch 68/100] Loss=0.0962 ValAcc=83.52
+[Distill Epoch 69/100] Loss=0.0943 ValAcc=83.44
+[Distill Epoch 70/100] Loss=0.0947 ValAcc=83.62
+[Distill Epoch 71/100] Loss=0.0937 ValAcc=83.84
+[Distill Epoch 72/100] Loss=0.0929 ValAcc=83.66
+[Distill Epoch 73/100] Loss=0.0928 ValAcc=83.50
+[Distill Epoch 74/100] Loss=0.0920 ValAcc=83.88
+[Distill Epoch 75/100] Loss=0.0917 ValAcc=83.90
+[Distill Epoch 76/100] Loss=0.0913 ValAcc=83.86
+[Distill Epoch 77/100] Loss=0.0903 ValAcc=83.72
+[Distill Epoch 78/100] Loss=0.0894 ValAcc=83.86
+[Distill Epoch 79/100] Loss=0.0894 ValAcc=83.86
+[Distill Epoch 80/100] Loss=0.0887 ValAcc=83.92
+[Distill Epoch 81/100] Loss=0.0885 ValAcc=83.44
+[Distill Epoch 82/100] Loss=0.0878 ValAcc=83.88
+[Distill Epoch 83/100] Loss=0.0877 ValAcc=83.82
+[Distill Epoch 84/100] Loss=0.0863 ValAcc=83.78
+[Distill Epoch 85/100] Loss=0.0870 ValAcc=84.10
+[Distill Epoch 86/100] Loss=0.0857 ValAcc=83.70
+[Distill Epoch 87/100] Loss=0.0850 ValAcc=84.10
+[Distill Epoch 88/100] Loss=0.0854 ValAcc=83.76
+[Distill Epoch 89/100] Loss=0.0849 ValAcc=83.88
+[Distill Epoch 90/100] Loss=0.0838 ValAcc=83.82
+[Distill Epoch 91/100] Loss=0.0837 ValAcc=83.90
+[Distill Epoch 92/100] Loss=0.0833 ValAcc=83.70
+[Distill Epoch 93/100] Loss=0.0832 ValAcc=84.02
+[Distill Epoch 94/100] Loss=0.0819 ValAcc=83.84
+[Distill Epoch 95/100] Loss=0.0819 ValAcc=84.22
+[Distill Epoch 96/100] Loss=0.0818 ValAcc=84.08
+[Distill Epoch 97/100] Loss=0.0809 ValAcc=83.98
+[Distill Epoch 98/100] Loss=0.0811 ValAcc=83.68
+[Distill Epoch 99/100] Loss=0.0813 ValAcc=84.10
+[Distill Epoch 100/100] Loss=0.0809 ValAcc=83.96
+
+Distilled Student Test Accuracy: 83.38
+84.13
+84.10
+84.13
+avg_ens_acc = 84.13
+avg_learner_acc = 82.3
+avg_ens_conf = 0.82
+Mean pairwise 0/1 disagreement: 0.117
+M1_acc= 82.5
+M2_acc= 82.84
+M3_acc= 82.84
+M4_acc= 80.56
+M5_acc= 83.41
+M6_acc= 83.36
+M7_acc= 83.83
+M8_acc= 81.75
+M9_acc= 79.6
+std_dev= 1.33
+acc_var= 1.77
+

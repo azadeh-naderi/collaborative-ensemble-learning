@@ -27,6 +27,7 @@ JOBS_DIR="/home/an57/ondemand/data/sys/myjobs/projects/default/83"
 CELNET_PATH="${CELNET_PATH:-${JOBS_DIR}/trained_models_10_resnet_MWM_AccDiff_New}"
 CE_PATH="${CE_PATH:-${JOBS_DIR}/trained_CE_models_10_resnet_122epochs}"
 KD_PATH="${KD_PATH:-${JOBS_DIR}/trained_KD_models_10_resnet_122epochs}"
+CE_LOW_EPOCHS_PATH="${CE_LOW_EPOCHS_PATH:-${JOBS_DIR}/trained_CE_models_10_resnet_CE_24epochs}"
 SIGMAS="${SIGMAS:-0.0 0.01 0.02 0.05 0.1 0.2}"
 REPEATS="${REPEATS:-5}"
 RESULTS_DIR="${RESULTS_DIR:-results/flatness_${SLURM_JOB_ID}}"
@@ -48,6 +49,7 @@ echo " GPU         : $(nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/
 echo " CelNet path : ${CELNET_PATH}"
 echo " CE path     : ${CE_PATH}"
 echo " KD path     : ${KD_PATH}"
+echo " CE-24ep path: ${CE_LOW_EPOCHS_PATH}"
 echo " Sigmas      : ${SIGMAS}"
 echo " Repeats     : ${REPEATS}"
 echo " Results dir : ${RESULTS_DIR}"
@@ -57,6 +59,7 @@ python scripts/flatness_experiment.py \
     --celnet-path "$CELNET_PATH" \
     --ce-path "$CE_PATH" \
     --kd-path "$KD_PATH" \
+    --ce-low-epochs-path "$CE_LOW_EPOCHS_PATH" \
     --sigmas $SIGMAS \
     --repeats "$REPEATS" \
     --output "$RESULTS_DIR"

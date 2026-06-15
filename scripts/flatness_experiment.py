@@ -110,6 +110,8 @@ def main():
     parser.add_argument("--celnet-path", type=str, required=True)
     parser.add_argument("--ce-path", type=str, required=True)
     parser.add_argument("--kd-path", type=str, required=True)
+    parser.add_argument("--ce-low-epochs-path", type=str, default=None,
+                         help="Optional path to a CE checkpoint trained with fewer epochs")
     parser.add_argument("--sigmas", type=float, nargs="+", default=[0.0, 0.01, 0.02, 0.05, 0.1, 0.2])
     parser.add_argument("--repeats", type=int, default=5)
     parser.add_argument("--seed", type=int, default=42)
@@ -131,9 +133,13 @@ def main():
         batch_size=args.batch_size, seed=args.seed, num_workers=args.num_workers, root=args.data_root
     )
 
-    exclude_map = {"CelNet": args.celnet_exclude_idx, "CE": [], "KD": []}
+    exclude_map = {"CelNet": args.celnet_exclude_idx, "CE": [], "KD": [], "CE_24epochs": []}
+    methods = [("CelNet", args.celnet_path), ("CE", args.ce_path), ("KD", args.kd_path)]
+    if args.ce_low_epochs_path:
+        methods.append(("CE_24epochs", args.ce_low_epochs_path))
+
     all_rows = []
-    for name, path in [("CelNet", args.celnet_path), ("CE", args.ce_path), ("KD", args.kd_path)]:
+    for name, path in methods:
         all_rows.extend(run_method(
             name, path, test_loader, args.sigmas, args.repeats,
             args.input_channels, args.num_classes, False, device, args.seed,

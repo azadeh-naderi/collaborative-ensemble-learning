@@ -38,9 +38,7 @@ conda activate /home/an57/ondemand/data/sys/myjobs/projects/default/15/torch-cud
 set -u
 pip install --user -q pandas
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(dirname "$SCRIPT_DIR")"
-cd "$REPO_ROOT"
+cd "$SLURM_SUBMIT_DIR"
 mkdir -p logs
 
 echo "======================================================"

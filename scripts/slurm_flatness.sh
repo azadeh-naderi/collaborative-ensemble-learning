@@ -30,9 +30,9 @@ REPEATS="${REPEATS:-5}"
 RESULTS_DIR="${RESULTS_DIR:-results/flatness_${SLURM_JOB_ID}}"
 # ─────────────────────────────────────────────────────────────────────────────
 
-# Activate your conda / venv environment here, e.g.:
-# module load cuda/12.1
-# conda activate celnet
+source /apps/easybuild/software/Anaconda3/2023.09-0/etc/profile.d/conda.sh
+conda activate /home/an57/ondemand/data/sys/myjobs/projects/default/15/torch-cuda
+pip install --user -q pandas
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"

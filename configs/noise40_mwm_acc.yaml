@@ -4,7 +4,7 @@ model: resnet
 dataset_name: cifar_10
 num_models: 10
 pairing_strategy: mwm_acc
-n_rounds: 100
+n_rounds: 220
 degree: 5
 batch_size: 64
 input_channels: 3

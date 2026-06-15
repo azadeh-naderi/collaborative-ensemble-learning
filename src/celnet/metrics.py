@@ -77,6 +77,14 @@ def average_ensemble_confidence(models_with_idx, data_loader, num_classes):
 
 
 @torch.no_grad()
+def average_learner_accuracy(models_with_idx, data_loader):
+    accuracy_sum = 0.0
+    for model, _ in models_with_idx:
+        accuracy_sum += accuracy(model, data_loader)
+    return accuracy_sum / len(models_with_idx)
+
+
+@torch.no_grad()
 def collect_preds_and_probs(models_with_idx, loader, num_classes, device=None):
     models = [m for m, _ in models_with_idx]
     ids = [idx for _, idx in models_with_idx]

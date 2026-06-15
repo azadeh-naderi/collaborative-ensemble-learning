@@ -151,7 +151,7 @@ def farthest_val_random_split(tuple_models, val_splits, batch_size, run_seed):
     return pairs
 
 
-def make_fixed_friend_groups_by_id(tuple_models, group_size=group_size, seed=None):
+def make_fixed_friend_groups_by_id(tuple_models, group_size=5, seed=None):
     """
     Create fixed random friend groups using model IDs only.
     Call this once before the round loop.
@@ -278,7 +278,7 @@ def pair_fixed_groups_acc_diff(groups, val_loader):
 
 
 @torch.no_grad()
-def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree=degree, seed=None):
+def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree, seed=None):
     """
     Include oracle in a true random d-regular graph, then choose disjoint pairs
     greedily by largest accuracy difference among allowed graph edges.
@@ -329,7 +329,7 @@ def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree=degree
     return pairs
 
 @torch.no_grad()
-def random_regular_graph_uniform_pairing(tuple_models, degree=degree, seed=None):
+def random_regular_graph_uniform_pairing(tuple_models, degree, seed=None):
     """
     Random 3-regular graph + uniform random neighbor matching.
 
@@ -388,14 +388,14 @@ def random_regular_graph_uniform_pairing(tuple_models, degree=degree, seed=None)
 
     return pairs
 
-def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, degree, run_seed, batch_size, round_idx):
+def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, degree, run_seed, batch_size, round_idx, fixed_group_ids=None):
     return {
         "split": lambda: farthest_val_random_split(updated_models, val_splits, batch_size, run_seed),
         "euclidean": lambda: euclidean_distance_class_accuracy(updated_models, val_loader, num_classes),
         "max": lambda: max_difference_pairing(updated_models, val_loader),
         "mwm_classAcc": lambda: maximum_weight_matching_class_accuracy(updated_models, val_loader, num_classes),
         "mwm_acc": lambda: maximum_weight_matching_accuracy_difference(updated_models, val_loader),
-        
+
         "friend_random": lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
         "friend_mwm_acc_diff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
         "friend_acc_diff": lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),

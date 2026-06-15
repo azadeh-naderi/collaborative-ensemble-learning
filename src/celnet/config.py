@@ -14,9 +14,10 @@ class ExperimentConfig:
     model: str = "resnet"
     dataset_name: str = "cifar_10"
     num_models: int = 10
-    pairing_strategy: str = "random_graph_mwm_acc"
+    pairing_strategy: str = "mwm_acc"
     n_rounds: int = 100
     degree: int = 5
+    friend_group_size: int = 5
     batch_size: int = 64
     input_channels: int = 3
     num_classes: int = 10

@@ -17,6 +17,8 @@ import pytz
 import numpy as np
 import os, random
 import math
+import copy
+
 
 import itertools
 import argparse
@@ -33,6 +35,10 @@ class ResNet(nn.Module):
 
         # Load a pretrained resnet18 model
         self.base_model = torch_models.resnet18(pretrained=pretrained)
+        #if pretrained:
+            #self.base_model = resnet18(weights=ResNet18_Weights.DEFAULT)
+        #else:
+            #self.base_model = resnet18(weights=None)
 
         # Modify the input layer to take grayscale or RGB input
         self.base_model.conv1 = nn.Conv2d(
@@ -100,10 +106,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # experiments settings
 model_class = ResNet
 num_models = 10
-pairing_strategy = "random_graph_mwm_acc"   # options: "ValSplit_Pair", "Class_Pair"/euclidean, "Acc_Pair"/max, "mwm_classAcc"/maximum-weight matching for class_accuracy distance, "mwm_acc"/maximum-weight matching for accuracy difference, "random_graph"
-n_rounds = 100
+pairing_strategy = "MWM_AccDiff"   # options: "ValSplit_Pair", "Class_Pair"/euclidean, "Acc_Pair"/max, "mwm_classAcc"/maximum-weight matching for class_accuracy distance, "mwm_acc"/maximum-weight matching for accuracy difference, "random_graph", "friend_random", "friend_acc_diff"
+n_rounds = 220
 
-degree =5
+degree =3
+
 
 # --- seeds ---
 num_runs = args.run_id  
@@ -144,7 +151,7 @@ schedulers = {}   # reset per run experiment
 learning_rate = 0.1  # for sgd
 momentum = 0.9
 weight_decay = 0.0001
-use_scheduler = True
+use_scheduler = True  #
 
 gamma = 0.1
 temperature = 4
@@ -169,12 +176,18 @@ test_size_percent = .10
 
 pairing_methods = {
     "split": lambda: farthest_val_random_split(tuple_models=updated_models),
-    "euclidean": lambda: euclidean_distance_class_accuracy(tuple_models=updated_models, val_loader=val_loader, num_classes=num_classes),
-    "max": lambda: max_difference_pairing(tuple_models=updated_models, val_loader=val_loader),
-    "mwm_classAcc": lambda: maximum_weight_matching_class_accuracy(tuple_models=updated_models, val_loader=val_loader, num_classes=num_classes),
-    "mwm_acc": lambda: maximum_weight_matching_accuracy_difference(tuple_models=updated_models, val_loader=val_loader),
-    "random_graph": lambda: random_graph_pairing(tuple_models=updated_models, degree=degree, seed=run_seed),
-    "random_graph_mwm_acc": lambda: random_graph_mwm_acc_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
+    "ClassDist": lambda: euclidean_distance_class_accuracy(tuple_models=updated_models, val_loader=val_loader, num_classes=num_classes),
+    "AccDiff": lambda: max_difference_pairing(tuple_models=updated_models, val_loader=val_loader),
+    "MWM_ClassDist": lambda: maximum_weight_matching_class_accuracy(tuple_models=updated_models, val_loader=val_loader, num_classes=num_classes),
+    "MWM_AccDiff": lambda: maximum_weight_matching_accuracy_difference(tuple_models=updated_models, val_loader=val_loader),
+    
+    "Friend_Random": lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
+    "Friend_MWM_AccDiff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
+    "Friend_AccDiff": lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
+    
+    "RRG_AccDiff": lambda: random_regular_graph_maxdiff_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
+    "RRg_Random": lambda: random_regular_graph_uniform_pairing(tuple_models=updated_models, degree=degree, seed=run_seed + round_idx),
+
 }
 
 
@@ -335,6 +348,30 @@ def average_ensemble_confidence(tuple_models, test_loader, num_classes):
     # Return mean confidence (0–1 range)
     return (total_conf_sum / total_samples) if total_samples > 0 else 0.0
 
+
+
+@torch.no_grad()
+def average_learner_accuracy(tuple_models, test_loader):
+    """
+    Compute the **average learner accuracy** of an ensemble on a given dataset.
+    ...
+    """
+    device = next(tuple_models[0][0].parameters()).device
+    num_models = len(tuple_models)
+    accuracy_sum = 0.0
+
+    for model, _ in tuple_models:
+        model.eval()
+        correct, total = 0, 0
+        for images, labels in test_loader:
+            images, labels = images.to(device), labels.to(device)
+            outputs = model(images)
+            preds = outputs.argmax(dim=1)
+            correct += (preds == labels).sum().item()
+            total += labels.size(0)
+        accuracy_sum += correct / total
+
+    return (accuracy_sum / num_models) * 100.0
 
 
 @torch.no_grad()
@@ -585,7 +622,7 @@ def maximum_weight_matching_accuracy_difference(tuple_models, val_loader):
     accuracies = []
     for model, idx in tuple_models:
         if idx == 0:
-            acc = 1.0   # oracle
+            acc = 100.0   # oracle
         else:
             acc = float(accuracy(model, val_loader))
         accuracies.append(acc)
@@ -614,124 +651,253 @@ def maximum_weight_matching_accuracy_difference(tuple_models, val_loader):
     return pairs
 
 
-@torch.no_grad()
-def random_graph_pairing(tuple_models, degree=degree, seed=None):
+
+
+def make_fixed_friend_groups_by_id(tuple_models, group_size=5, seed=None):
     """
-    Pair models under a random-graph connectivity constraint.
-
-    Idea:
-    - Each node (model) is allowed to connect only to a few random other nodes
-    - Pairing is chosen only from these allowed edges
-    - Each model can appear in at most one pair
-
-    Args:
-        tuple_models: [((model, idx), ...)] in your usual format
-        degree: approximate number of random neighbors per node
-        seed: optional seed for reproducibility
-
-    Returns:
-        pairs in the same format as your other strategies:
-        [((model_a, idx_a), (model_b, idx_b)), ...]
+    Create fixed random friend groups using model IDs only.
+    Call this once before the round loop.
     """
-    models = [model for model, _ in tuple_models]
-    model_indices = [idx for _, idx in tuple_models]
-    num_models = len(tuple_models)
+    if group_size < 2:
+        raise ValueError("group_size must be at least 2.")
 
-    if num_models < 2:
-        return []
-
-    # degree cannot be larger than num_models - 1
-    #degree = max(1, min(degree, num_models - 1))
+    ids = [idx for _, idx in tuple_models]
 
     rng = random.Random(seed) if seed is not None else random
+    rng.shuffle(ids)
 
-    # Build sparse random graph
-    G = nx.Graph()
-    G.add_nodes_from(range(num_models))
+    group_ids = []
+    for i in range(0, len(ids), group_size):
+        group_ids.append(ids[i:i + group_size])
 
-    # For each node, randomly choose a few neighbors
-    for i in range(num_models):
-        possible_neighbors = [j for j in range(num_models) if j != i]
-        chosen_neighbors = rng.sample(
-            possible_neighbors,
-            k=min(degree, len(possible_neighbors))
-        )
+    return group_ids
 
-        for j in chosen_neighbors:
-            G.add_edge(i, j, weight=1.0)   # unweighted allowed connection
 
-    # Use matching only on allowed edges
-    matching = nx.max_weight_matching(G, maxcardinality=True)
+def materialize_groups_from_ids(updated_models, group_ids):
+    """
+    Convert fixed group IDs into current (model, idx) tuples.
+    """
+    id_to_model = {idx: (model, idx) for model, idx in updated_models}
 
-    # Convert to your pair format
+    groups = []
+    for gid_group in group_ids:
+        group = [id_to_model[idx] for idx in gid_group if idx in id_to_model]
+        if len(group) > 0:
+            groups.append(group)
+
+    return groups
+
+
+def pair_fixed_groups_random(groups, seed=None):
+    """
+    Random pairing, but only inside each fixed friend group.
+    """
+    rng = random.Random(seed) if seed is not None else random
     pairs = []
-    for i, j in matching:
-        pairs.append(((models[i], model_indices[i]),
-                      (models[j], model_indices[j])))
+
+    for group in groups:
+        if len(group) < 2:
+            continue
+
+        members = list(group)
+        rng.shuffle(members)
+
+        for i in range(0, len(members) - 1, 2):
+            pairs.append((members[i], members[i + 1]))
 
     return pairs
 
 
+@torch.no_grad()
+def pair_fixed_groups_mwm_acc_diff(groups, val_loader):
+    """
+    Pair only inside each fixed friend group, using maximum-weight matching
+    with edge weight = absolute accuracy difference.
+    """
+    pairs = []
+
+    for group in groups:
+        if len(group) < 2:
+            continue
+
+        models = [m for m, _ in group]
+        ids = [idx for _, idx in group]
+
+        accs = []
+        for model, idx in group:
+            if idx == 0:
+                acc = 100.0
+            else:
+                acc = float(accuracy(model, val_loader))
+            accs.append(acc)
+
+        G = nx.Graph()
+        G.add_nodes_from(range(len(group)))
+
+        for i in range(len(group)):
+            for j in range(i + 1, len(group)):
+                weight = abs(accs[i] - accs[j])
+                G.add_edge(i, j, weight=weight)
+
+        matching = nx.max_weight_matching(G, maxcardinality=True)
+
+        for i, j in matching:
+            pairs.append(((models[i], ids[i]), (models[j], ids[j])))
+
+    return pairs
+
 
 @torch.no_grad()
-def random_graph_mwm_acc_pairing(tuple_models, val_loader, degree=degree, seed=None):
-    """
-    Pair models using maximum-weight matching on accuracy difference,
-    but only over edges allowed by a random graph.
+def pair_fixed_groups_acc_diff(groups, val_loader):
 
-    Args:
-        tuple_models: list like [(model, idx), ...]
-        val_loader: validation loader for computing model accuracies
-        degree: number of random neighbors per node (approximate)
-        seed: optional seed for reproducibility
+    pairs = []
+
+    for group in groups:
+        if len(group) < 2:
+            continue
+
+        # Compute accuracies for members of this group
+        members_with_acc = []
+        for model, idx in group:
+            if idx == 0:
+                acc = 100.0   # oracle handling, same as your current code
+            else:
+                acc = float(accuracy(model, val_loader))
+            members_with_acc.append((model, idx, acc))
+
+        # Sort by accuracy from low to high
+        members_with_acc.sort(key=lambda x: x[2])
+
+        # Pair lowest with highest, next-lowest with next-highest, ...
+        n = len(members_with_acc)
+        for i in range(n // 2):
+            low_model, low_id, low_acc = members_with_acc[i]
+            high_model, high_id, high_acc = members_with_acc[n - 1 - i]
+
+            pairs.append(((low_model, low_id), (high_model, high_id)))
+
+    return pairs
+
+@torch.no_grad()
+def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree=degree, seed=None):
+    """
+    Option A:
+    Include oracle in a true random d-regular graph, then choose disjoint pairs
+    greedily by largest accuracy difference among allowed graph edges.
 
     Returns:
-        pairs in format:
         [((model_a, idx_a), (model_b, idx_b)), ...]
     """
-
     num_models = len(tuple_models)
     if num_models < 2:
         return []
 
-    #degree = max(1, min(degree, num_models - 1))
-    rng = random.Random(seed) if seed is not None else random
+    if degree >= num_models:
+        raise ValueError(
+            f"degree must be < num_models, got degree={degree}, num_models={num_models}"
+        )
+
+    if (num_models * degree) % 2 != 0:
+        raise ValueError(
+            f"A {degree}-regular graph on {num_models} nodes cannot exist because "
+            f"num_models * degree must be even."
+        )
 
     models = [m for m, _ in tuple_models]
     ids = [idx for _, idx in tuple_models]
 
-    # ---- step 1: compute accuracy of each model ----
+    # compute accuracies in tuple_models order
     accs = []
-    for model, _ in tuple_models:
-        accs.append(float(accuracy(model, val_loader)))
+    for model, idx in tuple_models:
+        if idx == 0:
+            accs.append(100.0)   # keep oracle strongest, same style as your max_difference_pairing
+        else:
+            accs.append(float(accuracy(model, val_loader)))
 
-    # ---- step 2: build random sparse graph ----
-    G = nx.Graph()
-    G.add_nodes_from(range(num_models))
+    # build a true random d-regular graph
+    G = nx.random_regular_graph(d=degree, n=num_models, seed=seed)
 
-    for i in range(num_models):
-        possible_neighbors = [j for j in range(num_models) if j != i]
-        chosen_neighbors = rng.sample(
-            possible_neighbors,
-            k=min(degree, len(possible_neighbors))
-        )
+    # score only allowed edges
+    edge_list = []
+    for i, j in G.edges():
+        diff = abs(accs[i] - accs[j])
+        edge_list.append((diff, i, j))
 
-        for j in chosen_neighbors:
-            if not G.has_edge(i, j):
-                weight = abs(accs[i] - accs[j])   # mwm_acc weight
-                G.add_edge(i, j, weight=weight)
+    # highest-gap first
+    edge_list.sort(reverse=True)
 
-    # ---- step 3: maximum-weight matching on allowed edges only ----
-    matching = nx.max_weight_matching(G, maxcardinality=True)
-
-    # ---- step 4: convert to your pair format ----
+    # greedy matching from largest difference edges
+    paired = set()
     pairs = []
-    for i, j in matching:
-        pairs.append(
-            ((models[i], ids[i]), (models[j], ids[j]))
-        )
+
+    for diff, i, j in edge_list:
+        if i not in paired and j not in paired:
+            paired.add(i)
+            paired.add(j)
+            pairs.append(((models[i], ids[i]), (models[j], ids[j])))
 
     return pairs
+
+@torch.no_grad()
+def random_regular_graph_uniform_pairing(tuple_models, degree=degree, seed=None):
+    """
+    Random 3-regular graph + uniform random neighbor matching.
+
+    Steps:
+    1. Build random d-regular graph
+    2. Randomly iterate nodes
+    3. Each node picks a random available neighbor
+    4. Form disjoint pairs
+
+    Returns:
+        [((model_a, idx_a), (model_b, idx_b)), ...]
+    """
+    num_models = len(tuple_models)
+    if num_models < 2:
+        return []
+
+    if degree >= num_models:
+        raise ValueError(f"degree must be < num_models")
+
+    if (num_models * degree) % 2 != 0:
+        raise ValueError("num_models * degree must be even for regular graph")
+
+    rng = random.Random(seed)
+
+    models = [m for m, _ in tuple_models]
+    ids = [idx for _, idx in tuple_models]
+
+    # Step 1: build random 3-regular graph
+    G = nx.random_regular_graph(d=degree, n=num_models, seed=seed)
+
+    # Step 2: shuffle node order
+    nodes = list(range(num_models))
+    rng.shuffle(nodes)
+
+    paired = set()
+    pairs = []
+
+    # Step 3: greedy random neighbor matching
+    for i in nodes:
+        if i in paired:
+            continue
+
+        # available neighbors that are not yet paired
+        neighbors = [j for j in G.neighbors(i) if j not in paired]
+
+        if len(neighbors) == 0:
+            continue  # no available neighbor left
+
+        # pick one neighbor uniformly at random
+        j = rng.choice(neighbors)
+
+        paired.add(i)
+        paired.add(j)
+
+        pairs.append(((models[i], ids[i]), (models[j], ids[j])))
+
+    return pairs
+
 
 def Best_teach_best_pairing(tuple_models, val_loader):
 
@@ -1013,7 +1179,7 @@ def cifar_dataset(batch_size: int, seed: int = 42, num_workers: int = 4, root: s
 
 
 
-def train_student_oracle(student, train_loader, optimizer, lr_scheduler=None):
+def train_student_oracle(student, train_loader, optimizer , lr_scheduler=None):
     """Supervised step: CrossEntropy with true labels (Oracle)."""
     criterion = nn.CrossEntropyLoss()
     student.train()
@@ -1033,7 +1199,7 @@ def train_student_oracle(student, train_loader, optimizer, lr_scheduler=None):
 
     return student
 
-def train_student_kd(student, teacher, train_loader, optimizer, lr_scheduler=None):
+def train_student_kd(student, teacher, train_loader, optimizer , lr_scheduler=None):
     criterion_hard = nn.CrossEntropyLoss()
     criterion_soft = nn.KLDivLoss(reduction="batchmean")
 
@@ -1156,19 +1322,9 @@ def pairwise_disagreement_matrix(models_with_idx, loader, num_classes, device=No
     mean_pairwise = D.sum() / (M*(M-1))  # average over ordered pairs, excludes diagonal automatically
     return ids, D, float(mean_pairwise.item())
 
-def distill_ensemble_to_student(
-    ensemble_models,
-    student_model,
-    train_loader,
-    val_loader,
-    device,
-    temperature=4.0,
-    alpha=0.7,
-    epochs=10,
-    lr=0.01
-):
+def distill_ensemble_to_student(ensemble_models, student_model, train_loader, val_loader, device, temperature=temperature, alpha=alpha, epochs=1, lr=0.01):
 
-    optimizer = torch.optim.SGD(student_model.parameters(), lr=lr, momentum=0.9)
+    optimizer = torch.optim.SGD(student_model.parameters(), lr=lr, momentum=momentum)
     ce_loss = nn.CrossEntropyLoss()
     kl_loss = nn.KLDivLoss(reduction="batchmean")
 
@@ -1238,13 +1394,15 @@ def distill_ensemble_to_student(
 #############################################################################################################
 
 
-
+# =================================================
 # 1. load original dataset
+# =================================================
 train_loader, val_loader, test_loader = cifar_dataset(batch_size=batch_size, seed=run_seed, num_workers=4)
 
 
-
+# =================================================
 # 2. create models
+# =================================================
 assert num_models <= len(model_seeds), "Not enough seeds!"
 
 # Initialize all models (idx=0 is oracle automatically)
@@ -1254,41 +1412,55 @@ init_models = [ initialize_model(seed=s) for s in model_seeds[:num_models]]
 updated_models = [(model, idx) for idx, model in enumerate(init_models)]
 oracle_id = 0  # model-id reserved for Oracle (uses true labels)
 
+#fixed_group_ids = make_fixed_friend_groups_by_id(tuple_models=updated_models, group_size=friend_group_size, seed=run_seed)
+#print("Fixed friend groups:", fixed_group_ids)
 
-# 3. create empty tensors and tuple of models
-avg_val_acc_tensor = torch.zeros(n_rounds + 1, device=device)
-avg_val_conf_tensor = torch.zeros(n_rounds + 1, device=device)
+# =================================================
+# 3. create empty tensors 
+# =================================================
+#ens-acc tracking per round( as one unite)
+ens_acc_per_round = torch.zeros(n_rounds + 1, device=device)
+avg_learner_acc_per_round = torch.zeros(n_rounds + 1, device=device)
+avg_conf_per_round = torch.zeros(n_rounds + 1, device=device)
 
 
-# direct student-learning progress trackers
-# Oracle: one trained student per round -> direct pre/post val-accuracy gain of that student
-# Non-oracle: multiple trained students per round -> sum of direct pre/post val-accuracy gains
-oracle_gain_student = torch.zeros(n_rounds, dtype=torch.float32)
-oracle_gain_student_cum = torch.zeros(n_rounds + 1, dtype=torch.float32)
-
-non_oracle_gain_mean = torch.zeros(n_rounds, dtype=torch.float32)
-non_oracle_gain_mean_cum = torch.zeros(n_rounds + 1, dtype=torch.float32)
-
+# ens oracle vs. non-oracle tracking per round
 oracle_gain_ens = torch.zeros(n_rounds, dtype=torch.float32)
 oracle_gain_ens_cum = torch.zeros(n_rounds + 1, dtype=torch.float32)
-
 non_oracle_gain_ens = torch.zeros(n_rounds, dtype=torch.float32)
 non_oracle_gain_ens_cum = torch.zeros(n_rounds + 1, dtype=torch.float32)
 
 
+# track acc for each M1, M2, M3, ...
+per_model_acc = torch.zeros((num_models, n_rounds + 1), dtype=torch.float32)
 
 
+# Per-model gain trackers: [num_models, n_rounds]
+oracle_gain_per_model = torch.full((num_models, n_rounds), float('nan'), dtype=torch.float32)
+non_oracle_gain_per_model = torch.full((num_models, n_rounds), float('nan'), dtype=torch.float32)
+
+# Optional cumulative versions: [num_models, n_rounds + 1]
+oracle_gain_per_model_cum = torch.zeros((num_models, n_rounds + 1), dtype=torch.float32)
+non_oracle_gain_per_model_cum = torch.zeros((num_models, n_rounds + 1), dtype=torch.float32)
 
 
+# =================================================
 # 4. Training 
+# =================================================
 with TimeLogger():
 
     # persistent optimizer/scheduler per model id (so momentum etc. persists across rounds)
     optimizers = {}
     schedulers = {}
     
-    avg_val_acc_tensor[0] = average_ensemble_accuracy(updated_models, val_loader, num_classes)
-    avg_val_conf_tensor[0] = average_ensemble_confidence(updated_models, val_loader, num_classes)
+    # to fill initial values of tensors
+    models_no_oracle = get_models_no_oracle(updated_models, oracle_id)
+    for model, idx in updated_models:
+        per_model_acc[idx, 0] = accuracy(model, val_loader)
+    
+    ens_acc_per_round[0] = average_ensemble_accuracy(updated_models, val_loader, num_classes)
+    avg_learner_acc_per_round[0] = average_learner_accuracy(models_no_oracle, val_loader)
+    avg_conf_per_round[0] = average_ensemble_confidence(updated_models, val_loader, num_classes)
     
     for round_idx in range(n_rounds):
 
@@ -1306,6 +1478,7 @@ with TimeLogger():
         
         round_kd_total_gain = 0.0
         round_kd_student_count = 0
+        oracle_gain_student_var = 0.0
         
         # 2) train student in each pair
         for (m1, id1), (m2, id2) in pairs:
@@ -1317,7 +1490,7 @@ with TimeLogger():
                 stu_acc_before_oracle = accuracy(student, val_loader)
                 
                 opt, sch = get_opt_sched(student_id, student)
-                print(f"  oracle-train: oracle -> student {student_id}")
+                print(f"  oracle-train: oracle -> student {student_id} : {stu_acc_before_oracle:.2f}")
 
                 student = train_student_oracle(
                     student=student,
@@ -1331,17 +1504,14 @@ with TimeLogger():
                     if mid == student_id:
                         updated_models[i] = (student, student_id)
                         break
+          
+                stu_acc_after_oracle = accuracy(student, val_loader)
+                oracle_gain_student_var = stu_acc_after_oracle - stu_acc_before_oracle
 
-                #oracle_phase_acc = ensemble_val_acc_no_oracle(updated_models, val_loader, num_classes, oracle_id)
-                
-                #oracle_gain_ens_var = oracle_phase_acc - round_start_acc
-                #oracle_gain_ens[round_idx] = oracle_gain_ens_var
-                #oracle_gain_ens_cum[round_idx + 1] = oracle_gain_ens_cum[round_idx] + oracle_gain_ens_var
-                
-                oracle_gain_student_var = (accuracy(student, val_loader)) - stu_acc_before_oracle
-                oracle_gain_student[round_idx] = oracle_gain_student_var
-                oracle_gain_student_cum[round_idx + 1] = oracle_gain_student_cum[round_idx] + oracle_gain_student_var
-
+                # store per-model oracle gain for this round
+                oracle_gain_per_model[student_id, round_idx] = oracle_gain_student_var
+          
+                print(f"  oracle-gain in this round: {oracle_gain_student_var:.2f}")
                 continue
 
             # Case B: peer-to-peer -> pick mentor (teacher) by current val accuracy, then KD
@@ -1372,6 +1542,9 @@ with TimeLogger():
             student_acc_after = float(accuracy(student, val_loader))
             kd_gain = student_acc_after - student_acc_before
             
+            # store per-model non-oracle gain for this round
+            non_oracle_gain_per_model[student_id, round_idx] = kd_gain
+            
             # accumulate round statistics
             round_kd_total_gain += kd_gain
             round_kd_student_count += 1
@@ -1383,127 +1556,345 @@ with TimeLogger():
                     break
 
         # 3) after finishing the round, log ensemble stats
+        # log Oracle gain
+        oracle_gain_ens[round_idx] = oracle_gain_student_var
+        oracle_gain_ens_cum[round_idx + 1] = oracle_gain_ens_cum[round_idx] + oracle_gain_student_var
+         
+        # log ens_acc, ave_learner_acc, and ave_con per round
         models_no_oracle = get_models_no_oracle(updated_models, oracle_id)
-        round_end_acc = average_ensemble_accuracy(models_no_oracle, val_loader, num_classes)
+        round_end_acc = average_ensemble_accuracy(models_no_oracle, val_loader, num_classes)               
+        ens_acc_per_round[round_idx + 1] = round_end_acc
+        avg_learner_acc_per_round[round_idx + 1] = average_learner_accuracy(models_no_oracle, val_loader)              
+        avg_conf_per_round[round_idx + 1] = average_ensemble_confidence(models_no_oracle, val_loader, num_classes)
         
-        avg_val_acc_tensor[round_idx + 1] = average_ensemble_accuracy(models_no_oracle, val_loader, num_classes)
-        avg_val_conf_tensor[round_idx + 1] = average_ensemble_confidence(models_no_oracle, val_loader, num_classes)
-
+        # log non-oracle gain
         if round_kd_student_count > 0:
             round_kd_mean_gain = round_kd_total_gain / round_kd_student_count
         else:
-            round_kd_mean_gain = 0.0
-        
-        non_oracle_gain_mean[round_idx] = round_kd_mean_gain
-        non_oracle_gain_mean_cum[round_idx + 1] = non_oracle_gain_mean_cum[round_idx] + round_kd_mean_gain
-        
-        #base_for_non_oracle = oracle_phase_acc if oracle_done_this_round else round_start_acc
-        #non_oracle_gain_ens_var = round_end_acc - oracle_phase_acc
-        #non_oracle_gain_ens[round_idx] = non_oracle_gain_ens_var
-        #non_oracle_gain_ens_cum[round_idx + 1] = non_oracle_gain_ens_cum[round_idx] + non_oracle_gain_ens_var
+            round_kd_mean_gain = 0.0       
+        non_oracle_gain_ens[round_idx] = round_kd_mean_gain
+        non_oracle_gain_ens_cum[round_idx + 1] = non_oracle_gain_ens_cum[round_idx] + round_kd_mean_gain
+    
+        # to track acc for each M1, M2, M3, ...
+        for model, idx in updated_models:
+            per_model_acc[idx, round_idx + 1] = accuracy(model, val_loader)
+            
+        for mid in range(num_models):
+            og = oracle_gain_per_model[mid, round_idx]
+            ng = non_oracle_gain_per_model[mid, round_idx]
 
-        #print(f"  mean non-oracle gain per student = {round_kd_mean_gain:+.2f}")
-        #print(f"  round oracle gain      = {float(oracle_gain_per_round_student[round_idx]):.4f}")
-        #print(f"  round non-oracle gain ensemble = {float(non_oracle_gain_per_round[round_idx]):.4f}")
-        #print(f"  cum oracle gain        = {float(oracle_gain_cum[round_idx + 1]):.4f}")
-        #print(f"  cum non-oracle gain    = {float(non_oracle_gain_cum[round_idx + 1]):.4f}")
+            oracle_gain_per_model_cum[mid, round_idx + 1] = (
+                oracle_gain_per_model_cum[mid, round_idx] +
+                (0.0 if torch.isnan(og) else og)
+            )
+
+            non_oracle_gain_per_model_cum[mid, round_idx + 1] = (
+                non_oracle_gain_per_model_cum[mid, round_idx] +
+                (0.0 if torch.isnan(ng) else ng)
+            )
+            
+    oracle_total_per_model = torch.nan_to_num(oracle_gain_per_model, nan=0.0).sum(dim=1)
+    non_oracle_total_per_model = torch.nan_to_num(non_oracle_gain_per_model, nan=0.0).sum(dim=1)
+
+    for mid in range(num_models):
+        print(
+            f"M{mid}: oracle_total_gain={oracle_total_per_model[mid]:.2f}, "
+            f"non_oracle_total_gain={non_oracle_total_per_model[mid]:.2f}"
+        )
 
     time.sleep(5)
 
-
+# =================================================
+#visualize
+# =================================================
+# --------------plot oracle vs. non-oracle
 rounds = np.arange(1, n_rounds + 1)
 rounds_cum = np.arange(1, n_rounds + 2)
 
-plt.figure(figsize=(9, 5))
-plt.plot( rounds, oracle_gain_student.cpu().numpy(), label='Oracle Gain student', linewidth=2)
-plt.plot( rounds, non_oracle_gain_mean.cpu().numpy(), label='Non-Oracle Gain Mean per Model', linewidth=2)
-plt.xlabel("Round")
-plt.ylabel("Accuracy Gain")
-plt.title("Oracle vs Non-Oracle Gain per Round")
-plt.legend()
-plt.grid(True, alpha=0.3)
+fig, axes = plt.subplots(1, 2, figsize=(16, 5))
+
+# Left: mean gain per round
+axes[0].plot(rounds, oracle_gain_ens.cpu().numpy(), label='Oracle Avg Gain', linewidth=2)
+axes[0].plot(rounds, non_oracle_gain_ens.cpu().numpy(), label='Non-Oracle Avg Gain', linewidth=2)
+axes[0].set_xlabel("Round")
+axes[0].set_ylabel("Average Accuracy Gain")
+axes[0].set_title("Average Oracle vs Non-Oracle Gain per Round")
+axes[0].legend()
+axes[0].grid(True, alpha=0.3)
+
+# Right: cumulative gain
+axes[1].plot(rounds_cum, oracle_gain_ens_cum.cpu().numpy(), label='Cumulative Oracle Avg Gain', linewidth=2)
+axes[1].plot(rounds_cum, non_oracle_gain_ens_cum.cpu().numpy(), label='Cumulative Non-Oracle Avg Gain', linewidth=2)
+axes[1].set_xlabel("Round")
+axes[1].set_ylabel("Cumulative Accuracy Gain")
+axes[1].set_title("Cumulative Oracle vs Non-Oracle Gain")
+axes[1].legend()
+axes[1].grid(True, alpha=0.3)
+
 plt.tight_layout()
-plt.savefig( f"{num_models}_Mean_{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png", dpi=200)
+plt.savefig(f"plot_Oracle_nonOracle_{num_models}_{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png", dpi=200)
 plt.show()
 
 
+
+# --------------plot ens-acc and ave-learner-acc
+round_axis = np.arange(0, n_rounds + 1)
+
 plt.figure(figsize=(9, 5))
-plt.plot( rounds_cum, oracle_gain_student_cum.cpu().numpy(), label='Cumulative Oracle Gain student', linewidth=2)
-plt.plot( rounds_cum, non_oracle_gain_mean_cum.cpu().numpy(), label='Cumulative Non-Oracle Gain Mean per Model', linewidth=2)
+plt.plot(round_axis, ens_acc_per_round.cpu().numpy(), label='Ensemble Accuracy', linewidth=2)
+plt.plot(round_axis, avg_learner_acc_per_round.cpu().numpy(), label='Average Learner Accuracy', linewidth=2)
 plt.xlabel("Round")
-plt.ylabel("Cumulative Accuracy Gain")
-plt.title("Aggregate Progress by Session Type")
+plt.ylabel("Accuracy (%)")
+plt.title("Ensemble-Accuracy vs Average-Learner-Accuracy Across Rounds")
 plt.legend()
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
-plt.savefig( f"{num_models}_cumulative_mean__{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png", dpi=200)
+plt.savefig(f"plot_ensAcc_{num_models}_{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png", dpi=200)
+plt.show()
+
+
+# --------------plot each model
+
+plt.figure(figsize=(14, 8))  # make it large for visibility
+
+for model_idx in range(num_models):
+    plt.plot(round_axis, per_model_acc[model_idx].cpu().numpy(), label=f"M{model_idx}", linewidth=1.8)
+plt.xlabel("Round")
+plt.ylabel("Accuracy (%)")
+plt.title("Per-Model Accuracy Across Rounds")
+# Optional: move legend outside if crowded
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=9)
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.savefig(f"plot_per_model_acc_{num_models}_{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png", dpi=200, bbox_inches='tight')
+plt.show()
+
+
+
+# -------------- plot accuracy per round for each model, one subplot per model
+round_axis = np.arange(0, n_rounds + 1)
+
+ncols = 2
+nrows = math.ceil(num_models / ncols)
+
+fig, axes = plt.subplots(nrows, ncols, figsize=(16, 3.8 * nrows), sharex=True, sharey=True)
+axes = np.array(axes).reshape(-1)
+
+for mid in range(num_models):
+    ax = axes[mid]
+    ax.plot(round_axis, per_model_acc[mid].cpu().numpy(), linewidth=1.8, marker='o', markersize=2.5)
+    ax.set_title(f"M{mid}")
+    ax.set_xlabel("Round")
+    ax.set_ylabel("Accuracy (%)")
+    ax.grid(True, alpha=0.3)
+
+for j in range(num_models, len(axes)):
+    axes[j].axis("off")
+
+fig.suptitle("Accuracy per Round for Each Model", fontsize=14)
+plt.tight_layout(rect=[0, 0, 1, 0.97])
+plt.savefig(
+    f"plot_per_model_accuracy_subplots_{num_models}_{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png",
+    dpi=200,
+    bbox_inches='tight'
+)
+plt.show()
+
+# ---------------plot per model: left: cumulative oracle gain , right: cumulative non-oracle gain per model
+round_axis = np.arange(0, n_rounds + 1)
+
+fig, axes = plt.subplots(1, 2, figsize=(18, 7))
+
+for mid in range(num_models):
+    axes[0].plot(
+        round_axis,
+        oracle_gain_per_model_cum[mid].cpu().numpy(),
+        label=f"M{mid}",
+        linewidth=1.8
+    )
+    axes[1].plot(
+        round_axis,
+        non_oracle_gain_per_model_cum[mid].cpu().numpy(),
+        label=f"M{mid}",
+        linewidth=1.8
+    )
+
+axes[0].set_title("Cumulative Oracle Gain per Model")
+axes[0].set_xlabel("Round")
+axes[0].set_ylabel("Accuracy Gain")
+axes[0].grid(True, alpha=0.3)
+
+axes[1].set_title("Cumulative Non-Oracle Gain per Model")
+axes[1].set_xlabel("Round")
+axes[1].set_ylabel("Accuracy Gain")
+axes[1].grid(True, alpha=0.3)
+
+axes[1].legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=9)
+
+plt.tight_layout()
+plt.savefig(
+    f"plot_per_model_oracle_vs_nonoracle_gain_{num_models}_{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png",
+    dpi=200,
+    bbox_inches='tight'
+)
+plt.show()
+
+
+# --------------- plot per model: Oracle gain and Non-Oracle gain in the same subplot
+import math
+
+rounds = np.arange(1, n_rounds + 1)
+
+ncols = 2
+nrows = math.ceil(num_models / ncols)
+
+fig, axes = plt.subplots(nrows, ncols, figsize=(16, 3.8 * nrows), sharex=True)
+axes = np.array(axes).reshape(-1)
+
+for mid in range(num_models):
+    ax = axes[mid]
+
+    og = oracle_gain_per_model[mid].cpu().numpy()
+    ng = non_oracle_gain_per_model[mid].cpu().numpy()
+
+    ax.plot(rounds, og, label="OG", linewidth=1.8, marker='o', markersize=2.5)
+    ax.plot(rounds, ng, label="NG", linewidth=1.8, marker='o', markersize=2.5)
+
+    ax.set_title(f"M{mid}")
+    ax.set_xlabel("Round")
+    ax.set_ylabel("Accuracy Gain")
+    ax.grid(True, alpha=0.3)
+
+    # optional: horizontal zero line helps read negative/positive gains
+    ax.axhline(0, linewidth=1, alpha=0.4)
+
+    # show legend only once to avoid clutter
+    if mid == 0:
+        ax.legend()
+
+# hide extra empty axes if num_models is odd
+for j in range(num_models, len(axes)):
+    axes[j].axis("off")
+
+fig.suptitle("Oracle vs Non-Oracle Gain per Round for Each Model", fontsize=14)
+plt.tight_layout(rect=[0, 0, 1, 0.97])
+plt.savefig(
+    f"plot_per_model_og_ng_roundwise_{num_models}_{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png",
+    dpi=200,
+    bbox_inches='tight'
+)
 plt.show()
 
 
 
 
+# ----------- heatmap: per model og and ng
+# convert to numpy
+og = oracle_gain_per_model.cpu().numpy()
+ng = non_oracle_gain_per_model.cpu().numpy()
 
-# Derive model name automatically
-model_name = model_class.__name__.lower()   
+# replace NaN with 0 only for visualization
+og_plot = np.nan_to_num(og, nan=0.0)
+ng_plot = np.nan_to_num(ng, nan=0.0)
+
+fig, axes = plt.subplots(1, 2, figsize=(18, 8), sharey=True)
+
+im1 = axes[0].imshow(og_plot, aspect='auto', interpolation='nearest')
+axes[0].set_title("Oracle Gain per Round per Model")
+axes[0].set_xlabel("Round")
+axes[0].set_ylabel("Model")
+axes[0].set_yticks(np.arange(num_models))
+axes[0].set_yticklabels([f"M{i}" for i in range(num_models)])
+axes[0].set_xticks(np.arange(0, n_rounds, max(1, n_rounds // 10)))
+
+im2 = axes[1].imshow(ng_plot, aspect='auto', interpolation='nearest')
+axes[1].set_title("Non-Oracle Gain per Round per Model")
+axes[1].set_xlabel("Round")
+axes[1].set_yticks(np.arange(num_models))
+axes[1].set_yticklabels([f"M{i}" for i in range(num_models)])
+axes[1].set_xticks(np.arange(0, n_rounds, max(1, n_rounds // 10)))
+
+cbar1 = plt.colorbar(im1, ax=axes[0], fraction=0.046, pad=0.04)
+cbar1.set_label("Accuracy Gain")
+
+cbar2 = plt.colorbar(im2, ax=axes[1], fraction=0.046, pad=0.04)
+cbar2.set_label("Accuracy Gain")
+
+plt.tight_layout()
+plt.savefig(
+    f"plot_heatmap_og_ng_per_model_{num_models}_{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png",
+    dpi=200,
+    bbox_inches='tight'
+)
+plt.show()
 
 
+# -------------------barplot: each model og and ng
+oracle_total_per_model = torch.nan_to_num(oracle_gain_per_model, nan=0.0).sum(dim=1).cpu().numpy()
+non_oracle_total_per_model = torch.nan_to_num(non_oracle_gain_per_model, nan=0.0).sum(dim=1).cpu().numpy()
+
+x = np.arange(num_models)
+width = 0.38
+
+plt.figure(figsize=(12, 6))
+plt.bar(x - width/2, oracle_total_per_model, width=width, label='Oracle Gain')
+plt.bar(x + width/2, non_oracle_total_per_model, width=width, label='Non-Oracle Gain')
+
+plt.xlabel("Model")
+plt.ylabel("Total Accuracy Gain")
+plt.title("Total Oracle vs Non-Oracle Gain per Model")
+plt.xticks(x, [f"M{i}" for i in range(num_models)])
+plt.legend()
+plt.grid(True, axis='y', alpha=0.3)
+plt.tight_layout()
+
+plt.savefig(
+    f"plot_total_og_ng_per_model_{num_models}_{model_class.__name__.lower()}_{pairing_strategy}_r{num_runs}.png",
+    dpi=200
+)
+plt.show()
+
+
+# =================================================
 # save tensors
-#torch.save(oracle_gain_student, f"{num_models}_oracle_tensor_{model_name}_{pairing_strategy}_r{num_runs}")
-#torch.save(non_oracle_gain_mean, f"{num_models}_non_oracle_tensor_{model_name}_{pairing_strategy}_r{num_runs}") 
-torch.save(oracle_gain_student_cum, f"{num_models}_oracle_cum_tensor_{model_name}_{pairing_strategy}_r{num_runs}")
-torch.save(non_oracle_gain_mean_cum, f"{num_models}_non_oracle_cum_tensor_{model_name}_{pairing_strategy}_r{num_runs}")
+# =================================================
+model_name = model_class.__name__.lower()    # Derive model name automatically
 
+torch.save(oracle_gain_ens, f"tensor_mean_oracle_{num_models}_{model_name}_{pairing_strategy}_r{num_runs}")
+torch.save(non_oracle_gain_ens, f"tensor_mean_non_oracle_{num_models}_{model_name}_{pairing_strategy}_r{num_runs}") 
+torch.save(oracle_gain_ens_cum, f"tensor_cum_oracle_{num_models}_{model_name}_{pairing_strategy}_r{num_runs}")
+torch.save(non_oracle_gain_ens_cum, f"tensor_cum_non_oracle_{num_models}_{model_name}_{pairing_strategy}_r{num_runs}")
 
-# save tensors
-#torch.save(avg_val_acc_tensor, f"avg_ens_acc_tensor_{num_models}_{model_name}_{pairing_strategy}_r{num_runs}")
-#torch.save(avg_val_conf_tensor, f"avg_ens_conf_tensor_{num_models}_{model_name}_{pairing_strategy}_r{num_runs}") 
+torch.save(ens_acc_per_round, f"tensor_ens_acc_{num_models}_{model_name}_{pairing_strategy}_r{num_runs}")
+torch.save(avg_learner_acc_per_round, f"tensor_avg_learner_acc_{num_models}_{model_name}_{pairing_strategy}_r{num_runs}") 
 
 # Save models with their indices
 #torch.save([(model.state_dict(), idx) for model, idx in updated_models], f"trained_models_{num_models}_{model_name}_{pairing_strategy}_KD_r{num_runs}")
 
-#=============
-#print("ensemble_acc, ensemble_acc_prob, ensemble_acc_logit, avg_acc, avg_conf:")
 
-# Evaluate ensemble performance Ensemble (logprob) Top-1 Accuracy: 
-#ensemble_acc = ensemble_accuracy(models_no_oracle, test_loader, mode='logprob')
-#print(f"{ensemble_acc:.2f}")
-
-# Optionally compare with averaging probabilities Ensemble (prob) Top-1 Accuracy: 
-#ensemble_acc_prob = ensemble_accuracy(models_no_oracle, test_loader, mode='prob')
-#print(f"{ensemble_acc_prob:.2f}")
-
-# Or averaging logits Ensemble (logit) Top-1 Accuracy: 
-#ensemble_acc_logit = ensemble_accuracy(models_no_oracle, test_loader, mode='logit')
-#print(f"{ensemble_acc_logit:.2f}")
-
-# Compute average prediction Average Ensemble Test Accuracy = 
-#models = [(m, idx) for idx, m in enumerate(init_models)]
-avg_acc = average_ensemble_accuracy(models_no_oracle, test_loader, num_classes)
-print(f"avg_ens_acc = {round(avg_acc, 2)}")
-
-# Average Ensemble Test Confidence = 
-avg_conf = average_ensemble_confidence(models_no_oracle, test_loader, num_classes)
-print(f"avg_ens_conf = {round(avg_conf, 2)}")
+# =================================================
+# get ens without oracle
+# =================================================
+final_models_no_oracle = get_models_no_oracle(updated_models, oracle_id)
 
 
-ids, D, mean_dis = pairwise_disagreement_matrix(models_no_oracle, val_loader, num_classes)
-print("Mean pairwise 0/1 disagreement:", round(mean_dis, 4))
-
-#=============
+#=================================================
+# Distill
+#=================================================
 
 print("\n===== Distilling Ensemble → Single Model =====")
 
 student_model = initialize_model(seed=999).to(device)
 
 student_model = distill_ensemble_to_student(
-    ensemble_models=models_no_oracle,
+    ensemble_models=final_models_no_oracle,
     student_model=student_model,
     train_loader=train_loader,
     val_loader=val_loader,
     device=device,
     temperature=4.0,
-    alpha=0.7,
-    epochs=50,
+    alpha=0.9,
+    epochs=100,
     lr=0.01
 )
 
@@ -1512,13 +1903,46 @@ student_test_acc = accuracy(student_model, test_loader)
 print(f"\nDistilled Student Test Accuracy: {student_test_acc:.2f}")
 
 
+#=================================================
+# log results
+#=================================================
+#print("ensemble_acc, ensemble_acc_prob, ensemble_acc_logit, avg_acc, avg_conf:")
+
+# Evaluate ensemble performance Ensemble (logprob) Top-1 Accuracy: 
+ensemble_acc = ensemble_accuracy(final_models_no_oracle, test_loader, mode='logprob')
+print(f"{ensemble_acc:.2f}")
+
+# Optionally compare with averaging probabilities Ensemble (prob) Top-1 Accuracy: 
+ensemble_acc_prob = ensemble_accuracy(final_models_no_oracle, test_loader, mode='prob')
+print(f"{ensemble_acc_prob:.2f}")
+
+# Or averaging logits Ensemble (logit) Top-1 Accuracy: 
+ensemble_acc_logit = ensemble_accuracy(final_models_no_oracle, test_loader, mode='logit')
+print(f"{ensemble_acc_logit:.2f}")
+
+# Compute average prediction Average Ensemble Test Accuracy = 
+avg_acc = average_ensemble_accuracy(final_models_no_oracle, test_loader, num_classes)
+print(f"avg_ens_acc = {round(avg_acc, 2)}")
+
+# Compute average learner Accuracy on test= 
+avg_lenarner_acc = average_learner_accuracy(final_models_no_oracle, test_loader)
+print(f"avg_learner_acc = {round(avg_lenarner_acc, 2)}")
 
 
-#=============
+# Average Ensemble Test Confidence = 
+avg_conf = average_ensemble_confidence(final_models_no_oracle, test_loader, num_classes)
+print(f"avg_ens_conf = {round(avg_conf, 2)}")
+
+
+# Disagreement
+ids, D, mean_dis = pairwise_disagreement_matrix(final_models_no_oracle, test_loader, num_classes)
+print("Mean pairwise 0/1 disagreement:", round(mean_dis, 3))
+
+
 
 # compute each models accuracy 
 accuracies = []
-for model, idx in models_no_oracle:  # Unpack the model and idx
+for model, idx in final_models_no_oracle:  # Unpack the model and idx
     acc = accuracy(model, test_loader)
     print(f"M{idx}_acc= {round(acc, 2)}")
     accuracies.append(acc)
@@ -1531,7 +1955,7 @@ print(f"std_dev= {round(std_dev, 2)}")
 
 
 acc_var_test = float(np.var(accuracies))
-print(f"acc_var= {round(acc_var_test, 4)}")
+print(f"acc_var= {round(acc_var_test, 2)}")
 
 
 

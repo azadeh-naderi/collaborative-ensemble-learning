@@ -11,13 +11,14 @@ from .metrics import (
     accuracy,
     average_ensemble_accuracy,
     average_ensemble_confidence,
+    average_learner_accuracy,
     ensemble_val_acc_no_oracle,
     get_models_no_oracle,
     pairwise_disagreement_matrix,
 )
 from .models import get_model_class, initialize_model
-from .pairing import build_pairing_methods
-from .plotting import save_gain_plots
+from .pairing import build_pairing_methods, make_fixed_friend_groups_by_id
+from .plotting import save_gain_plots, save_per_model_plots
 from .training import OptimizerRegistry, distill_ensemble_to_student, train_student_kd, train_student_oracle
 from .utils import TimeLogger, calculate_std_dev, save_json, seed_everything
 
@@ -46,16 +47,30 @@ def run_experiment(cfg: ExperimentConfig):
 
     avg_val_acc_tensor = torch.zeros(cfg.n_rounds + 1, device=device)
     avg_val_conf_tensor = torch.zeros(cfg.n_rounds + 1, device=device)
+    avg_learner_acc_tensor = torch.zeros(cfg.n_rounds + 1, device=device)
     oracle_gain_student = torch.zeros(cfg.n_rounds, dtype=torch.float32)
     oracle_gain_student_cum = torch.zeros(cfg.n_rounds + 1, dtype=torch.float32)
     non_oracle_gain_mean = torch.zeros(cfg.n_rounds, dtype=torch.float32)
     non_oracle_gain_mean_cum = torch.zeros(cfg.n_rounds + 1, dtype=torch.float32)
+
+    per_model_acc = torch.zeros((cfg.num_models, cfg.n_rounds + 1), dtype=torch.float32)
+    oracle_gain_per_model = torch.full((cfg.num_models, cfg.n_rounds), float("nan"), dtype=torch.float32)
+    non_oracle_gain_per_model = torch.full((cfg.num_models, cfg.n_rounds), float("nan"), dtype=torch.float32)
+    oracle_gain_per_model_cum = torch.zeros((cfg.num_models, cfg.n_rounds + 1), dtype=torch.float32)
+    non_oracle_gain_per_model_cum = torch.zeros((cfg.num_models, cfg.n_rounds + 1), dtype=torch.float32)
+
+    fixed_group_ids = None
+    if cfg.pairing_strategy.startswith("friend"):
+        fixed_group_ids = make_fixed_friend_groups_by_id(updated_models, group_size=cfg.friend_group_size, seed=cfg.run_seed)
 
     registry = OptimizerRegistry()
 
     with TimeLogger():
         avg_val_acc_tensor[0] = average_ensemble_accuracy(updated_models, val_loader, cfg.num_classes)
         avg_val_conf_tensor[0] = average_ensemble_confidence(updated_models, val_loader, cfg.num_classes)
+        avg_learner_acc_tensor[0] = average_learner_accuracy(get_models_no_oracle(updated_models, oracle_id), val_loader)
+        for model, idx in updated_models:
+            per_model_acc[idx, 0] = accuracy(model, val_loader)
 
         for round_idx in range(cfg.n_rounds):
             pairing_methods = build_pairing_methods(
@@ -67,6 +82,7 @@ def run_experiment(cfg: ExperimentConfig):
                 run_seed=cfg.run_seed,
                 batch_size=cfg.batch_size,
                 round_idx=round_idx,
+                fixed_group_ids=fixed_group_ids,
             )
             if cfg.pairing_strategy not in pairing_methods:
                 raise ValueError(f"Invalid pairing strategy: {cfg.pairing_strategy}")
@@ -95,6 +111,7 @@ def run_experiment(cfg: ExperimentConfig):
                     gain = accuracy(student, val_loader) - stu_acc_before_oracle
                     oracle_gain_student[round_idx] = gain
                     oracle_gain_student_cum[round_idx + 1] = oracle_gain_student_cum[round_idx] + gain
+                    oracle_gain_per_model[student_id, round_idx] = gain
                     continue
 
                 acc1 = float(accuracy(m1, val_loader))
@@ -114,6 +131,7 @@ def run_experiment(cfg: ExperimentConfig):
                 student = train_student_kd(student, teacher, train_loader, opt, device, cfg.temperature, cfg.alpha, sch)
                 student_acc_after = float(accuracy(student, val_loader))
                 kd_gain = student_acc_after - student_acc
+                non_oracle_gain_per_model[student_id, round_idx] = kd_gain
                 round_kd_total_gain += kd_gain
                 round_kd_student_count += 1
                 for i, (_m, mid) in enumerate(updated_models):
@@ -124,9 +142,19 @@ def run_experiment(cfg: ExperimentConfig):
             models_no_oracle = get_models_no_oracle(updated_models, oracle_id)
             avg_val_acc_tensor[round_idx + 1] = average_ensemble_accuracy(models_no_oracle, val_loader, cfg.num_classes)
             avg_val_conf_tensor[round_idx + 1] = average_ensemble_confidence(models_no_oracle, val_loader, cfg.num_classes)
+            avg_learner_acc_tensor[round_idx + 1] = average_learner_accuracy(models_no_oracle, val_loader)
             round_kd_mean_gain = (round_kd_total_gain / round_kd_student_count) if round_kd_student_count > 0 else 0.0
             non_oracle_gain_mean[round_idx] = round_kd_mean_gain
             non_oracle_gain_mean_cum[round_idx + 1] = non_oracle_gain_mean_cum[round_idx] + round_kd_mean_gain
+
+            for model, idx in updated_models:
+                per_model_acc[idx, round_idx + 1] = accuracy(model, val_loader)
+
+            for mid in range(cfg.num_models):
+                og = oracle_gain_per_model[mid, round_idx]
+                ng = non_oracle_gain_per_model[mid, round_idx]
+                oracle_gain_per_model_cum[mid, round_idx + 1] = oracle_gain_per_model_cum[mid, round_idx] + (0.0 if torch.isnan(og) else og)
+                non_oracle_gain_per_model_cum[mid, round_idx + 1] = non_oracle_gain_per_model_cum[mid, round_idx] + (0.0 if torch.isnan(ng) else ng)
 
     model_name = model_class.__name__.lower()
     fig1, fig2 = save_gain_plots(
@@ -142,9 +170,23 @@ def run_experiment(cfg: ExperimentConfig):
         cfg.results_dir,
     )
 
+    per_model_figs = save_per_model_plots(
+        per_model_acc,
+        oracle_gain_per_model,
+        non_oracle_gain_per_model,
+        oracle_gain_per_model_cum,
+        non_oracle_gain_per_model_cum,
+        cfg.num_models,
+        model_name,
+        cfg.pairing_strategy,
+        cfg.run_id,
+        cfg.results_dir,
+    )
+
     results_dir = Path(cfg.results_dir)
     torch.save(oracle_gain_student_cum, results_dir / f"{cfg.num_models}_oracle_cum_tensor_{model_name}_{cfg.pairing_strategy}_r{cfg.run_id}.pt")
     torch.save(non_oracle_gain_mean_cum, results_dir / f"{cfg.num_models}_non_oracle_cum_tensor_{model_name}_{cfg.pairing_strategy}_r{cfg.run_id}.pt")
+    torch.save(avg_learner_acc_tensor, results_dir / f"{cfg.num_models}_avg_learner_acc_tensor_{model_name}_{cfg.pairing_strategy}_r{cfg.run_id}.pt")
 
     models_no_oracle = get_models_no_oracle(updated_models, oracle_id)
     avg_acc = average_ensemble_accuracy(models_no_oracle, test_loader, cfg.num_classes)
@@ -191,7 +233,7 @@ def run_experiment(cfg: ExperimentConfig):
         "individual_model_accuracies": accuracies,
         "std_dev": std_dev,
         "variance": acc_var_test,
-        "plots": [fig1, fig2],
+        "plots": [fig1, fig2, *per_model_figs],
     }
     save_json(summary, results_dir / f"summary_r{cfg.run_id}.json")
     return summary

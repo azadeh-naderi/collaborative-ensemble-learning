@@ -33,7 +33,9 @@ RESULTS_DIR="${RESULTS_DIR:-results/flatness_${SLURM_JOB_ID}}"
 # ─────────────────────────────────────────────────────────────────────────────
 
 source /apps/easybuild/software/Anaconda3/2023.09-0/etc/profile.d/conda.sh
+set +u
 conda activate /home/an57/ondemand/data/sys/myjobs/projects/default/15/torch-cuda
+set -u
 pip install --user -q pandas
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

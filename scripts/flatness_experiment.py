@@ -67,7 +67,7 @@ def perturb_inplace(model, sigma, generator):
 
 
 def load_models(path, input_channels, num_classes, pretrained, device):
-    entries = torch.load(path, map_location=device)
+    entries = torch.load(path, map_location=device, weights_only=False)
     models = []
     for entry in entries:
         state_dict, idx = entry
@@ -77,10 +77,12 @@ def load_models(path, input_channels, num_classes, pretrained, device):
     return models
 
 
-def run_method(name, path, loader, sigmas, repeats, input_channels, num_classes, pretrained, device, base_seed):
+def run_method(name, path, loader, sigmas, repeats, input_channels, num_classes, pretrained, device, base_seed, exclude_idx=None):
     rows = []
     models = load_models(path, input_channels, num_classes, pretrained, device)
-    print(f"[{name}] loaded {len(models)} models from {path}")
+    exclude_idx = exclude_idx or []
+    models = [(m, idx) for m, idx in models if idx not in exclude_idx]
+    print(f"[{name}] loaded {len(models)} models from {path} (excluding idx={exclude_idx})")
 
     for model, idx in models:
         base_acc, base_loss = eval_model(model, loader, device)
@@ -117,6 +119,8 @@ def main():
     parser.add_argument("--input-channels", type=int, default=3)
     parser.add_argument("--num-classes", type=int, default=10)
     parser.add_argument("--output", type=str, default="results/flatness")
+    parser.add_argument("--celnet-exclude-idx", type=int, nargs="*", default=[0],
+                         help="Model indices to exclude from the CelNet checkpoint (default: oracle idx 0)")
     args = parser.parse_args()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -127,11 +131,13 @@ def main():
         batch_size=args.batch_size, seed=args.seed, num_workers=args.num_workers, root=args.data_root
     )
 
+    exclude_map = {"CelNet": args.celnet_exclude_idx, "CE": [], "KD": []}
     all_rows = []
     for name, path in [("CelNet", args.celnet_path), ("CE", args.ce_path), ("KD", args.kd_path)]:
         all_rows.extend(run_method(
             name, path, test_loader, args.sigmas, args.repeats,
             args.input_channels, args.num_classes, False, device, args.seed,
+            exclude_idx=exclude_map[name],
         ))
 
     df = pd.DataFrame(all_rows)

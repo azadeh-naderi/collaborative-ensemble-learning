@@ -13,7 +13,9 @@
 #SBATCH --job-name=celnet-flatness
 #SBATCH --output=logs/flatness_%j.out
 #SBATCH --error=logs/flatness_%j.err
-#SBATCH --gres=gpu:a800:1
+#SBATCH --partition=gpu
+#SBATCH --qos=standard
+#SBATCH --gres=gpu:a100_10g:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=04:00:00

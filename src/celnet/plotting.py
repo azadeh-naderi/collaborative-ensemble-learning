@@ -57,6 +57,37 @@ def save_gain_plots(n_rounds, oracle_gain_student, non_oracle_gain_mean, oracle_
     return str(fig1), str(fig2)
 
 
+def save_sharpness_plot(df, output_path):
+    """
+    df: DataFrame with columns method, sigma, acc_drop (output of flatness_experiment.py).
+    Plots mean accuracy drop vs sigma for each method, with std-dev shading.
+    """
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    df = df[df["sigma"] > 0]
+    plt.figure(figsize=(8, 6))
+    for method, group in df.groupby("method"):
+        stats = group.groupby("sigma")["acc_drop"].agg(["mean", "std"]).reset_index()
+        plt.plot(stats["sigma"], stats["mean"], marker="o", label=method, linewidth=2)
+        plt.fill_between(
+            stats["sigma"],
+            stats["mean"] - stats["std"].fillna(0),
+            stats["mean"] + stats["std"].fillna(0),
+            alpha=0.15,
+        )
+
+    plt.xlabel("Perturbation magnitude (sigma)")
+    plt.ylabel("Test accuracy drop (%)")
+    plt.title("Sharpness Comparison: Accuracy Drop under Weight Perturbation")
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=200)
+    plt.close()
+    return str(output_path)
+
+
 def save_per_model_plots(per_model_acc, oracle_gain_per_model, non_oracle_gain_per_model, oracle_gain_per_model_cum, non_oracle_gain_per_model_cum, num_models, model_name, pairing_strategy, run_id, results_dir):
     results_dir = Path(results_dir)
     results_dir.mkdir(parents=True, exist_ok=True)

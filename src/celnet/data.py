@@ -24,6 +24,49 @@ def split_validation_set_kfold(dataset, k: int, seed: int):
     return random_split(dataset, lengths, generator=g)
 
 
+class SymmetricLabelNoiseDataset(torch.utils.data.Dataset):
+    """Wraps a dataset, flipping each label to a uniformly random wrong class with probability `rate`."""
+
+    def __init__(self, dataset, num_classes: int, rate: float, seed: int):
+        self.dataset = dataset
+        self.num_classes = num_classes
+        self.rate = rate
+
+        rng = np.random.RandomState(seed)
+        n = len(dataset)
+        flip_mask = rng.random(n) < rate
+        self.labels = []
+        flipped = 0
+        for i in range(n):
+            _, label = dataset[i]
+            if flip_mask[i]:
+                choices = [c for c in range(num_classes) if c != label]
+                label = int(rng.choice(choices))
+                flipped += 1
+            self.labels.append(label)
+        self.actual_noise_rate = flipped / n if n > 0 else 0.0
+
+    def __len__(self):
+        return len(self.dataset)
+
+    def __getitem__(self, idx):
+        image, _ = self.dataset[idx]
+        return image, self.labels[idx]
+
+
+def noisy_loader(loader: DataLoader, num_classes: int, rate: float, seed: int) -> Tuple[DataLoader, float]:
+    """Build a DataLoader over a label-noised copy of `loader`'s dataset, mirroring its other settings."""
+    noisy_dataset = SymmetricLabelNoiseDataset(loader.dataset, num_classes, rate, seed)
+    new_loader = DataLoader(
+        noisy_dataset,
+        batch_size=loader.batch_size,
+        shuffle=True,
+        num_workers=loader.num_workers,
+        pin_memory=True,
+    )
+    return new_loader, noisy_dataset.actual_noise_rate
+
+
 def cifar_dataset(batch_size: int, seed: int = 42, num_workers: int = 4, root: str = "./data"):
     cifar_mean = (0.4914, 0.4822, 0.4465)
     cifar_std = (0.2023, 0.1994, 0.2010)

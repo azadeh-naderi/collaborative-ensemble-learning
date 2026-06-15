@@ -6,7 +6,7 @@ import numpy as np
 import torch
 
 from .config import ExperimentConfig
-from .data import cifar_dataset, split_validation_set_kfold
+from .data import cifar_dataset, noisy_loader, split_validation_set_kfold
 from .metrics import (
     accuracy,
     average_ensemble_accuracy,
@@ -34,6 +34,14 @@ def run_experiment(cfg: ExperimentConfig):
         root=cfg.data_root,
     )
     val_splits = split_validation_set_kfold(val_loader.dataset, 10, cfg.run_seed)
+
+    oracle_train_loader = train_loader
+    actual_noise_rate = 0.0
+    if cfg.label_noise_rate > 0:
+        oracle_train_loader, actual_noise_rate = noisy_loader(
+            train_loader, cfg.num_classes, cfg.label_noise_rate, cfg.noise_seed
+        )
+        print(f"Oracle label noise: requested={cfg.label_noise_rate:.2f}, actual={actual_noise_rate:.4f}")
 
     model_class = get_model_class(cfg.model)
     assert cfg.num_models <= len(cfg.model_seeds), "Not enough seeds for requested num_models."
@@ -103,7 +111,7 @@ def run_experiment(cfg: ExperimentConfig):
                         cfg.momentum, cfg.weight_decay, cfg.use_scheduler, cfg.n_rounds, cfg.gamma,
                     )
                     print(f"  oracle-train: oracle -> student {student_id}")
-                    student = train_student_oracle(student, train_loader, opt, device, sch)
+                    student = train_student_oracle(student, oracle_train_loader, opt, device, sch)
                     for i, (_m, mid) in enumerate(updated_models):
                         if mid == student_id:
                             updated_models[i] = (student, student_id)
@@ -226,6 +234,7 @@ def run_experiment(cfg: ExperimentConfig):
 
     summary = {
         "config": cfg.to_dict(),
+        "actual_noise_rate": actual_noise_rate,
         "avg_ensemble_test_accuracy": avg_acc,
         "avg_ensemble_test_confidence": avg_conf,
         "mean_pairwise_disagreement": mean_dis,

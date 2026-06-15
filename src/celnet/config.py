@@ -18,6 +18,8 @@ class ExperimentConfig:
     n_rounds: int = 100
     degree: int = 5
     friend_group_size: int = 5
+    label_noise_rate: float = 0.0
+    noise_seed: int = 42
     batch_size: int = 64
     input_channels: int = 3
     num_classes: int = 10
@@ -64,6 +66,8 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument("--pairing-strategy", dest="pairing_strategy", type=str, default=None)
     parser.add_argument("--n-rounds", dest="n_rounds", type=int, default=None)
     parser.add_argument("--degree", type=int, default=None)
+    parser.add_argument("--label-noise-rate", dest="label_noise_rate", type=float, default=None)
+    parser.add_argument("--noise-seed", dest="noise_seed", type=int, default=None)
     parser.add_argument("--batch-size", dest="batch_size", type=int, default=None)
     parser.add_argument("--input-channels", dest="input_channels", type=int, default=None)
     parser.add_argument("--num-classes", dest="num_classes", type=int, default=None)

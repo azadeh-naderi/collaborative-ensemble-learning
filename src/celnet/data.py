@@ -9,7 +9,8 @@ from torch.utils.data import DataLoader, random_split
 from torchvision import datasets, transforms
 
 
-def seed_worker(worker_id: int) -> None:
+def seed_worker(worker_id: int):
+    # Ensures each dataloader worker has a deterministic seed
     worker_seed = torch.initial_seed() % 2**32
     np.random.seed(worker_seed)
     random.seed(worker_seed)
@@ -66,41 +67,59 @@ def noisy_loader(loader: DataLoader, num_classes: int, rate: float, seed: int) -
     )
     return new_loader, noisy_dataset.actual_noise_rate
 
-
 def cifar_dataset(batch_size: int, seed: int = 42, num_workers: int = 4, root: str = "./data"):
-    cifar_mean = (0.4914, 0.4822, 0.4465)
-    cifar_std = (0.2023, 0.1994, 0.2010)
+    CIFAR_MEAN = (0.4914, 0.4822, 0.4465)
+    CIFAR_STD  = (0.2023, 0.1994, 0.2010)
 
     train_transform = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
-        transforms.Normalize(cifar_mean, cifar_std),
+        transforms.Normalize(CIFAR_MEAN, CIFAR_STD),
     ])
+
     test_transform = transforms.Compose([
         transforms.ToTensor(),
-        transforms.Normalize(cifar_mean, cifar_std),
+        transforms.Normalize(CIFAR_MEAN, CIFAR_STD),
     ])
 
-    full_train_aug = datasets.CIFAR10(root=root, train=True, download=True, transform=train_transform)
-    full_train_eval = datasets.CIFAR10(root=root, train=True, download=True, transform=test_transform)
+    # Two separate dataset objects (same underlying CIFAR files, different transforms)
+    full_train_aug  = datasets.CIFAR10(root=root, train=True,  download=True, transform=train_transform)
+    full_train_eval = datasets.CIFAR10(root=root, train=True,  download=True, transform=test_transform)
 
     train_size = int(0.9 * len(full_train_aug))
-    val_size = len(full_train_aug) - train_size
+    val_size   = len(full_train_aug) - train_size
 
     g_split = torch.Generator().manual_seed(seed)
     train_subset_aug, val_subset_indices = random_split(
         range(len(full_train_aug)), [train_size, val_size], generator=g_split
     )
 
-    train_dataset = torch.utils.data.Subset(full_train_aug, train_subset_aug.indices)
-    val_dataset = torch.utils.data.Subset(full_train_eval, val_subset_indices.indices)
+    # Build Subsets using the *same indices* but different dataset objects
+    train_dataset = torch.utils.data.Subset(full_train_aug,  train_subset_aug.indices)
+    val_dataset   = torch.utils.data.Subset(full_train_eval, val_subset_indices.indices)
+
     test_dataset = datasets.CIFAR10(root=root, train=False, download=True, transform=test_transform)
 
+    # Dataloader RNG (controls shuffle deterministically)
     g_loader = torch.Generator().manual_seed(seed)
-    common = dict(num_workers=num_workers, worker_init_fn=seed_worker, persistent_workers=(num_workers > 0), pin_memory=True)
 
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, generator=g_loader, **common)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, **common)
-    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, **common)
+    train_loader = DataLoader(
+        train_dataset, batch_size=batch_size, shuffle=True,
+        num_workers=num_workers, worker_init_fn=seed_worker,
+        generator=g_loader, persistent_workers=(num_workers > 0), pin_memory=True
+    )
+    val_loader = DataLoader(
+        val_dataset, batch_size=batch_size, shuffle=False,
+        num_workers=num_workers, worker_init_fn=seed_worker,
+        persistent_workers=(num_workers > 0), pin_memory=True
+    )
+    test_loader = DataLoader(
+        test_dataset, batch_size=batch_size, shuffle=False,
+        num_workers=num_workers, worker_init_fn=seed_worker,
+        persistent_workers=(num_workers > 0), pin_memory=True
+    )
+
     return train_loader, val_loader, test_loader
+
+

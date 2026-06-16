@@ -102,7 +102,7 @@ def maximum_weight_matching_accuracy_difference(tuple_models, val_loader):
     model_indices = [idx for _, idx in tuple_models]
     accuracies = []
     for model, idx in tuple_models:
-        acc = 1.0 if idx == 0 else float(accuracy(model, val_loader))
+        acc = 100.0 if idx == 0 else float(accuracy(model, val_loader))
         accuracies.append(acc)
     g = nx.Graph()
     num_models = len(tuple_models)
@@ -389,20 +389,31 @@ def random_regular_graph_uniform_pairing(tuple_models, degree, seed=None):
     return pairs
 
 def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, degree, run_seed, batch_size, round_idx, fixed_group_ids=None):
-    return {
-        "split": lambda: farthest_val_random_split(updated_models, val_splits, batch_size, run_seed),
-        "euclidean": lambda: euclidean_distance_class_accuracy(updated_models, val_loader, num_classes),
-        "max": lambda: max_difference_pairing(updated_models, val_loader),
-        "mwm_classAcc": lambda: maximum_weight_matching_class_accuracy(updated_models, val_loader, num_classes),
-        "mwm_acc": lambda: maximum_weight_matching_accuracy_difference(updated_models, val_loader),
+    methods = {
+        # canonical names (matching monolithic script)
+        "MWM_AccDiff":       lambda: maximum_weight_matching_accuracy_difference(updated_models, val_loader),
+        "MWM_ClassDist":     lambda: maximum_weight_matching_class_accuracy(updated_models, val_loader, num_classes),
+        "AccDiff":           lambda: max_difference_pairing(updated_models, val_loader),
+        "ClassDist":         lambda: euclidean_distance_class_accuracy(updated_models, val_loader, num_classes),
+        "RRG_AccDiff":       lambda: random_regular_graph_maxdiff_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
+        "RRg_Random":        lambda: random_regular_graph_uniform_pairing(tuple_models=updated_models, degree=degree, seed=run_seed + round_idx),
+        "Friend_Random":     lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
+        "Friend_MWM_AccDiff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
+        "Friend_AccDiff":    lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
+        "split":             lambda: farthest_val_random_split(updated_models, val_splits, batch_size, run_seed),
 
-        "friend_random": lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
-        "friend_mwm_acc_diff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
-        "friend_acc_diff": lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
-
-        "random_3reg_max": lambda: random_regular_graph_maxdiff_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
+        # legacy aliases
+        "mwm_acc":           lambda: maximum_weight_matching_accuracy_difference(updated_models, val_loader),
+        "mwm_classAcc":      lambda: maximum_weight_matching_class_accuracy(updated_models, val_loader, num_classes),
+        "max":               lambda: max_difference_pairing(updated_models, val_loader),
+        "euclidean":         lambda: euclidean_distance_class_accuracy(updated_models, val_loader, num_classes),
+        "random_3reg_max":   lambda: random_regular_graph_maxdiff_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
         "random_3reg_uniform": lambda: random_regular_graph_uniform_pairing(tuple_models=updated_models, degree=degree, seed=run_seed + round_idx),
+        "friend_random":     lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
+        "friend_mwm_acc_diff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
+        "friend_acc_diff":   lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
     }
+    return methods
 
 
 @torch.no_grad()

@@ -3,7 +3,7 @@ run_seed: 42
 model: resnet
 dataset_name: cifar_10
 num_models: 10
-pairing_strategy: mwm_acc
+pairing_strategy: MWM_AccDiff
 n_rounds: 220
 degree: 5
 batch_size: 64

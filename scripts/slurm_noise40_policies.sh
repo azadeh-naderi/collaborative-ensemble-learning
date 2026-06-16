@@ -27,8 +27,8 @@
 
 set -euo pipefail
 
-POLICIES=(mwm_classAcc max euclidean random_3reg_max random_3reg_uniform)
-NAMES=(MWM_ClassDist AccDiff ClassDist RRG_AccDiff RRG_Random)
+POLICIES=(MWM_ClassDist AccDiff ClassDist RRG_AccDiff RRg_Random)
+NAMES=(MWM_ClassDist AccDiff ClassDist RRG_AccDiff RRg_Random)
 
 POLICY="${POLICIES[$SLURM_ARRAY_TASK_ID]}"
 NAME="${NAMES[$SLURM_ARRAY_TASK_ID]}"

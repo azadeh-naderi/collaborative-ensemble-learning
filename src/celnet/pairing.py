@@ -8,147 +8,241 @@ import torch
 
 from .metrics import accuracy
 
+#-----------pairing---------------------
+
+@torch.no_grad()
+def max_difference_pairing(tuple_models, val_loader):
+
+    models = [m for m, _ in tuple_models]
+    initial_indices = [idx for _, idx in tuple_models]
+    
+    acc_list = []
+    for m, idx in tuple_models:
+        if idx == 0:
+            acc_list.append(100.0)  # oracle
+        else:
+            acc_list.append(float(accuracy(m, val_loader)))
+
+    accuracies = torch.tensor(acc_list)
+    sorted_indices = torch.argsort(accuracies)
+
+    pairs = []
+    n = len(models)
+    for i in range(n // 2):
+        model_1 = models[sorted_indices[i].item()]           # Lowest accuracy model
+        model_1_idx = initial_indices[sorted_indices[i].item()]
+        model_2 = models[sorted_indices[n - 1 - i].item()]   # Highest accuracy model
+        model_2_idx = initial_indices[sorted_indices[n - 1 - i].item()]
+        pairs.append(((model_1, model_1_idx), (model_2, model_2_idx)))
+
+    return pairs
+
+
 
 @torch.no_grad()
 def per_class_accuracy_vector(model, val_loader, num_classes):
+
     device = next(model.parameters()).device
     correct = torch.zeros(num_classes, dtype=torch.long, device=device)
-    total = torch.zeros(num_classes, dtype=torch.long, device=device)
+    total   = torch.zeros(num_classes, dtype=torch.long, device=device)
+
     model.eval()
     for images, labels in val_loader:
         images, labels = images.to(device), labels.to(device)
-        preds = model(images).argmax(dim=1)
+        logits = model(images)
+        preds = logits.argmax(dim=1)
+
+        # Count total per class in batch
         total += torch.bincount(labels, minlength=num_classes)
+
+        # Count correct per class in batch
         correct += torch.bincount(labels[preds == labels], minlength=num_classes)
+
+    # Avoid div-by-zero
     acc = torch.zeros(num_classes, dtype=torch.float32, device=device)
     nonzero = total > 0
     acc[nonzero] = correct[nonzero].float() / total[nonzero].float()
+
     return acc
 
 
 @torch.no_grad()
 def get_model_feature_vector(model, model_idx, val_loader, num_classes):
+    """
+    Return the feature vector for one model.
+    If model_idx == 0, treat it as the oracle and return all-ones vector.
+    """
     if model_idx == 0:
         device = next(model.parameters()).device
         return torch.ones(num_classes, dtype=torch.float32, device=device)
+
     return per_class_accuracy_vector(model, val_loader, num_classes)
 
 
 @torch.no_grad()
 def build_feature_vectors(tuple_models, val_loader, num_classes):
-    return torch.stack([
-        get_model_feature_vector(model, idx, val_loader, num_classes)
-        for model, idx in tuple_models
-    ])
+    """
+    Build stacked feature vectors for all models.
+    Returns tensor of shape [num_models, num_classes].
+    """
+    feature_vectors = []
+
+    for model, idx in tuple_models:
+        vec = get_model_feature_vector(model, idx, val_loader, num_classes)
+        feature_vectors.append(vec)
+
+    return torch.stack(feature_vectors)
 
 
 @torch.no_grad()
 def compute_pairwise_euclidean_distances(feature_vectors):
+    """
+    Compute full symmetric pairwise Euclidean distance matrix.
+    Returns:
+        distances: [num_models, num_models]
+        distance_list: list of (distance, i, j)
+    """
     num_models = feature_vectors.shape[0]
     device = feature_vectors.device
+
     distances = torch.zeros((num_models, num_models), dtype=torch.float32, device=device)
     distance_list = []
+
     for i in range(num_models):
         for j in range(i + 1, num_models):
             dist = torch.norm(feature_vectors[i] - feature_vectors[j], p=2)
             distances[i, j] = distances[j, i] = dist
             distance_list.append((dist.item(), i, j))
+
     return distances, distance_list
 
 
 def greedy_farthest_pairing(distance_list, tuple_models):
+    """
+    Greedy farthest-first pairing based on a sorted distance list.
+    """
     models = [m for m, _ in tuple_models]
     model_indices = [idx for _, idx in tuple_models]
+
     distance_list = sorted(distance_list, reverse=True)
+
     paired = set()
     pairs = []
+
     for dist, i, j in distance_list:
         if i not in paired and j not in paired:
             paired.add(i)
             paired.add(j)
-            pairs.append(((models[i], model_indices[i]), (models[j], model_indices[j])))
+            pairs.append(((models[i], model_indices[i]),
+                          (models[j], model_indices[j])))
+
         if len(paired) == len(models):
             break
+
     return pairs
 
 
 @torch.no_grad()
 def euclidean_distance_class_accuracy(tuple_models, val_loader, num_classes):
+    """
+    Pair models using greedy farthest-first matching based on Euclidean distance
+    between per-class accuracy vectors.
+    """
     feature_vectors = build_feature_vectors(tuple_models, val_loader, num_classes)
-    _, distance_list = compute_pairwise_euclidean_distances(feature_vectors)
-    return greedy_farthest_pairing(distance_list, tuple_models)
+    distances, distance_list = compute_pairwise_euclidean_distances(feature_vectors)
+    pairs = greedy_farthest_pairing(distance_list, tuple_models)
+    return pairs
 
 
 @torch.no_grad()
 def maximum_weight_matching_class_accuracy(tuple_models, val_loader, num_classes):
+    """
+    Pair models using maximum-weight matching based on Euclidean distance
+    between per-class accuracy vectors.
+
+    - Each model can appear in at most one pair
+    - Edge weight = Euclidean distance between model feature vectors
+    - idx == 0 is treated as oracle by your existing feature functions
+    """
     models = [m for m, _ in tuple_models]
     model_indices = [idx for _, idx in tuple_models]
+
+    # 1) Build feature vectors
     feature_vectors = build_feature_vectors(tuple_models, val_loader, num_classes)
+
+    # 2) Compute pairwise distances
     distances, _ = compute_pairwise_euclidean_distances(feature_vectors)
-    g = nx.Graph()
+
+    # 3) Build weighted graph
+    G = nx.Graph()
     num_models = len(tuple_models)
+
     for i in range(num_models):
-        g.add_node(i)
+        G.add_node(i)
+
     for i in range(num_models):
         for j in range(i + 1, num_models):
-            g.add_edge(i, j, weight=float(distances[i, j].item()))
-    matching = nx.max_weight_matching(g, maxcardinality=True)
-    return [((models[i], model_indices[i]), (models[j], model_indices[j])) for i, j in matching]
+            G.add_edge(i, j, weight=float(distances[i, j].item()))
 
+    # 4) Maximum weight matching
+    matching = nx.max_weight_matching(G, maxcardinality=True)
+
+    # 5) Convert matching to your pair format
+    pairs = []
+    for i, j in matching:
+        pairs.append(((models[i], model_indices[i]),
+                      (models[j], model_indices[j])))
+
+    return pairs
 
 @torch.no_grad()
 def maximum_weight_matching_accuracy_difference(tuple_models, val_loader):
+    """
+    Pair models using maximum-weight matching based on absolute accuracy difference.
+
+    Edge weight between model i and j:
+        |acc_i - acc_j|
+
+    Returns:
+        pairs in the same format as your other pairing strategies:
+        [((model_a, idx_a), (model_b, idx_b)), ...]
+    """
     models = [model for model, _ in tuple_models]
     model_indices = [idx for _, idx in tuple_models]
+
+    # Compute accuracies in tuple_models order
     accuracies = []
     for model, idx in tuple_models:
-        acc = 100.0 if idx == 0 else float(accuracy(model, val_loader))
+        if idx == 0:
+            acc = 100.0   # oracle
+        else:
+            acc = float(accuracy(model, val_loader))
         accuracies.append(acc)
-    g = nx.Graph()
+
+    # Build weighted graph
+    G = nx.Graph()
     num_models = len(tuple_models)
+
     for i in range(num_models):
-        g.add_node(i)
-    for i in range(num_models):
-        for j in range(i + 1, num_models):
-            g.add_edge(i, j, weight=abs(accuracies[i] - accuracies[j]))
-    matching = nx.max_weight_matching(g, maxcardinality=True)
-    return [((models[i], model_indices[i]), (models[j], model_indices[j])) for i, j in matching]
+        G.add_node(i)
 
-
-
-@torch.no_grad()
-def compute_feature_vector_accuracy(model, val_splits, batch_size, run_seed):
-    feature_vector = torch.zeros(len(val_splits))
-    for j, subset in enumerate(val_splits):
-        generator = torch.Generator()
-        generator.manual_seed(run_seed)
-        loader = torch.utils.data.DataLoader(subset, generator=generator, batch_size=batch_size, shuffle=False)
-        feature_vector[j] = accuracy(model, loader)
-    return feature_vector
-
-
-@torch.no_grad()
-def farthest_val_random_split(tuple_models, val_splits, batch_size, run_seed):
-    models = [model for model, idx in tuple_models]
-    initial_indices = [idx for model, idx in tuple_models]
-    feature_vectors = [compute_feature_vector_accuracy(model, val_splits, batch_size, run_seed) for model in models]
-    feature_vectors = torch.stack(feature_vectors)
-    num_models = len(models)
-    distance_list = []
     for i in range(num_models):
         for j in range(i + 1, num_models):
-            dist = torch.norm(feature_vectors[i] - feature_vectors[j], p=2)
-            distance_list.append((dist.item(), i, j))
-    distance_list.sort(reverse=True)
-    paired = set()
+            weight = abs(accuracies[i] - accuracies[j])
+            G.add_edge(i, j, weight=weight)
+
+    # Maximum-weight matching
+    matching = nx.max_weight_matching(G, maxcardinality=True)
+
+    # Convert to your pair format
     pairs = []
-    for dist, i, j in distance_list:
-        if i not in paired and j not in paired:
-            paired.update([i, j])
-            pairs.append(((models[i], initial_indices[i]), (models[j], initial_indices[j])))
-        if len(paired) == num_models:
-            break
+    for i, j in matching:
+        pairs.append(((models[i], model_indices[i]),
+                      (models[j], model_indices[j])))
+
     return pairs
+
+
 
 
 def make_fixed_friend_groups_by_id(tuple_models, group_size=5, seed=None):
@@ -276,12 +370,15 @@ def pair_fixed_groups_acc_diff(groups, val_loader):
 
     return pairs
 
-
 @torch.no_grad()
-def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree, seed=None):
+def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree=degree, seed=None):
     """
+    Option A:
     Include oracle in a true random d-regular graph, then choose disjoint pairs
     greedily by largest accuracy difference among allowed graph edges.
+
+    Returns:
+        [((model_a, idx_a), (model_b, idx_b)), ...]
     """
     num_models = len(tuple_models)
     if num_models < 2:
@@ -301,22 +398,27 @@ def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree, seed=
     models = [m for m, _ in tuple_models]
     ids = [idx for _, idx in tuple_models]
 
+    # compute accuracies in tuple_models order
     accs = []
     for model, idx in tuple_models:
         if idx == 0:
-            accs.append(100.0)
+            accs.append(100.0)   # keep oracle strongest, same style as your max_difference_pairing
         else:
             accs.append(float(accuracy(model, val_loader)))
 
+    # build a true random d-regular graph
     G = nx.random_regular_graph(d=degree, n=num_models, seed=seed)
 
+    # score only allowed edges
     edge_list = []
     for i, j in G.edges():
         diff = abs(accs[i] - accs[j])
         edge_list.append((diff, i, j))
 
+    # highest-gap first
     edge_list.sort(reverse=True)
 
+    # greedy matching from largest difference edges
     paired = set()
     pairs = []
 
@@ -329,7 +431,7 @@ def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree, seed=
     return pairs
 
 @torch.no_grad()
-def random_regular_graph_uniform_pairing(tuple_models, degree, seed=None):
+def random_regular_graph_uniform_pairing(tuple_models, degree=degree, seed=None):
     """
     Random 3-regular graph + uniform random neighbor matching.
 
@@ -388,49 +490,116 @@ def random_regular_graph_uniform_pairing(tuple_models, degree, seed=None):
 
     return pairs
 
-def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, degree, run_seed, batch_size, round_idx, fixed_group_ids=None):
-    methods = {
-        # canonical names (matching monolithic script)
-        "MWM_AccDiff":       lambda: maximum_weight_matching_accuracy_difference(updated_models, val_loader),
-        "MWM_ClassDist":     lambda: maximum_weight_matching_class_accuracy(updated_models, val_loader, num_classes),
-        "AccDiff":           lambda: max_difference_pairing(updated_models, val_loader),
-        "ClassDist":         lambda: euclidean_distance_class_accuracy(updated_models, val_loader, num_classes),
-        "RRG_AccDiff":       lambda: random_regular_graph_maxdiff_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
-        "RRg_Random":        lambda: random_regular_graph_uniform_pairing(tuple_models=updated_models, degree=degree, seed=run_seed + round_idx),
-        "Friend_Random":     lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
-        "Friend_MWM_AccDiff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
-        "Friend_AccDiff":    lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
-        "split":             lambda: farthest_val_random_split(updated_models, val_splits, batch_size, run_seed),
 
-        # legacy aliases
-        "mwm_acc":           lambda: maximum_weight_matching_accuracy_difference(updated_models, val_loader),
-        "mwm_classAcc":      lambda: maximum_weight_matching_class_accuracy(updated_models, val_loader, num_classes),
-        "max":               lambda: max_difference_pairing(updated_models, val_loader),
-        "euclidean":         lambda: euclidean_distance_class_accuracy(updated_models, val_loader, num_classes),
-        "random_3reg_max":   lambda: random_regular_graph_maxdiff_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
-        "random_3reg_uniform": lambda: random_regular_graph_uniform_pairing(tuple_models=updated_models, degree=degree, seed=run_seed + round_idx),
-        "friend_random":     lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
-        "friend_mwm_acc_diff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
-        "friend_acc_diff":   lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
-    }
-    return methods
+def Best_teach_best_pairing(tuple_models, val_loader):
+
+    # Extract models and their initial indices
+    models = [model for model, idx in tuple_models]
+    initial_indices = [idx for model, idx in tuple_models]
+
+    # Compute test accuracies for all models
+    accuracies = torch.tensor([accuracy(model, val_loader) for model in models])
+    sorted_indices = torch.argsort(accuracies, descending=True)   # (descending order)
+    sorted_models_with_indices = [(models[i], initial_indices[i]) for i in sorted_indices]
+
+    # Step 3: Split into teachers (top half) and remaining models
+    num_teachers = len(models) // 2
+    teachers_with_indices = sorted_models_with_indices[:num_teachers]
+    remaining_with_indices = sorted_models_with_indices[num_teachers:]
+
+    # Pair teachers with remaining models (highest-to-highest)
+    pairs = []
+    for (teacher, teacher_idx), (student, student_idx) in zip(teachers_with_indices, remaining_with_indices):
+        pairs.append(((teacher, teacher_idx), (student, student_idx)))
+
+    return pairs
 
 
 @torch.no_grad()
-def max_difference_pairing(tuple_models, val_loader):
-    models = [m for m, _ in tuple_models]
-    initial_indices = [idx for _, idx in tuple_models]
-    acc_list = []
-    for m, idx in tuple_models:
-        acc_list.append(100.0 if idx == 0 else float(accuracy(m, val_loader)))
-    accuracies = torch.tensor(acc_list)
-    sorted_indices = torch.argsort(accuracies)
+def get_output_vectors(model, val_loader):
+    model.eval()
+    outputs_list = []
+    with torch.no_grad():
+        for images, _ in val_loader:
+            images = images.to(device)
+            outputs = model(images)
+            #probs = F.softmax(outputs, dim=1)
+            #outputs_list.append(probs.cpu())
+
+            log_probs = F.log_softmax(outputs, dim=1)
+            outputs_list.append(log_probs.cpu())
+    return torch.cat(outputs_list, dim=0).mean(dim=0)  # average prediction vector, get the mean for all the validation samples for each class, output: 1D tensor of shape [num_classes]
+
+
+
+@torch.no_grad()
+def compute_feature_vector_accuracy(model, val_splits):
+
+    feature_vector = torch.zeros(K)
+
+    for j, subset in enumerate(val_splits):
+        if isinstance(subset, torch.utils.data.Dataset):
+            generator = torch.Generator() # added to test if the result will be the same
+            generator.manual_seed(run_seed)
+            loader = DataLoader(subset, generator=generator, batch_size=batch_size, shuffle=False)
+        else:
+            loader = subset  # already a DataLoader
+        #acc = accuracy(model, loader)
+
+        feature_vector[j] = accuracy(model, loader)
+
+    return feature_vector
+
+@torch.no_grad()
+def farthest_val_random_split(tuple_models):
+
+    models = [model for model, idx in tuple_models]
+    initial_indices = [idx for model, idx in tuple_models]
+
+    # Get the probability vectors (average softmax outputs across val set)
+    feature_vectors = [compute_feature_vector_accuracy(model, val_splits) for model in models]
+    feature_vectors = torch.stack(feature_vectors)  #stacks the list into a 2D tensor of shape [num_models, num_classes]
+
+    # Compute pairwise distances
+    num_models = len(models)
+    distance_list = []
+    distances = torch.zeros((num_models, num_models)) # Initializes a zero matrix of shape [num_models, num_models], filled with zeros to store the pairwise distances between every pair of models
+    for i in range(num_models):
+        for j in range(i + 1, num_models):
+            dist = torch.norm(feature_vectors[i] - feature_vectors[j], p=2)  # Euclidean distance
+            distances[i][j] = distances[j][i] = dist
+            distance_list.append((dist.item(), i, j))
+
+    distance_list.sort(reverse=True)
+
+    paired = set()
     pairs = []
-    n = len(models)
-    for i in range(n // 2):
-        model_1 = models[sorted_indices[i].item()]
-        model_1_idx = initial_indices[sorted_indices[i].item()]
-        model_2 = models[sorted_indices[n - 1 - i].item()]
-        model_2_idx = initial_indices[sorted_indices[n - 1 - i].item()]
-        pairs.append(((model_1, model_1_idx), (model_2, model_2_idx)))
+
+    # Select the farthest available pairs greedily
+    for dist, i, j in distance_list:
+        if i not in paired and j not in paired:
+            paired.update([i, j])
+            pairs.append(((models[i], initial_indices[i]), (models[j], initial_indices[j])))
+        if len(paired) == num_models:
+            break
     return pairs
+
+
+
+pairing_methods = {
+    "split": lambda: farthest_val_random_split(tuple_models=updated_models),
+    "ClassDist": lambda: euclidean_distance_class_accuracy(tuple_models=updated_models, val_loader=val_loader, num_classes=num_classes),
+    "AccDiff": lambda: max_difference_pairing(tuple_models=updated_models, val_loader=val_loader),
+    "MWM_ClassDist": lambda: maximum_weight_matching_class_accuracy(tuple_models=updated_models, val_loader=val_loader, num_classes=num_classes),
+    "MWM_AccDiff": lambda: maximum_weight_matching_accuracy_difference(tuple_models=updated_models, val_loader=val_loader),
+    
+    "Friend_Random": lambda: pair_fixed_groups_random(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), seed=run_seed + round_idx),
+    "Friend_MWM_AccDiff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
+    "Friend_AccDiff": lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
+    
+    "RRG_AccDiff": lambda: random_regular_graph_maxdiff_pairing(tuple_models=updated_models, val_loader=val_loader, degree=degree, seed=run_seed + round_idx),
+    "RRg_Random": lambda: random_regular_graph_uniform_pairing(tuple_models=updated_models, degree=degree, seed=run_seed + round_idx),
+
+}
+
+

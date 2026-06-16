@@ -36,6 +36,13 @@ def load(base: Path, subdir: str, fname: str):
     return torch.load(path, map_location="cpu", weights_only=True).numpy()
 
 
+def smooth(x, w=10):
+    """Simple moving average."""
+    import numpy as np
+    kernel = np.ones(w) / w
+    return np.convolve(x, kernel, mode="valid")
+
+
 def style_ax(ax, title, xlabel="Round", ylabel="Accuracy (%)"):
     ax.set_title(title, fontsize=13, fontweight="bold", pad=10)
     ax.set_xlabel(xlabel, fontsize=11)
@@ -52,6 +59,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--results-base", default="results/")
     parser.add_argument("--out", default="results/noise40_combined.png")
+    parser.add_argument("--smooth", type=int, default=10, help="Moving average window (0 to disable)")
     args = parser.parse_args()
 
     base = Path(args.results_base)
@@ -66,10 +74,21 @@ def main():
     for i, (name, subdir, ens_file, learner_file) in enumerate(POLICIES):
         ens_acc     = load(base, subdir, ens_file)
         learner_acc = load(base, subdir, learner_file)
-        rounds = range(len(ens_acc))
         c, ls, lw = COLORS[i], LINESTYLES[i], LINEWIDTHS[i]
-        axes[0].plot(rounds, ens_acc,     color=c, linestyle=ls, linewidth=lw, label=name)
-        axes[1].plot(rounds, learner_acc, color=c, linestyle=ls, linewidth=lw, label=name)
+
+        if args.smooth > 1:
+            w = args.smooth
+            # plot raw as faint background, smoothed as solid line
+            rounds_raw    = range(len(ens_acc))
+            rounds_smooth = range(w - 1, len(ens_acc))
+            axes[0].plot(rounds_raw, ens_acc,     color=c, linestyle=ls, linewidth=0.5, alpha=0.2)
+            axes[0].plot(rounds_smooth, smooth(ens_acc, w),     color=c, linestyle=ls, linewidth=lw, label=name)
+            axes[1].plot(rounds_raw, learner_acc, color=c, linestyle=ls, linewidth=0.5, alpha=0.2)
+            axes[1].plot(rounds_smooth, smooth(learner_acc, w), color=c, linestyle=ls, linewidth=lw, label=name)
+        else:
+            rounds = range(len(ens_acc))
+            axes[0].plot(rounds, ens_acc,     color=c, linestyle=ls, linewidth=lw, label=name)
+            axes[1].plot(rounds, learner_acc, color=c, linestyle=ls, linewidth=lw, label=name)
 
     style_ax(axes[0], "Ensemble Accuracy (val, no oracle)")
     style_ax(axes[1], "Avg Learner Accuracy (val, no oracle)")

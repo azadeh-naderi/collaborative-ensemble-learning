@@ -23,10 +23,9 @@ POLICIES = [
     ("Independent",   "noise40_independent_1070485",     "tensor_ens_acc_9_resnet_independent_r1.pt",     "tensor_avg_learner_acc_9_resnet_independent_r1.pt"),
 ]
 
-# Distinct colors + the independent baseline gets black dashed
-COLORS     = ["#e6194b", "#3cb44b", "#4363d8", "#f58231", "#911eb4", "#42d4f4", "#000000"]
-LINESTYLES = ["-",       "-",       "-",       "-",       "-",       "-",       "--"]
-LINEWIDTHS = [2.0,        2.0,       2.0,       2.0,       2.0,       2.0,       2.5]
+COLORS     = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#7f7f7f"]
+LINESTYLES = ["-", "-", "-", "-", "-", "-", "--"]
+LINEWIDTHS = [1.5, 1.5, 1.5, 1.5, 1.5, 1.5, 1.5]
 
 
 def load(base: Path, subdir: str, fname: str):
@@ -44,15 +43,11 @@ def smooth(x, w=10):
 
 
 def style_ax(ax, title, xlabel="Round", ylabel="Accuracy (%)"):
-    ax.set_title(title, fontsize=13, fontweight="bold", pad=10)
-    ax.set_xlabel(xlabel, fontsize=11)
-    ax.set_ylabel(ylabel, fontsize=11)
-    ax.tick_params(axis="both", labelsize=10)
-    ax.grid(True, linestyle="--", alpha=0.4)
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    ax.yaxis.set_minor_locator(ticker.AutoMinorLocator(2))
-    ax.legend(fontsize=9, framealpha=0.85, loc="lower right")
+    ax.set_title(title)
+    ax.set_xlabel(xlabel)
+    ax.set_ylabel(ylabel)
+    ax.legend(fontsize=8)
+    ax.grid(True, alpha=0.3)
 
 
 def main():
@@ -64,12 +59,8 @@ def main():
 
     base = Path(args.results_base)
 
-    plt.rcParams.update({"font.family": "DejaVu Sans"})
-    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
-    fig.suptitle(
-        "ResNet-18 / CIFAR-10  —  40% Symmetric Label Noise  (220 rounds)",
-        fontsize=14, fontweight="bold", y=1.01,
-    )
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+    fig.suptitle("ResNet-18 / CIFAR-10 — 40% Symmetric Label Noise (220 rounds)", fontsize=13)
 
     for i, (name, subdir, ens_file, learner_file) in enumerate(POLICIES):
         ens_acc     = load(base, subdir, ens_file)

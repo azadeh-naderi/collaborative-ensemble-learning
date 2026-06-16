@@ -69,10 +69,21 @@ def run_independent_baseline(cfg: ExperimentConfig):
     ens_acc_per_round[0] = ensemble_accuracy(models_with_idx, val_loader, mode="logprob")
     avg_learner_acc_per_round[0] = average_learner_accuracy(models_with_idx, val_loader)
 
+    rng = torch.Generator().manual_seed(cfg.run_seed)
+
     with TimeLogger():
         for round_idx in range(cfg.n_rounds):
             print(f"\n=== Round {round_idx + 1}/{cfg.n_rounds} (Independent) ===")
-            for i, m in enumerate(models):
+
+            # Match collaborative training frequency: in a 10-model run, 5 pairs form
+            # per round but only the students (half) update. Mirror that here by training
+            # floor(n_models / 2) randomly selected models each round.
+            n_train = n_models // 2
+            perm = torch.randperm(n_models, generator=rng).tolist()
+            train_indices = perm[:n_train]
+
+            for i in train_indices:
+                m = models[i]
                 m.train()
                 for images, labels in noisy_train_loader:
                     images, labels = images.to(device), labels.to(device)
@@ -81,8 +92,10 @@ def run_independent_baseline(cfg: ExperimentConfig):
                     loss.backward()
                     optimizers[i].step()
                 schedulers[i].step()
+
+            for i, m in enumerate(models):
                 per_model_acc[i, round_idx + 1] = accuracy(m, val_loader)
-                print(f"  M{i} val_acc={per_model_acc[i, round_idx + 1]:.2f}")
+            print(f"  trained models: {sorted(train_indices)}")
 
             ens_acc_per_round[round_idx + 1] = ensemble_accuracy(models_with_idx, val_loader, mode="logprob")
             avg_learner_acc_per_round[round_idx + 1] = average_learner_accuracy(models_with_idx, val_loader)

@@ -1,0 +1,52 @@
+run_id: 1
+run_seed: 42
+model: resnet
+dataset_name: cifar_10
+num_models: 10
+pairing_strategy: MWM_AccDiff
+n_rounds: 500
+degree: 5
+batch_size: 64
+input_channels: 3
+num_classes: 10
+pretrained: false
+validation: false
+optimizer_type: sgd
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0001
+use_scheduler: true
+gamma: 0.1
+temperature: 4.0
+alpha: 0.9
+train_size_percent: 0.8
+val_size_percent: 0.1
+test_size_percent: 0.1
+num_workers: 4
+data_root: ./data
+results_dir: ./results/noise40_500r_mwm_acc
+
+label_noise_rate: 0.4
+noise_seed: 42
+
+model_seeds:
+  - 104729
+  - 1299709
+  - 15485863
+  - 179424673
+  - 2038074743
+  - 32452843
+  - 49979687
+  - 67867967
+  - 86028121
+  - 104395303
+  - 122949829
+  - 141650939
+  - 160481183
+  - 179424691
+  - 198491317
+  - 217645199
+  - 236887691
+  - 256203161
+  - 275604541
+  - 295075153

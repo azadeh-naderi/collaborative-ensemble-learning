@@ -48,6 +48,48 @@ def train_student_kd(student, teacher, train_loader, optimizer, device, temperat
     return student
 
 
+def train_pair_pom(m1, m2, train_loader, opt1, opt2, device, temperature, alpha, lr_scheduler1=None, lr_scheduler2=None):
+    """
+    POM symmetric training: both models exchange soft predictions and train on
+    each other's outputs. Forward passes for both happen before either backward
+    pass so neither model trains on already-updated weights.
+    """
+    criterion_soft = nn.KLDivLoss(reduction="batchmean")
+    criterion_hard = nn.CrossEntropyLoss()
+    m1.train()
+    m2.train()
+    for images, _labels in train_loader:
+        images = images.to(device)
+        with torch.no_grad():
+            logits1 = m1(images)
+            logits2 = m2(images)
+        out1 = m1(images)
+        hard_loss1 = criterion_hard(out1, logits2.argmax(dim=1))
+        soft_loss1 = criterion_soft(
+            F.log_softmax(out1 / temperature, dim=1),
+            F.softmax(logits2 / temperature, dim=1),
+        )
+        loss1 = (1 - alpha) * hard_loss1 + alpha * (temperature ** 2) * soft_loss1
+        opt1.zero_grad()
+        loss1.backward()
+        opt1.step()
+        out2 = m2(images)
+        hard_loss2 = criterion_hard(out2, logits1.argmax(dim=1))
+        soft_loss2 = criterion_soft(
+            F.log_softmax(out2 / temperature, dim=1),
+            F.softmax(logits1 / temperature, dim=1),
+        )
+        loss2 = (1 - alpha) * hard_loss2 + alpha * (temperature ** 2) * soft_loss2
+        opt2.zero_grad()
+        loss2.backward()
+        opt2.step()
+    if lr_scheduler1 is not None:
+        lr_scheduler1.step()
+    if lr_scheduler2 is not None:
+        lr_scheduler2.step()
+    return m1, m2
+
+
 class OptimizerRegistry:
     def __init__(self):
         self._optimizers = {}

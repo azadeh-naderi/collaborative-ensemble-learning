@@ -21,7 +21,7 @@ from .metrics import (
 from .models import get_model_class, initialize_model
 from .pairing import build_pairing_methods, make_fixed_friend_groups_by_id
 from .plotting import save_gain_plots, save_per_model_plots
-from .training import OptimizerRegistry, distill_ensemble_to_student, train_student_kd, train_student_oracle
+from .training import OptimizerRegistry, distill_ensemble_to_student, train_pair_pom, train_student_kd, train_student_oracle
 from .utils import TimeLogger, calculate_std_dev, save_json, seed_everything
 
 
@@ -116,8 +116,52 @@ def run_experiment(cfg: ExperimentConfig):
             round_kd_total_gain   = 0.0
             round_kd_student_count = 0
             oracle_gain_student_var = 0.0
+            is_pom = (cfg.pairing_strategy == "POM")
 
             for (m1, id1), (m2, id2) in pairs:
+                # ── POM: symmetric mutual KD (oracle contributes true labels, doesn't update) ──
+                if is_pom:
+                    if id1 == oracle_id or id2 == oracle_id:
+                        # oracle in pair: non-oracle trains CE on oracle's noisy labels
+                        student, student_id = (m2, id2) if id1 == oracle_id else (m1, id1)
+                        stu_acc_before = accuracy(student, val_loader)
+                        opt, sch = registry.get(
+                            student_id, student, cfg.optimizer_type, cfg.learning_rate,
+                            cfg.momentum, cfg.weight_decay, cfg.use_scheduler, cfg.n_rounds, cfg.gamma,
+                        )
+                        student = train_student_oracle(student, oracle_train_loader, opt, device, sch)
+                        for i, (_m, mid) in enumerate(updated_models):
+                            if mid == student_id:
+                                updated_models[i] = (student, student_id)
+                                break
+                        stu_acc_after = accuracy(student, val_loader)
+                        g = stu_acc_after - stu_acc_before
+                        oracle_gain_student_var = g
+                        oracle_gain_per_model[student_id, round_idx] = g
+                        print(f"  pom oracle-pair: oracle -> student {student_id}, gain={g:.2f}")
+                    else:
+                        # both non-oracle: symmetric KD
+                        acc1_before = float(accuracy(m1, val_loader))
+                        acc2_before = float(accuracy(m2, val_loader))
+                        opt1, sch1 = registry.get(id1, m1, cfg.optimizer_type, cfg.learning_rate, cfg.momentum, cfg.weight_decay, cfg.use_scheduler, cfg.n_rounds, cfg.gamma)
+                        opt2, sch2 = registry.get(id2, m2, cfg.optimizer_type, cfg.learning_rate, cfg.momentum, cfg.weight_decay, cfg.use_scheduler, cfg.n_rounds, cfg.gamma)
+                        print(f"  pom-train: {id1} ({acc1_before:.2f}) <-> {id2} ({acc2_before:.2f})")
+                        m1, m2 = train_pair_pom(m1, m2, train_loader, opt1, opt2, device, cfg.temperature, cfg.alpha, sch1, sch2)
+                        acc1_after = float(accuracy(m1, val_loader))
+                        acc2_after = float(accuracy(m2, val_loader))
+                        gain1 = acc1_after - acc1_before
+                        gain2 = acc2_after - acc2_before
+                        non_oracle_gain_per_model[id1, round_idx] = gain1
+                        non_oracle_gain_per_model[id2, round_idx] = gain2
+                        round_kd_total_gain += (gain1 + gain2)
+                        round_kd_student_count += 2
+                        for i, (_m, mid) in enumerate(updated_models):
+                            if mid == id1:
+                                updated_models[i] = (m1, id1)
+                            elif mid == id2:
+                                updated_models[i] = (m2, id2)
+                    continue
+
                 # Case A: oracle pair → supervised CE with (optionally noisy) true labels
                 if id1 == oracle_id or id2 == oracle_id:
                     student, student_id = (m2, id2) if id1 == oracle_id else (m1, id1)

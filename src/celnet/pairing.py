@@ -586,6 +586,21 @@ def farthest_val_random_split(tuple_models):
 
 
 
+def pom_random_pairing(tuple_models, seed=None):
+    """
+    POM (Planted Oracle Mechanism): uniformly random permutation of ALL models
+    (oracle included), consecutive pairs. No accuracy evaluation.
+    """
+    rng = random.Random(seed)
+    indices = list(range(len(tuple_models)))
+    rng.shuffle(indices)
+    pairs = []
+    for i in range(0, len(indices) - 1, 2):
+        a, b = indices[i], indices[i + 1]
+        pairs.append((tuple_models[a], tuple_models[b]))
+    return pairs
+
+
 def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, degree, run_seed, batch_size, round_idx, fixed_group_ids=None):
     return {
         # canonical names (matching monolithic script)
@@ -599,6 +614,7 @@ def build_pairing_methods(updated_models, val_loader, val_splits, num_classes, d
         "Friend_MWM_AccDiff": lambda: pair_fixed_groups_mwm_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
         "Friend_AccDiff":     lambda: pair_fixed_groups_acc_diff(groups=materialize_groups_from_ids(updated_models, fixed_group_ids), val_loader=val_loader),
         "split":              lambda: farthest_val_random_split(updated_models, val_splits, batch_size, run_seed),
+        "POM":                lambda: pom_random_pairing(updated_models, seed=run_seed + round_idx),
     }
 
 

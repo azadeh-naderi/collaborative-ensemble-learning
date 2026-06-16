@@ -76,19 +76,9 @@ def main():
         learner_acc = load(base, subdir, learner_file)
         c, ls, lw = COLORS[i], LINESTYLES[i], LINEWIDTHS[i]
 
-        if args.smooth > 1:
-            w = args.smooth
-            # plot raw as faint background, smoothed as solid line
-            rounds_raw    = range(len(ens_acc))
-            rounds_smooth = range(w - 1, len(ens_acc))
-            axes[0].plot(rounds_raw, ens_acc,     color=c, linestyle=ls, linewidth=0.5, alpha=0.2)
-            axes[0].plot(rounds_smooth, smooth(ens_acc, w),     color=c, linestyle=ls, linewidth=lw, label=name)
-            axes[1].plot(rounds_raw, learner_acc, color=c, linestyle=ls, linewidth=0.5, alpha=0.2)
-            axes[1].plot(rounds_smooth, smooth(learner_acc, w), color=c, linestyle=ls, linewidth=lw, label=name)
-        else:
-            rounds = range(len(ens_acc))
-            axes[0].plot(rounds, ens_acc,     color=c, linestyle=ls, linewidth=lw, label=name)
-            axes[1].plot(rounds, learner_acc, color=c, linestyle=ls, linewidth=lw, label=name)
+        rounds = range(len(ens_acc))
+        axes[0].plot(rounds, ens_acc,     color=c, linestyle=ls, linewidth=lw, label=name)
+        axes[1].plot(rounds, learner_acc, color=c, linestyle=ls, linewidth=lw, label=name)
 
     style_ax(axes[0], "Ensemble Accuracy (val, no oracle)")
     style_ax(axes[1], "Avg Learner Accuracy (val, no oracle)")

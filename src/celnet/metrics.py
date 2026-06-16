@@ -35,6 +35,27 @@ def confidence(model, data_loader):
 
 
 @torch.no_grad()
+def ensemble_accuracy(models_with_idx, data_loader, mode="logprob"):
+    """Ensemble accuracy with selectable aggregation: 'prob', 'logit', or 'logprob'."""
+    models = [m for m, _ in models_with_idx]
+    for m in models:
+        m.eval()
+    device = next(models[0].parameters()).device
+    correct, total = 0, 0
+    for images, labels in data_loader:
+        images, labels = images.to(device), labels.to(device)
+        if mode == "logit":
+            avg = torch.stack([m(images) for m in models], dim=0).mean(dim=0)
+        elif mode == "prob":
+            avg = torch.stack([F.softmax(m(images), dim=1) for m in models], dim=0).mean(dim=0)
+        else:  # logprob
+            avg = torch.stack([F.log_softmax(m(images), dim=1) for m in models], dim=0).mean(dim=0)
+        correct += (avg.argmax(dim=1) == labels).sum().item()
+        total += labels.size(0)
+    return 100.0 * correct / total
+
+
+@torch.no_grad()
 def average_ensemble_accuracy(models_with_idx, data_loader, num_classes):
     device = next(models_with_idx[0][0].parameters()).device
     total = 0

@@ -371,7 +371,7 @@ def pair_fixed_groups_acc_diff(groups, val_loader):
     return pairs
 
 @torch.no_grad()
-def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree=degree, seed=None):
+def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree=3, seed=None):
     """
     Option A:
     Include oracle in a true random d-regular graph, then choose disjoint pairs
@@ -431,7 +431,7 @@ def random_regular_graph_maxdiff_pairing(tuple_models, val_loader, degree=degree
     return pairs
 
 @torch.no_grad()
-def random_regular_graph_uniform_pairing(tuple_models, degree=degree, seed=None):
+def random_regular_graph_uniform_pairing(tuple_models, degree=3, seed=None):
     """
     Random 3-regular graph + uniform random neighbor matching.
 

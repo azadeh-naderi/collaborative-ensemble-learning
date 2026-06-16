@@ -37,6 +37,8 @@ def run_experiment(cfg: ExperimentConfig):
     )
 
 
+    val_splits = split_validation_set_kfold(val_loader.dataset, 10, cfg.run_seed)
+
     # Oracle train loader (may have label noise injected)
     oracle_train_loader = train_loader
     actual_noise_rate = 0.0

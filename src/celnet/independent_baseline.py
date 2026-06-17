@@ -44,14 +44,18 @@ def run_independent_baseline(cfg: ExperimentConfig):
         for i in range(n_models)
     ]
 
+    # Each model trains ~(n_models//2)/n_models fraction of rounds
+    n_train_per_round = n_models // 2
+    expected_train_steps = int(cfg.n_rounds * n_train_per_round / n_models)
+
     optimizers = []
     schedulers = []
     for m in models:
         opt = torch.optim.SGD(m.parameters(), lr=cfg.learning_rate,
                               momentum=cfg.momentum, weight_decay=cfg.weight_decay)
-        m1 = max(1, int(0.55 * cfg.n_rounds))
-        m2 = max(m1 + 1, int(0.80 * cfg.n_rounds))
-        sch = torch.optim.lr_scheduler.MultiStepLR(opt, milestones=[m1, m2], gamma=cfg.gamma)
+        s1 = max(1, int(0.55 * expected_train_steps))
+        s2 = max(s1 + 1, int(0.80 * expected_train_steps))
+        sch = torch.optim.lr_scheduler.MultiStepLR(opt, milestones=[s1, s2], gamma=cfg.gamma)
         optimizers.append(opt)
         schedulers.append(sch)
 

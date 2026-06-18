@@ -228,9 +228,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True)
     parser.add_argument("--out", required=True)
+    parser.add_argument("--pairing-strategy", dest="pairing_strategy", default=None)
     args = parser.parse_args()
 
     defaults = ExperimentConfig()
     file_cfg = load_config_file(args.config)
     cfg = ExperimentConfig(**{**defaults.to_dict(), **file_cfg})
+    if args.pairing_strategy:
+        cfg.pairing_strategy = args.pairing_strategy
     run(cfg, Path(args.out))

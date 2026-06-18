@@ -22,7 +22,7 @@ POLICIES = [
     ("ClassDist",     "noise40_500r_ClassDist_1071101_2",  "tensor_ens_acc_10_resnet_ClassDist_r1.pt",     "tensor_avg_learner_acc_10_resnet_ClassDist_r1.pt"),
     ("RRG_AccDiff",   "noise40_500r_RRG_AccDiff_1071101_3","tensor_ens_acc_10_resnet_RRG_AccDiff_r1.pt",   "tensor_avg_learner_acc_10_resnet_RRG_AccDiff_r1.pt"),
     ("RRg_Random",    "noise40_500r_RRg_Random_1071101_4", "tensor_ens_acc_10_resnet_RRg_Random_r1.pt",    "tensor_avg_learner_acc_10_resnet_RRg_Random_r1.pt"),
-    ("Independent",   "noise40_500r_independent_1071102",  "tensor_ens_acc_9_resnet_independent_r1.pt",    "tensor_avg_learner_acc_9_resnet_independent_r1.pt"),
+    ("Independent",   "noise40_500r_independent_1072314",  "tensor_ens_acc_9_resnet_independent_r1.pt",    "tensor_avg_learner_acc_9_resnet_independent_r1.pt"),
 ]
 
 POM_ENTRY = ("POM", "noise40_500r_pom_1071132",

@@ -23,6 +23,7 @@ set -u
 
 cd "$SLURM_SUBMIT_DIR"
 mkdir -p logs
+export PYTHONPATH="$SLURM_SUBMIT_DIR:$PYTHONPATH"
 
 echo "======================================================"
 echo " Job ID      : ${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}"

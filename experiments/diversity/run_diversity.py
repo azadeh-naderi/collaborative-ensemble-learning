@@ -116,6 +116,7 @@ def run(cfg: ExperimentConfig, out_dir: Path):
 
     registry = OptimizerRegistry()
     fixed_group_ids = None
+    DISAGREE_INTERVAL = 5  # compute disagreement every N rounds to reduce overhead
 
     # round-0
     models_no_oracle = get_models_no_oracle(updated_models, oracle_id)
@@ -126,6 +127,7 @@ def run(cfg: ExperimentConfig, out_dir: Path):
     avg_ind_error_per_round[0]  = 1 - avg_acc0 / 100
     diversity_per_round[0]      = avg_ind_error_per_round[0] - ensemble_error_per_round[0]
     disagreement_per_round[0]   = dis0
+    last_dis = dis0
 
     with TimeLogger():
         for round_idx in range(cfg.n_rounds):
@@ -166,16 +168,17 @@ def run(cfg: ExperimentConfig, out_dir: Path):
                         updated_models[i] = (student, student_id); break
 
             models_no_oracle = get_models_no_oracle(updated_models, oracle_id)
-            ens_acc  = average_ensemble_accuracy(models_no_oracle, val_loader, cfg.num_classes)
-            avg_acc  = average_learner_accuracy(models_no_oracle, val_loader)
-            _, _, dis = pairwise_disagreement_matrix(models_no_oracle, val_loader, cfg.num_classes)
+            ens_acc = average_ensemble_accuracy(models_no_oracle, val_loader, cfg.num_classes)
+            avg_acc = average_learner_accuracy(models_no_oracle, val_loader)
 
             r = round_idx + 1
+            if r % DISAGREE_INTERVAL == 0 or r == cfg.n_rounds:
+                _, _, last_dis = pairwise_disagreement_matrix(models_no_oracle, val_loader, cfg.num_classes)
+            disagreement_per_round[r]   = last_dis
             ensemble_error_per_round[r] = 1 - ens_acc / 100
             avg_ind_error_per_round[r]  = 1 - avg_acc / 100
             diversity_per_round[r]      = avg_ind_error_per_round[r] - ensemble_error_per_round[r]
-            disagreement_per_round[r]   = dis
-            print(f"  ens_acc={ens_acc:.2f}  avg_acc={avg_acc:.2f}  disagreement={dis:.4f}  diversity={diversity_per_round[r]:.4f}")
+            print(f"  ens_acc={ens_acc:.2f}  avg_acc={avg_acc:.2f}  disagreement={last_dis:.4f}  diversity={diversity_per_round[r]:.4f}")
 
         time.sleep(5)
 

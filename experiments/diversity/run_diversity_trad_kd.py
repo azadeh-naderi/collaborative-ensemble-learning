@@ -93,11 +93,12 @@ def run(cfg: ExperimentConfig, out_dir: Path):
     avg_ind_error_per_round[0]  = 1 - avg0 / 100
     diversity_per_round[0]      = avg_ind_error_per_round[0] - ensemble_error_per_round[0]
     disagreement_per_round[0]   = dis0
+    last_dis = dis0
+    DISAGREE_INTERVAL = 5
 
     with TimeLogger():
         for round_idx in range(cfg.n_rounds):
             print(f"\n=== Round {round_idx + 1}/{cfg.n_rounds} (TradKD) ===")
-            # each round: one randomly selected student trains via KD from teacher
             student_id = round_idx % n_students
             student = students[student_id]
             student = train_student_kd(student, teacher, train_loader,
@@ -108,13 +109,14 @@ def run(cfg: ExperimentConfig, out_dir: Path):
 
             ens  = average_ensemble_accuracy(models_with_idx, val_loader, cfg.num_classes)
             avg  = average_learner_accuracy(models_with_idx, val_loader)
-            _, _, dis = pairwise_disagreement_matrix(models_with_idx, val_loader, cfg.num_classes)
             r = round_idx + 1
+            if r % DISAGREE_INTERVAL == 0 or r == cfg.n_rounds:
+                _, _, last_dis = pairwise_disagreement_matrix(models_with_idx, val_loader, cfg.num_classes)
             ensemble_error_per_round[r] = 1 - ens / 100
             avg_ind_error_per_round[r]  = 1 - avg / 100
             diversity_per_round[r]      = avg_ind_error_per_round[r] - ensemble_error_per_round[r]
-            disagreement_per_round[r]   = dis
-            print(f"  student={student_id}  ens_acc={ens:.2f}  avg_acc={avg:.2f}  disagreement={dis:.4f}")
+            disagreement_per_round[r]   = last_dis
+            print(f"  student={student_id}  ens_acc={ens:.2f}  avg_acc={avg:.2f}  disagreement={last_dis:.4f}")
 
         time.sleep(5)
 

@@ -102,7 +102,7 @@ def plot_scatter(data_dir: Path, out_dir: Path):
 
     # t-SNE (only meaningful if num_models > 5; perplexity must be < num_models)
     perp = min(5, n_models - 1)
-    tsne = TSNE(n_components=2, perplexity=perp, random_state=42, n_iter=1000)
+    tsne = TSNE(n_components=2, perplexity=perp, random_state=42, max_iter=1000)
     coords_tsne = tsne.fit_transform(correct_mat)
 
     colors = plt.cm.tab10(np.linspace(0, 1, n_models))

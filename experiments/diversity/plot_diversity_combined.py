@@ -23,10 +23,12 @@ METHODS = {
     "RRg_Random":    "results/diversity_RRg_Random_1073996_4",
     "Independent":   "results/diversity_independent_1073997",
     "Traditional KD": "results/diversity_trad_kd_1073998",
+    # Experiment A: DML full-label baseline — job ID filled in after run
+    # "DML":           "results/diversity_dml_<JOBID>",
 }
 
 COLORS = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728",
-          "#9467bd", "#8c564b", "#7f7f7f", "#17becf"]
+          "#9467bd", "#8c564b", "#7f7f7f", "#17becf", "#e377c2"]
 
 
 def load(data_dir: Path, fname: str):

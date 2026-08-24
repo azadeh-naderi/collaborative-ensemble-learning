@@ -4,7 +4,7 @@
 #SBATCH --error=logs/geometry_temp_%A_%a.err
 #SBATCH --partition=gpu
 #SBATCH --qos=high_dept_dms
-#SBATCH --gres=gpu:a100_10g:1
+#SBATCH --gres=gpu:a100_20g:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=24G
 #SBATCH --time=06:00:00

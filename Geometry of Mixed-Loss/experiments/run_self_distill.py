@@ -7,9 +7,10 @@ After each generation, reintroduce CE fine-tuning from that Gen-k checkpoint
 for CE_EPOCHS epochs and record the accuracy trajectory (drop and recovery).
 
 Usage:
-    python experiments/geometry/run_self_distill.py \
+    # run from repo root:
+    python "Geometry of Mixed-Loss/experiments/run_self_distill.py" \
         --n_gens 3 --kd_epochs 150 --ce_epochs 60 \
-        --out results/geometry/self_distill/seed42/ \
+        --out "Geometry of Mixed-Loss/results/self_distill/seed42/" \
         --seed 42
 """
 from __future__ import annotations
@@ -25,7 +26,9 @@ import torch.nn.functional as F
 from src.celnet.data import cifar_dataset
 from src.celnet.models import get_model_class, initialize_model
 from src.celnet.utils import seed_everything, save_json, TimeLogger
-from experiments.geometry.run_alpha_sweep import gradient_cosine, collect_probe
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
+from run_alpha_sweep import gradient_cosine, collect_probe
 
 PROBE_N           = 1000
 GRAD_LOG_INTERVAL = 5

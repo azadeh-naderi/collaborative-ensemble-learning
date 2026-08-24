@@ -6,9 +6,10 @@ Trains ResNet-18 student with KD from a fixed ResNet-50 teacher for K epochs
 accuracy drop at the phase switch and recovery trajectory.
 
 Usage:
-    python experiments/geometry/run_kd_finetune.py \
+    # run from repo root:
+    python "Geometry of Mixed-Loss/experiments/run_kd_finetune.py" \
         --kd_epochs 100 --ce_epochs 60 \
-        --out results/geometry/kd_finetune/k100_seed42/ \
+        --out "Geometry of Mixed-Loss/results/kd_finetune/k100_seed42/" \
         --seed 42
 """
 from __future__ import annotations
@@ -24,7 +25,9 @@ import torchvision.models as tvm
 from src.celnet.data import cifar_dataset
 from src.celnet.models import get_model_class, initialize_model
 from src.celnet.utils import seed_everything, save_json, TimeLogger
-from experiments.geometry.run_alpha_sweep import (
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
+from run_alpha_sweep import (
     pretrain_teacher, gradient_cosine, collect_probe,
 )
 

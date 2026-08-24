@@ -6,9 +6,10 @@ At epoch SWITCH_EPOCH, peer-1 switches to CE-only (α=0); peer-0 continues
 DML. Measure per-epoch accuracy of both peers across the switch.
 
 Usage:
-    python experiments/geometry/run_dml_switch.py \
+    # run from repo root:
+    python "Geometry of Mixed-Loss/experiments/run_dml_switch.py" \
         --alpha 0.9 --switch_epoch 150 --total_epochs 210 \
-        --out results/geometry/dml_switch/alpha0.9_seed42/ \
+        --out "Geometry of Mixed-Loss/results/dml_switch/alpha0.9_seed42/" \
         --seed 42
 """
 from __future__ import annotations
@@ -23,7 +24,9 @@ import torch.nn.functional as F
 from src.celnet.data import cifar_dataset
 from src.celnet.models import get_model_class, initialize_model
 from src.celnet.utils import seed_everything, save_json, TimeLogger
-from experiments.geometry.run_alpha_sweep import gradient_cosine, collect_probe
+import sys, pathlib
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
+from run_alpha_sweep import gradient_cosine, collect_probe
 
 PROBE_N           = 1000
 GRAD_LOG_INTERVAL = 5

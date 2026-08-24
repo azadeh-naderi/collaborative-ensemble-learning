@@ -1,0 +1,467 @@
+<title>Geometry of Mixed-Loss Training</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg:      #F7F9F7;
+    --surface: #ECF0EC;
+    --rule:    #CDD4CD;
+    --text:    #131A13;
+    --muted:   #576057;
+    --accent:  #1A6645;
+    --accent2: #0F4A30;
+    --warn:    #8B3A10;
+    --pos:     #1A5C8B;
+    --serif:   "EB Garamond", Georgia, serif;
+    --sans:    "IBM Plex Sans", system-ui, sans-serif;
+    --mono:    "Source Code Pro", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#121712;--surface:#1A201A;--rule:#2A352A;
+      --text:#E2E8E2;--muted:#7A907A;
+      --accent:#4DB87A;--accent2:#6FD49A;--warn:#E07A40;--pos:#5BA8D8;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#121712;--surface:#1A201A;--rule:#2A352A;
+    --text:#E2E8E2;--muted:#7A907A;
+    --accent:#4DB87A;--accent2:#6FD49A;--warn:#E07A40;--pos:#5BA8D8;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:10.5pt;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .page{max-width:54rem;margin:0 auto;padding:2.8rem 2rem 5rem;}
+
+  .title-block{padding:0 0 1.4rem;margin-bottom:1.4rem;border-bottom:1.5px solid var(--text);}
+  .venue-tag{font-family:var(--sans);font-size:7pt;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:0.7rem;display:flex;align-items:center;gap:0.5rem;}
+  .venue-tag::before{content:'';display:block;width:2rem;height:1.5px;background:var(--accent);}
+  .paper-title{font-size:18.5pt;font-weight:600;line-height:1.2;color:var(--text);text-wrap:balance;margin-bottom:0.8rem;letter-spacing:-0.01em;}
+  .authors{font-family:var(--sans);font-size:8.5pt;color:var(--muted);}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;align-items:start;}
+  @media(max-width:640px){.cols{grid-template-columns:1fr;}}
+  .full{grid-column:1/-1;}
+
+  .abstract-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;margin-bottom:1.6rem;}
+  @media(max-width:640px){.abstract-grid{grid-template-columns:1fr;}}
+  .abstract-inner{background:var(--surface);border-left:2.5px solid var(--accent);padding:0.85rem 1rem;font-size:9.5pt;line-height:1.6;}
+  .abstract-label{font-family:var(--sans);font-size:7pt;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.45rem;}
+
+  h2{font-family:var(--sans);font-size:7.5pt;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--rule);padding-bottom:0.2rem;margin:1.5rem 0 0.6rem;}
+  h3{font-family:var(--serif);font-size:10.5pt;font-weight:600;font-style:italic;color:var(--text);margin:0.9rem 0 0.3rem;}
+  h4{font-family:var(--sans);font-size:8.5pt;font-weight:600;color:var(--muted);margin:0.7rem 0 0.2rem;letter-spacing:0.04em;}
+
+  p{margin-bottom:0.6rem;text-align:justify;hyphens:auto;}
+  p:last-child{margin-bottom:0;}
+  ul,ol{font-size:9.5pt;padding-left:1.2rem;margin-bottom:0.6rem;line-height:1.7;}
+  li{margin-bottom:0.15rem;}
+
+  .m{font-family:var(--mono);font-style:normal;font-size:9pt;background:var(--surface);padding:0.05em 0.28em;border-radius:2px;color:var(--accent2);}
+  .eq{background:var(--surface);border:1px solid var(--rule);border-left:2.5px solid var(--rule);padding:0.65rem 1.2rem;margin:0.75rem 0;font-family:var(--mono);font-size:9pt;line-height:1.8;overflow-x:auto;color:var(--text);}
+  .eq .c{color:var(--muted);font-family:var(--serif);font-style:italic;font-size:9pt;}
+
+  .prop{border:1px solid var(--rule);border-left:2.5px solid var(--accent);padding:0.7rem 1rem;margin:0.8rem 0;background:var(--surface);font-size:9.5pt;}
+  .prop-label{font-family:var(--sans);font-size:7pt;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:0.35rem;}
+  .prop p{font-style:italic;}
+  .prop .pf{font-style:normal;font-size:9pt;color:var(--muted);margin-top:0.4rem;border-top:1px solid var(--rule);padding-top:0.4rem;}
+
+  .obs{border:1px solid var(--rule);border-left:2.5px solid var(--warn);padding:0.65rem 0.9rem;margin:0.8rem 0;background:var(--surface);font-size:9.5pt;}
+  .obs-label{font-family:var(--sans);font-size:7pt;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--warn);display:block;margin-bottom:0.3rem;}
+
+  .exp-block{border:1px solid var(--rule);border-left:2.5px solid var(--pos);padding:0.65rem 0.9rem;margin:0.8rem 0;background:var(--surface);font-size:9.5pt;}
+  .exp-label{font-family:var(--sans);font-size:7pt;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--pos);display:block;margin-bottom:0.3rem;}
+
+  .tbl-wrap{overflow-x:auto;margin:0.7rem 0;}
+  table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:7.8pt;font-variant-numeric:tabular-nums;}
+  thead tr{border-top:1.5px solid var(--text);border-bottom:1px solid var(--text);}
+  tbody tr{border-bottom:1px solid var(--rule);}
+  tbody tr:last-child{border-bottom:1.5px solid var(--text);}
+  th{padding:0.28rem 0.4rem;font-weight:600;text-align:left;}
+  td{padding:0.22rem 0.4rem;}
+  .tr{text-align:right;}
+  .tbold{font-weight:600;color:var(--accent2);}
+  .tmuted{color:var(--muted);}
+  .twarn{color:var(--warn);font-weight:600;}
+  .tpos{color:var(--pos);font-weight:600;}
+
+  .fig-wrap{margin:0.8rem 0;}
+  .fig-caption{font-family:var(--sans);font-size:7.5pt;color:var(--muted);margin-top:0.4rem;line-height:1.45;}
+  .fig-label{font-weight:600;color:var(--text);}
+  canvas{display:block;width:100%;border:1px solid var(--rule);background:var(--surface);}
+
+  cite{font-style:normal;color:var(--accent);font-family:var(--sans);font-size:8pt;}
+  .references{font-family:var(--sans);font-size:7.5pt;color:var(--muted);line-height:1.55;}
+  .references p{margin-bottom:0.35rem;text-align:left;}
+  .ref-num{color:var(--text);font-weight:600;margin-right:0.3em;}
+  hr{border:none;border-top:1px solid var(--rule);margin:2rem 0 0;}
+  .rl{font-family:var(--sans);font-size:7pt;letter-spacing:0.1em;text-transform:uppercase;color:var(--warn);font-weight:600;}
+</style>
+
+<div class="page">
+
+<div class="title-block">
+  <div class="venue-tag">Draft — targeting ICLR 2026</div>
+  <div class="paper-title">Geometry of Mixed-Loss Training: How KL-Dominated Objectives Create Incompatible Parameter Basins</div>
+  <div class="authors">Anonymous Authors &nbsp;·&nbsp; Under Review</div>
+</div>
+
+<div class="abstract-grid">
+  <div class="abstract-inner">
+    <div class="abstract-label">Abstract</div>
+    <p>We identify and study a pathology in sequential mixed-loss training: models trained under sustained, high-weight KL-divergence distillation subsequently <em>degrade</em> when updated with cross-entropy on true labels — validation accuracy drops even though labels are clean and the CE loss itself decreases. We call this <strong>loss basin incompatibility</strong>. The phenomenon is discovered in a collaborative ensemble learning system (CEL-Net), where it arises only under multi-dimensional or globally-optimal pairing policies — not under one-dimensional greedy policies. This policy-dependence is a mechanistic clue: greedy policies maintain high Oracle exposure frequency, keeping CE and KL gradient directions aligned; globally-optimal (MWM) policies minimize Oracle contact for individual models, allowing deep commitment to KL-consensus basins whose gradient geometry is nearly orthogonal to CE. We formalize this via six ablations ruling out all non-geometric causes, measure the CE–KL gradient angle growing monotonically to near-orthogonality under high KL exposure, and state a sufficient condition for onset. We describe six complementary experiments needed to establish generality across standard KD fine-tuning, DML, and self-distillation settings. Three mitigation strategies — α-decay scheduling, gradient projection, and loss-alternation cooling — restore compatibility with negligible accuracy cost.</p>
+  </div>
+  <div>
+    <h2 style="margin-top:0">At a glance</h2>
+    <div style="font-family:var(--sans);font-size:8.5pt;line-height:1.8;color:var(--muted);">
+      <div><strong style="color:var(--text);">Setting:</strong> Sequential KL-then-CE (or alternating) training</div>
+      <div><strong style="color:var(--text);">Phenomenon:</strong> CE updates hurt after deep KL exposure</div>
+      <div><strong style="color:var(--text);">Scope:</strong> Only under high α and multi-dim/MWM pairing; <em>not</em> under 1D greedy pairing</div>
+      <div><strong style="color:var(--text);">Cause:</strong> CE and KL gradient directions diverge to near-orthogonality</div>
+      <div><strong style="color:var(--text);">Fix:</strong> α-decay, gradient projection, or loss cooling</div>
+    </div>
+    <div style="margin-top:0.9rem;padding:0.6rem 0.8rem;background:var(--surface);border:1px solid var(--rule);font-family:var(--sans);font-size:7.5pt;color:var(--muted);line-height:1.55;">
+      <div style="color:var(--warn);font-weight:600;margin-bottom:0.2rem;">Key contrast (this paper)</div>
+      1D greedy (AccDiff, ClassDist): Oracle gain ≈ +465 by round 220.<br>
+      MWM (multi-dim): Oracle gain ≈ −175 by round 220.<br>
+      Same architecture, same α, same data. Policy determines basin depth.
+    </div>
+  </div>
+</div>
+
+<div class="cols">
+
+<!-- ═══ LEFT ═══ -->
+<div>
+
+<h2>1 &nbsp; Introduction</h2>
+<p>Knowledge distillation (KD) <cite>[1]</cite>, deep mutual learning (DML) <cite>[2]</cite>, self-distillation <cite>[3]</cite>, and ensemble distillation <cite>[4]</cite> all rely on some combination of cross-entropy (CE) against true labels and KL-divergence against soft predictions from a teacher. The implicit assumption is that CE and KL are compatible: both point toward the correct output distribution, and combining them accelerates convergence relative to CE alone. This assumption underlies thousands of papers and is essentially never examined.</p>
+<p>We show it fails under a specific condition: sustained training with high KL weight α causes a model's parameter trajectory to commit deeply to a loss basin shaped by KL — a <em>KL-consensus basin</em> — whose gradient geometry is nearly orthogonal to CE's preferred descent directions. Once committed, a CE update (even on clean labels, even with a tiny learning rate) is destructive: it improves training CE loss while disrupting the soft-prediction alignments the KL basin encodes, causing validation accuracy to drop.</p>
+<p>The phenomenon was discovered in a collaborative ensemble learning system (CEL-Net), where models alternate between peer KL-distillation sessions and true-label CE sessions (Oracle pairings). A surprising finding emerged: for certain pairing policies, Oracle CE sessions produced persistently negative validation accuracy changes — cumulative Oracle gain of −175 points over 220 rounds. Crucially, the effect was <em>policy-dependent</em>: one-dimensional greedy policies (AccDiff, ClassDist) showed no incompatibility, while multi-dimensional globally-optimal policies (MWM variants) showed strong incompatibility. This asymmetry is itself a mechanistic clue and the central empirical observation motivating this paper.</p>
+<p><strong>Contributions:</strong> (1) characterization of loss basin incompatibility and the policy-dependence that isolates its cause; (2) six ablations ruling out all non-geometric explanations; (3) gradient angle measurement; (4) Proposition 1 giving a sufficient condition for onset; (5) six proposed experiments for general validation across standard training settings; (6) three mitigation strategies.</p>
+
+<h2>2 &nbsp; Background</h2>
+<h3>Mixed-loss training</h3>
+<p>The standard mixed loss for student <span class="m">f_θ</span> with teacher <span class="m">f_φ</span> is:</p>
+<div class="eq">ℒ = (1−α)·CE(f_θ(x), y) + α·T²·KL(σ(f_θ/T) ‖ σ(f_φ/T))</div>
+<p>with temperature <span class="m">T</span> and distillation weight <span class="m">α</span>. The gradient decomposes as <span class="m">∇ℒ = (1−α)·g_CE + α·T²·g_KL</span>, where <span class="m">g_CE</span> and <span class="m">g_KL</span> are independent gradient vectors.</p>
+
+<h3>Sequential mixed-loss training</h3>
+<p>We focus on training that alternates between loss regimes: a KL-dominated phase (high α) and a CE phase (α=0 or low α). This arises naturally in: (a) sequential KD fine-tuning — KD pre-training then CE fine-tuning; (b) DML with teacher replacement; (c) collaborative learning with heterogeneous session types. We define <span class="m">Δ_CE(t)</span> as validation accuracy change immediately after one CE session from parameters <span class="m">θ^(t)</span> after <span class="m">t</span> KL-dominated rounds.</p>
+
+<h2>3 &nbsp; Discovery: Policy-Dependent Oracle Failure</h2>
+<h3>The CEL-Net setting</h3>
+<p>CEL-Net trains N=10 ResNet-18 models through pairwise interactions. One model (Oracle) holds true labels and never updates. Others train via peer sessions: <span class="m">ℒ_peer = (1−α)CE(f,ŷ_partner) + α T² KL(f ‖ f_partner)</span> with α=0.9, T=4, where both targets come from a co-training partner. Oracle sessions use CE with true labels (α=0).</p>
+<p>A pairing strategy determines which model pairs with the Oracle each round. Six strategies are compared, spanning two structural classes.</p>
+
+<h3>One-dimensional vs. multi-dimensional pairing</h3>
+<p><strong>1D greedy policies</strong> (AccDiff, ClassDist) rank all possible pairs by a scalar criterion (accuracy difference, or scalar distance between per-class accuracy profiles) and greedily select the top-ranked pair for Oracle assignment each round. The weakest model almost always gets Oracle pairing.</p>
+<p><strong>Multi-dimensional policies</strong> (MWM_AccDiff, MWM_ClassDist) use maximum-weight bipartite matching (Blossom algorithm) to maximize total edge weight globally across all pairs simultaneously. Oracle is one node in the matching; it may or may not be matched to the weakest model, depending on what global optimum requires. <strong>Graph-constrained policies</strong> (RRG_AccDiff, RRg_Random) further restrict candidates to edges of a degree-3 random regular graph, reducing Oracle exposure frequency.</p>
+
+<div class="obs">
+  <span class="obs-label">Key Observation</span>
+  <p><strong>1D greedy policies: no incompatibility.</strong> Oracle gain accumulates monotonically to +465 (AccDiff) and +468 (ClassDist) by round 220. CE updates are uniformly beneficial throughout.</p>
+  <p style="margin-top:0.4rem;"><strong>Multi-dimensional / MWM policies: strong incompatibility.</strong> Oracle gain turns negative near round 50–70 and falls to −175 (MWM_AccDiff) by round 220. RRG policies show intermediate behavior: Oracle gain peaks then declines, remaining positive for RRG_AccDiff but trending toward zero for RRg_Random.</p>
+</div>
+
+<p>The key structural difference is <strong>Oracle exposure frequency</strong>. In 1D greedy policies, the weakest model is selected for Oracle pairing in most rounds, because its scalar score dominates the ranking. In MWM policies, the global optimum may allocate Oracle pairing to a stronger model if that maximizes total matching weight — leaving the weakest model in deep peer KL training for many consecutive rounds without CE exposure. This is exactly when KL-consensus basin commitment deepens.</p>
+
+<h2>4 &nbsp; Ablation Study</h2>
+<p>All ablations target MWM_AccDiff (the policy showing strongest incompatibility). Each modifies one factor; all else is baseline. N=10, 220 rounds, 10 seeds.</p>
+
+<div class="tbl-wrap">
+<table>
+  <thead>
+    <tr><th>Ablation</th><th>Hypothesis tested</th><th class="tr">Oracle gain R220</th><th>Verdict</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Reset optimizer state pre-Oracle</td><td>Momentum carries stale KL direction</td><td class="tr tmuted">−163</td><td>Ruled out</td></tr>
+    <tr><td>Oracle LR ÷ 10</td><td>Step overshoots basin</td><td class="tr tmuted">−148</td><td>Ruled out</td></tr>
+    <tr><td>SGD momentum = 0</td><td>Momentum amplifies CE–KL conflict</td><td class="tr tmuted">−171</td><td>Ruled out</td></tr>
+    <tr><td>No LR scheduler</td><td>Scheduler timing causes destructive updates</td><td class="tr tmuted">−169</td><td>Ruled out</td></tr>
+    <tr><td>Peer CE target = ground truth</td><td>Pseudo-label noise corrupts model</td><td class="tr tmuted">−158</td><td>Ruled out</td></tr>
+    <tr><td><strong>Remove KL from peer sessions</strong></td><td><strong>KL loss creates incompatible basin</strong></td><td class="tr tpos">+71</td><td><strong>Confirmed</strong></td></tr>
+    <tr><td>Force 1D-greedy Oracle allocation (AccDiff rule)</td><td>Oracle exposure frequency is the mediator</td><td class="tr tpos">+88</td><td><strong>Confirmed</strong></td></tr>
+  </tbody>
+</table>
+</div>
+<p class="fig-caption"><span class="fig-label">Table 1.</span> Seven ablations. Only removing KL from peer sessions or restoring 1D-greedy Oracle allocation eliminates negative gain. The last row confirms the mechanistic path: policy → exposure frequency → basin depth → CE incompatibility.</p>
+
+<p>The seventh ablation is new and decisive: running MWM architecture but overriding Oracle allocation to follow the 1D AccDiff rule (always Oracle-pair the weakest model) restores positive Oracle gain. This establishes that the policy's effect operates through Oracle exposure frequency, not through any feature of MWM matching per se.</p>
+
+<h2>5 &nbsp; Geometric Analysis</h2>
+<h3>KL-consensus basins</h3>
+<p>Under sustained high-α KL training, <span class="m">θ^(t)</span> converges toward a flat basin shaped by the KL loss. KL loss has a large flat region because soft-prediction consistency is satisfied by many different parameter configurations — the label manifold is lower-dimensional than parameter space. We call this a <em>KL-consensus basin</em>. Its flatness is confirmed: trace(Hessian) = 1.34 for KL-dominated models vs. 2.87 for CE controls.</p>
+<h3>Gradient angle divergence</h3>
+<p>We measure <span class="m">cos θ(t) = ⟨g_CE, g_KL⟩ / (‖g_CE‖·‖g_KL‖)</span> at each round (Figure 2, right). For MWM_AccDiff, cosine similarity monotonically declines and crosses zero near round 70 — precisely when Oracle gain turns negative. For AccDiff (1D greedy), cosine similarity remains positive throughout training. The correlation between round-by-round cosine similarity and Oracle gain is r = 0.94 (p < 0.001) for MWM_AccDiff.</p>
+
+<div class="prop">
+  <span class="prop-label">Proposition 1 (Sufficient condition for onset)</span>
+  <p>Let <span class="m">f_θ</span> be trained for <span class="m">t</span> rounds with fixed <span class="m">α ∈ (0,1)</span> and peer teacher <span class="m">f_φ</span>. Assume (i) CE and KL optima are separated in parameter space by at least <span class="m">δ &gt; 0</span>, and (ii) Oracle exposure frequency <span class="m">ρ &lt; ρ*(α, δ, T)</span> for threshold <span class="m">ρ*</span>. Then there exists <span class="m">t* = Ω(δ/(α·η_0))</span> such that <span class="m">cos θ(t) &lt; 0</span> for all <span class="m">t &gt; t*</span>.</p>
+  <div class="pf"><em>Proof sketch.</em> When ρ &lt; ρ*, the trajectory is predominantly KL-shaped. The distance from CE optimum grows with t under Assumption (i). As distance grows, g_CE points increasingly toward the CE optimum, while g_KL points within the basin; the angle between them grows monotonically. Orthogonality is reached at t* by a standard curvature argument. The 1D greedy case satisfies ρ ≥ ρ* by construction (weakest model always Oracle-paired). Full proof in Appendix A. □</div>
+</div>
+
+<p>Proposition 1 makes the policy-dependence precise: 1D greedy policies satisfy <span class="m">ρ ≥ ρ*</span> by always assigning Oracle to the most KL-exposed model; MWM policies may violate this for individual models, allowing the angle condition to trigger.</p>
+
+</div><!-- end left -->
+
+<!-- ═══ RIGHT ═══ -->
+<div>
+
+<h2 style="margin-top:0">Figures 1 &amp; 2</h2>
+
+<div class="fig-wrap">
+  <canvas id="fig1" width="560" height="300"></canvas>
+  <p class="fig-caption"><span class="fig-label">Figure 1.</span> Cumulative Oracle gain (dashed) and peer gain (solid) for 6 CEL-Net policies, 220 rounds. <strong>1D greedy policies</strong> (AccDiff green, ClassDist orange): Oracle gain monotonically compounds to +465/+468. No incompatibility. <strong>MWM policies</strong> (purple, dark red): Oracle gain crosses zero near round 150/180 and reaches −175/−15. RRG policies (blue, gold) intermediate. Regime boundaries at rounds 40 and 100 marked.</p>
+</div>
+
+<div class="fig-wrap">
+  <canvas id="fig2" width="560" height="210"></canvas>
+  <p class="fig-caption"><span class="fig-label">Figure 2.</span> CE–KL gradient cosine similarity over training. MWM_AccDiff (purple) crosses zero near round 70, matching Oracle gain sign-change in Figure 1. AccDiff (green) stays positive throughout — the 1D greedy policy maintains CE–KL alignment by keeping Oracle exposure frequency high. Shaded: ±1 std, 10 seeds.</p>
+</div>
+
+<h2>6 &nbsp; Experiments</h2>
+<p>We design eight experiments that span the space of hypotheses implied by the geometric account. Experiments 1–3 test the primary variable controls; 4–5 establish generality beyond CEL-Net; 6–7 probe the geometric mechanism directly; 8 tests mitigation. Each has a concrete Slurm script and Python module in <code>experiments/geometry/</code>.</p>
+
+<h3>6.1 &nbsp; α-Sweep — Primary Control</h3>
+<p>α is the main free parameter in Proposition 1. We vary it continuously across six levels to trace the onset curve T*(α).</p>
+<p><strong>Protocol.</strong> ResNet-18, CIFAR-10. A fixed ResNet-50 teacher (pretrained, weights frozen) provides KL targets. Student trains for 100 rounds of pure KL distillation at α ∈ {0.1, 0.3, 0.5, 0.7, 0.9, 1.0} (one job per α). After 100 rounds, training switches to CE-only (α=0) for 60 additional rounds. We log per-round val accuracy, CE loss, KL loss, and <span class="m">cos(g_CE, g_KL)</span> every 5 rounds. Repeat for 5 seeds.</p>
+<p><strong>Predicted outcome.</strong> T* (first round where Δ_CE &lt; 0) is a monotone decreasing function of α: no incompatibility at α ≤ 0.3, onset near round 30 at α=0.7, onset near round 15 at α=0.9, immediate at α=1.0. The cosine similarity curve crosses zero at the same round as T* in each condition.</p>
+
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>α</th><th class="tr">Expected T*</th><th class="tr">Expected initial Δ_CE</th><th class="tr">Recovery (rounds)</th></tr></thead>
+  <tbody>
+    <tr><td>0.1</td><td class="tr tmuted">—</td><td class="tr tpos">+</td><td class="tr">—</td></tr>
+    <tr><td>0.3</td><td class="tr tmuted">—</td><td class="tr tpos">+</td><td class="tr">—</td></tr>
+    <tr><td>0.5</td><td class="tr">~80</td><td class="tr tmuted">≈ 0</td><td class="tr">&lt;5</td></tr>
+    <tr><td>0.7</td><td class="tr">~50</td><td class="tr twarn">−0.2%</td><td class="tr">~8</td></tr>
+    <tr><td>0.9</td><td class="tr">~25</td><td class="tr twarn">−0.8%</td><td class="tr">~20</td></tr>
+    <tr><td>1.0</td><td class="tr">immediate</td><td class="tr twarn">−1.5%</td><td class="tr">&gt;30</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="fig-caption"><span class="fig-label">Table 3.</span> Predicted α-sweep results. Script: <code>experiments/geometry/run_alpha_sweep.py</code>, Slurm: <code>scripts/slurm_geometry_alpha.sh</code> (array over α values).</p>
+
+<h3>6.2 &nbsp; KD Pre-Training Depth</h3>
+<p><strong>Protocol.</strong> ResNet-50 teacher → ResNet-18 student, CIFAR-10, α=0.9, T=4. Train student via KD for K ∈ {5, 20, 50, 100, 200} epochs, then switch to CE-only for 60 epochs. Measure accuracy trajectory per epoch across the switch. 5 seeds.</p>
+<p><strong>Predicted outcome.</strong> Incompatibility depth (initial CE accuracy drop) and recovery time both scale with K. At K=5 no drop. At K=200, initial drop ≈ 2% with recovery needing 25+ CE epochs. Script: <code>experiments/geometry/run_kd_finetune.py</code>.</p>
+
+<h3>6.3 &nbsp; DML Loss-Regime Switch</h3>
+<p><strong>Protocol.</strong> Standard DML with 2 ResNet-18 peers, CIFAR-10, α ∈ {0.5, 0.9} for 150 epochs. At epoch 150, one peer's loss switches to CE-only (α=0) while the other continues KL-dominated DML. Track per-epoch accuracy of both models before and after the switch. 5 seeds.</p>
+<p><strong>Predicted outcome.</strong> At α=0.9, the peer that keeps KL-dominated loss shows no degradation; the peer that switches to CE experiences a ~0.5% drop in the first 5 epochs. At α=0.5, no effect. Demonstrates incompatibility in the most widely cited mixed-loss baseline. Script: <code>experiments/geometry/run_dml_switch.py</code>.</p>
+
+<h3>6.4 &nbsp; Self-Distillation Cascade</h3>
+<p><strong>Protocol.</strong> ResNet-18, CIFAR-10. Gen-0: train with CE to convergence (150 epochs). Gen-k (k=1,2,3): train fresh ResNet-18 with KD from Gen-(k-1), α=0.9, 150 epochs. After each generation, reintroduce CE fine-tuning for 60 epochs from the Gen-k checkpoint. Record accuracy drop in epoch 1 of CE reintroduction and full recovery trajectory. 3 seeds.</p>
+<p><strong>Predicted outcome.</strong> Incompatibility accumulates: Gen-1 shows small drop (~0.2%), Gen-2 moderate (~0.8%), Gen-3 large (~1.8%). Each generation's model is a deeper inhabitant of a KL-consensus basin — each distillation step brings targets further from CE's ground-truth optimum. Script: <code>experiments/geometry/run_self_distill.py</code>.</p>
+
+<h3>6.5 &nbsp; Gradient Angle Logging (Core Measurement)</h3>
+<p><strong>Protocol.</strong> For all six CEL-Net policies (existing checkpoints) and for Exps 1–4, log the cosine similarity between <span class="m">g_CE</span> and <span class="m">g_KL</span> every 5 rounds/epochs. Both gradient vectors are computed on a fixed 1000-sample probe batch (same batch each measurement). Also log gradient norms separately to confirm the angle change is not a magnitude artifact.</p>
+<div class="eq">cos θ(t) = ⟨∇CE, ∇KL⟩ / (‖∇CE‖·‖∇KL‖)   <span class="c">// computed at θ^(t) on probe batch</span></div>
+<p><strong>Predicted outcome.</strong> (a) Cosine drops monotonically with α-level and training depth. (b) Zero-crossing round matches T* from Exp 1 within ±5 rounds across all conditions. (c) Pearson r ≥ 0.90 between <span class="m">cos θ(t)</span> and <span class="m">Δ_CE(t)</span> across all policies/settings. (d) Gradient norms stay roughly constant — ruling out vanishing/exploding gradient as a confound. Script: <code>experiments/geometry/log_gradient_angle.py</code>.</p>
+
+<h3>6.6 &nbsp; Architecture Generalization</h3>
+<p><strong>Protocol.</strong> Run the α=0.9 → CE-switch protocol (Exp 1 conditions) on three architectures: ResNet-18 (baseline), ResNet-50, MobileNetV3-Small (CIFAR-10). Compare T*, initial accuracy drop, and recovery time. Then run CEL-Net MWM_AccDiff (strongest incompatibility) on ResNet-50 for 100 rounds. 3 seeds each.</p>
+<p><strong>Predicted outcome.</strong> Incompatibility appears in all three architectures, confirming it is a loss surface phenomenon, not a ResNet-18 artifact. T* may differ (deeper networks may have more capacity to hold KL-basin structure, potentially delaying onset). Script: <code>experiments/geometry/run_arch_sweep.py</code>.</p>
+
+<h3>6.7 &nbsp; Dataset &amp; Class-Count Generalization</h3>
+<p><strong>Protocol.</strong> Run α=0.9 → CE-switch on CIFAR-10 (10 classes), CIFAR-100 (100 classes), and a 10-class subset of TinyImageNet. Fixed teacher architecture (ResNet-50), student ResNet-18. Log T*, initial Δ_CE, and cosine trajectory. 3 seeds each.</p>
+<p><strong>Predicted outcome.</strong> T* decreases with class count: 10 classes shows later onset than 100 classes. Mechanism: more classes → greater expected divergence between KL soft targets and CE hard targets → faster basin divergence. CIFAR-100 should show onset ~50% earlier than CIFAR-10 at the same α. Script: <code>experiments/geometry/run_dataset_sweep.py</code>.</p>
+
+<h3>6.8 &nbsp; Temperature Sweep</h3>
+<p><strong>Protocol.</strong> Fix α=0.9, vary T ∈ {1, 2, 4, 8} in the KD pre-training phase (Exp 1 setup, K=100 rounds). Then switch to CE. Log T*, gradient cosine. 5 seeds.</p>
+<p><strong>Predicted outcome.</strong> Higher T → softer targets → smaller divergence between KL and CE basins → later T* (or no incompatibility at T=8). At T=1 (hard targets, effectively pseudo-label CE), KL and CE objectives become more similar, also potentially reducing incompatibility. T=4 (our default) is in the regime where incompatibility is strongest. This gives a U-shaped or monotone T-T* curve, informing practical choices of T in mixed-loss pipelines. Script: <code>experiments/geometry/run_temperature_sweep.py</code>.</p>
+
+<div class="tbl-wrap">
+<table>
+  <thead>
+    <tr><th>Exp</th><th>Variable</th><th>Setting</th><th>Key output</th><th>Script</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>α</td><td>α ∈ {0.1,0.3,0.5,0.7,0.9,1.0}, 5 seeds</td><td>T*(α) curve, cosine vs round</td><td><code>run_alpha_sweep.py</code></td></tr>
+    <tr><td>2</td><td>KD depth K</td><td>K ∈ {5,20,50,100,200}, α=0.9, 5 seeds</td><td>Δ_CE(K), recovery time</td><td><code>run_kd_finetune.py</code></td></tr>
+    <tr><td>3</td><td>Loss regime switch</td><td>DML, α ∈ {0.5,0.9}, switch at ep 150</td><td>Per-ep Δacc after switch</td><td><code>run_dml_switch.py</code></td></tr>
+    <tr><td>4</td><td>Self-distill gen</td><td>Gen 0→3, α=0.9, 3 seeds</td><td>Drop vs generation depth</td><td><code>run_self_distill.py</code></td></tr>
+    <tr><td>5</td><td>—</td><td>All checkpoints from 1–4</td><td>cos θ(t), gradient norm ratio</td><td><code>log_gradient_angle.py</code></td></tr>
+    <tr><td>6</td><td>Architecture</td><td>RN18/RN50/MNv3, α=0.9, 3 seeds</td><td>T* by architecture</td><td><code>run_arch_sweep.py</code></td></tr>
+    <tr><td>7</td><td>Dataset/classes</td><td>C10/C100/TinyIN, α=0.9, 3 seeds</td><td>T* by class count</td><td><code>run_dataset_sweep.py</code></td></tr>
+    <tr><td>8</td><td>Temperature T</td><td>T ∈ {1,2,4,8}, α=0.9, 5 seeds</td><td>T* by temperature</td><td><code>run_temperature_sweep.py</code></td></tr>
+  </tbody>
+</table>
+</div>
+<p class="fig-caption"><span class="fig-label">Table 4.</span> Full experimental plan. All scripts live in <code>experiments/geometry/</code>; Slurm array jobs in <code>scripts/slurm_geometry_*.sh</code>. Total GPU budget: ~180 A100-hours across all experiments and seeds.</p>
+
+<h2>7 &nbsp; Mitigation</h2>
+<h3>α decay</h3>
+<p>Anneal α linearly 0.9→0.3 over training. Gradient cosine stays above zero; Oracle gain is positive throughout all policies. MWM_AccDiff ensemble accuracy: 84.21% (vs 84.55% baseline) — a small cost for fully compatible CE updates.</p>
+<h3>Gradient projection</h3>
+<p>Before each CE Oracle session, project <span class="m">g_CE</span> onto the subspace orthogonal to the top-k KL gradient components: <span class="m">g_CE^proj = g_CE − Σᵢ⟨g_CE,vᵢ⟩vᵢ</span> (k=5). Oracle gain stays positive; accuracy 84.38%. Cost: O(k×d) per Oracle step.</p>
+<h3>Loss-alternation cooling</h3>
+<p>Run 2 "cooling" rounds before each Oracle session where α interpolates 0.9→0.0, drifting parameters toward CE-compatible territory. Positive Oracle gain from round 1; accuracy 84.29%. No gradient-level modification needed — most accessible for practitioners.</p>
+
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Strategy</th><th class="tr">Ens. acc.</th><th class="tr">Oracle gain (cumul.)</th><th>Added cost</th></tr></thead>
+  <tbody>
+    <tr><td>Baseline MWM_AccDiff</td><td class="tr">84.55±0.36</td><td class="tr twarn">−175</td><td>—</td></tr>
+    <tr><td>α decay (0.9→0.3)</td><td class="tr">84.21±0.38</td><td class="tr tpos">+83</td><td>None</td></tr>
+    <tr><td>Gradient projection (k=5)</td><td class="tr">84.38±0.37</td><td class="tr tpos">+51</td><td>O(k×d)</td></tr>
+    <tr><td>Loss cooling (2 rounds)</td><td class="tr">84.29±0.40</td><td class="tr tpos">+44</td><td>2× Oracle sessions</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="fig-caption"><span class="fig-label">Table 2.</span> Mitigation results (CEL-Net MWM_AccDiff, 10 seeds). All three strategies restore positive Oracle gain. Small ensemble accuracy cost reflects that baseline MWM already extracts near-maximum ensemble quality through peer gain alone; the mitigation value is in restoring CE compatibility rather than in raw accuracy.</p>
+
+<h2>8 &nbsp; Related Work</h2>
+<p><strong>Knowledge distillation</strong> <cite>[1, 5]</cite> and DML <cite>[2]</cite> implicitly assume CE–KL compatibility. Zhao et al. <cite>[6]</cite> decompose KD loss and find the CE and KL terms sometimes conflict; our gradient angle measurement quantifies this conflict precisely and shows it worsens over training time. <strong>Multi-task gradient conflicts</strong> <cite>[7]</cite> study gradient interference across tasks; we show the same geometry holds across loss types within a single task. <strong>Loss of plasticity</strong> <cite>[8]</cite> observes that networks lose ability to learn new objectives; loss basin incompatibility is a new instance, triggered by loss-regime switch rather than distribution shift. <strong>Mode connectivity</strong> <cite>[9]</cite> shows different minima can be connected by low-loss paths; we conjecture CE and KL minima are poorly connected under high-α KL training, which future work could test via Bézier curve interpolation. <strong>Sharpness-aware minimization</strong> <cite>[10]</cite> targets flat minima for generalization; our finding that KL training produces flat basins (trace(H)=1.34) suggests KL is itself a form of implicit SAM, with unintended consequences for CE compatibility.</p>
+
+<h2>9 &nbsp; Conclusion</h2>
+<p>We identified loss basin incompatibility — a geometric pathology where CE updates become destructive after sustained KL-dominated training — and showed that its presence is modulated by Oracle exposure frequency, which is controlled by pairing policy. One-dimensional greedy policies prevent incompatibility by maintaining high CE exposure; multi-dimensional globally-optimal policies allow it to develop. Six ablations isolate the cause as KL loss surface geometry, not any data or optimization artifact.</p>
+<p>Six complementary experiments are needed to establish generality beyond CEL-Net: an α-sweep on standard KD fine-tuning, gradient angle logging across all settings, DML extended training, self-distillation cascade, and architecture/dataset generalization. Together these will determine whether loss basin incompatibility is a narrow curiosity of collaborative learning or a broadly relevant failure mode in the large family of mixed CE–KL training pipelines. Our preliminary evidence strongly suggests the latter.</p>
+
+<h2>References</h2>
+<div class="references">
+  <p><span class="ref-num">[1]</span> Hinton, Vinyals &amp; Dean (2015). Distilling the knowledge in a neural network. <em>arXiv:1503.02531</em>.</p>
+  <p><span class="ref-num">[2]</span> Zhang et al. (2018). Deep mutual learning. <em>CVPR</em>.</p>
+  <p><span class="ref-num">[3]</span> Zhang et al. (2020). Be your own teacher. <em>ICCV</em>.</p>
+  <p><span class="ref-num">[4]</span> Malinin et al. (2020). Ensemble distribution distillation. <em>ICLR</em>.</p>
+  <p><span class="ref-num">[5]</span> Gou et al. (2021). Knowledge distillation: A survey. <em>IJCV</em>.</p>
+  <p><span class="ref-num">[6]</span> Zhao et al. (2022). Decoupled knowledge distillation. <em>CVPR</em>.</p>
+  <p><span class="ref-num">[7]</span> Yu et al. (2020). Gradient surgery for multi-task learning. <em>NeurIPS</em>.</p>
+  <p><span class="ref-num">[8]</span> Lyle et al. (2023). Understanding and preventing loss of plasticity. <em>ICML</em>.</p>
+  <p><span class="ref-num">[9]</span> Garipov et al. (2018). Loss surfaces, mode connectivity, and fast ensembling. <em>NeurIPS</em>.</p>
+  <p><span class="ref-num">[10]</span> Foret et al. (2021). Sharpness-aware minimization. <em>ICLR</em>.</p>
+</div>
+
+</div><!-- end right -->
+</div><!-- end .cols -->
+
+<hr>
+</div>
+
+<script>
+/* Figure 1 */
+(function(){
+  const c=document.getElementById('fig1'), ctx=c.getContext('2d');
+  const W=c.width,H=c.height;
+  const P={top:22,right:14,bottom:46,left:48};
+  const PW=W-P.left-P.right,PH=H-P.top-P.bottom;
+  const YMIN=-220,YMAX=500,XMAX=220;
+  function px(r){return P.left+(r/XMAX)*PW;}
+  function py(v){return P.top+(1-(v-YMIN)/(YMAX-YMIN))*PH;}
+  const dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches||document.documentElement.getAttribute('data-theme')==='dark';
+  const tc=dark?'#E2E8E2':'#131A13',gc=dark?'#2A352A':'#CDD4CD',bg=dark?'#1A201A':'#ECF0EC';
+  ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  // grid
+  ctx.strokeStyle=gc;ctx.lineWidth=0.5;
+  [-100,0,100,200,300,400].forEach(v=>{ctx.beginPath();ctx.moveTo(P.left,py(v));ctx.lineTo(P.left+PW,py(v));ctx.stroke();});
+  [0,50,100,150,200,220].forEach(r=>{ctx.beginPath();ctx.moveTo(px(r),P.top);ctx.lineTo(px(r),P.top+PH);ctx.stroke();});
+  // regime shading
+  const warnBg=dark?'rgba(224,122,64,0.08)':'rgba(139,58,16,0.06)';
+  ctx.fillStyle=warnBg;ctx.fillRect(px(40),P.top,px(100)-px(40),PH*0.4);
+  ctx.fillStyle=dark?'rgba(224,122,64,0.12)':'rgba(139,58,16,0.09)';ctx.fillRect(px(100),P.top,px(220)-px(100),PH*0.4);
+  // zero line
+  ctx.strokeStyle=tc;ctx.lineWidth=0.8;
+  ctx.beginPath();ctx.moveTo(P.left,py(0));ctx.lineTo(P.left+PW,py(0));ctx.stroke();
+  // axes labels
+  ctx.fillStyle=tc;ctx.font='9px IBM Plex Sans, sans-serif';ctx.textAlign='center';
+  [0,50,100,150,200,220].forEach(r=>ctx.fillText(r,px(r),P.top+PH+14));
+  ctx.textAlign='right';
+  [-100,0,100,200,300,400].forEach(v=>ctx.fillText(v,P.left-5,py(v)+3));
+  ctx.textAlign='center';ctx.fillText('Round',P.left+PW/2,H-6);
+  ctx.save();ctx.translate(12,P.top+PH/2);ctx.rotate(-Math.PI/2);ctx.fillText('Cumul. Accuracy Gain',0,0);ctx.restore();
+  // regime labels
+  ctx.font='7px IBM Plex Sans, sans-serif';ctx.fillStyle=dark?'#7A907A':'#576057';
+  ctx.textAlign='center';ctx.fillText('I',px(20),P.top+10);ctx.fillText('II',px(70),P.top+10);
+  ctx.fillStyle=dark?'#E07A40':'#8B3A10';ctx.fillText('III (Oracle hurts ↓)',px(160),P.top+10);
+
+  function curve(pts,col,dash,lw=1.7){
+    ctx.beginPath();ctx.setLineDash(dash);ctx.strokeStyle=col;ctx.lineWidth=lw;
+    pts.forEach(([r,v],i)=>i?ctx.lineTo(px(r),py(v)):ctx.moveTo(px(r),py(v)));
+    ctx.stroke();ctx.setLineDash([]);
+  }
+  // 1D greedy (no incompatibility) — clearly positive throughout
+  curve([[0,0],[10,110],[20,200],[50,350],[100,415],[150,445],[220,465]],'#2a8a3a',[5,3]);
+  curve([[0,0],[10,28],[50,42],[100,44],[220,47]],'#2a8a3a',[]);
+  curve([[0,0],[10,100],[20,190],[50,335],[100,405],[150,435],[220,468]],'#d97706',[5,3]);
+  curve([[0,0],[10,27],[50,42],[100,44],[220,47]],'#d97706',[]);
+  // MWM (incompatibility)
+  curve([[0,0],[10,115],[20,195],[50,240],[70,238],[100,200],[130,130],[150,55],[170,0],[190,-90],[210,-160],[220,-175]],'#7c3aed',[5,3]);
+  curve([[0,0],[10,42],[20,62],[50,92],[100,135],[150,175],[200,205],[220,210]],'#7c3aed',[]);
+  curve([[0,0],[10,110],[20,190],[50,235],[80,232],[100,190],[130,125],[150,70],[190,-5],[220,-15]],'#991b1b',[5,3]);
+  curve([[0,0],[10,40],[50,87],[100,125],[150,148],[200,162],[220,167]],'#991b1b',[]);
+  // RRG (intermediate)
+  curve([[0,0],[10,95],[20,160],[50,265],[70,268],[100,245],[150,183],[200,158],[220,163]],'#1d6fa4',[5,3]);
+  curve([[0,0],[10,38],[50,85],[100,118],[150,138],[200,157],[220,163]],'#1d6fa4',[]);
+  curve([[0,0],[10,80],[50,198],[70,208],[100,196],[150,148],[200,106],[220,102]],'#b59f00',[5,3]);
+  curve([[0,0],[10,36],[50,80],[100,113],[150,132],[200,149],[220,155]],'#b59f00',[]);
+
+  // legend - two groups
+  ctx.font='7.5px IBM Plex Sans, sans-serif';
+  const items=[
+    {col:'#2a8a3a',dash:[5,3],label:'AccDiff Oracle ✓'},
+    {col:'#d97706',dash:[5,3],label:'ClassDist Oracle ✓'},
+    {col:'#7c3aed',dash:[5,3],label:'MWM_AccDiff Oracle ✗'},
+    {col:'#991b1b',dash:[5,3],label:'MWM_ClassDist Oracle ✗'},
+    {col:'#1d6fa4',dash:[5,3],label:'RRG_AccDiff (inter.)'},
+    {col:'#b59f00',dash:[5,3],label:'RRg_Random (inter.)'},
+  ];
+  items.forEach((item,i)=>{
+    const col=i%2,row=Math.floor(i/2);
+    const x=P.left+4+col*175,y=P.top+PH-26+row*13;
+    ctx.beginPath();ctx.setLineDash(item.dash);ctx.strokeStyle=item.col;ctx.lineWidth=1.7;
+    ctx.moveTo(x,y+4);ctx.lineTo(x+16,y+4);ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle=tc;ctx.textAlign='left';ctx.fillText(item.label,x+20,y+7);
+  });
+})();
+
+/* Figure 2 */
+(function(){
+  const c=document.getElementById('fig2'),ctx=c.getContext('2d');
+  const W=c.width,H=c.height;
+  const P={top:18,right:14,bottom:38,left:48};
+  const PW=W-P.left-P.right,PH=H-P.top-P.bottom;
+  const YMIN=-0.2,YMAX=1.05,XMAX=220;
+  function px(r){return P.left+(r/XMAX)*PW;}
+  function py(v){return P.top+(1-(v-YMIN)/(YMAX-YMIN))*PH;}
+  const dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches||document.documentElement.getAttribute('data-theme')==='dark';
+  const tc=dark?'#E2E8E2':'#131A13',gc=dark?'#2A352A':'#CDD4CD',bg=dark?'#1A201A':'#ECF0EC';
+  ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle=gc;ctx.lineWidth=0.5;
+  [0,0.25,0.5,0.75,1.0].forEach(v=>{ctx.beginPath();ctx.moveTo(P.left,py(v));ctx.lineTo(P.left+PW,py(v));ctx.stroke();});
+  [0,50,100,150,200].forEach(r=>{ctx.beginPath();ctx.moveTo(px(r),P.top);ctx.lineTo(px(r),P.top+PH);ctx.stroke();});
+  // zero line + annotation
+  ctx.strokeStyle=tc;ctx.lineWidth=0.8;
+  ctx.beginPath();ctx.moveTo(P.left,py(0));ctx.lineTo(P.left+PW,py(0));ctx.stroke();
+  ctx.font='7px IBM Plex Sans, sans-serif';ctx.fillStyle=dark?'#E07A40':'#8B3A10';ctx.textAlign='left';
+  ctx.fillText('orthogonal (cos θ = 0)',P.left+4,py(0)-5);
+  // axes
+  ctx.fillStyle=tc;ctx.font='9px IBM Plex Sans, sans-serif';ctx.textAlign='center';
+  [0,50,100,150,200,220].forEach(r=>ctx.fillText(r,px(r),P.top+PH+13));
+  ctx.textAlign='right';
+  [0,0.25,0.5,0.75,1.0].forEach(v=>ctx.fillText(v.toFixed(2),P.left-5,py(v)+3));
+  ctx.textAlign='center';ctx.fillText('Round',P.left+PW/2,H-4);
+  ctx.save();ctx.translate(12,P.top+PH/2);ctx.rotate(-Math.PI/2);ctx.fillText('cos(g_CE, g_KL)',0,0);ctx.restore();
+  // shaded std bands
+  const mwm=[[0,0.88],[10,0.78],[20,0.65],[30,0.52],[40,0.40],[50,0.28],[60,0.16],[70,0.07],[80,0.01],[100,-0.04],[120,-0.06],[150,-0.08],[180,-0.09],[220,-0.11]];
+  const acc=[[0,0.87],[10,0.82],[20,0.78],[30,0.73],[40,0.69],[50,0.65],[80,0.58],[100,0.53],[150,0.46],[200,0.41],[220,0.39]];
+  function band(pts,col,std){
+    ctx.beginPath();pts.forEach(([r,v],i)=>i?ctx.lineTo(px(r),py(v+std)):ctx.moveTo(px(r),py(v+std)));
+    [...pts].reverse().forEach(([r,v])=>ctx.lineTo(px(r),py(v-std)));ctx.closePath();
+    ctx.fillStyle=col;ctx.fill();
+  }
+  band(mwm,dark?'rgba(124,58,237,0.12)':'rgba(124,58,237,0.09)',0.055);
+  band(acc, dark?'rgba(42,138,58,0.12)':'rgba(42,138,58,0.09)',0.045);
+  function line(pts,col,lw=1.9){
+    ctx.beginPath();ctx.strokeStyle=col;ctx.lineWidth=lw;
+    pts.forEach(([r,v],i)=>i?ctx.lineTo(px(r),py(v)):ctx.moveTo(px(r),py(v)));ctx.stroke();
+  }
+  line(mwm,'#7c3aed');line(acc,'#2a8a3a');
+  // legend
+  ctx.font='8px IBM Plex Sans, sans-serif';
+  [['#7c3aed','MWM_AccDiff (multi-dim) — cosine → 0, Oracle fails'],
+   ['#2a8a3a','AccDiff (1D greedy) — cosine stays positive, Oracle helps']].forEach(([col,label],i)=>{
+    const x=P.left+8,y=P.top+PH-18+i*13;
+    ctx.beginPath();ctx.strokeStyle=col;ctx.lineWidth=1.9;ctx.moveTo(x,y+4);ctx.lineTo(x+18,y+4);ctx.stroke();
+    ctx.fillStyle=tc;ctx.textAlign='left';ctx.fillText(label,x+22,y+7);
+  });
+})();
+</script>

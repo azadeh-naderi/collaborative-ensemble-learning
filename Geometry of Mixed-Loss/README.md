@@ -22,12 +22,18 @@ Geometry of Mixed-Loss/
 │   ├── run_kd_finetune.py        ← Exp 2: KD depth K ∈ {5,20,50,100,200}
 │   ├── run_dml_switch.py         ← Exp 3: DML regime switch at epoch 150
 │   ├── run_self_distill.py       ← Exp 4: self-distillation cascade Gen 0→3
-│   └── log_gradient_angle.py     ← Exp 5: post-hoc cos(g_CE, g_KL) logging
+│   ├── log_gradient_angle.py     ← Exp 5: post-hoc cos(g_CE, g_KL) logging
+│   ├── run_arch_sweep.py         ← Exp 6: architecture (RN18/RN50/MNv3)
+│   ├── run_dataset_sweep.py      ← Exp 7: dataset (C10/C100/TinyIN-10)
+│   └── run_temperature_sweep.py  ← Exp 8: temperature T ∈ {1,2,4,8}
 ├── scripts/
 │   ├── slurm_alpha_sweep.sh      ← 30-task array (6α × 5 seeds)
 │   ├── slurm_kd_finetune.sh      ← 25-task array (5K × 5 seeds)
 │   ├── slurm_dml_switch.sh       ← 10-task array (2α × 5 seeds)
-│   └── slurm_self_distill.sh     ←  3-task array (3 seeds)
+│   ├── slurm_self_distill.sh     ←  3-task array (3 seeds)
+│   ├── slurm_arch_sweep.sh       ←  9-task array (3 archs × 3 seeds)
+│   ├── slurm_dataset_sweep.sh    ←  9-task array (3 datasets × 3 seeds)
+│   └── slurm_temperature_sweep.sh← 20-task array (4T × 5 seeds)
 └── results/                      ← output written here by all scripts
 ```
 
@@ -49,6 +55,16 @@ sbatch "Geometry of Mixed-Loss/scripts/slurm_dml_switch.sh"
 
 # Exp 4 — self-distillation cascade
 sbatch "Geometry of Mixed-Loss/scripts/slurm_self_distill.sh"
+
+# Exp 6 — architecture sweep (resnet18 / resnet50 / mobilenet_v3_small)
+sbatch "Geometry of Mixed-Loss/scripts/slurm_arch_sweep.sh"
+
+# Exp 7 — dataset sweep (cifar10 / cifar100 / tinyimagenet10)
+# Note: TinyImageNet must be pre-downloaded to ./data/tiny-imagenet-200/
+sbatch "Geometry of Mixed-Loss/scripts/slurm_dataset_sweep.sh"
+
+# Exp 8 — temperature sweep (T ∈ {1,2,4,8}, α=0.9 fixed)
+sbatch "Geometry of Mixed-Loss/scripts/slurm_temperature_sweep.sh"
 ```
 
 After jobs finish, run the gradient angle logger on each result directory:
@@ -59,23 +75,26 @@ python "Geometry of Mixed-Loss/experiments/log_gradient_angle.py" \
     --alpha 0.9 --seed 42
 ```
 
-## Experiments still to implement (Exps 6–8)
-
-| Exp | Variable | Script (TODO) |
-|-----|----------|---------------|
-| 6 | Architecture (RN18/RN50/MNv3) | `run_arch_sweep.py` |
-| 7 | Dataset (C10/C100/TinyIN) | `run_dataset_sweep.py` |
-| 8 | Temperature T ∈ {1,2,4,8} | `run_temperature_sweep.py` |
-
 ## GPU budget estimate
 
-| Experiment | Tasks | Hours/task | Total |
-|------------|-------|-----------|-------|
-| α-sweep    | 30    | 2h        | 60 A100-h |
-| KD depth   | 25    | 3h        | 75 A100-h |
-| DML switch | 10    | 3h        | 30 A100-h |
-| Self-distil| 3     | 5h        | 15 A100-h |
-| **Total**  |       |           | **~180 A100-h** |
+| Experiment        | Tasks | Hours/task | Total      |
+|-------------------|-------|-----------|------------|
+| α-sweep           | 30    | 2h        | 60 A100-h  |
+| KD depth          | 25    | 3h        | 75 A100-h  |
+| DML switch        | 10    | 3h        | 30 A100-h  |
+| Self-distil       | 3     | 5h        | 15 A100-h  |
+| Arch sweep        | 9     | 3h        | 27 A100-h  |
+| Dataset sweep     | 9     | 4h        | 36 A100-h  |
+| Temperature sweep | 20    | 2h        | 40 A100-h  |
+| **Total**         |       |           | **~283 A100-h** |
+
+### Note on TinyImageNet (Exp 7)
+Download and extract before submitting:
+```bash
+wget http://cs231n.stanford.edu/tiny-imagenet-200.zip -P ./data/
+unzip ./data/tiny-imagenet-200.zip -d ./data/
+```
+The script uses the first 10 wnids sorted alphabetically as the 10-class subset.
 
 ## Key predictions
 

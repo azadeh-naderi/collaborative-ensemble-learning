@@ -3,6 +3,7 @@
 #SBATCH --output=logs/geometry_kd_%A_%a.out
 #SBATCH --error=logs/geometry_kd_%A_%a.err
 #SBATCH --partition=gpu
+#SBATCH --account=dept_dms
 #SBATCH --qos=high_dept_dms
 #SBATCH --gres=gpu:a100_20g:1
 #SBATCH --cpus-per-task=8

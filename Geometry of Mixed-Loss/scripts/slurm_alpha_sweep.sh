@@ -30,7 +30,7 @@ OUT_DIR="Geometry of Mixed-Loss/results/alpha_sweep/alpha${ALPHA_STR}_seed${SEED
 
 source /apps/easybuild/software/Anaconda3/2023.09-0/etc/profile.d/conda.sh
 set +u
-conda activate /home/an57/ondemand/data/sys/myjobs/projects/default/15/torch-cuda
+conda activate /project/ikoutis/an57/conda_envs/torch-cuda
 set -u
 
 cd "$SLURM_SUBMIT_DIR"

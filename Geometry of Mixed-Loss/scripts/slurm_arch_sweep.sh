@@ -26,7 +26,7 @@ TEACHER_CKPT="Geometry of Mixed-Loss/results/teachers/teacher_resnet50_seed${SEE
 
 source /apps/easybuild/software/Anaconda3/2023.09-0/etc/profile.d/conda.sh
 set +u
-conda activate /home/an57/ondemand/data/sys/myjobs/projects/default/15/torch-cuda
+conda activate /project/ikoutis/an57/conda_envs/torch-cuda
 set -u
 
 cd "$SLURM_SUBMIT_DIR"

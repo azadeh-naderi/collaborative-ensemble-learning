@@ -244,8 +244,23 @@
 
 <div class="obs">
   <span class="obs-label">Actual outcome (2026-08-25, 30/30 runs completed)</span>
-  <p>The predicted zero-crossing does not occur, but the predicted <em>direction</em> partially does. Comparing round 100 (end of KL phase) to round 105, <span class="m">cos(g_CE, g_KL)</span> dips at the switch for every α, and the size of the dip scales with α — from −0.095 at α=0.1 up to −0.150 at α=1.0 — consistent with the direction Proposition 1 predicts. But cosine never goes negative or even close to zero anywhere in the trajectory (it stays between 0.15 and 0.39 throughout, rounds 70–160), so Proposition 1's actual onset condition — <span class="m">cos θ(t) < 0</span> — is never triggered in this protocol. The dip also <em>recovers</em>, climbing back toward its pre-switch level by round 140–160, rather than continuing to diverge monotonically the way the proof sketch assumes once past onset — a discrepancy the proof sketch does not currently account for.</p>
+  <p>The predicted zero-crossing does not occur, but the predicted <em>direction</em> partially does. Comparing round 100 (end of KL phase) to round 105, <span class="m">cos(g_CE, g_KL)</span> dips at the switch for every α, and the size of the dip scales with α (Table 3b) — from −0.095 at α=0.1 up to −0.150 at α=1.0 — consistent with the direction Proposition 1 predicts. But cosine never goes negative or even close to zero anywhere in the trajectory (it stays between 0.15 and 0.39 throughout, rounds 70–160), so Proposition 1's actual onset condition — <span class="m">cos θ(t) < 0</span> — is never triggered in this protocol. The dip also <em>recovers</em>, climbing back toward its pre-switch level by round 140–160, rather than continuing to diverge monotonically the way the proof sketch assumes once past onset — a discrepancy the proof sketch does not currently account for.</p>
 </div>
+
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>α</th><th class="tr">r100 → r105 dip</th></tr></thead>
+  <tbody>
+    <tr><td>0.1</td><td class="tr twarn">−0.095</td></tr>
+    <tr><td>0.3</td><td class="tr twarn">−0.079</td></tr>
+    <tr><td>0.5</td><td class="tr twarn">−0.072</td></tr>
+    <tr><td>0.7</td><td class="tr twarn">−0.087</td></tr>
+    <tr><td>0.9</td><td class="tr twarn">−0.131</td></tr>
+    <tr><td>1.0</td><td class="tr twarn">−0.150</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="fig-caption"><span class="fig-label">Table 3b.</span> <span class="m">cos(g_CE, g_KL)</span> at round 100 minus its value at round 105, per α (mean across seeds). The dip grows with α — roughly flat across 0.1–0.7, then distinctly larger at 0.9 and 1.0 — but even the largest dip (α=1.0) is far short of crossing zero from a baseline around 0.3. Script: <code>experiments/print_cosine_at_switch.py</code>.</p>
 
 <p>The most likely explanation is a structural mismatch with CEL-Net's actual switching pattern, not a failure of the underlying mechanism. This experiment uses a single long KL block (100 rounds) followed by a single long, uninterrupted CE block (60 rounds). CEL-Net's incompatibility instead arises from many <em>brief</em> Oracle CE exposures — one round of true-label CE, immediately followed by a return to peer-KL training — repeated across 220 rounds (see the note on Oracle gain in §3). A single long CE block may simply give the student enough time to fully re-adapt, erasing whatever damage a brief exposure would have revealed. If so, pre-switch KL dominance <span class="m">D = α · t_eff</span> (Corollary 1) is not sufficient on its own: <em>how</em> CE exposure is distributed over time — concentrated in one long block versus fragmented into many short, repeated interruptions — may be at least as important as its total amount.</p>
 

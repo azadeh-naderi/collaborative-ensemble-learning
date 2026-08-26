@@ -9,12 +9,16 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=24G
 #SBATCH --time=08:00:00
-#SBATCH --array=0-11    # 4 K values x 3 seeds = 12 jobs (only seeds with a cached Gen-1 teacher)
+#SBATCH --array=0-19    # 4 K values x 5 seeds = 20 jobs (index math assumes a
+                         # cached Gen-1 teacher for every seed below -- for a
+                         # partial submission, e.g. only the two new seeds
+                         # across all K, use --array=3-4,8-9,13-14,18-19 on
+                         # the sbatch command line, which overrides this)
 
 set -euo pipefail
 
 KS=(5 10 20 40)
-SEEDS=(42 123 456)   # only the 3 seeds with a cached KL-self-distilled Gen-1 teacher
+SEEDS=(42 123 456 789 1337)   # all must have a cached KL-self-distilled Gen-1 teacher
 N_EXPOSURES=20
 
 N_KS=${#KS[@]}

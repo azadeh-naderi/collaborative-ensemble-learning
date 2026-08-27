@@ -148,6 +148,19 @@ def val_accuracy(model, loader, device):
     return 100 * correct / total
 
 
+def compute_ce_loss(model, loader, device):
+    model.eval()
+    criterion = nn.CrossEntropyLoss()
+    total_loss = total = 0.0
+    with torch.no_grad():
+        for x, y in loader:
+            x, y = x.to(device), y.to(device)
+            loss = criterion(model(x), y)
+            total_loss += loss.item() * y.size(0)
+            total += y.size(0)
+    return total_loss / total if total > 0 else float("nan")
+
+
 # ── main ───────────────────────────────────────────────────────────────────────
 
 def run(args):

@@ -28,6 +28,12 @@ exactly, computed within one continuous run instead of pooled across a
   - cos(g_CE, g_KL), logged at every CE round and periodically during KL
     rounds -- tests whether the angle progressively drifts toward/past
     zero as more cycles accumulate, unlike Exp 1's single-block design.
+  - train/val CE loss immediately before and after each CE round
+    (ce_train_loss_before/after, ce_val_loss_before/after, one value per
+    CE exposure) -- the single-model analog of the CEL-Net measurement in
+    experiments/Oracle_Gain_Experiments/D. Measure loss/, which found the
+    Oracle CE update frequently *raises* CE loss rather than lowering it
+    once incompatibility sets in, not just accuracy.
 
 Usage (from repo root):
     python "Geometry of Mixed-Loss/experiments/run_repeated_cycle.py" \
@@ -49,7 +55,7 @@ import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from run_alpha_sweep import (
     build_resnet18, _collect_probe, gradient_cosine, val_accuracy,
-    train_kl_round, train_ce_round, pretrain_teacher,
+    train_kl_round, train_ce_round, pretrain_teacher, compute_ce_loss,
 )
 
 GRAD_LOG_INTERVAL_KL = 5   # log cosine every 5 KL rounds, in addition to every CE round
@@ -94,6 +100,8 @@ def run(args):
         "val_acc": [], "phase": [], "delta_acc": [],
         "oracle_gain_cumulative": [], "peer_gain_cumulative": [],
         "ce_kl_cosine": [], "g_ce_norm": [], "g_kl_norm": [],
+        "ce_train_loss_before": [], "ce_train_loss_after": [],
+        "ce_val_loss_before": [], "ce_val_loss_after": [],
     }
 
     prev_acc = val_accuracy(student, val_loader, device)
@@ -109,8 +117,18 @@ def run(args):
             is_ce_round = (r % cycle_len == 0)
 
             if is_ce_round:
+                train_loss_before = compute_ce_loss(student, train_loader, device)
+                val_loss_before = compute_ce_loss(student, val_loader, device)
+
                 train_ce_round(student, train_loader, opt, device, sch)
                 n_ce_seen += 1
+
+                train_loss_after = compute_ce_loss(student, train_loader, device)
+                val_loss_after = compute_ce_loss(student, val_loader, device)
+                log["ce_train_loss_before"].append(train_loss_before)
+                log["ce_train_loss_after"].append(train_loss_after)
+                log["ce_val_loss_before"].append(val_loss_before)
+                log["ce_val_loss_after"].append(val_loss_after)
             else:
                 train_kl_round(student, teacher, train_loader, opt, device,
                                 args.temperature, args.alpha, sch)
@@ -136,8 +154,13 @@ def run(args):
                 log["ce_kl_cosine"].append({"round": r, "cos": cos, "is_ce_round": is_ce_round})
                 log["g_ce_norm"].append(gce_n); log["g_kl_norm"].append(gkl_n)
                 tag = "CE" if is_ce_round else "KL"
+                loss_str = ""
+                if is_ce_round:
+                    loss_str = (f"  trainLossΔ={train_loss_after - train_loss_before:+.4f}  "
+                                f"valLossΔ={val_loss_after - val_loss_before:+.4f}")
                 print(f"  {tag} r{r:4d} (ce#{n_ce_seen:3d}): val={acc:.2f}%  Delta={delta:+.2f}  "
-                      f"cos={cos:.3f}  oracle_gain={oracle_gain:+.2f}  peer_gain={peer_gain:+.2f}")
+                      f"cos={cos:.3f}  oracle_gain={oracle_gain:+.2f}  peer_gain={peer_gain:+.2f}"
+                      f"{loss_str}")
 
     log["final_oracle_gain"] = oracle_gain
     log["final_peer_gain"] = peer_gain

@@ -28,7 +28,7 @@ from src.celnet.utils import seed_everything, save_json, TimeLogger
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from run_alpha_sweep import (
-    pretrain_teacher, gradient_cosine, collect_probe,
+    pretrain_teacher, gradient_cosine, _collect_probe,
 )
 
 PROBE_N          = 1000
@@ -75,7 +75,7 @@ def run(args):
 
     train_loader, val_loader, _ = cifar_dataset(
         batch_size=64, seed=args.seed, num_workers=4, root=args.data_root)
-    probe_imgs, probe_labs = collect_probe(val_loader, PROBE_N, device)
+    probe_imgs, probe_labs = _collect_probe(val_loader, PROBE_N, device)
 
     # teacher
     teacher_path = Path(args.data_root).parent / "teacher_resnet50.pt"

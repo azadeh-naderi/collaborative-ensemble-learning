@@ -26,7 +26,7 @@ from src.celnet.models import get_model_class, initialize_model
 from src.celnet.utils import seed_everything, save_json, TimeLogger
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from run_alpha_sweep import gradient_cosine, collect_probe
+from run_alpha_sweep import gradient_cosine, _collect_probe
 
 PROBE_N           = 1000
 GRAD_LOG_INTERVAL = 5
@@ -90,7 +90,7 @@ def run(args):
     import copy
     teacher_proxy = copy.deepcopy(m1).eval()
     for p in teacher_proxy.parameters(): p.requires_grad_(False)
-    probe_imgs, probe_labs = collect_probe(val_loader, PROBE_N, device)
+    probe_imgs, probe_labs = _collect_probe(val_loader, PROBE_N, device)
 
     log = {"alpha": args.alpha, "switch_epoch": args.switch_epoch, "seed": args.seed,
            "m0_acc": [], "m1_acc": [], "m1_delta": [], "m1_cosine": []}

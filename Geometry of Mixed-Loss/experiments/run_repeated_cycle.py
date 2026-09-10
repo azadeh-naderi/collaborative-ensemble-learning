@@ -93,12 +93,23 @@ def run(args):
     # ---- student ----
     student = build_resnet18(args.seed, device)
     opt = torch.optim.SGD(student.parameters(), lr=0.1, momentum=0.9, weight_decay=1e-4)
-    s1 = max(1, int(0.55 * total_rounds)); s2 = max(s1 + 1, int(0.80 * total_rounds))
-    sch = torch.optim.lr_scheduler.MultiStepLR(opt, milestones=[s1, s2], gamma=0.1)
+    if args.lr_schedule == "none":
+        # constant LR for the whole run -- no decay at all. Used to test
+        # whether the harmful-transition timing (which lands at ~55% of
+        # exposures under the default schedule, exactly matching that
+        # schedule's own first milestone) is a genuine cumulative-exposure
+        # phenomenon or an artifact of the LR decay itself: if the
+        # transition still appears at the same exposure fraction with a
+        # flat LR throughout, it can't be caused by a decay that never
+        # happens.
+        sch = torch.optim.lr_scheduler.MultiStepLR(opt, milestones=[], gamma=0.1)
+    else:
+        s1 = max(1, int(0.55 * total_rounds)); s2 = max(s1 + 1, int(0.80 * total_rounds))
+        sch = torch.optim.lr_scheduler.MultiStepLR(opt, milestones=[s1, s2], gamma=0.1)
 
     log = {
         "k": args.k, "n_exposures": args.n_exposures, "total_rounds": total_rounds,
-        "alpha": args.alpha, "seed": args.seed,
+        "alpha": args.alpha, "seed": args.seed, "lr_schedule": args.lr_schedule,
         "val_acc": [], "phase": [], "delta_acc": [],
         "oracle_gain_cumulative": [], "peer_gain_cumulative": [],
         "ce_kl_cosine": [], "g_ce_norm": [], "g_kl_norm": [],
@@ -196,4 +207,9 @@ if __name__ == "__main__":
     parser.add_argument("--data_root",    default="./data")
     parser.add_argument("--teacher_ckpt", required=True,
                          help="path to the CE-pretrained ResNet-50 teacher (reused from Exp 1)")
+    parser.add_argument("--lr_schedule", choices=["fraction", "none"], default="fraction",
+                         help="'fraction' (default): MultiStepLR at 55%%/80%% of total_rounds, "
+                              "as before. 'none': constant LR for the whole run, no decay at "
+                              "all -- used to test whether the harmful-transition timing is a "
+                              "genuine cumulative-exposure effect or an LR-decay artifact.")
     run(parser.parse_args())

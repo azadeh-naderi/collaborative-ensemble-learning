@@ -14,6 +14,16 @@ One row per (group, seed, round). Columns:
     phase        -- "kl" or "ce" (or "kd" for kd_finetune)
     val_acc      -- validation accuracy logged that round
     delta_acc    -- val_acc[this round] - val_acc[previous round]
+    cos_ce_kl    -- cos(g_CE, g_KL) at this round (gradient DIRECTION),
+                    if logged that round -- blank otherwise. Only present
+                    every round for runs made after GRAD_LOG_INTERVAL was
+                    changed from 5 to 1; older results.json files only
+                    have this at every 5th round, so most rows will be
+                    blank for those.
+    g_ce_norm, g_kl_norm -- gradient magnitudes (||g_CE||, ||g_KL||) at
+                    the same rounds cos_ce_kl is present, for checking the
+                    angle change isn't a magnitude artifact. Same
+                    blank-row caveat as cos_ce_kl.
 
 Works generically across:
     alpha-sweep:    --glob "alpha*_seed*" --group_field alpha
@@ -62,10 +72,12 @@ def main():
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     n_rows = 0
+    n_cos_rows = 0
     with open(out_path, "w", newline="") as fh:
         writer = csv.writer(fh)
         writer.writerow(["group", "seed", "round_index", "relative_round",
-                          "phase", "val_acc", "delta_acc"])
+                          "phase", "val_acc", "delta_acc",
+                          "cos_ce_kl", "g_ce_norm", "g_kl_norm"])
         for g in sorted(by_group):
             for data in by_group[g]:
                 phase = data["phase"]
@@ -73,12 +85,35 @@ def main():
                 val_acc = data.get("val_acc", [None] * len(phase))
                 deltas = data["delta_acc"]
                 seed = data.get("seed", "?")
+
+                # build round -> (cos, g_ce_norm, g_kl_norm) lookup;
+                # g_ce_norm/g_kl_norm are parallel-positioned to
+                # ce_kl_cosine, not separately keyed by round
+                cosine_entries = data.get("ce_kl_cosine", [])
+                g_ce_norms = data.get("g_ce_norm", [])
+                g_kl_norms = data.get("g_kl_norm", [])
+                cos_by_round: dict[int, tuple] = {}
+                for pos, entry in enumerate(cosine_entries):
+                    gce = g_ce_norms[pos] if pos < len(g_ce_norms) else None
+                    gkl = g_kl_norms[pos] if pos < len(g_kl_norms) else None
+                    cos_by_round[entry["round"]] = (entry["cos"], gce, gkl)
+
                 for i, (p, d) in enumerate(zip(phase, deltas)):
+                    round_index = i + 1
                     va = val_acc[i] if i < len(val_acc) else None
-                    writer.writerow([g, seed, i + 1, i - switch_idx, p, va, d])
+                    cos, gce, gkl = cos_by_round.get(round_index, (None, None, None))
+                    if cos is not None:
+                        n_cos_rows += 1
+                    # relative_round: 0 = last KL round (i == switch_idx-1),
+                    # +1 = first CE round (i == switch_idx)
+                    relative_round = i - switch_idx + 1
+                    writer.writerow([g, seed, round_index, relative_round, p, va, d,
+                                      cos, gce, gkl])
                     n_rows += 1
 
     print(f"Wrote {n_rows} rows ({len(by_group)} groups) to {out_path}")
+    print(f"  {n_cos_rows}/{n_rows} rows have cos_ce_kl populated "
+          f"({'per-round logging' if n_cos_rows > n_rows * 0.5 else 'sparse -- likely pre-GRAD_LOG_INTERVAL=1 data'})")
 
 
 if __name__ == "__main__":

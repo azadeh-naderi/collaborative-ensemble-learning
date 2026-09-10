@@ -87,16 +87,27 @@ def main():
                 seed = data.get("seed", "?")
 
                 # build round -> (cos, g_ce_norm, g_kl_norm) lookup;
-                # g_ce_norm/g_kl_norm are parallel-positioned to
-                # ce_kl_cosine, not separately keyed by round
-                cosine_entries = data.get("ce_kl_cosine", [])
-                g_ce_norms = data.get("g_ce_norm", [])
-                g_kl_norms = data.get("g_kl_norm", [])
+                # g_ce_norm/g_kl_norm are parallel-positioned to the cosine
+                # log, not separately keyed by round. Two schema variants
+                # exist across scripts: run_alpha_sweep.py/run_repeated_cycle.py
+                # use "ce_kl_cosine" (key "round") + separate g_ce_norm/
+                # g_kl_norm lists; run_kd_finetune.py uses "cosine" (key
+                # "epoch") and never logs the norms at all.
+                if "ce_kl_cosine" in data:
+                    cosine_entries = data["ce_kl_cosine"]
+                    round_key = "round"
+                    g_ce_norms = data.get("g_ce_norm", [])
+                    g_kl_norms = data.get("g_kl_norm", [])
+                else:
+                    cosine_entries = data.get("cosine", [])
+                    round_key = "epoch"
+                    g_ce_norms = []
+                    g_kl_norms = []
                 cos_by_round: dict[int, tuple] = {}
                 for pos, entry in enumerate(cosine_entries):
                     gce = g_ce_norms[pos] if pos < len(g_ce_norms) else None
                     gkl = g_kl_norms[pos] if pos < len(g_kl_norms) else None
-                    cos_by_round[entry["round"]] = (entry["cos"], gce, gkl)
+                    cos_by_round[entry[round_key]] = (entry["cos"], gce, gkl)
 
                 for i, (p, d) in enumerate(zip(phase, deltas)):
                     round_index = i + 1

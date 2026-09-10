@@ -26,7 +26,9 @@ from src.celnet.data import cifar_dataset
 from src.celnet.models import get_model_class, initialize_model
 from src.celnet.utils import seed_everything, save_json, TimeLogger
 
-GRAD_LOG_INTERVAL = 5
+GRAD_LOG_INTERVAL = 1  # log cos(g_CE, g_KL) every round -- needed to see the
+                        # round-by-round gradient-angle change right at the
+                        # KL->CE switch, not just every 5th round
 PROBE_BATCH_SIZE  = 1000
 
 

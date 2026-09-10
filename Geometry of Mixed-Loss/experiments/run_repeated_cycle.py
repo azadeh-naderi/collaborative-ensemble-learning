@@ -58,7 +58,9 @@ from run_alpha_sweep import (
     train_kl_round, train_ce_round, pretrain_teacher, compute_ce_loss,
 )
 
-GRAD_LOG_INTERVAL_KL = 5   # log cosine every 5 KL rounds, in addition to every CE round
+GRAD_LOG_INTERVAL_KL = 1   # log cosine every KL round too (CE rounds always logged) --
+                           # needed to see the round-by-round gradient-angle change,
+                           # not just every 5th KL round
 PROBE_BATCH_SIZE = 1000
 
 

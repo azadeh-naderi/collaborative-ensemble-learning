@@ -32,7 +32,9 @@ from run_alpha_sweep import (
 )
 
 PROBE_N          = 1000
-GRAD_LOG_INTERVAL = 5
+GRAD_LOG_INTERVAL = 1  # log cos(g_CE, g_KL) every epoch -- needed to see the
+                        # epoch-by-epoch gradient-angle change right at the
+                        # KD->CE switch, not just every 5th epoch
 
 
 @torch.no_grad()

@@ -10,7 +10,7 @@ import torch
 import torch.nn.functional as F
 
 sys.path.insert(0, str(Path(__file__).parent))
-from switch_common import build_loaders, build_teacher_arch, metrics, predict
+from switch_common import build_loaders, build_teacher_arch, ce_optimum_gap, kd_loss, metrics, predict
 from src.celnet.models import get_model_class, initialize_model
 from src.celnet.utils import TimeLogger, seed_everything, save_json
 
@@ -29,10 +29,7 @@ def train_epoch(student, teacher, loader, opt, device, loss_type, alpha, tempera
         else:
             with torch.no_grad():
                 teacher_logits = teacher(x)
-            loss = alpha * temperature ** 2 * F.kl_div(
-                F.log_softmax(logits / temperature, dim=1),
-                F.softmax(teacher_logits / temperature, dim=1),
-                reduction="batchmean")
+            loss = alpha * kd_loss(logits, teacher_logits, temperature)
             if alpha < 1.0:
                 loss = loss + (1.0 - alpha) * F.cross_entropy(logits, y)
         opt.zero_grad(set_to_none=True)
@@ -70,7 +67,7 @@ def main():
     seed_everything(args.seed)
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
-    train_loader, val_loader, test_loader = build_loaders(
+    train_loader, val_loader, test_loader, probe_loader = build_loaders(
         args.seed, args.split_seed, args.batch_size, args.num_workers, args.data_root)
 
     student = initialize_model(get_model_class("resnet"), 3, False, 10, seed=args.seed, device=device)
@@ -98,9 +95,10 @@ def main():
         "phase1_epochs": p1, "phase2_epochs": args.phase2_epochs,
         "alpha": args.alpha, "temperature": args.temperature,
         "base_lr": BASE_LR, "ft_lr": args.ft_lr, "phase1_milestones": milestones,
-        "val_init": init,
+        "val_init": init, "train_probe_init": ce_optimum_gap(student, probe_loader, device),
         "epoch": [], "phase": [], "lr": [], "train_loss": [],
-        "val_acc": [], "val_loss": [], "val_ece": [], "val_agree": [], "delta_acc": [],
+        "val_acc": [], "val_loss": [], "val_ece": [], "val_conf": [], "val_agree": [], "delta_acc": [],
+        "probe_ce_loss": [], "probe_acc": [], "probe_ce_grad_norm": [],
     }
     prev_acc = init["acc"]
 
@@ -116,6 +114,7 @@ def main():
                 sched.step()
 
             val = metrics(*predict(student, val_loader, device), val_teacher_pred)
+            probe = ce_optimum_gap(student, probe_loader, device)
             log["epoch"].append(epoch)
             log["phase"].append(loss_type)
             log["lr"].append(lr)
@@ -123,8 +122,12 @@ def main():
             log["val_acc"].append(val["acc"])
             log["val_loss"].append(val["loss"])
             log["val_ece"].append(val["ece"])
+            log["val_conf"].append(val["conf"])
             log["val_agree"].append(val.get("agree"))
             log["delta_acc"].append(val["acc"] - prev_acc)
+            log["probe_ce_loss"].append(probe["ce_loss"])
+            log["probe_acc"].append(probe["acc"])
+            log["probe_ce_grad_norm"].append(probe["ce_grad_norm"])
             prev_acc = val["acc"]
 
             if epoch == p1:
@@ -133,7 +136,8 @@ def main():
             if epoch % 10 == 0 or epoch == len(losses):
                 agree = f"  agree {val['agree']:.1f}" if "agree" in val else ""
                 print(f"ep {epoch:3d} [{loss_type}] lr {lr:.0e}  val acc {val['acc']:.2f}"
-                      f"  delta {log['delta_acc'][-1]:+.2f}  ece {val['ece']:.3f}{agree}")
+                      f"  delta {log['delta_acc'][-1]:+.2f}  ece {val['ece']:.3f}{agree}"
+                      f"  train CE {probe['ce_loss']:.3f} |grad| {probe['ce_grad_norm']:.3f}")
 
     log["test_final"] = metrics(*predict(student, test_loader, device), test_teacher_pred)
     save_json(log, out_dir / "results.json")

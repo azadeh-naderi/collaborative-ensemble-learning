@@ -9,13 +9,13 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=24G
 #SBATCH --time=08:00:00
-#SBATCH --array=0-2    # weak / medium / strong teacher
+#SBATCH --array=0-2    # CE teachers: weak / medium / strong
 
 set -euo pipefail
 
 TEACHER_EPOCHS=(20 50 100)
 E=${TEACHER_EPOCHS[$SLURM_ARRAY_TASK_ID]}
-OUT="Geometry of Mixed-Loss/results/switch_exp1/teachers/teacher_r50_e${E}.pt"
+OUT="Geometry of Mixed-Loss/results/switch_exp1/teachers/teacher_ce_e${E}.pt"
 
 source /apps/easybuild/software/Anaconda3/2023.09-0/etc/profile.d/conda.sh
 set +u
@@ -26,8 +26,9 @@ cd "$SLURM_SUBMIT_DIR"
 mkdir -p logs
 export PYTHONPATH="$SLURM_SUBMIT_DIR:${PYTHONPATH:-}"
 
-echo "Teacher: ResNet-50, ${E} epochs -> ${OUT}"
+echo "Teacher: ResNet-50, CE, ${E} epochs -> ${OUT}"
 python "Geometry of Mixed-Loss/experiments/switch_train_teacher.py" \
+    --objective ce \
     --epochs "$E" \
     --out "$OUT" \
     --data_root ./data

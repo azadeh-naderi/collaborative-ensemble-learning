@@ -1,0 +1,30 @@
+{
+  "objective": "kd",
+  "source_ckpt": "Geometry of Mixed-Loss/results/switch_exp1/teachers/teacher_ce_e100.pt",
+  "temperature": 4.0,
+  "epochs": 100,
+  "seed": 2234,
+  "split_seed": 0,
+  "milestones": [
+    50,
+    75
+  ],
+  "val": {
+    "acc": 83.96000266075134,
+    "loss": 0.5982348918914795,
+    "ece": 0.0882491219172678,
+    "conf": 0.9276464581489563
+  },
+  "test": {
+    "acc": 84.579998254776,
+    "loss": 0.5675978064537048,
+    "ece": 0.08408459791734446,
+    "conf": 0.9297329187393188,
+    "agree": 88.16999793052673
+  },
+  "train_probe": {
+    "ce_loss": 0.29533384704589843,
+    "acc": 90.8,
+    "ce_grad_norm": 0.3865430525378948
+  }
+}

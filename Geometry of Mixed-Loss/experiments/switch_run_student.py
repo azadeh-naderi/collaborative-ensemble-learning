@@ -33,7 +33,8 @@ def train_epoch(student, teacher, loader, opt, device, loss_type, alpha, tempera
                 teacher_logits = teacher(x)
             loss = alpha * kd_loss(logits, teacher_logits, temperature)
             if alpha < 1.0:
-                loss = loss + (1.0 - alpha) * F.cross_entropy(logits, y)
+                # hard part uses the teacher's predicted labels, not the true labels (as in CEL-Net)
+                loss = loss + (1.0 - alpha) * F.cross_entropy(logits, teacher_logits.argmax(dim=1))
         opt.zero_grad(set_to_none=True)
         loss.backward()
         opt.step()
@@ -64,7 +65,8 @@ def main():
     ap.add_argument("--phase2_epochs", type=int, default=60)
     ap.add_argument("--phase1_lr_schedule", choices=["step", "constant"], default="step",
                     help="step: 0.1 decayed x0.1 at 50%% and 75%% of phase 1; constant: 0.1 throughout phase 1")
-    ap.add_argument("--alpha", type=float, default=1.0, help="KD weight; 1.0 = pure KL, no true labels in KD epochs")
+    ap.add_argument("--alpha", type=float, default=1.0,
+                    help="KD epochs: alpha*T^2*KL + (1-alpha)*CE on the teacher's predicted labels; 1.0 = pure KL")
     ap.add_argument("--temperature", type=float, default=4.0)
     ap.add_argument("--ft_lr", type=float, default=1e-3, help="constant LR for phase 2")
     ap.add_argument("--ce_every", type=int, default=5, help="interleaved mode: every k-th epoch is CE, the rest KD")
@@ -117,7 +119,7 @@ def main():
         "mode": args.mode, "seed": args.seed, "split_seed": args.split_seed,
         "teacher_ckpt": args.teacher_ckpt, "teacher": teacher_meta,
         "phase1_epochs": p1, "phase2_epochs": args.phase2_epochs,
-        "alpha": args.alpha, "temperature": args.temperature,
+        "alpha": args.alpha, "temperature": args.temperature, "kd_hard_labels": "teacher_argmax",
         "base_lr": BASE_LR, "ft_lr": args.ft_lr, "phase1_lr_schedule": args.phase1_lr_schedule,
         "phase1_milestones": milestones, "ce_every": args.ce_every if args.mode == "interleaved" else None,
         "branch_at_ce": branch,

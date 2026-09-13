@@ -12,6 +12,7 @@
 #SBATCH --array=0-34    # 7 conditions x 5 seeds
 
 # Pilot: everything at constant LR 0.1, 80 epochs, reusing the switch_exp1 teachers.
+# KD epochs use the CEL-Net loss: 0.9 * T^2 * KL + 0.1 * CE on the teacher's predicted labels (T = 4).
 #   kd_then_ce : KD epochs 1-50, CE epochs 51-80
 #   interleaved: KD, with every 5th epoch CE; before each CE epoch a KD epoch from the same state is also measured
 
@@ -58,6 +59,7 @@ python "Geometry of Mixed-Loss/experiments/switch_run_student.py" \
     --phase2_epochs 30 \
     --phase1_lr_schedule constant \
     --ft_lr 0.1 \
+    --alpha 0.9 \
     --out "$OUT_DIR" \
     --data_root ./data \
     ${EXTRA_ARGS[@]+"${EXTRA_ARGS[@]}"}

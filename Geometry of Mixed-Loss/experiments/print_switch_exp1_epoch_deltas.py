@@ -20,9 +20,12 @@ def table(df, values, aggfunc="mean"):
     return tab
 
 
+VERTICAL = False  # one row per epoch step instead of one column; easier to read for long windows
+
+
 def show(title, tab, decimals=2):
     print(f"\n{title}")
-    print(tab.round(decimals).to_string())
+    print((tab.T if VERTICAL else tab).round(decimals).to_string())
 
 
 def main():
@@ -31,7 +34,10 @@ def main():
     ap.add_argument("--window", type=int, default=20, help="number of epochs after the switch to show")
     ap.add_argument("--pre", type=int, default=2, help="number of epochs before the switch to show for reference")
     ap.add_argument("--per_seed", action="store_true", help="also print every seed for kd_then_ce")
+    ap.add_argument("--vertical", action="store_true", help="one row per epoch step instead of one column")
     args = ap.parse_args()
+    global VERTICAL
+    VERTICAL = args.vertical
 
     root = Path(args.root)
     df = pd.read_csv(root / "analysis" / "per_epoch.csv")

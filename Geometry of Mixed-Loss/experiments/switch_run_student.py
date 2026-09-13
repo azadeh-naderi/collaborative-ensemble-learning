@@ -1,7 +1,8 @@
-"""Train one ResNet-18 student for the loss-switch experiment (ce_only, kd_then_ce, or kd_only)."""
+"""Train one ResNet-18 student for the loss-switch experiment (ce_only, kd_then_ce, kd_only, or interleaved)."""
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import sys
 from pathlib import Path
@@ -16,6 +17,7 @@ from src.celnet.utils import TimeLogger, seed_everything, save_json
 
 BASE_LR = 0.1
 PHASE_LOSSES = {"ce_only": ("ce", "ce"), "kd_then_ce": ("kd", "ce"), "kd_only": ("kd", "kd")}
+MODES = sorted(PHASE_LOSSES) + ["interleaved"]
 
 
 def train_epoch(student, teacher, loader, opt, device, loss_type, alpha, temperature):
@@ -40,28 +42,50 @@ def train_epoch(student, teacher, loader, opt, device, loss_type, alpha, tempera
     return total / count
 
 
+def branch_kd_epoch(student, opt, teacher, loader, val_loader, device, args, val_teacher_pred):
+    """Counterfactual: from the current weights and optimizer state, what would one KD epoch have given?"""
+    twin = copy.deepcopy(student)
+    twin_opt = torch.optim.SGD(twin.parameters(), lr=opt.param_groups[0]["lr"], momentum=0.9, weight_decay=1e-4)
+    # deepcopy: load_state_dict would otherwise share the momentum buffers with the real optimizer
+    twin_opt.load_state_dict(copy.deepcopy(opt.state_dict()))
+    train_epoch(twin, teacher, loader, twin_opt, device, "kd", args.alpha, args.temperature)
+    out = metrics(*predict(twin, val_loader, device), val_teacher_pred)
+    del twin, twin_opt
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--mode", choices=sorted(PHASE_LOSSES), required=True)
+    ap.add_argument("--mode", choices=MODES, required=True)
     ap.add_argument("--teacher_ckpt", default=None)
     ap.add_argument("--seed", type=int, required=True)
     ap.add_argument("--split_seed", type=int, default=0)
     ap.add_argument("--phase1_epochs", type=int, default=100)
     ap.add_argument("--phase2_epochs", type=int, default=60)
-    ap.add_argument("--alpha", type=float, default=1.0, help="KD weight; 1.0 = pure KL, no true labels in phase 1")
+    ap.add_argument("--phase1_lr_schedule", choices=["step", "constant"], default="step",
+                    help="step: 0.1 decayed x0.1 at 50%% and 75%% of phase 1; constant: 0.1 throughout phase 1")
+    ap.add_argument("--alpha", type=float, default=1.0, help="KD weight; 1.0 = pure KL, no true labels in KD epochs")
     ap.add_argument("--temperature", type=float, default=4.0)
-    ap.add_argument("--ft_lr", type=float, default=1e-3, help="constant LR for phase 2 (phase 1 ends at 1e-3)")
+    ap.add_argument("--ft_lr", type=float, default=1e-3, help="constant LR for phase 2")
+    ap.add_argument("--ce_every", type=int, default=5, help="interleaved mode: every k-th epoch is CE, the rest KD")
+    ap.add_argument("--branch_at_ce", action="store_true",
+                    help="interleaved mode: before each CE epoch, also measure a KD epoch from the same state")
     ap.add_argument("--batch_size", type=int, default=64)
     ap.add_argument("--num_workers", type=int, default=4)
     ap.add_argument("--data_root", default="./data")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
-    first, second = PHASE_LOSSES[args.mode]
     p1 = args.phase1_epochs
-    losses = [first] * p1 + [second] * args.phase2_epochs
+    n_epochs = p1 + args.phase2_epochs
+    if args.mode == "interleaved":
+        losses = ["ce" if e % args.ce_every == 0 else "kd" for e in range(1, n_epochs + 1)]
+    else:
+        first, second = PHASE_LOSSES[args.mode]
+        losses = [first] * p1 + [second] * args.phase2_epochs
     if "kd" in losses and not args.teacher_ckpt:
         raise SystemExit(f"--teacher_ckpt is required for mode {args.mode}")
+    branch = args.branch_at_ce and args.mode == "interleaved"
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     seed_everything(args.seed)
@@ -85,7 +109,7 @@ def main():
         test_teacher_pred = predict(teacher, test_loader, device)[0].argmax(dim=1)
 
     opt = torch.optim.SGD(student.parameters(), lr=BASE_LR, momentum=0.9, weight_decay=1e-4)
-    milestones = [max(1, int(0.5 * p1)), max(2, int(0.75 * p1))]
+    milestones = [max(1, int(0.5 * p1)), max(2, int(0.75 * p1))] if args.phase1_lr_schedule == "step" else []
     sched = torch.optim.lr_scheduler.MultiStepLR(opt, milestones=milestones, gamma=0.1)
 
     init = metrics(*predict(student, val_loader, device), val_teacher_pred)
@@ -94,11 +118,14 @@ def main():
         "teacher_ckpt": args.teacher_ckpt, "teacher": teacher_meta,
         "phase1_epochs": p1, "phase2_epochs": args.phase2_epochs,
         "alpha": args.alpha, "temperature": args.temperature,
-        "base_lr": BASE_LR, "ft_lr": args.ft_lr, "phase1_milestones": milestones,
+        "base_lr": BASE_LR, "ft_lr": args.ft_lr, "phase1_lr_schedule": args.phase1_lr_schedule,
+        "phase1_milestones": milestones, "ce_every": args.ce_every if args.mode == "interleaved" else None,
+        "branch_at_ce": branch,
         "val_init": init, "train_probe_init": ce_optimum_gap(student, probe_loader, device),
         "epoch": [], "phase": [], "lr": [], "train_loss": [],
         "val_acc": [], "val_loss": [], "val_ece": [], "val_conf": [], "val_agree": [], "delta_acc": [],
         "probe_ce_loss": [], "probe_acc": [], "probe_ce_grad_norm": [],
+        "branch_kd_val_acc": [], "branch_kd_val_loss": [],
     }
     prev_acc = init["acc"]
 
@@ -108,6 +135,9 @@ def main():
                 for group in opt.param_groups:
                     group["lr"] = args.ft_lr
             lr = opt.param_groups[0]["lr"]
+            twin = None
+            if branch and loss_type == "ce":
+                twin = branch_kd_epoch(student, opt, teacher, train_loader, val_loader, device, args, val_teacher_pred)
             train_loss = train_epoch(student, teacher, train_loader, opt, device,
                                      loss_type, args.alpha, args.temperature)
             if epoch <= p1:
@@ -128,6 +158,13 @@ def main():
             log["probe_ce_loss"].append(probe["ce_loss"])
             log["probe_acc"].append(probe["acc"])
             log["probe_ce_grad_norm"].append(probe["ce_grad_norm"])
+            log["branch_kd_val_acc"].append(twin["acc"] if twin else None)
+            log["branch_kd_val_loss"].append(twin["loss"] if twin else None)
+
+            if twin:
+                print(f"ep {epoch:3d} [ce] from {prev_acc:.2f}: CE epoch -> {val['acc']:.2f} "
+                      f"({val['acc'] - prev_acc:+.2f}), KD epoch instead -> {twin['acc']:.2f} "
+                      f"({twin['acc'] - prev_acc:+.2f})")
             prev_acc = val["acc"]
 
             if epoch == p1:

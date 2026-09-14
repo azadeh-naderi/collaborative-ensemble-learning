@@ -1,0 +1,95 @@
+====================================================================================================
+RUNS
+ seed  n_peers  rounds  ce_every  peer_test_mean  ensemble_test
+    0        4      80         5           71.10          76.73
+    1        4      80         5           70.45          76.30
+    2        4      80         5           69.71          76.58
+    3        4      80         5           69.16          76.03
+    4        4      80         5           70.78          77.04
+
+====================================================================================================
+ACCURACY OVER TIME (mean val accuracy of all peers, windows of 10 rounds)
+   rounds  peers_val_acc  peers_train_label_agreement  ce_only_student_val_acc (pilot)  peers_minus_ce_only
+     1-10          26.14                        26.60                            56.82               -30.68
+    11-20          47.63                        48.87                            73.01               -25.38
+    21-30          59.10                        60.74                            76.10               -17.00
+    31-40          64.46                        66.29                            77.17               -12.71
+    41-50          66.53                        68.65                            78.34               -11.81
+    51-60          67.96                        70.09                            78.66               -10.70
+    61-70          68.71                        70.93                            79.55               -10.84
+    71-80          69.83                        71.99                            79.95               -10.12
+   train label agreement = accuracy on 5000 fixed training images; for comparison the fixed teachers of the pilot had 96.1 (CE teacher) and 90.8 (KL gen 1)
+
+====================================================================================================
+CE UPDATES. From the SAME weights and optimizer state:
+  d_CE = accuracy change from the real CE update; d_KD = change had it been a KD update instead.
+  CE - KD < 0 means the CE update did worse than a KD update would have.
+  loss_CE / loss_KD = the same for val loss (positive = loss went UP); lossCE - lossKD > 0 = CE worse.
+
+  all CE updates: n=320  d_CE +9.39  d_KD +2.81  CE-KD +6.58  CE worse in 15%  seeds with CE worse on average 0/5  p 0.062
+  CE updates from >= 72.5%: n=7  d_CE -0.60  d_KD -4.72  CE-KD +4.12  CE worse in 14%  seeds with CE worse on average 0/5  p 0.062
+  val loss: loss_CE -0.455  loss_KD -0.111  lossCE-lossKD -0.344  CE raised the loss in 6%
+
+  [by accuracy before the CE update]
+                    n    d_CE   d_KD  CE_minus_KD  CE_worse_share  CE_drop_share  KD_drop_share  loss_CE  loss_KD  lossCE_minus_lossKD  CE_loss_up_share
+   pre_bin                                                                                                                                              
+   (0.0, 50.0]   80.0  23.196  9.560       13.636           0.125          0.000          0.162   -1.172   -0.361               -0.811             0.000
+   (50.0, 60.0]  50.0   9.462  3.879        5.583           0.160          0.020          0.200   -0.420   -0.191               -0.230             0.020
+   (60.0, 65.0]  63.0   6.119  1.894        4.225           0.127          0.016          0.206   -0.265   -0.087               -0.178             0.016
+   (65.0, 70.0]  93.0   3.116 -0.114        3.230           0.204          0.086          0.441   -0.144    0.009               -0.153             0.054
+   (70.0, 72.5]  27.0   0.219 -4.956        5.174           0.111          0.481          0.926   -0.022    0.228               -0.250             0.296
+   (72.5, 75.0]   7.0  -0.597 -4.720        4.123           0.143          0.571          1.000   -0.002    0.200               -0.202             0.429
+
+  [by round (10-round windows)]
+                    n    d_CE   d_KD  CE_minus_KD  CE_worse_share  CE_drop_share  KD_drop_share  loss_CE  loss_KD  lossCE_minus_lossKD  CE_loss_up_share
+   window_label                                                                                                                                         
+   1-10          40.0  25.337  7.600       17.737           0.125          0.000          0.250   -1.253   -0.098               -1.155             0.000
+   11-20         40.0  16.585  5.367       11.219           0.100          0.025          0.275   -0.919   -0.376               -0.543             0.025
+   21-30         40.0  10.204  2.363        7.841           0.100          0.025          0.300   -0.399   -0.089               -0.310             0.025
+   31-40         40.0   4.931  1.645        3.286           0.225          0.125          0.325   -0.205   -0.063               -0.142             0.125
+   41-50         40.0   5.345  1.696        3.649           0.175          0.125          0.325   -0.243   -0.070               -0.174             0.075
+   51-60         40.0   4.415  1.138        3.277           0.175          0.075          0.425   -0.209   -0.060               -0.150             0.050
+   61-70         40.0   4.502  1.878        2.623           0.150          0.125          0.325   -0.211   -0.092               -0.119             0.050
+   71-80         40.0   3.825  0.827        2.998           0.175          0.175          0.500   -0.197   -0.040               -0.157             0.100
+
+  [AFTER EACH CE UPDATE: change relative to the state just before it, k updates later (k=0 is the CE update itself; later updates are KD)]
+   all CE updates
+           n  acc_change  below_pre_CE_share  loss_change  loss_above_pre_CE_share
+      k                                                                           
+      0  320       9.393               0.084       -0.455                    0.056
+      1  315       4.814               0.314       -0.152                    0.384
+      2  310       4.876               0.377       -0.116                    0.397
+      3  305       4.887               0.328       -0.152                    0.390
+      4  300       3.896               0.383       -0.115                    0.403
+   CE updates from >= 72.5%
+         n  acc_change  below_pre_CE_share  loss_change  loss_above_pre_CE_share
+      k                                                                         
+      0  7      -0.597               0.571       -0.002                    0.429
+      1  7      -2.551               1.000        0.115                    1.000
+      2  7      -4.200               0.857        0.146                    0.857
+      3  7      -1.834               0.857        0.053                    0.714
+      4  3      -9.133               1.000        0.429                    1.000
+
+====================================================================================================
+KD UPDATES by accuracy before the update (compare with the CE table above, and with CE-only epochs)
+                   n  acc_change  drop_share  loss_change  loss_up_share
+   pre_bin                                                              
+   (0.0, 50.0]   259      -0.505       0.479        0.160          0.463
+   (50.0, 60.0]  155      -0.805       0.497        0.020          0.497
+   (60.0, 65.0]  208      -0.368       0.495        0.013          0.505
+   (65.0, 70.0]  400      -1.468       0.578        0.073          0.595
+   (70.0, 72.5]  204      -3.182       0.824        0.145          0.843
+   (72.5, 75.0]   53      -4.417       0.981        0.180          1.000
+   (75.0, 77.5]    1      -4.100       1.000        0.157          1.000
+
+  [rounds 21+: change by position relative to the peer's last CE update]
+                     n  acc_change  drop_share  loss_change  loss_up_share
+   position                                                               
+   CE update       240       5.537       0.108       -0.244          0.071
+   KD, 1 after CE  240      -2.701       0.804        0.124          0.875
+   KD, 2 after CE  240      -0.359       0.525        0.023          0.512
+   KD, 3 after CE  240      -0.393       0.517        0.018          0.521
+   KD, 4 after CE  240      -0.820       0.525        0.043          0.525
+
+====================================================================================================
+wrote Geometry of Mixed-Loss/results/switch_peers/analysis/updates.csv

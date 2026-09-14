@@ -38,7 +38,9 @@ def load(students: Path):
         df = pd.DataFrame({
             "mode": mode, "teacher": teacher, "seed": r["seed"], "epoch": r["epoch"], "phase": r["phase"],
             "lr": r["lr"], "val_acc": r["val_acc"], "delta_acc": r["delta_acc"], "val_loss": r["val_loss"],
-            "probe_ce_loss": r["probe_ce_loss"], "branch_kd_val_acc": branch})
+            "probe_ce_loss": r["probe_ce_loss"], "val_ece": r["val_ece"], "val_conf": r["val_conf"],
+            "branch_kd_val_acc": branch,
+            "branch_kd_val_loss": r.get("branch_kd_val_loss") or [None] * n})
         df["pre_acc"] = df["val_acc"] - df["delta_acc"]
         df["phase1_epochs"] = r["phase1_epochs"]
         rows.append(df)

@@ -116,6 +116,33 @@ def main():
             print("\n   [CE updates from >= 70%, per seed]")
             print(indent(by_seed.round(3).to_string(), 6))
 
+        # tug of war: does the harm grow with the number of KD updates since the model's previous CE update?
+        seq = p.sort_values(["seed", "student", "round"])
+        since = {}
+        for (seed, student), g in seq.groupby(["seed", "student"]):
+            count = None
+            for idx, phase in zip(g.index, g["phase"]):
+                if phase == "ce":
+                    since[idx] = count
+                    count = 0
+                elif count is not None and phase == "kd":
+                    count += 1
+        ev["kd_since_last_ce"] = pd.Series(since, dtype=float).reindex(ev.index)
+        tw = ev[(ev["pre_acc"] >= 70) & ev["kd_since_last_ce"].notna()].copy()
+        if len(tw) >= 3:
+            tw["kd_since_bin"] = pd.cut(tw["kd_since_last_ce"], [-1, 2, 4, 7, 12, 10_000],
+                                        labels=["0-2", "3-4", "5-7", "8-12", "13+"])
+            tab = tw.groupby("kd_since_bin", observed=True).agg(
+                n=("CE_minus_KD", "size"), mean_pre_acc=("pre_acc", "mean"), d_CE=("d_CE", "mean"),
+                CE_minus_KD=("CE_minus_KD", "mean"), CE_worse_share=("CE_minus_KD", lambda x: (x < 0).mean()),
+                lossCE_minus_lossKD=("lossCE_minus_lossKD", "mean"))
+            print("\n   [CE updates from >= 70%, by number of KD updates since the model's previous CE update]")
+            print(indent(tab.round(3).to_string(), 6))
+            x = np.column_stack([np.ones(len(tw)), tw["kd_since_last_ce"].clip(upper=15), tw["pre_acc"]])
+            b = np.linalg.lstsq(x, tw["CE_minus_KD"].to_numpy(float), rcond=None)[0]
+            print(f"      linear fit: CE_minus_KD = {b[0]:+.2f} {b[1]:+.3f} * KD_updates_since_last_CE (capped at 15) "
+                  f"{b[2]:+.3f} * accuracy_before  (n={len(tw)})")
+
         # ---------------------------------------------------------------- after the CE update
         seq = p.sort_values(["seed", "student", "round"]).reset_index(drop=True)
         rows = []

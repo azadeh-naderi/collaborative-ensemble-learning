@@ -9,25 +9,27 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=12:00:00
-#SBATCH --array=0-5    # 2 conditions x 3 seeds
+#SBATCH --array=0-8    # 3 conditions x 3 seeds (tasks 0-2 celnet, 3-5 all_ce, 6-8 all_ce_cf)
 
 # 9 ResNet-18 learners + oracle, CEL-Net MWM_AccDiff pairing, 220 rounds, constant LR 0.1, fixed data split.
-#   celnet : KD from the better peer (0.9 KL + 0.1 CE on its predicted labels), 1 oracle CE update per round,
-#            with a counterfactual KD epoch from the best peer before each CE update
-#   all_ce : same pairing and schedule, every update is CE on the true labels (control)
+#   celnet    : KD from the better peer (0.9 KL + 0.1 CE on its predicted labels), 1 oracle CE update per round,
+#               with a counterfactual KD epoch from the best peer before each CE update
+#   all_ce    : same pairing and schedule, every update is CE on the true labels (control, no counterfactual)
+#   all_ce_cf : as all_ce, plus the counterfactual KD epoch before each oracle CE update (models shaped by CE only)
 
 set -euo pipefail
 
-CONDITIONS=(celnet all_ce)
+CONDITIONS=(celnet all_ce all_ce_cf)
 SEEDS=(0 1 2)
 
 N_SEEDS=${#SEEDS[@]}
 CONDITION=${CONDITIONS[$(( SLURM_ARRAY_TASK_ID / N_SEEDS ))]}
 SEED=${SEEDS[$(( SLURM_ARRAY_TASK_ID % N_SEEDS ))]}
 EXTRA_ARGS=()
-if [ "$CONDITION" = "all_ce" ]; then
-    EXTRA_ARGS+=(--all_ce)
-fi
+case "$CONDITION" in
+    all_ce)    EXTRA_ARGS+=(--all_ce --no_counterfactual) ;;
+    all_ce_cf) EXTRA_ARGS+=(--all_ce) ;;
+esac
 OUT_DIR="Geometry of Mixed-Loss/results/peers_celnet_pairing/${CONDITION}/seed${SEED}"
 
 source /apps/easybuild/software/Anaconda3/2023.09-0/etc/profile.d/conda.sh

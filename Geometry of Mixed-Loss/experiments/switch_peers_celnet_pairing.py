@@ -8,7 +8,8 @@ official CIFAR-10 test set, constant LR (no scheduler).
 
 Before each oracle CE update, a KD epoch from the best peer (most accurate other learner at the start of the round)
 is measured from the same weights and optimizer state. With --all_ce every update is CE instead (same pairing and
-schedule), as a control.
+schedule), as a control; the counterfactual is then measured on models shaped by CE only (--no_counterfactual to
+skip it).
 
 results.json uses the same schema as celnet_ce_counterfactual.py, so analyze_celnet_counterfactual.py reads it.
 """
@@ -84,8 +85,10 @@ def main():
     models = {i: initialize_model(get_model_class("resnet"), 3, False, 10, seed=args.seed * 100 + i, device=device)
               for i in ids}
     opts = {i: torch.optim.SGD(models[i].parameters(), lr=args.lr, momentum=0.9, weight_decay=1e-4) for i in ids}
-    counterfactual = not args.no_counterfactual and not args.all_ce
-    condition = f"{args.pairing}{'_all_ce' if args.all_ce else ''}"
+    # with --all_ce the counterfactual asks the control question: would a KD step have beaten CE for a model that was
+    # shaped by CE only?
+    counterfactual = not args.no_counterfactual
+    condition = f"{args.pairing}{'_all_ce' if args.all_ce else ''}{'_cf' if args.all_ce and counterfactual else ''}"
 
     updates, round_start_acc, train_label_agreement = [], [], []
     log = {"config": {"pairing_strategy": condition, "pairing": args.pairing, "all_ce": args.all_ce,

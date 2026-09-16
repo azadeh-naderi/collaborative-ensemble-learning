@@ -1,0 +1,120 @@
+==============================================================================================================
+RUNS
+            policy  seed  rounds  learners  counterfactual  mean_learner_test  ensemble_test
+mwm_accdiff_all_ce     0     220         9           False              81.25          87.98
+mwm_accdiff_all_ce     1     220         9           False              81.32          87.88
+mwm_accdiff_all_ce     2     220         9           False              81.56          87.73
+       mwm_accdiff     0     220         9            True              77.80          81.80
+       mwm_accdiff     1     220         9            True              77.96          82.10
+       mwm_accdiff     2     220         9            True              77.58          79.98
+
+share of updates at the initial LR:
+   policy              phase  
+   mwm_accdiff         ce         1.0
+                       kd         1.0
+   mwm_accdiff_all_ce  ce         1.0
+                       ce_peer    1.0
+
+==============================================================================================================
+POLICY mwm_accdiff
+
+  [as in the CEL-Net logs: change per update by accuracy before it; CE vs KD updates are from DIFFERENT models and states]
+                   n       acc_change        drop_share        loss_change       
+   phase          ce    kd         ce     kd         ce     kd          ce     kd
+   pre_bin                                                                       
+   (0.0, 50.0]    34   135     13.875  5.233      0.000  0.119      -0.530 -0.129
+   (50.0, 60.0]   23    93      4.485  1.541      0.000  0.215      -0.125  0.004
+   (60.0, 65.0]   19   116      2.732  0.855      0.158  0.319      -0.084 -0.024
+   (65.0, 70.0]   43   229      0.441  1.029      0.372  0.297      -0.012 -0.031
+   (70.0, 72.5]   42   254     -0.832  0.860      0.619  0.307       0.023 -0.023
+   (72.5, 75.0]   85   572     -0.693  0.908      0.647  0.297       0.016 -0.025
+   (75.0, 77.5]  220  1105     -1.604  0.174      0.823  0.417       0.038 -0.001
+   (77.5, 80.0]  194   136     -2.098 -0.494      0.933  0.721       0.048  0.017
+
+  [COUNTERFACTUAL: each oracle CE update vs a KD epoch from the best peer, from the SAME state]
+   CE_minus_KD < 0 = CE did worse than KD would have; lossCE_minus_lossKD > 0 = CE raised val loss more;
+   cf_teacher_gap = counterfactual teacher accuracy minus student accuracy
+
+   all: n=660  d_CE -0.32  d_KD +0.22  CE-KD -0.53  CE worse in 64%  | loss CE -0.004 KD -0.006  | per-seed CE-KD: -0.42, -0.47, -0.70
+
+   [by accuracy before the CE update]
+                        n    d_CE   d_KD  CE_minus_KD  CE_worse_share  CE_drop_share  KD_drop_share  loss_CE  loss_KD  lossCE_minus_lossKD  cf_teacher_gap
+      pre_bin                                                                                                                                             
+      (0.0, 50.0]    34.0  13.875  8.928        4.947           0.206          0.000          0.029   -0.530   -0.322               -0.208          11.315
+      (50.0, 60.0]   23.0   4.485  2.147        2.338           0.174          0.000          0.087   -0.125   -0.047               -0.078           4.534
+      (60.0, 65.0]   19.0   2.732  1.525        1.206           0.263          0.158          0.105   -0.084   -0.033               -0.051           3.385
+      (65.0, 70.0]   43.0   0.441  0.291        0.150           0.465          0.372          0.395   -0.012   -0.002               -0.010           2.165
+      (70.0, 72.5]   42.0  -0.832 -0.220       -0.611           0.595          0.619          0.548    0.023    0.008                0.015           1.450
+      (72.5, 75.0]   85.0  -0.693 -0.216       -0.477           0.529          0.647          0.588    0.016    0.014                0.002           1.428
+      (75.0, 77.5]  220.0  -1.604 -0.506       -1.098           0.700          0.823          0.659    0.038    0.019                0.020           1.065
+      (77.5, 80.0]  194.0  -2.098 -0.581       -1.517           0.845          0.933          0.722    0.048    0.017                0.031           0.790
+
+   [by round (20-round windows)]
+                  n   d_CE   d_KD  CE_minus_KD  CE_worse_share  CE_drop_share  KD_drop_share  loss_CE  loss_KD  lossCE_minus_lossKD  cf_teacher_gap
+      window                                                                                                                                       
+      1-20     60.0  9.669  5.924        3.744           0.200          0.017          0.050   -0.350   -0.199               -0.151           8.218
+      21-40    60.0  1.139  0.695        0.445           0.417          0.317          0.283   -0.036   -0.016               -0.020           2.557
+      41-60    60.0 -0.865 -0.329       -0.536           0.533          0.617          0.633    0.023    0.012                0.011           1.300
+      61-80    60.0 -0.688 -0.173       -0.514           0.550          0.650          0.550    0.019    0.013                0.006           1.539
+      81-100   60.0 -1.188 -0.548       -0.639           0.550          0.717          0.733    0.027    0.022                0.005           0.989
+      101-120  60.0 -1.651 -0.712       -0.939           0.667          0.867          0.733    0.040    0.028                0.012           0.870
+      121-140  60.0 -1.693 -0.485       -1.208           0.800          0.883          0.633    0.037    0.018                0.019           1.152
+      141-160  60.0 -2.032 -0.335       -1.698           0.883          0.933          0.583    0.049    0.007                0.043           0.991
+      161-180  60.0 -2.278 -0.642       -1.636           0.817          0.917          0.733    0.057    0.017                0.040           0.837
+      181-200  60.0 -1.805 -0.616       -1.189           0.783          0.850          0.783    0.041    0.024                0.017           0.833
+      201-220  60.0 -2.076 -0.400       -1.676           0.867          0.933          0.617    0.043    0.009                0.034           0.986
+
+   [CE updates from >= 70%, per seed]
+                n   d_CE   d_KD  CE_minus_KD  CE_worse_share  CE_drop_share  KD_drop_share  loss_CE  loss_KD  lossCE_minus_lossKD  cf_teacher_gap
+      seed                                                                                                                                       
+      0     183.0 -1.490 -0.542       -0.948           0.705          0.836          0.683    0.031    0.021                0.010           0.985
+      1     180.0 -1.471 -0.443       -1.028           0.694          0.761          0.667    0.038    0.014                0.025           1.034
+      2     178.0 -1.777 -0.409       -1.368           0.753          0.860          0.635    0.042    0.015                0.027           1.144
+
+   [CE updates from >= 70%, by number of KD updates since the model's previous CE update]
+                      n  mean_pre_acc   d_CE  CE_minus_KD  CE_worse_share  lossCE_minus_lossKD
+      kd_since_bin                                                                            
+      0-2           368        76.332 -1.165       -0.777           0.666                0.012
+      3-4            73        76.585 -2.053       -1.561           0.781                0.032
+      5-7            45        75.929 -2.614       -1.866           0.867                0.042
+      8-12           19        75.509 -2.607       -2.236           0.895                0.053
+      13+            36        75.967 -3.004       -2.106           0.833                0.042
+      linear fit: CE_minus_KD = +12.79 -0.131 * KD_updates_since_last_CE (capped at 15) -0.177 * accuracy_before  (n=541)
+
+  [AFTER EACH CE UPDATE: the same model k of its own updates later (k=0 is the CE update), relative to just before the CE update]
+   all
+           n  acc_change  below_pre_CE  loss_change  loss_above_pre_CE  share_KD
+      k                                                                         
+      0  660      -0.315         0.700       -0.004              0.644     0.000
+      1  654       1.133         0.474       -0.023              0.479     0.794
+      2  642       1.222         0.514       -0.040              0.512     0.609
+      3  635       1.658         0.465       -0.049              0.463     0.712
+   CE updates from >= 70%
+           n  acc_change  below_pre_CE  loss_change  loss_above_pre_CE  share_KD
+      k                                                                         
+      0  541      -1.578         0.819        0.037              0.750     0.000
+      1  535      -0.166         0.559        0.007              0.553     0.826
+      2  523      -0.437         0.621        0.011              0.610     0.585
+      3  516      -0.220         0.566        0.008              0.560     0.711
+
+==============================================================================================================
+POLICY mwm_accdiff_all_ce
+
+  [as in the CEL-Net logs: change per update by accuracy before it; CE vs KD updates are from DIFFERENT models and states]
+                   n         acc_change         drop_share         loss_change        
+   phase          ce ce_peer         ce ce_peer         ce ce_peer          ce ce_peer
+   pre_bin                                                                            
+   (0.0, 50.0]    17      74      9.751  14.564      0.118   0.014       1.085  -0.748
+   (50.0, 60.0]   12      48      4.827   3.682      0.083   0.083      -0.129  -0.055
+   (60.0, 65.0]   10      42      2.492   2.540      0.100   0.167      -0.060  -0.075
+   (65.0, 70.0]   14      79      0.670   1.655      0.214   0.190      -0.010  -0.040
+   (70.0, 72.5]   15      57     -0.895   1.245      0.533   0.246       0.034  -0.036
+   (72.5, 75.0]   21     144      0.061   1.139      0.381   0.222       0.002  -0.036
+   (75.0, 77.5]   47     396     -1.350   1.047      0.660   0.260       0.059  -0.033
+   (77.5, 80.0]  145    1155     -1.008   0.449      0.766   0.331       0.031  -0.014
+   (80.0, 82.5]  379     645     -1.216  -0.474      0.836   0.631       0.038   0.016
+
+  no counterfactual found for this policy
+
+==============================================================================================================
+wrote Geometry of Mixed-Loss/results/peers_celnet_pairing/analysis/updates.csv

@@ -16,14 +16,16 @@ results.json uses the same schema as celnet_ce_counterfactual.py, so analyze_cel
 from __future__ import annotations
 
 import argparse
+import copy
 import sys
 from pathlib import Path
 
 import torch
 
 sys.path.insert(0, str(Path(__file__).parent))
+from peer_mechanism import describe_updates, kd_twin
 from switch_common import build_loaders, metrics, predict
-from switch_run_student import branch_kd_epoch, train_epoch
+from switch_run_student import train_epoch
 from src.celnet.models import get_model_class, initialize_model
 from src.celnet.utils import TimeLogger, save_json, seed_everything
 
@@ -60,6 +62,9 @@ def main():
     ap.add_argument("--pairing", choices=["mwm_accdiff", "accdiff"], default="mwm_accdiff")
     ap.add_argument("--all_ce", action="store_true", help="control: every update is CE on the true labels")
     ap.add_argument("--no_counterfactual", action="store_true")
+    ap.add_argument("--mechanism", action="store_true",
+                    help="at each oracle CE update, log what the CE epoch and the KD counterfactual change "
+                         "(see peer_mechanism.py); evaluation only")
     ap.add_argument("--alpha", type=float, default=0.9)
     ap.add_argument("--temperature", type=float, default=4.0)
     ap.add_argument("--lr", type=float, default=0.1)
@@ -73,6 +78,8 @@ def main():
     args = ap.parse_args()
     if args.n_learners < 2:
         raise SystemExit("--n_learners must be at least 2")
+    if args.mechanism and args.no_counterfactual:
+        raise SystemExit("--mechanism needs the counterfactual")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     seed_everything(args.seed)
@@ -85,6 +92,7 @@ def main():
     models = {i: initialize_model(get_model_class("resnet"), 3, False, 10, seed=args.seed * 100 + i, device=device)
               for i in ids}
     opts = {i: torch.optim.SGD(models[i].parameters(), lr=args.lr, momentum=0.9, weight_decay=1e-4) for i in ids}
+    scratch = copy.deepcopy(models[ids[0]]) if args.mechanism else None     # spare model for describe_updates
     # with --all_ce the counterfactual asks the control question: would a KD step have beaten CE for a model that was
     # shaped by CE only?
     counterfactual = not args.no_counterfactual
@@ -94,7 +102,8 @@ def main():
     log = {"config": {"pairing_strategy": condition, "pairing": args.pairing, "all_ce": args.all_ce,
                       "run_seed": args.seed, "n_rounds": args.rounds, "num_models": args.n_learners + 1,
                       "alpha": args.alpha, "temperature": args.temperature, "kd_hard_labels": "teacher_argmax",
-                      "lr": args.lr, "lr_schedule": "constant", "split_seed": args.split_seed},
+                      "lr": args.lr, "lr_schedule": "constant", "split_seed": args.split_seed,
+                      "mechanism": args.mechanism},
            "counterfactual": counterfactual,
            "counterfactual_teacher_rule": "most accurate other learner at the start of the round",
            "updates": updates, "round_start_acc": round_start_acc, "train_label_agreement": train_label_agreement}
@@ -125,16 +134,24 @@ def main():
                 if kind == "ce":
                     # how well the student fits the true labels on fixed training images, i.e. what CE will push on
                     rec["pre_train_acc"], rec["pre_train_loss"] = evaluate(models[s], probe_loader, device)
+                twin = before = None
                 if kind == "ce" and counterfactual:
                     cf_id = max((start[i][0], i) for i in ids if i != s)[1]
-                    twin = branch_kd_epoch(models[s], opts[s], models[cf_id], train_loader, val_loader, device,
-                                           args, None)
+                    if args.mechanism:
+                        before = copy.deepcopy(models[s].state_dict())
+                    twin = kd_twin(models[s], opts[s], models[cf_id], train_loader, device, args.alpha,
+                                   args.temperature)
+                    cf_acc, cf_loss = evaluate(twin, val_loader, device)
                     rec.update({"cf_teacher": cf_id, "cf_teacher_start_acc": start[cf_id][0],
-                                "cf_teacher_acc": start[cf_id][0], "cf_acc": twin["acc"], "cf_loss": twin["loss"]})
+                                "cf_teacher_acc": start[cf_id][0], "cf_acc": cf_acc, "cf_loss": cf_loss})
                 loss_type = "kd" if kind == "kd" else "ce"
                 train_epoch(models[s], models[t] if kind == "kd" else None, train_loader, opts[s], device,
                             loss_type, args.alpha, args.temperature)
                 rec["post_acc"], rec["post_loss"] = evaluate(models[s], val_loader, device)
+                if before is not None:
+                    rec["mech"] = describe_updates(before, {"ce": models[s], "kd": twin}, models[cf_id],
+                                                   {"val": val_loader, "train": probe_loader}, scratch, device)
+                del twin, before
                 updates.append(rec)
                 who = "oracle" if kind == "ce" else f"teacher {t} ({start[t][0]:.2f})"
                 cf_txt = (f", KD from peer {rec['cf_teacher']} instead -> {rec['cf_acc']:.2f} "

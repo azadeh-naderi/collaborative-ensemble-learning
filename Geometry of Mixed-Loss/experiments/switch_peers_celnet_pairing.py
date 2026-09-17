@@ -122,6 +122,9 @@ def main():
                 rec = {"round": rnd, "student": s, "phase": kind, "teacher": t,
                        "teacher_acc": None if t is None else start[t][0], "lr": opts[s].param_groups[0]["lr"],
                        "pre_acc": pre_acc, "pre_loss": pre_loss}
+                if kind == "ce":
+                    # how well the student fits the true labels on fixed training images, i.e. what CE will push on
+                    rec["pre_train_acc"], rec["pre_train_loss"] = evaluate(models[s], probe_loader, device)
                 if kind == "ce" and counterfactual:
                     cf_id = max((start[i][0], i) for i in ids if i != s)[1]
                     twin = branch_kd_epoch(models[s], opts[s], models[cf_id], train_loader, val_loader, device,

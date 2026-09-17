@@ -9,7 +9,9 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=12:00:00
-#SBATCH --array=0-8    # 3 conditions x 3 seeds (tasks 0-2 celnet, 3-5 all_ce, 6-8 all_ce_cf)
+#SBATCH --array=0-29   # 3 conditions x 10 seeds; task = 10 * condition + seed
+#                        (celnet 0-9, all_ce 10-19, all_ce_cf 20-29); submit a subset with sbatch --array=...
+#                        tasks whose results.json already exists are skipped
 
 # 9 ResNet-18 learners + oracle, CEL-Net MWM_AccDiff pairing, 220 rounds, constant LR 0.1, fixed data split.
 #   celnet    : KD from the better peer (0.9 KL + 0.1 CE on its predicted labels), 1 oracle CE update per round,
@@ -20,7 +22,7 @@
 set -euo pipefail
 
 CONDITIONS=(celnet all_ce all_ce_cf)
-SEEDS=(0 1 2)
+SEEDS=(0 1 2 3 4 5 6 7 8 9)
 
 N_SEEDS=${#SEEDS[@]}
 CONDITION=${CONDITIONS[$(( SLURM_ARRAY_TASK_ID / N_SEEDS ))]}
@@ -31,6 +33,10 @@ case "$CONDITION" in
     all_ce_cf) EXTRA_ARGS+=(--all_ce) ;;
 esac
 OUT_DIR="Geometry of Mixed-Loss/results/peers_celnet_pairing/${CONDITION}/seed${SEED}"
+if [ -f "$OUT_DIR/results.json" ]; then
+    echo "Skipping ${CONDITION} seed ${SEED}: $OUT_DIR/results.json already exists"
+    exit 0
+fi
 
 source /apps/easybuild/software/Anaconda3/2023.09-0/etc/profile.d/conda.sh
 set +u

@@ -33,6 +33,55 @@ def kd_twin(student, opt, teacher, loader, device, alpha, temperature):
     return twin
 
 
+CE_VARIANTS = ("ce", "ce_head", "ce_lowlr")
+
+
+def ce_update(model, opt, loader, device, variant, low_lr):
+    """One CE epoch on the true labels, in place.
+    ce       : the normal update.
+    ce_head  : only the final layer learns; the backbone is frozen, including BatchNorm statistics (eval mode), so the
+               features cannot change. SGD skips parameters without a gradient, so their momentum is left as it is.
+    ce_lowlr : the normal update with the learning rate lowered to low_lr for this epoch only."""
+    if variant == "ce":
+        train_epoch(model, None, loader, opt, device, "ce", 1.0, 1.0)
+    elif variant == "ce_lowlr":
+        saved = [g["lr"] for g in opt.param_groups]
+        for g in opt.param_groups:
+            g["lr"] = low_lr
+        try:
+            train_epoch(model, None, loader, opt, device, "ce", 1.0, 1.0)
+        finally:
+            for g, lr in zip(opt.param_groups, saved):
+                g["lr"] = lr
+    elif variant == "ce_head":
+        trainable = {n: p.requires_grad for n, p in model.named_parameters()}
+        for n, p in model.named_parameters():
+            p.requires_grad_(n.startswith(HEAD_PREFIX))
+        model.eval()
+        try:
+            for x, y in loader:
+                x, y = x.to(device, non_blocking=True), y.to(device, non_blocking=True)
+                loss = torch.nn.functional.cross_entropy(model(x), y)
+                opt.zero_grad(set_to_none=True)
+                loss.backward()
+                opt.step()
+        finally:
+            for n, p in model.named_parameters():
+                p.requires_grad_(trainable[n])
+            opt.zero_grad(set_to_none=True)
+    else:
+        raise ValueError(variant)
+
+
+def ce_twin(student, opt, loader, device, variant, low_lr):
+    """Copy of the student after one CE epoch of the given variant; the student and its optimizer are untouched."""
+    twin = copy.deepcopy(student)
+    twin_opt = torch.optim.SGD(twin.parameters(), lr=opt.param_groups[0]["lr"], momentum=0.9, weight_decay=1e-4)
+    twin_opt.load_state_dict(copy.deepcopy(opt.state_dict()))
+    ce_update(twin, twin_opt, loader, device, variant, low_lr)
+    return twin
+
+
 def _mix(backbone_state, head_state):
     mixed = dict(backbone_state)
     mixed.update({k: v for k, v in head_state.items() if k.startswith(HEAD_PREFIX)})

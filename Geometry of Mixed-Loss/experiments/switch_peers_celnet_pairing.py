@@ -23,7 +23,9 @@ from pathlib import Path
 import torch
 
 sys.path.insert(0, str(Path(__file__).parent))
-from peer_mechanism import CE_VARIANTS, ce_twin, ce_update, describe_updates, kd_twin
+import random
+
+from peer_mechanism import CE_VARIANTS, describe_updates, kd_twin, update, update_twin
 from switch_common import build_loaders, metrics, predict
 from switch_run_student import train_epoch
 from src.celnet.models import get_model_class, initialize_model
@@ -69,7 +71,16 @@ def main():
                     help="the CE update applied at oracle rounds: normal, final layer only, or at --low_lr")
     ap.add_argument("--ce_variants", action="store_true",
                     help="at each oracle update, also measure the other CE variants from the same state")
-    ap.add_argument("--low_lr", type=float, default=0.01, help="learning rate of the ce_lowlr variant")
+    ap.add_argument("--kd_variants", action="store_true",
+                    help="at each oracle update, also measure KD on the final layer only and KD at --low_lr, "
+                         "from the same state and with the same teacher as the KD counterfactual")
+    ap.add_argument("--low_lr", type=float, default=0.01, help="learning rate of the *_lowlr variants")
+    ap.add_argument("--kd_lowlr_per_round", action="store_true",
+                    help="control: in every round, one randomly chosen KD student trains at --low_lr")
+    ap.add_argument("--gentle_after", type=float, default=None,
+                    help="schedule: from this validation accuracy (%%) on, oracle rounds apply --gentle_update "
+                         "instead of --oracle_update")
+    ap.add_argument("--gentle_update", choices=CE_VARIANTS, default="ce_head")
     ap.add_argument("--alpha", type=float, default=0.9)
     ap.add_argument("--temperature", type=float, default=4.0)
     ap.add_argument("--lr", type=float, default=0.1)
@@ -83,10 +94,10 @@ def main():
     args = ap.parse_args()
     if args.n_learners < 2:
         raise SystemExit("--n_learners must be at least 2")
-    if (args.mechanism or args.ce_variants) and args.no_counterfactual:
-        raise SystemExit("--mechanism and --ce_variants need the counterfactual")
-    if args.all_ce and (args.ce_variants or args.oracle_update != "ce"):
-        raise SystemExit("CE variants are for the KD-shaped condition, not --all_ce")
+    if (args.mechanism or args.ce_variants or args.kd_variants) and args.no_counterfactual:
+        raise SystemExit("--mechanism, --ce_variants and --kd_variants need the counterfactual")
+    if args.all_ce and args.kd_lowlr_per_round:
+        raise SystemExit("--kd_lowlr_per_round needs KD updates, not --all_ce")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     seed_everything(args.seed)
@@ -99,7 +110,7 @@ def main():
     models = {i: initialize_model(get_model_class("resnet"), 3, False, 10, seed=args.seed * 100 + i, device=device)
               for i in ids}
     opts = {i: torch.optim.SGD(models[i].parameters(), lr=args.lr, momentum=0.9, weight_decay=1e-4) for i in ids}
-    describe = args.mechanism or args.ce_variants
+    describe = args.mechanism or args.ce_variants or args.kd_variants
     scratch = copy.deepcopy(models[ids[0]]) if describe else None           # spare model for describe_updates
     # with --all_ce the counterfactual asks the control question: would a KD step have beaten CE for a model that was
     # shaped by CE only?
@@ -107,7 +118,12 @@ def main():
     condition = f"{args.pairing}{'_all_ce' if args.all_ce else ''}{'_cf' if args.all_ce and counterfactual else ''}"
     if args.oracle_update != "ce":
         condition += f"_oracle_{args.oracle_update}"
-    branch_variants = [v for v in CE_VARIANTS if v != args.oracle_update] if args.ce_variants else []
+    if args.gentle_after is not None:
+        condition += f"_{args.gentle_update}_from{args.gentle_after:g}"
+    if args.kd_lowlr_per_round:
+        condition += "_kd_lowlr_per_round"
+    kd_branches = ["kd_head", "kd_lowlr"] if args.kd_variants else []
+    lowlr_picker = random.Random(args.seed + 10_000)      # separate from torch's RNG, so data order is unaffected
 
     updates, round_start_acc, train_label_agreement = [], [], []
     log = {"config": {"pairing_strategy": condition, "pairing": args.pairing, "all_ce": args.all_ce,
@@ -115,7 +131,12 @@ def main():
                       "alpha": args.alpha, "temperature": args.temperature, "kd_hard_labels": "teacher_argmax",
                       "lr": args.lr, "lr_schedule": "constant", "split_seed": args.split_seed,
                       "mechanism": args.mechanism, "oracle_update": args.oracle_update,
-                      "ce_variants": branch_variants, "low_lr": args.low_lr},
+                      "ce_variants": ([v for v in CE_VARIANTS if v != args.oracle_update]
+                                      if args.ce_variants else []),
+                      "kd_variants": kd_branches, "low_lr": args.low_lr,
+                      "kd_lowlr_per_round": args.kd_lowlr_per_round,
+                      "gentle_after": args.gentle_after,
+                      "gentle_update": args.gentle_update if args.gentle_after is not None else None},
            "counterfactual": counterfactual,
            "counterfactual_teacher_rule": "most accurate other learner at the start of the round",
            "updates": updates, "round_start_acc": round_start_acc, "train_label_agreement": train_label_agreement}
@@ -129,6 +150,12 @@ def main():
                                                                for i in ids}})
             pairs = pair_models({ORACLE_ID: 100.0, **{i: start[i][0] for i in ids}}, args.pairing)
             print(f"\n=== Round {rnd}/{args.rounds} ({condition}) ===")
+            lowlr_student = None
+            if args.kd_lowlr_per_round:
+                # the student of each KD pair, by the same rule as in the loop below
+                kd_students = sorted(a if start[b][0] > start[a][0] else b
+                                     for a, b in pairs if ORACLE_ID not in (a, b))
+                lowlr_student = lowlr_picker.choice(kd_students) if kd_students else None
 
             for a, b in pairs:
                 if ORACLE_ID in (a, b):
@@ -148,6 +175,10 @@ def main():
                     rec["pre_train_acc"], rec["pre_train_loss"] = evaluate(models[s], probe_loader, device)
                 twin = before = None
                 branches = {}
+                real = None
+                if kind == "ce":
+                    gentle = args.gentle_after is not None and pre_acc >= args.gentle_after
+                    real = args.gentle_update if gentle else args.oracle_update
                 if kind == "ce" and counterfactual:
                     cf_id = max((start[i][0], i) for i in ids if i != s)[1]
                     if describe:
@@ -157,20 +188,27 @@ def main():
                     cf_acc, cf_loss = evaluate(twin, val_loader, device)
                     rec.update({"cf_teacher": cf_id, "cf_teacher_start_acc": start[cf_id][0],
                                 "cf_teacher_acc": start[cf_id][0], "cf_acc": cf_acc, "cf_loss": cf_loss})
-                    for v in branch_variants:
-                        branches[v] = ce_twin(models[s], opts[s], train_loader, device, v, args.low_lr)
+                    ce_branches = [v for v in CE_VARIANTS if v != real] if args.ce_variants else []
+                    for v in ce_branches + kd_branches:
+                        branches[v] = update_twin(models[s], opts[s], train_loader, device, v, args.low_lr,
+                                                  models[cf_id] if v.startswith("kd") else None,
+                                                  args.alpha, args.temperature)
                         v_acc, v_loss = evaluate(branches[v], val_loader, device)
                         rec.setdefault("variants", {})[v] = {"acc": v_acc, "loss": v_loss}
                 if kind == "ce":
-                    rec["oracle_update"] = args.oracle_update
-                    ce_update(models[s], opts[s], train_loader, device, args.oracle_update, args.low_lr)
+                    rec["oracle_update"] = real
+                    update(models[s], opts[s], train_loader, device, real, args.low_lr)
+                elif kind == "kd" and s == lowlr_student:
+                    rec["kd_lowlr"] = True
+                    update(models[s], opts[s], train_loader, device, "kd_lowlr", args.low_lr, models[t],
+                           args.alpha, args.temperature)
                 else:
                     loss_type = "kd" if kind == "kd" else "ce"
                     train_epoch(models[s], models[t] if kind == "kd" else None, train_loader, opts[s], device,
                                 loss_type, args.alpha, args.temperature)
                 rec["post_acc"], rec["post_loss"] = evaluate(models[s], val_loader, device)
                 if before is not None:
-                    arms = {args.oracle_update: models[s], "kd": twin, **branches}
+                    arms = {real: models[s], "kd": twin, **branches}
                     loaders = {"val": val_loader, "train": probe_loader} if args.mechanism else {"val": val_loader}
                     rec["mech"] = describe_updates(before, arms, models[cf_id], loaders, scratch, device)
                 del twin, before, branches

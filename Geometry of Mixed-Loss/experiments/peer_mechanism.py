@@ -16,8 +16,9 @@ from __future__ import annotations
 import copy
 
 import torch
+import torch.nn.functional as F
 
-from switch_common import predict
+from switch_common import kd_loss, predict
 from switch_run_student import train_epoch
 
 HEAD_PREFIX = "base_model.fc."
@@ -34,26 +35,33 @@ def kd_twin(student, opt, teacher, loader, device, alpha, temperature):
 
 
 CE_VARIANTS = ("ce", "ce_head", "ce_lowlr")
+KD_VARIANTS = ("kd", "kd_head", "kd_lowlr")
 
 
-def ce_update(model, opt, loader, device, variant, low_lr):
-    """One CE epoch on the true labels, in place.
-    ce       : the normal update.
-    ce_head  : only the final layer learns; the backbone is frozen, including BatchNorm statistics (eval mode), so the
+def update(model, opt, loader, device, variant, low_lr, teacher=None, alpha=0.9, temperature=4.0):
+    """One epoch of the given variant, in place. The loss is CE on the true labels (ce*) or the KD loss from
+    `teacher` (kd*, same loss as switch_run_student.train_epoch).
+    *        : the normal update.
+    *_head   : only the final layer learns; the backbone is frozen, including BatchNorm statistics (eval mode), so the
                features cannot change. SGD skips parameters without a gradient, so their momentum is left as it is.
-    ce_lowlr : the normal update with the learning rate lowered to low_lr for this epoch only."""
-    if variant == "ce":
-        train_epoch(model, None, loader, opt, device, "ce", 1.0, 1.0)
-    elif variant == "ce_lowlr":
+    *_lowlr  : the normal update with the learning rate lowered to low_lr for this epoch only."""
+    loss_type, _, scope = variant.partition("_")
+    if loss_type not in ("ce", "kd") or scope not in ("", "head", "lowlr"):
+        raise ValueError(variant)
+    if loss_type == "kd" and teacher is None:
+        raise ValueError(f"{variant} needs a teacher")
+    if scope == "":
+        train_epoch(model, teacher, loader, opt, device, loss_type, alpha, temperature)
+    elif scope == "lowlr":
         saved = [g["lr"] for g in opt.param_groups]
         for g in opt.param_groups:
             g["lr"] = low_lr
         try:
-            train_epoch(model, None, loader, opt, device, "ce", 1.0, 1.0)
+            train_epoch(model, teacher, loader, opt, device, loss_type, alpha, temperature)
         finally:
             for g, lr in zip(opt.param_groups, saved):
                 g["lr"] = lr
-    elif variant == "ce_head":
+    else:
         trainable = {n: p.requires_grad for n, p in model.named_parameters()}
         for n, p in model.named_parameters():
             p.requires_grad_(n.startswith(HEAD_PREFIX))
@@ -61,7 +69,15 @@ def ce_update(model, opt, loader, device, variant, low_lr):
         try:
             for x, y in loader:
                 x, y = x.to(device, non_blocking=True), y.to(device, non_blocking=True)
-                loss = torch.nn.functional.cross_entropy(model(x), y)
+                logits = model(x)
+                if loss_type == "ce":
+                    loss = F.cross_entropy(logits, y)
+                else:
+                    with torch.no_grad():
+                        teacher_logits = teacher(x)
+                    loss = alpha * kd_loss(logits, teacher_logits, temperature)
+                    if alpha < 1.0:
+                        loss = loss + (1.0 - alpha) * F.cross_entropy(logits, teacher_logits.argmax(dim=1))
                 opt.zero_grad(set_to_none=True)
                 loss.backward()
                 opt.step()
@@ -69,17 +85,23 @@ def ce_update(model, opt, loader, device, variant, low_lr):
             for n, p in model.named_parameters():
                 p.requires_grad_(trainable[n])
             opt.zero_grad(set_to_none=True)
-    else:
-        raise ValueError(variant)
 
 
-def ce_twin(student, opt, loader, device, variant, low_lr):
-    """Copy of the student after one CE epoch of the given variant; the student and its optimizer are untouched."""
+def update_twin(student, opt, loader, device, variant, low_lr, teacher=None, alpha=0.9, temperature=4.0):
+    """Copy of the student after one epoch of the given variant; the student and its optimizer are untouched."""
     twin = copy.deepcopy(student)
     twin_opt = torch.optim.SGD(twin.parameters(), lr=opt.param_groups[0]["lr"], momentum=0.9, weight_decay=1e-4)
     twin_opt.load_state_dict(copy.deepcopy(opt.state_dict()))
-    ce_update(twin, twin_opt, loader, device, variant, low_lr)
+    update(twin, twin_opt, loader, device, variant, low_lr, teacher, alpha, temperature)
     return twin
+
+
+def ce_update(model, opt, loader, device, variant, low_lr):
+    update(model, opt, loader, device, variant, low_lr)
+
+
+def ce_twin(student, opt, loader, device, variant, low_lr):
+    return update_twin(student, opt, loader, device, variant, low_lr)
 
 
 def _mix(backbone_state, head_state):

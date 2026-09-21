@@ -1,0 +1,54 @@
+==============================================================================================================
+PART 1. PER UPDATE, oracle updates from >= 70%: every arm starts from the same state.
+  d_acc = val accuracy change; minus_kd = arm minus the KD counterfactual (> 0: better than KD);
+  p = sign-flip test on the per-seed means of minus_kd; broken / fixed / changed in % of val images
+
+  [applied at oracle rounds: ce]   updates: 896
+        arm  d_acc  minus_kd  better_than_kd  worse_than_kd seeds_better     p  broken  fixed  fixed_peer_agree  changed    kl  backbone_change  head_change
+         kd -0.409     0.000           0.000          0.000          0/5   NaN   6.673  6.264             1.055   17.431 0.257            0.186        0.176
+         ce -1.784    -1.375           0.234          0.762          0/5 0.062   9.816  8.033             3.203   23.694 0.404            0.339        0.259
+    ce_head  1.416     1.825           0.979          0.021          5/5 0.062   2.951  4.368             1.356    9.883 0.085            0.000        0.518
+   ce_lowlr  4.901     5.310           1.000          0.000          5/5 0.062   3.411  8.313             2.886   15.266 0.213            0.058        0.070
+
+  [applied at oracle rounds: ce_lowlr]   updates: 934
+        arm  d_acc  minus_kd  better_than_kd  worse_than_kd seeds_better     p  broken  fixed  fixed_peer_agree  changed    kl  backbone_change  head_change
+         kd -4.990     0.000           0.000          0.000          0/5   NaN   9.936  4.946             1.449   19.300 0.323            0.437        0.219
+         ce -9.018    -4.029           0.044          0.954          0/5 0.062  14.244  5.225             2.131   25.060 0.406            0.421        0.274
+    ce_head  0.170     5.160           0.990          0.010          5/5 0.062   2.420  2.590             0.759    6.595 0.043            0.000        0.341
+   ce_lowlr  0.338     5.327           1.000          0.000          5/5 0.062   4.203  4.540             1.385   11.446 0.116            0.069        0.034
+==============================================================================================================
+PART 1. PER UPDATE, oracle updates from 75-80%: every arm starts from the same state.
+  d_acc = val accuracy change; minus_kd = arm minus the KD counterfactual (> 0: better than KD);
+  p = sign-flip test on the per-seed means of minus_kd; broken / fixed / changed in % of val images
+
+  [applied at oracle rounds: ce]   updates: 709
+        arm  d_acc  minus_kd  better_than_kd  worse_than_kd seeds_better     p  broken  fixed  fixed_peer_agree  changed    kl  backbone_change  head_change
+         kd -0.404     0.000           0.000          0.000          0/5   NaN   6.138  5.734             1.044   15.938 0.227            0.182        0.165
+         ce -2.042    -1.639           0.176          0.819          0/5 0.062   9.696  7.654             3.249   22.912 0.395            0.340        0.256
+    ce_head  1.263     1.666           0.977          0.023          5/5 0.062   2.791  4.054             1.337    9.212 0.080            0.000        0.513
+   ce_lowlr  4.640     5.043           1.000          0.000          5/5 0.062   3.295  7.935             2.955   14.565 0.206            0.058        0.069
+
+  [applied at oracle rounds: ce_lowlr]   updates: 244
+        arm  d_acc  minus_kd  better_than_kd  worse_than_kd seeds_better     p  broken  fixed  fixed_peer_agree  changed    kl  backbone_change  head_change
+         kd -3.851     0.000           0.000          0.000          0/5   NaN   9.129  5.278             1.491   19.071 0.268            0.325        0.197
+         ce -8.820    -4.969           0.012          0.988          0/5 0.062  14.418  5.597             2.330   26.199 0.397            0.403        0.286
+    ce_head  0.215     4.066           0.984          0.016          5/5 0.062   2.674  2.889             0.847    7.395 0.048            0.000        0.370
+   ce_lowlr  0.472     4.324           1.000          0.000          5/5 0.062   4.529  5.002             1.547   12.636 0.119            0.066        0.038
+
+==============================================================================================================
+PART 2. OVER THE RUN: accuracy of the peers when the oracle rounds apply each update (mean over seeds)
+                                  seeds  val_acc_last_40_rounds  learner_test  learner_test_sd  ensemble_test
+   condition                                                                                                 
+   all-CE control (earlier runs)     10                   81.28         81.31             0.17          87.77
+   normal CE (earlier runs)          10                   78.00         77.83             0.50          80.78
+   oracle update: ce                  5                   78.16         77.87             0.37          80.68
+   oracle update: ce_head             5                   37.02         36.55             1.72          36.80
+   oracle update: ce_lowlr            5                   81.85         82.04             0.32          84.67
+
+   vs normal CE (earlier runs), per-seed learner test accuracy (exact permutation test):
+   all-CE control (earlier runs)        +3.47  p 0.0000
+   oracle update: ce                    +0.03  p 0.8991
+   oracle update: ce_head               -41.29  p 0.0003
+   oracle update: ce_lowlr              +4.20  p 0.0003
+
+wrote Geometry of Mixed-Loss/results/peers_ce_variants/analysis/variant_events.csv
